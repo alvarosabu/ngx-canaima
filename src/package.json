@@ -1,0 +1,28 @@
+{
+  "name": "ngx-canaima",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvarosaburido/ngx-canaima"
+  },
+  "author": {
+    "name": "Alvaro Saburido",
+    "email": "alvaro.saburido@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alvarosaburido/ngx-canaima/issues"
+  },
+  "main": "ngx-canaima.umd.js",
+  "module": "ngx-canaima.js",
+  "jsnext:main": "ngx-canaima.js",
+  "typings": "ngx-canaima.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}

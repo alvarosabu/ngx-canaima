@@ -1,0 +1,30 @@
+<as-navbar [shadow]=1 [customClass]="'navbar--primary navbar--subheader'" [brand]="navBar.brand" [fixed]=true>
+    <div class="left-content"></div>
+    <div class="center-content">
+        <div class="navbar__title">Ngx-Canaima</div>
+    </div>
+    <div class="right-content"></div>
+</as-navbar>
+<div class="container-fluid has-navbar"
+fxLayout="row wrap"
+fxLayoutAlign="space-around">
+	<div
+	fxFlex="45">
+		<as-card 
+		[title]="cardSimple.title"
+		[subtitle]="cardSimple.subtitle"
+		[shadow]="1"
+		[msg]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut accusamus non ducimus quisquam voluptatum dolore soluta, optio nobis cupiditate consequuntur ipsum eaque, sapiente in repudiandae officia, qui fuga fugit?'">
+		</as-card>
+	</div>
+	<div
+	fxFlex="45">
+		<as-card 
+		[title]="cardSimple.title + ' with stuff'"
+		[shadow]="1"
+		[optionsRight]="cardSimple.optionsRight"
+		[actions]="cardSimple.actions"
+		[msg]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut accusamus non ducimus quisquam voluptatum dolore soluta, optio nobis cupiditate consequuntur ipsum eaque, sapiente in repudiandae officia, qui fuga fugit?'">
+		</as-card>
+	</div>
+</div>
