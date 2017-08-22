@@ -1,0 +1,267 @@
+/*------------------------------------*\
+    Cards
+\*------------------------------------*/
+@import '../_variables.scss';
+$avatar: 150px;
+$card-bg: rgb(98.4%, 98.4%, 98.4%);
+.card {
+    background:$card-bg;
+    border-radius: 2px;
+    width: 100%;   
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+    &__header {  
+        display: flex;
+        justify-content: space-between;
+    }
+    &__msg {
+        padding: 8px 16px 8px 16px;
+    }
+    &__title {
+        padding: 24px 16px 12px 16px;
+        text-transform: capitalize;
+        order: 2;
+        flex: 15;
+    }
+    &__options {
+        height: 65px;
+        display: flex;
+        justify-content: space-between;
+        padding: 9px 2px;
+        .btn {
+            border-radius: 50px !important;
+            overflow: hidden;
+            padding: 3px !important; 
+        }
+        .mdi {
+            color: $gray;
+            font-size: 18px;
+        }
+        .mdi-filter {
+            padding-top: .2rem;
+        }
+        .mdi-chevron-left, .mdi-dots-vertical {
+            font-size: 24px;
+        }
+        &--left {
+            order: 1;
+            flex: 1;
+            
+        }
+        &--right {
+            order: 3;
+            flex: 1;
+        }
+    }
+    &__subtitle {
+        padding: 24px 16px 8px 16px;
+        margin-bottom: 12px !important;
+        color: $gray;
+    }
+    &__content {
+        padding: 16px;
+        flex: 3;
+    }
+    &__list {
+        .mdi {
+            margin-right: 16px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+        a {
+            cursor: pointer;
+        }
+    }
+    &__stats {
+        display: flex;
+        justify-content: space-around;
+        padding: 8px 16px;
+        border-top: 1px solid $gray-lighter;
+    }
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        text-align: center;
+        .stat__value {
+            font-weight: bold;
+            font-size: 28px;
+        }
+        .stat__line {
+            height: 1px;
+            background-color: $gray-light;
+            width: 20px;
+            margin: 8px;
+        }
+        .stat__label {
+            font-size: 14px;
+            color: $gray;
+        }
+    }
+    &__thumb {
+        padding: 16px 8px 16px 16px;
+        min-width: 69px;
+        display: flex;
+        justify-content: center;
+        transition: all ease-in-out 1s;
+    }
+    &__subheader {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 5rem;
+        .btn-fab-sm {
+            margin-top: -18px;
+        }
+        .btn-fab-md {
+            margin-top: -28px;
+        }
+    }
+     &__avatar {
+        background-color: $white;
+        width: $avatar;
+        height: $avatar;
+        background-size: cover;
+        background-position: center;
+        margin-top: -($avatar/2);
+        border: 3px solid $card-bg; 
+    }
+    &__fabs {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 5rem;
+        height: 0;
+        .btn-fab-sm {
+            margin-top: -18px;
+        }
+        .btn-fab-md {
+            margin-top: -28px;
+        }
+    }
+    &__footer {
+        padding: 8px;
+    }
+    &--noBg {
+        background: none !important;
+        .card__thumb, .card__content, .card--data__actions {
+            padding: 0 !important;
+        }
+    }
+    &--bg {
+        height: 300px;
+        background-size: 100%;
+        background-position: center; 
+        transition: all .5s ease;
+        &:hover {
+           background-size: 110%; 
+        }
+        .card__body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1, h2, h3, h4, h5, h6 {
+                color: white;
+                text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+                padding: 0.5rem !important;
+            }
+        }
+        .card__title, .card__subtitle {
+            flex: none;
+        }
+    }
+    &--image {
+        &__header {
+           position: relative;
+        }
+        &__img {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
+        &__options {
+            position: absolute;
+            right: .5rem;
+            display: flex;
+            .btn {
+                border-radius: 50px !important;
+                overflow: hidden;
+                padding: 3px !important; 
+            }
+            .btn > .mdi {
+                color: $white;
+                font-size: 24px;
+            }
+            &--left {
+                left: .5rem;
+            }
+            &--right {
+                right: .5rem;
+            }
+        }
+    }
+     &--profile {
+        .card__header, .card__subheader {
+            position: relative;
+        }
+        &__img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
+         &__options {
+            position: absolute;
+            right: .5rem;
+            display: flex;
+            .btn {
+                border-radius: 50px !important;
+                overflow: hidden;
+                padding: 3px !important; 
+            }
+            .btn > .mdi {
+                color: $white;
+                font-size: 24px;
+            }
+            &--left {
+                left: .5rem;
+            }
+            &--right {
+                right: .5rem;
+            }
+        }
+    }
+    &--data {
+        display: flex;
+        flex-direction: row;
+        &__img {
+            width: 45px;
+            height: 45px;
+            background-size: cover;
+            background-position: center;
+        }
+        &__title {
+            font-size: 1.8rem;
+            margin-bottom: 2px !important;
+        }
+        &__subtitle {
+            font-size: 1.4rem;
+            color: $gray;
+        }
+        &__actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex: 1;
+            padding: 16px;
+            i {
+                font-size: 24px;
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
