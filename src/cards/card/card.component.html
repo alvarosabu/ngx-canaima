@@ -1,10 +1,12 @@
-<div class="card card--{{customClass}} shadow-{{shadow}}" >
+<div class="card 
+    card--{{customClass}} 
+    shadow-{{shadow}}" >
     <div class="card__header" *ngIf="title">
 
         <div class="card__options card__options--left" *ngIf="optionsLeft?.length > 0">
             <div class="card__option" *ngFor="let option of optionsLeft">
                 <button class="btn btn-link" (click)="option.callback()">
-                    <i class="mdi mdi-{{option.icon}}"></i>
+                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
                 </button>
             </div>
         </div>
@@ -49,7 +51,8 @@
         </p>
         
     </div>
-    <div class="card__footer" [hidden]="actions?.length === 0">
+    <div class="card__footer" 
+    *ngIf="actions">
         <div class="card__actions">
             <button class="btn btn-link card__action"  *ngFor="let action of actions" [disabled]="action.disabled" (click)="action.callback()">
                 {{action.label}}

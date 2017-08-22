@@ -54,6 +54,7 @@ export class HomeComponent implements OnInit {
         optionsRight: [
           {
             icon: 'dots-vertical',
+            prefix: 'mdi',
             dropdown: [
                 {
                     label: 'Action 1',
@@ -73,6 +74,7 @@ export class HomeComponent implements OnInit {
           },
           {
             icon: 'filter',
+            prefix: 'mdi',
             callback: () => {
               console.log('Filter');
             },

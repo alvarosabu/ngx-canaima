@@ -10,10 +10,12 @@ $avatar: 150px;
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
     }
+    color: $as-card-color;
     &__header {  
         display: flex;
         justify-content: space-between;
         background: $as-card-header-bg;
+        padding: $as-card-header-padding;
         border-top: $as-card-header-border-top;
         border-bottom: $as-card-header-border-bottom;
         border-color: $as-card-header-border-color;
@@ -32,19 +34,17 @@ $avatar: 150px;
         height: 65px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 9px 2px;
         .btn {
-            border-radius: 50px !important;
             overflow: hidden;
             padding: 3px !important; 
         }
-        .mdi {
-            color: $gray;
+        i {
+            color: $as-card-header-color;
             font-size: 18px;
         }
-        .mdi-filter {
-            padding-top: .2rem;
-        }
+        
         .mdi-chevron-left, .mdi-dots-vertical {
             font-size: 24px;
         }
@@ -61,11 +61,20 @@ $avatar: 150px;
     &__subtitle {
         padding: $as-card-subtitle-padding;
         margin-bottom: 12px !important;
-        color: $gray;
     }
     &__content {
-        padding: 16px;
+        padding: $as-card-content-padding;
         flex: 3;
+    }
+    &__footer {
+        padding: $as-card-footer-padding;
+        background: $as-card-footer-bg;
+        border-top: $as-card-footer-border-top;
+        border-bottom: $as-card-footer-border-bottom;
+        border-color: $as-card-footer-border-color;
+        .btn-link {
+            color: $as-card-footer-color;
+        }
     }
     &__list {
         .mdi {
@@ -143,9 +152,7 @@ $avatar: 150px;
             margin-top: -28px;
         }
     }
-    &__footer {
-        padding: 8px;
-    }
+    
     &--noBg {
         background: none !important;
         .card__thumb, .card__content, .card--data__actions {

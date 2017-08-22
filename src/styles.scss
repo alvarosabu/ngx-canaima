@@ -1,2 +1,6 @@
 
 @import "./cards/cards.scss";
+
+*:focus {
+    outline: none !important;
+}

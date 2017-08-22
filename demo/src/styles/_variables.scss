@@ -15,7 +15,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              #212121 !default;
+$gray-dark:              #5a5a5a !default;
 $gray:                   #666 !default;
 $gray-light:             #bbb !default;
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
@@ -882,11 +882,14 @@ $hr-border:                   $gray-lighter !default;
 //== Cards
 //
 //##
-/* $as-card-bg: red ; */
-
-/* $as-card-header-bg: $brand-primary;
-$as-card-header-color: $white; */
+// $as-card-bg: $gray-dark ; 
+// $as-card-color: $white;
+// $as-card-header-bg: $brand-primary;
+// $as-card-header-color: $white; 
 
 $as-card-header-border-top: none;
 $as-card-header-border-bottom: none;
 $as-card-header-border-color: $brand-secundary;
+
+// $as-card-footer-bg: $brand-primary;
+// $as-card-footer-color: $white; 

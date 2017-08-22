@@ -4,7 +4,7 @@
 
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              #212121 !default;
+$gray-dark:              #5a5a5a !default;
 $gray:                   #666 !default;
 $gray-light:             #bbb !default;
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
@@ -20,10 +20,25 @@ $brand-danger:          #e51c23 !default;
 
 //== Cards
 $as-card-bg: rgb(98.4%, 98.4%, 98.4%) !default;
+$as-card-color: $gray !default;
 $as-card-border-radius: 3px !default;
 
 $as-card-header-bg: transparent !default;
 $as-card-header-color: $gray-dark !default;
-$as-card-msg-padding: 8px 16px !default;
+$as-card-header-border-top: none !default;
+$as-card-header-border-bottom: none !default;
+$as-card-header-border-color: transparent !default;
+$as-card-header-padding: 0 !default;
+
 $as-card-title-padding: 24px 16px 12px 16px !default;
 $as-card-subtitle-padding: 24px 16px 8px 16px !default;
+
+$as-card-msg-padding: 8px 16px 12px !default;
+$as-card-content-padding: 16px !default;
+
+$as-card-footer-bg: transparent !default;
+$as-card-footer-color: $brand-primary !default;
+$as-card-footer-border-top: none !default;
+$as-card-footer-border-bottom: none !default;
+$as-card-footer-border-color: transparent !default;
+$as-card-footer-padding: 8px !default;

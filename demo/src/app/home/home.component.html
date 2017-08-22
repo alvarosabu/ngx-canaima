@@ -20,8 +20,10 @@ fxLayoutAlign="space-around">
 	<div
 	fxFlex="45">
 		<as-card 
-		[title]="'Awesome Title'"
+		[title]="cardSimple.title + ' with stuff'"
 		[shadow]="1"
+		[optionsRight]="cardSimple.optionsRight"
+		[actions]="cardSimple.actions"
 		[msg]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut accusamus non ducimus quisquam voluptatum dolore soluta, optio nobis cupiditate consequuntur ipsum eaque, sapiente in repudiandae officia, qui fuga fugit?'">
 		</as-card>
 	</div>
