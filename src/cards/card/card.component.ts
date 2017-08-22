@@ -2,13 +2,10 @@ import {
     Component,
     Input,
 } from '@angular/core';
-
+import { Action } from './../../action';
 @Component({
     selector: 'as-card',
-    templateUrl: 'card.component.html',
-    styleUrls: [
-        '../cards.scss'
-    ]
+    templateUrl: 'card.component.html'
 })
 export class CardComponent {
     public _actions = [];
@@ -18,7 +15,7 @@ export class CardComponent {
     @Input('msg') public msg: string;
     @Input('optionsLeft') public optionsLeft: any[];
     @Input('optionsRight') public optionsRight: any[];
-    @Input('actions') public actions: any[];
+    @Input('actions') public actions: Action[];
     @Input('shadow') public shadow: [any];
 
 }

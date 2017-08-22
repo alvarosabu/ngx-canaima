@@ -3,10 +3,9 @@
 \*------------------------------------*/
 @import '../_variables.scss';
 $avatar: 150px;
-$card-bg: rgb(98.4%, 98.4%, 98.4%);
 .card {
-    background:$card-bg;
-    border-radius: 2px;
+    background: $as-card-bg;
+    border-radius: $as-card-border-radius;
     width: 100%;   
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
@@ -14,15 +13,20 @@ $card-bg: rgb(98.4%, 98.4%, 98.4%);
     &__header {  
         display: flex;
         justify-content: space-between;
+        background: $as-card-header-bg;
+        border-top: $as-card-header-border-top;
+        border-bottom: $as-card-header-border-bottom;
+        border-color: $as-card-header-border-color;
     }
     &__msg {
-        padding: 8px 16px 8px 16px;
+        padding: $as-card-msg-padding;
     }
     &__title {
-        padding: 24px 16px 12px 16px;
+        padding: $as-card-title-padding;
         text-transform: capitalize;
         order: 2;
         flex: 15;
+        color: $as-card-header-color;
     }
     &__options {
         height: 65px;
@@ -55,7 +59,7 @@ $card-bg: rgb(98.4%, 98.4%, 98.4%);
         }
     }
     &__subtitle {
-        padding: 24px 16px 8px 16px;
+        padding: $as-card-subtitle-padding;
         margin-bottom: 12px !important;
         color: $gray;
     }
@@ -125,7 +129,7 @@ $card-bg: rgb(98.4%, 98.4%, 98.4%);
         background-size: cover;
         background-position: center;
         margin-top: -($avatar/2);
-        border: 3px solid $card-bg; 
+        border: 3px solid $as-card-bg; 
     }
     &__fabs {
         display: flex;

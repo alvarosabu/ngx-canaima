@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    $Navbar
+\*------------------------------------*/
+
+@import '../../../styles/_variables.scss';
+
+.navbar {
+  z-index: 1;
+  &--flex {
+    .container-fluid {
+      display: flex;
+      align-items: center;
+      min-height: $navbar-height;
+    }
+  }
+  &--open {
+    .navbar__center {
+      width: 30%;
+      transition: all .5s ease;
+    }
+    .navbar-brand {
+      margin-right: 200px;
+      transition: all .5s ease;
+    }
+    
+
+  }
+  &__center {
+    flex: 50;
+    text-align: center;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .5s ease;
+  }
+  &__brand, &__burger {
+    flex: 2;
+    z-index: 3;
+  }
+  &__title {
+    font-weight: 500;
+  }
+  &__subtitle {
+    font-size: 10px;
+  }
+  &__logo {
+    width: 30px;
+    height: 30px;
+  }
+  &__burger {
+    font-size: 24px;
+    min-width: 40px;
+  }
+  &__navitem {
+    a {
+      width: 100%;
+      padding: 10px;
+      display: block;
+      font-weight: 500;
+    }
+  }
+  &__left, &__right {
+    height: $navbar-height;
+    flex: 25;
+  }
+  &__right {
+
+    .right-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+    }
+  }
+  &__left{
+    .left-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+  
+}

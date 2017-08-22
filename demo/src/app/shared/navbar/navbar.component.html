@@ -1,0 +1,29 @@
+<nav class="navbar navbar--flex navbar--default shadow-{{shadow}} {{customClass}}">
+  <div class="container-fluid">
+     <div class="navbar__brand" (click)="brand?.callback()" *ngIf="brand">
+       <img  class="navbar__logo" *ngIf="brand?.logo" [src]="brand?.logo" alt="">
+        <span  class="navbar__logo">{{brand?.name}}</span>
+        <i class="mdi mdi-menu" *ngIf="!brand"></i>
+     </div>
+     <div class="nav navbar__left hidden-xs " #leftContent [ngStyle]="{'width': left + '%'}" >
+
+        <ng-content select=".left-content"></ng-content>
+  
+      </div>
+      <div class="nav navbar__center" #centerContent [ngStyle]="{'width': center + '%'}" >
+        <ng-content select=".center-content"></ng-content>
+      </div>
+      
+      <div class="nav navbar__right hidden-xs " #rightContent [ngStyle]="{'width': right + '%'}" >
+        <ng-content select=".right-content"></ng-content>
+      </div>
+      <div class="navbar__burger hidden-sm hidden-md hidden-lg" *ngIf="navlist" (click)="openCollapsable()">
+        <i class="mdi mdi-menu" ></i>
+      </div>
+  </div>
+  <div class="navbar__navlist hidden-sm hidden-md hidden-lg" *ngIf="navlist && collapsable" >
+    <div class="navbar__navitem" *ngFor="let nav of navlist">
+      <a routerLink="/{{nav.slugName}}" (click)="_toggleOpened()" routerLinkActive="active" title="{{nav.title}}">{{nav.title}}</a>
+    </div>
+  </div>
+</nav>

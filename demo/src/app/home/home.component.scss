@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    $Home
+\*------------------------------------*/
+
+@import '../../styles/_variables.scss';
+
+.header {
+    background: $brand-primary;
+    width: 100%;
+    height: 200px;
+}
+.container-negative {
+    margin-top: -10rem !important;
+}
+.multiselect-btn {
+    padding: 8px 16px;
+    box-shadow: inset 0 -1px 0 $gray-light;
+    font-size: 14px;
+    font-weight: 600;
+}
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    i {
+        font-size: 24px;
+    }
+}
+textarea {
+    padding: 16px 0;
+}
+.form-footer {
+    padding: 16px;
+    width: 100%;
+}
+.list-item {
+    align-items: center;
+}
+.list-item__thumb {
+    display: flex;
+    justify-content: center !important;
+    background: $brand-primary;
+    border-radius: 50%;
+    color: white;
+    width: 40px !important;
+    height: 40px !important;
+}
