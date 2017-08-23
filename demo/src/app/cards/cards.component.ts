@@ -31,8 +31,8 @@ export class CardsComponent implements OnInit {
             new Action('Action 2')
         ],
         specialActions: [
-            new Action('Action 1', null, null, null, 'btn-primary'),
-            new Action('Action 2', null, null, null, 'btn-primary'),
+            new Action('Action 1', null, null, null, false, 'btn-primary'),
+            new Action('Action 2', null, null, null, false, 'btn-primary'),
         ],
         optionsLeft: [
             new Action(null, () => {
@@ -59,7 +59,7 @@ export class CardsComponent implements OnInit {
         `portland kickstarter`,
         fab: new Action(null, () => {
             console.log('Fab Action');
-        }, 'plus', null, 'btn-primary', 'mdi', 'md'),
+        }, 'plus', null, false, 'btn-primary', 'mdi', 'md'),
         optionsRight: [
             new ActionDropdown(null,
                 [
@@ -111,6 +111,16 @@ export class CardsComponent implements OnInit {
             justify: 'flex-end',
             alignment: 'center'
         }
+    };
+    public cardData = {
+        title: 'Data Card',
+        subtitle: 'Waaaa subtitle',
+        img: 'https://img06.deviantart.net/29f9/i/2014/018/0/e/hipster_wallpaper_by_bomberbb-d72q9no.png',
+        actions: [
+            new Action(null, () => {
+                console.log('Data action1');
+              }, 'heart-outline', 'heart', false),
+        ]
     };
     constructor() {}
 

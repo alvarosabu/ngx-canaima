@@ -1,0 +1,21 @@
+
+$breakpoints: (
+	"alpha"				:	"(min-width: 80.5em)",
+	"beta"				:	"(min-width: 1440px)",
+	"reverse-beta"		:	"(max-width: 1440px)",
+	"gamma"				:	"(min-width: 800px)",
+	"reverse-gamma"		:	"(max-width: 800px)",
+	"epsilon"			:	"(min-width: 720px)",
+	"reverse-epsilon"	:	"(max-width: 720px)",
+    "1x"                :   "(-webkit-device-pixel-ratio: 1)",
+    "2x"                :   "(-webkit-device-pixel-ratio: 2)",
+    "3x"                :   "(-webkit-device-pixel-ratio: 3)"
+) !default;
+
+@mixin breakpoint($point) {
+	$query: map-get($breakpoints, $point);
+
+	@media #{$query} {
+		@content;
+	}
+}

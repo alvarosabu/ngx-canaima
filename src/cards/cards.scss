@@ -2,6 +2,7 @@
     Cards
 \*------------------------------------*/
 @import '../_variables.scss';
+@import '../_mixins.scss';
 $avatar: 150px;
 .card {
     background: $as-card-bg;
@@ -124,7 +125,11 @@ $avatar: 150px;
         }
     }
     &__thumb {
-        padding: 16px 8px 16px 16px;
+        background: $as-card-data-thumb-bg;
+        color: $as-card-data-thumb-color;
+        border-right: $as-card-data-thumb-border-right;
+        border-color: $as-card-data-thumb-border-color;
+        padding: $as-card-data-padding;
         min-width: 69px;
         display: flex;
         justify-content: center;
@@ -170,7 +175,7 @@ $avatar: 150px;
     &--bg {
         position: relative;
         height: $as-card-bg-height;
-        background-size: 102%;
+        background-size: cover;
         background-position: center; 
         transition: all .5s ease;
         &:hover {
@@ -234,25 +239,44 @@ $avatar: 150px;
         }  
     }
     &--left, &--right {
+
         display: flex;
         .card--image__header, .card__flex {
-            flex: 1
+            flex: 1;
         }
+        @include breakpoint('gamma') {
+            .card--image__img {
+                height: 100%;
+            }
+        }
+        
+
     }
     &--left {
-        flex-direction: row;
+        .card--image__img {
+            height: as-card-image-height / 2;
+        }
+        flex-direction: column;
         .card__fabs {
             position: absolute;
-            bottom: -2rem;
-            left: -3rem;
+            right: 3rem;
+        }
+        @include breakpoint('gamma') {
+            flex-direction: row;
+            .card__fabs {
+                bottom: -2rem;
+                left: -3rem;
+            }
         }
     }
     &--right {
-        flex-direction: row-reverse;
-        .card__fabs {
-            position: absolute;
-            bottom: -2rem;
-            right: -3rem;
+        @include breakpoint('gamma') {
+            flex-direction: row-reverse;
+            .card__fabs {
+                position: absolute;
+                bottom: -2rem;
+                right: -3rem;
+            }
         }
     }
     &--top, &--right, &--profile, &--bg {
@@ -278,6 +302,9 @@ $avatar: 150px;
             background-size: cover;
             background-position: center;
             width: 100%;
+            @include breakpoint('reverse-gamma') {
+                height: $as-card-image-height / 2;
+            }
         }
     }
     &--profile {

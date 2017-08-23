@@ -11,6 +11,7 @@
 </as-navbar>
 <div class="container-fluid wrap has-navbar"
 fxLayout="row"
+fxFlexAlign="start start"
 fxLayoutWrap>
     <div
     class="box"
@@ -94,5 +95,17 @@ fxLayoutWrap>
         [footer]="cardBg.footer"
         [shadow]="1">
         </as-card-bg>
+    </div>
+    <div class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-data
+        [img]="cardData.img"
+        [title]="cardData.title"
+        [subtitle]="cardData.subtitle"
+        [actions]="cardData.actions"
+        [shadow]=1
+        ></as-card-data>
     </div>
 </div>

@@ -1,11 +1,10 @@
-
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
 import { CardImageComponent } from './card-image/card-image.component';
 import { CardBgComponent } from './card-bg/card-bg.component';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { CardDataComponent } from './card-data/card-data.component';
 
 @NgModule({
   imports: [
@@ -16,12 +15,14 @@ import { BsDropdownModule } from 'ngx-bootstrap';
     CommonModule,
     CardComponent,
     CardImageComponent,
-    CardBgComponent
+    CardBgComponent,
+    CardDataComponent
   ],
   declarations: [
     CardComponent,
     CardImageComponent,
-    CardBgComponent
+    CardBgComponent,
+    CardDataComponent
   ],
   providers: []
 })
