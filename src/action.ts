@@ -3,6 +3,7 @@ export class Action {
     public callback: any;
     public icon: string;
     public iconActive: string;
+    public value: boolean;
     public size: string;
     public prefix: string;
     public customClass: string;
@@ -13,6 +14,7 @@ export class Action {
         },
         icon = null,
         iconActive= null,
+        value= false,
         customClass = 'btn-link',
         prefix = 'mdi',
         size = 'md'
@@ -24,5 +26,6 @@ export class Action {
         this.customClass = customClass;
         this.callback = callback;
         this.size = size;
+        this.value = value;
     }
 }
