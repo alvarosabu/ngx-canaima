@@ -79,5 +79,20 @@ fxLayoutWrap>
 		[shadow]="1"
         [msg]="cardImage.msg">
 		</as-card-image>
-	</div>
+    </div>
+    <div class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-bg 
+        [title]="cardBg.title"
+        [subtitle]="cardBg.subtitle"
+        [bg]="cardBg.bg"
+        [optionsLeft]="cardBg.optionsLeft"
+        [optionsRight]="cardBg.optionsRight"
+        [actions]="cardBg.actions"
+        [footer]="cardBg.footer"
+        [shadow]="1">
+        </as-card-bg>
+    </div>
 </div>

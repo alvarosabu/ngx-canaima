@@ -84,6 +84,34 @@ export class CardsComponent implements OnInit {
             alignment: 'center'
         }
     };
+    public cardBg = {
+        bg: 'https://s-media-cache-ak0.pinimg.com/originals/1d/77/98/1d779888d2894348e9577fe3329d682b.jpg',
+        title: 'Card Background',
+        subtitle: 'Waaaa subtitle',
+        optionsRight: [
+            new ActionDropdown(null,
+                [
+                    new Action('Action 1'),
+                    new Action('Action 2')
+                ]),
+            new Action(null, () => {
+                console.log('Filter');
+            }, 'filter')
+        ],
+        optionsLeft: [
+            new Action(null, () => {
+                console.log('Back');
+            }, 'chevron-left')
+        ],
+        actions: [
+            new Action('Action 1'),
+            new Action('Action 2'),
+        ],
+        footer: {
+            justify: 'flex-end',
+            alignment: 'center'
+        }
+    };
     constructor() {}
 
     public ngOnInit() {}

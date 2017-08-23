@@ -30,6 +30,9 @@ $as-card-header-border-bottom: none !default;
 $as-card-header-border-color: transparent !default;
 $as-card-header-padding: 0 !default;
 
+$as-card-options-color: $gray-dark;
+$as-card-options-color-inverse: $white;
+
 $as-card-title-padding: 24px 16px 12px 16px !default;
 $as-card-subtitle-padding: 24px 16px 8px 16px !default;
 
@@ -45,3 +48,6 @@ $as-card-footer-padding: 8px !default;
 
 
 $as-card-image-height: 300px !default;
+
+$as-card-bg-height: 300px !default;
+$as-card-bg-actions-color: $white !default;

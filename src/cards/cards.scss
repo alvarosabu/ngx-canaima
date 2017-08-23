@@ -168,8 +168,9 @@ $avatar: 150px;
         }
     }
     &--bg {
-        height: 300px;
-        background-size: 100%;
+        position: relative;
+        height: $as-card-bg-height;
+        background-size: 102%;
         background-position: center; 
         transition: all .5s ease;
         &:hover {
@@ -187,8 +188,22 @@ $avatar: 150px;
                 padding: 0.5rem !important;
             }
         }
+        .card__title {
+            order: 1;
+        }
+        .card__subtitle {
+            order: 2;
+        }
         .card__title, .card__subtitle {
             flex: none;
+        }
+        .card__footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            .btn-link {
+                color: $as-card-bg-actions-color !important;
+            };
         }
     }
     &--top,  &--bottom {
@@ -240,18 +255,18 @@ $avatar: 150px;
             right: -3rem;
         }
     }
-    &--top, &--right {
-        .card--image__options {
+    &--top, &--right, &--profile, &--bg {
+        .card__options {
             .btn > i {
-                color: $white;
+                color: $as-card-options-color-inverse;
                 font-size: 24px;
             }
         }
     }
     &--bottom, &--left {
-        .card--image__options {
+        .card__options {
             .btn > i {
-                color: $gray-dark;
+                color: $as-card-options-color;
                 font-size: 24px;
             }
         }
@@ -264,23 +279,8 @@ $avatar: 150px;
             background-position: center;
             width: 100%;
         }
-        &__options {
-            position: absolute;
-            top: 1rem;
-            right: .5rem;
-            display: flex;
-            .btn {
-                padding: 3px !important; 
-            }
-            &--left {
-                left: .5rem;
-            }
-            &--right {
-                right: .5rem;
-            }
-        }
     }
-     &--profile {
+    &--profile {
         .card__header, .card__subheader {
             position: relative;
         }
@@ -290,17 +290,18 @@ $avatar: 150px;
             background-position: center;
             width: 100%;
         }
-         &__options {
+        
+    }
+    &--image, &--profile, &--bg {
+        .card__options {
             position: absolute;
             right: .5rem;
             display: flex;
+            z-index: 2;
             .btn {
-                border-radius: 50px !important;
-                overflow: hidden;
                 padding: 3px !important; 
             }
             .btn > i {
-                color: $white;
                 font-size: 24px;
             }
             &--left {

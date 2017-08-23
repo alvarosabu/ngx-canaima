@@ -1,8 +1,4 @@
-<div class="card 
-card--image
-card--{{orientation}}
-shadow-{{shadow}} 
-{{customClass}}" >
+<div class="card card--bg {{customClass}} shadow-{{shadow}}"  [ngStyle]="{'background-image': bg && 'url(' + bg + ')'}" >
     <div class="card__options card__options--left"
     *ngIf="optionsLeft?.length > 0">
         <div class="card__option" 
@@ -37,36 +33,19 @@ shadow-{{shadow}}
             </ul>
         </div>
     </div>
-    <div class="card__header card--image__header">
-        <div class="card--image__img" 
-        [ngStyle]="{'background-image': img && 'url(' + img + ')'}">
-
-        </div>
-        
+    <div class="card__body" >     
+        <h4 class="card__title">{{title}}</h4>
+        <h6 class="card__subtitle">{{subtitle}}</h6>
     </div>
-    <div class="card__flex">
-        <div class="card__body">
-            <div class="card__fabs">
-                <div class="btn btn-fab {{fab.customClass}} btn-fab-{{fab.size}}" *ngIf="fab" (click)="fab.callback()">
-                    <i class="{{fab.prefix}} {{fab.prefix}}-{{fab.icon}}"></i>
-                </div>
-            </div>
-            <h4 class="card__title">{{title}}</h4>
-            <h6 class="card__subtitle">{{subtitle}}</h6>
-            <p class="card__msg">
-                {{msg}}
-            </p>
-        </div>
-        <div class="card__footer" 
-        *ngIf="actions">
-            <div class="card__actions" [ngStyle]="{'justify-content': footer.justify}">
-                <button class="btn {{action?.customClass}} card__action"  
-                *ngFor="let action of actions" 
-                [disabled]="action.disabled" 
-                (click)="action.callback()">
-                    {{action.label}}
-                </button>
-            </div>
+    <div class="card__footer" 
+    *ngIf="actions">
+        <div class="card__actions" [ngStyle]="{'justify-content': footer.justify}">
+            <button class="btn {{action?.customClass}} card__action"  
+            *ngFor="let action of actions" 
+            [disabled]="action.disabled" 
+            (click)="action.callback()">
+                {{action.label}}
+            </button>
         </div>
     </div>
 </div>
