@@ -343,8 +343,8 @@ $avatar: 150px;
         display: flex;
         flex-direction: row;
         &__img {
-            width: 45px;
-            height: 45px;
+            width: $as-card-data-thumb-size;
+            height: $as-card-data-thumb-size;
             background-size: cover;
             background-position: center;
         }
@@ -354,7 +354,7 @@ $avatar: 150px;
         }
         &__subtitle {
             font-size: 1.4rem;
-            color: $gray;
+            color: $as-card-color;
         }
         &__actions {
             display: flex;
