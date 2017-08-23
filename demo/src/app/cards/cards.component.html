@@ -1,0 +1,83 @@
+<as-navbar 
+[shadow]=1 
+[customClass]="'navbar--primary navbar--subheader'" 
+[brand]="navBar.brand" 
+[fixed]=true>
+    <div class="left-content"></div>
+    <div class="center-content">
+        <div class="navbar__title">Ngx-Canaima</div>
+    </div>
+    <div class="right-content"></div>
+</as-navbar>
+<div class="container-fluid wrap has-navbar"
+fxLayout="row"
+fxLayoutWrap>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+		<as-card 
+		[title]="cardSimple.title"
+		[subtitle]="cardSimple.subtitle"
+        [shadow]="1"
+        [actions]="cardSimple.actions"
+        [msg]="cardSimple.msg">
+        <div class="card__content">
+           
+        </div>
+		</as-card>
+	</div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+		<as-card 
+		[title]="cardSimple.title + ' with stuff'"
+        [shadow]="1"
+        [optionsLeft]="cardSimple.optionsLeft"
+		[optionsRight]="cardSimple.optionsRight"
+		[actions]="cardSimple.specialActions"
+		[msg]="cardSimple.msg">
+		</as-card>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-image
+        [img]="cardImage.img"
+        [title]="cardImage.title"
+        [orientation]="'top'"
+        [subtitle]="cardImage.subtitle"
+        [fab]="cardImage.fab"
+        [optionsLeft]="cardImage.optionsLeft"
+        [optionsRight]="cardImage.optionsRight"
+        [actions]="cardImage.actions"
+        [footer]="cardImage.footer"
+		[shadow]="1"
+        [msg]="cardImage.msg"
+        >
+		</as-card-image>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-image
+        [img]="'https://upload.wikimedia.org/wikipedia/en/f/fa/Linkin_Park%2C_The_Hunting_Party%2C_album_art_final.jpg'"
+        [title]="cardImage.title"
+        [orientation]="'left'"
+        [subtitle]="cardImage.subtitle"
+        [fab]="cardImage.fab"
+        [actions]="cardImage.actions"
+        [optionsRight]="cardImage.optionsRight"
+        [footer]="cardImage.footer"
+		[shadow]="1"
+        [msg]="cardImage.msg">
+		</as-card-image>
+	</div>
+</div>

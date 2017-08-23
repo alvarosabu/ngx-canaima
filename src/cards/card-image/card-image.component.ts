@@ -1,20 +1,23 @@
 import {
     Component,
-    Input,
+    Input
 } from '@angular/core';
 import { Action } from '../../action';
 @Component({
-    selector: 'as-card',
-    templateUrl: 'card.component.html'
+    selector: 'as-card-image',
+    templateUrl: 'card-image.component.html'
 })
-export class CardComponent {
+export class CardImageComponent {
+    @Input('img') public img: string;
     @Input('title') public title: string;
+    @Input('orientation') public orientation;
     @Input('subtitle') public subtitle: string;
     @Input('customClass') public customClass: string;
+    @Input('footer') public footer: any;
     @Input('msg') public msg: string;
+    @Input('fab') public fab: Action;
     @Input('optionsLeft') public optionsLeft: Action[];
-    @Input('optionsRight') public optionsRight: any[];
-    @Input('actions') public actions: any[];
+    @Input('optionsRight') public optionsRight: any;
     @Input('shadow') public shadow: string;
-
+    @Input('actions') public actions: Action[];
 }

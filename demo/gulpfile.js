@@ -55,33 +55,33 @@ gulp.task('ng2Module', function() {
     .pipe(plugins.plumber())
     .pipe(plugins.template({name: plugins.util.env.name}))
     .pipe(plugins.rename({ basename: plugins.util.env.name, extname: '.component.html'}))
-    .pipe(gulp.dest('src/app/'+ plugins.util.env.name + '/'))
+    .pipe(gulp.dest('demo/src/app/'+ plugins.util.env.name + '/'))
      //SCSS
     
     .pipe(plugins.addSrc.append(paths.gulp.templates + 'component.tpl.scss'), { passthrough: true })
     .pipe(plugins.template({name: capitalize(plugins.util.env.name)}))
     .pipe(plugins.rename({ basename: plugins.util.env.name, extname: '.component.scss'}))
-    .pipe(gulp.dest('src/app/'+ plugins.util.env.name + '/'))
+    .pipe(gulp.dest('demo/src/app/'+ plugins.util.env.name + '/'))
 
     //Component
     
     .pipe(plugins.addSrc.append(paths.gulp.templates + 'component.tpl.ts'), { passthrough: true })
     .pipe(plugins.template({name: plugins.util.env.name, capitalname: capitalize(plugins.util.env.name)}))
     .pipe(plugins.rename({ basename: plugins.util.env.name, extname: '.component.ts'}))
-    .pipe(gulp.dest('src/app/'+ plugins.util.env.name + '/'))
+    .pipe(gulp.dest('demo/src/app/'+ plugins.util.env.name + '/'))
 
     //Module
     .pipe(plugins.addSrc.append(paths.gulp.templates + 'module.tpl.ts'), { passthrough: true })
     .pipe(plugins.template({name: plugins.util.env.name, capitalname: capitalize(plugins.util.env.name)}))
     .pipe(plugins.rename({ basename: plugins.util.env.name, extname: '.module.ts'}))
-    .pipe(gulp.dest('src/app/'+ plugins.util.env.name + '/'))
+    .pipe(gulp.dest('demo/src/app/'+ plugins.util.env.name + '/'))
    
     //Routes
     
     .pipe(plugins.addSrc.append(paths.gulp.templates + 'routes.tpl.ts'), { passthrough: true })
     .pipe(plugins.template({name: plugins.util.env.name, capitalname: capitalize(plugins.util.env.name)}))
     .pipe(plugins.rename({ basename: plugins.util.env.name, extname: '.routes.ts'}))
-    .pipe(gulp.dest('src/app/'+ plugins.util.env.name + '/'))
+    .pipe(gulp.dest('demo/src/app/'+ plugins.util.env.name + '/'))
 
 });
 

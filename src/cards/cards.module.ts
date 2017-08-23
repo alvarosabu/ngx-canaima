@@ -1,17 +1,23 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
+import { CardImageComponent } from './card-image/card-image.component';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    BsDropdownModule
   ],
   exports: [
     CommonModule,
-    CardComponent
+    CardComponent,
+    CardImageComponent
   ],
   declarations: [
-    CardComponent
+    CardComponent,
+    CardImageComponent
   ],
   providers: []
 })
