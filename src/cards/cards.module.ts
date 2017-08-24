@@ -7,6 +7,7 @@ import { CardBgComponent } from './card-bg/card-bg.component';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { CardDataComponent } from './card-data/card-data.component';
 import { CardProfileComponent } from './card-profile/card-profile.component';
+import { CardIllustrationComponent } from './card-illustration/card-illustration.component';
 
 @NgModule({
   imports: [
@@ -19,14 +20,16 @@ import { CardProfileComponent } from './card-profile/card-profile.component';
     CardImageComponent,
     CardBgComponent,
     CardDataComponent,
-    CardProfileComponent
+    CardProfileComponent,
+    CardIllustrationComponent
   ],
   declarations: [
     CardComponent,
     CardImageComponent,
     CardBgComponent,
     CardDataComponent,
-    CardProfileComponent
+    CardProfileComponent,
+    CardIllustrationComponent
   ],
   providers: []
 })
