@@ -8,11 +8,9 @@
 ___
 
 
-# AWS Poly Notes Webapp 
+# NGX - Canaima demo page
 
-![Poly-notes.png](https://s3.amazonaws.com/as-poly-notes/Poly-notes.png)
-
-> An Text-to-Speech App Solution with Angular and AWS that Post text entries and convert them to Speech with [Amazon Poly](https://aws.amazon.com/es/polly/) and save them in S3 Buckets
+> A ngx - canaima demo repo
 
 
 
