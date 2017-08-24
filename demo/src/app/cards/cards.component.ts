@@ -18,7 +18,7 @@ import { ActionDropdown } from '../../../../src/action-dropdown';
 export class CardsComponent implements OnInit {
     public navBar: any = {
         brand: {
-            logo: '/assets/img/logo-white.png'
+            logo: '/assets/img/ngx-canaima.png'
         }
     };
     public cardSimple = {

@@ -40,6 +40,9 @@
   }
   &__title {
     font-weight: 500;
+    .badge {
+      background-color: darken($brand-primary, 5%);
+    }
   }
   &__subtitle {
     font-size: 10px;

@@ -240,7 +240,9 @@
     &--left, &--right {
 
         display: flex;
-        .card--image__header, .card__flex {
+        .card--image__header,
+        .card--illustration__header,
+         .card__flex {
             flex: 1;
         }
         @include breakpoint('gamma') {
@@ -278,7 +280,10 @@
             }
         }
     }
-    &--top, &--right, &--profile, &--bg {
+    &--image &--top,
+    &--image &--right, 
+    &--profile, 
+    &--bg {
         .card__options {
             .btn > i {
                 color: $as-card-options-color-inverse;
@@ -286,7 +291,8 @@
             }
         }
     }
-    &--bottom, &--left {
+    &--image &--bottom, 
+    &--image &--left {
         .card__options {
             .btn > i {
                 color: $as-card-options-color;
@@ -306,6 +312,27 @@
             }
         }
     }
+    &--illustration {
+        position: relative;
+        &__header {
+            background:  $as-card-illustration-header-bg;
+            height: $as-card-illustration-height;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            @include breakpoint('reverse-gamma') {
+                height: $as-card-illustration-height / 1.2;
+            }
+        }
+        &__img {
+            width: $as-card-illustration-size;
+            height: $as-card-illustration-size;
+            border-radius: $as-card-illustration-border-radius;
+            background-size: cover;
+            background-position: center;
+        }
+    }
     &--profile {
         .card__header, .card__subheader {
             position: relative;
@@ -323,7 +350,7 @@
         }
         
     }
-    &--image, &--profile, &--bg {
+    &--image, &--profile, &--bg, &--illustration {
         .card__options {
             position: absolute;
             right: .5rem;
