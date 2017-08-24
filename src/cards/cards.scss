@@ -3,7 +3,6 @@
 \*------------------------------------*/
 @import '../_variables.scss';
 @import '../_mixins.scss';
-$avatar: 150px;
 .card {
     background: $as-card-bg;
     border-radius: $as-card-border-radius;
@@ -43,11 +42,11 @@ $avatar: 150px;
         }
         i {
             color: $as-card-header-color;
-            font-size: 18px;
+            font-size: $as-card-options-font-size;
         }
         
         .mdi-chevron-left, .mdi-dots-vertical {
-            font-size: 24px;
+            font-size: $as-card-options-font-size;
         }
         &--left {
             order: 1;
@@ -148,12 +147,12 @@ $avatar: 150px;
     }
      &__avatar {
         background-color: $white;
-        width: $avatar;
-        height: $avatar;
+        width: $as-card-profile-avatar-size;
+        height: $as-card-profile-avatar-size;
         background-size: cover;
         background-position: center;
-        margin-top: -($avatar/2);
-        border: 3px solid $as-card-bg; 
+        margin-top: -($as-card-profile-avatar-size/2);
+        border: $as-card-profile-avatar-border $as-card-profile-avatar-border-color; 
     }
     &__fabs {
         display: flex;
@@ -312,10 +311,15 @@ $avatar: 150px;
             position: relative;
         }
         &__img {
-            height: 200px;
+            height: $as-card-profile-bg-height;
             background-size: cover;
             background-position: center;
             width: 100%;
+            border-bottom: $as-card-profile-bg-border $as-card-profile-bg-border-color;
+
+        }
+        .card__actions {
+            margin-top: 2rem;
         }
         
     }
@@ -329,7 +333,7 @@ $avatar: 150px;
                 padding: 3px !important; 
             }
             .btn > i {
-                font-size: 24px;
+                font-size: $as-card-options-font-size;
             }
             &--left {
                 left: .5rem;
@@ -363,7 +367,7 @@ $avatar: 150px;
             flex: 1;
             padding: 16px;
             i {
-                font-size: 24px;
+                font-size: $as-card-actions-font-size;
                 margin-left: 1rem;
                 cursor: pointer;
                 color: $as-card-data-actions-color !important;

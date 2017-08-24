@@ -26,6 +26,8 @@ $as-card-header-padding: 0 !default;
 
 $as-card-options-color: $gray-dark;
 $as-card-options-color-inverse: $white;
+$as-card-options-font-size: 18px;
+$as-card-actions-font-size: 24px;
 
 $as-card-title-padding: 24px 16px 12px 16px !default;
 $as-card-subtitle-padding: 24px 16px 8px 16px !default;
@@ -53,3 +55,10 @@ $as-card-data-padding: 16px 8px 16px 16px;
 $as-card-data-thumb-border-right: none !default;
 $as-card-data-thumb-border-color: transparent !default;
 $as-card-data-actions-color: $gray-dark !default;
+
+$as-card-profile-bg-height: 200px !default;
+$as-card-profile-bg-border: none !default;
+$as-card-profile-bg-border-color: transparent !default;
+$as-card-profile-avatar-size: 150px !default;
+$as-card-profile-avatar-border: 3px solid !default;
+$as-card-profile-avatar-border-color: $as-card-bg !default;

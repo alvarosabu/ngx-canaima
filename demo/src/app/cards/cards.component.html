@@ -79,7 +79,16 @@ fxLayoutWrap>
         [footer]="cardImage.footer"
 		[shadow]="1"
         [msg]="cardImage.msg">
-		</as-card-image>
+        </as-card-image>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-data
+        [img]="cardData.img"
+        [title]="cardData.title"
+        [subtitle]="cardData.subtitle"
+        [actions]="cardData.actions"
+        [shadow]=1
+        ></as-card-data>
     </div>
     <div class="box"
     fxFlexAlign="start"
@@ -95,17 +104,51 @@ fxLayoutWrap>
         [footer]="cardBg.footer"
         [shadow]="1">
         </as-card-bg>
+        
     </div>
+    
     <div class="box"
     fxFlexAlign="start"
     fxFlex="50"
     fxFlex.lt-md="100">
-        <as-card-data
-        [img]="cardData.img"
-        [title]="cardData.title"
-        [subtitle]="cardData.subtitle"
-        [actions]="cardData.actions"
-        [shadow]=1
-        ></as-card-data>
+            <as-card-profile
+            [bg]="cardProfile.bg"
+            [avatar]="cardProfile.avatar"
+            [title]="cardProfile.title"
+            [subtitle]="cardProfile.subtitle"
+            [msg]="cardProfile.msg"
+            [optionsLeft]="cardSimple.optionsLeft"
+            [optionsRight]="cardSimple.optionsRight"
+            [fab] ="cardProfile.fab"
+            [stats] ="cardProfile.stats"
+            [actions]="cardBg.actions"
+            [footer]="cardBg.footer"
+            [shadow]=0
+            >
+             <div class="card__content">
+                <div class="card__list">
+                    <div>
+                        <i class="mdi mdi-twitter"></i>
+                        <a target="_blank" href="http://twitter.com/@shevastation">@shevastation</a>     
+                    </div>
+                    <div>
+                        <i class="mdi mdi-instagram"></i>
+                        <a target="_blank" href="https://www.instagram.com/alvarosaburido">alvarosaburido</a>      
+                    </div>
+                    <div>
+                        <i class="mdi mdi-email"></i>
+                        <a target="_blank" href="mailto:alvaro.saburido@gmail.com">alvaro.saburido@gmail.com</a>      
+                    </div>
+                    <div>
+                        <i class="mdi mdi-phone"></i>
+                        <a target="_blank" href="tel:+34-655-17-23-86">+34-655-17-23-86</a>        
+                    </div>
+                    <div>
+                        <i class="mdi mdi-linkedin"></i>
+                        <a target="_blank" href="https://www.linkedin.com/in/alvarosaburido/">alvarosaburido</a>        
+                    </div>
+                </div>
+            </div>
+      </as-card-profile>
     </div>
 </div>
