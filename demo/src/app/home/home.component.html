@@ -1,31 +1,41 @@
 <as-navbar [shadow]=1 [customClass]="'navbar--primary navbar--subheader'" [brand]="navBar.brand" [fixed]=true>
     <div class="left-content"></div>
     <div class="center-content">
-        <div class="navbar__title">Ngx-Canaima</div>
+        <div class="navbar__title">
+			Ngx-Canaima <span class="badge">v0.2.0</span>
+		</div>
     </div>
     <div class="right-content"></div>
 </as-navbar>
-<header class="header"></header>
+<header class="header">
+
+</header>
 <div class="container-fluid wrap has-navbar container-negative"
 fxLayout="row"
 fxLayoutWrap="wrap"
 fxLayoutAlign="start">
 	<div class="box"
-	fxFlex="25"
-	fxFlex.lt-md="50">
-		<as-card 
-		[title]="'Awesome Title'"
-		[shadow]="1"
-		[msg]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut accusamus non ducimus quisquam voluptatum dolore soluta, optio nobis cupiditate consequuntur ipsum eaque, sapiente in repudiandae officia, qui fuga fugit?'">
-		</as-card>
-	</div>
-	<div class="box"
-	fxFlex="25"
-	fxFlex.lt-md="50">
-		<as-card 
-		[title]="'Awesome Title'"
-		[shadow]="1"
-		[msg]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut accusamus non ducimus quisquam voluptatum dolore soluta, optio nobis cupiditate consequuntur ipsum eaque, sapiente in repudiandae officia, qui fuga fugit?'">
-		</as-card>
+	fxFlex="33"
+	fxFlex.lt-md="100"
+	*ngFor="let comp of components"
+	[ngClass]="{ 'card--commingsoon' : comp.comming }">
+		<as-card-illustration
+		[customClass]="'card--component' + !comp.comming"
+		[img]="comp.illustration"
+		[title]="comp.label"
+		[shadow]="1">
+		<div class="card__content">
+			<p>{{comp.msg}}</p>
+			<button *ngIf="!comp.comming"
+			[routerLink]="['/'+ comp.slug +'']"
+			class="btn btn-block btn-primary">
+				See More
+			</button>
+			<button *ngIf="comp.comming"
+			class="btn btn-block btn-link" disabled>
+				Cooming Soon...
+			</button>
+		</div>
+		</as-card-illustration>
 	</div>
 </div>

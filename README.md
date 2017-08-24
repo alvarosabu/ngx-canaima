@@ -1,4 +1,4 @@
-![banner](https://s3-eu-west-1.amazonaws.com/asaburido/ngx-canaima-github-banner2.png)
+![banner](https://s3-eu-west-1.amazonaws.com/asaburido/ngx-canaima-github-banner-new.png)
 
 # ngx-canaima [![npm version](https://badge.fury.io/js/ngx-canaima.svg)](http://badge.fury.io/js/ngx-canaima) [![npm downloads](https://img.shields.io/npm/dm/ngx-canaima.svg)](https://npmjs.org/ngx-canaima)
 

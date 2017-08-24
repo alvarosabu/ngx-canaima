@@ -1,48 +1,5 @@
-<ng-sidebar-container>
-  <!-- A sidebar -->
-      <!-- 
-  <div [hidden]="isLogin()">
-    <ng-sidebar [(opened)]="_opened" [mode]="_mode" [keyClose]="_keyClose" [position]="_position" [dockedSize]="'50px'" [closeOnClickOutside]="_closeOnClickOutside"
-      [showBackdrop]="_showBackdrop" [animate]="_animate" [trapFocus]="_trapFocus" [autoFocus]="_autoFocus" [sidebarClass]="'sidebar'"
-      [ariaLabel]="'My sidebar'" (onOpenStart)="_onOpenStart()" (onOpened)="_onOpened()" (onCloseStart)="_onCloseStart()" (onClosed)="_onClosed()"
-      (onAnimationStart)="_onAnimationStart($event)" (onAnimationDone)="_onAnimationDone($event)">
-      <div class="sidebar__header">
-      </div>
-      <div class="sidebar__body">
-        <div class="sidebar__profile">
-          <div class="sidebar__avatar circle shadow-3" [ngStyle]="{'background-image': 'url(' + photo + ')'}">
+<div class="page-content">
+  <router-outlet></router-outlet>
+  <ng2-toasty [position]="'bottom-right'"></ng2-toasty>
+</div>
 
-          </div>
-          <div class="badge"> {{user?.name}} {{user?.lastname}}</div>
-        </div>
-        <div class="sidebar__nav">
-            <div *ngFor="let nav of navs">
-                <a *ngIf="!nav.sub" routerLink="/{{nav.slugName}}" (click)="_toggleOpened()" routerLinkActive="active" title="{{nav.title}}"><i class="mdi mdi-{{nav.icon}}"></i><span class="nav-title" >{{nav.title}}</span> <span class="sr-only">(current)</span></a>
-                <a *ngIf="nav.sub" (click)="openSubNav($event,nav)" title="{{nav.title}}"><i class="mdi mdi-{{nav.icon}}"></i><span class="nav-title" >{{nav.title}}</span> <span class="sr-only">(current)</span></a>
-                <div *ngIf="nav.open" class="sidebar__subnav">
-                    <div *ngFor="let subitem of nav.subitems" >
-                        <a routerLink="/{{subitem.slug}}" routerLinkActive="active" (click)="_toggleOpened()"><i class="mdi mdi-{{subitem.icon}}"></i>{{subitem.title}}</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <ul class="responsive-sidebar-nav visible-xs">
-         <div ng-repeat="nav in navList" ng-class="{'active': isActiveState('app.{{nav.slug}}'),}">
-                <a ui-sref="app.{{nav.slug}}" title="{{nav.title}}"><i class="mdi mdi-{{nav.icon}}"></i><span class="nav-title">{{nav.title}}</span> <span class="sr-only">(current)</span></a>
-            </li> 
-        </ul>
-        
-      </div>
-      <div class="sidebar__footer">
-        <div class="version">v0.1.0</div>
-      </div>
-    </ng-sidebar>
-
-
-  </div> 
-  -->
-  <div class="page-content">
-    <router-outlet></router-outlet>
-    <ng2-toasty [position]="'bottom-right'"></ng2-toasty>
-  </div>
-</ng-sidebar-container>

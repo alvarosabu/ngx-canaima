@@ -51,9 +51,13 @@ shadow-{{shadow}}
                     <i class="{{fab.prefix}} {{fab.prefix}}-{{fab.icon}}"></i>
                 </div>
             </div>
-            <h4 class="card__title">{{title}}</h4>
-            <h6 class="card__subtitle">{{subtitle}}</h6>
-            <p class="card__msg">
+            <h4 class="card__title" *ngIf="title">{{title}}</h4>
+            <h6 class="card__subtitle" *ngIf="subtitle">{{subtitle}}</h6>
+            <div #cardContent>
+                <ng-content selector=".card__content" ></ng-content>
+            </div>
+            <p class="card__msg" 
+            *ngIf="cardContent.children.length == 0">
                 {{msg}}
             </p>
         </div>
