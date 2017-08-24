@@ -1,11 +1,39 @@
-# ngx-canaima
+![banner](https://s3-eu-west-1.amazonaws.com/asaburido/ngx-canaima-github-banner2.png)
 
-## Installation
+# ngx-canaima [![npm version](https://badge.fury.io/js/ngx-canaima.svg)](http://badge.fury.io/js/ngx-canaima) [![npm downloads](https://img.shields.io/npm/dm/ngx-canaima.svg)](https://npmjs.org/ngx-canaima)
+
+Angular 4+ Awesome UI Components 
+
+[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/guide/styleguide)
+[![Build Status](https://travis-ci.org/valor-software/ngx-canaima.svg?branch=master)](https://travis-ci.org/valor-software/ngx-canaima)
+<!-- [![codecov](https://codecov.io/gh/valor-software/ngx-canaima/branch/development/graph/badge.svg)](https://codecov.io/gh/valor-software/ngx-canaima)
+[![Dependency Status](https://david-dm.org/valor-software/ngx-canaima.svg)](https://david-dm.org/valor-software/ngx-canaima) -->
+
+[![NPM](https://nodei.co/npm/ngx-canaima.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/ngx-canaima)
+[![NPM](https://nodei.co/npm-dl/ngx-canaima.png?height=3&months=6)](https://npmjs.org/ngx-canaima)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/valorkin.svg)](https://saucelabs.com/u/valorkin)
+
+## Table of contents
+1. [Getting Started](#getting-started)
+2. [Installation instructions](#installation-instructions)
+3. [Usage & Demo](#usage--demo)
+4. [API](#api)
+5. [Troubleshooting](#troubleshooting)
+6. [Contributing](#contribution)
+7. [License](#license)
+
+## Installation instructions
 
 To install this library, run:
 
 ```bash
 $ npm install ngx-canaima --save
+```
+You will need bootstrap styles (Bootstrap 3)
+
+```
+<!-- index.html -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 ```
 
 ## Consuming your library
@@ -25,7 +53,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from 'ngx-canaima';
+import { NgxCanaimaModule } from 'ngx-canaima';
 
 @NgModule({
   declarations: [
@@ -33,9 +61,7 @@ import { SampleModule } from 'ngx-canaima';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
+    NgxCanaimaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
