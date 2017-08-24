@@ -122,6 +122,32 @@ export class CardsComponent implements OnInit {
               }, 'heart-outline', 'heart', false),
         ]
     };
+    public cardProfile: any = {
+        bg: 'https://s.tmimgcdn.com/blog/wp-content/uploads/2016/04/1-9-2.jpg?x47994',
+        avatar: 'https://scontent-mad1-1.xx.fbcdn.net/v/t31.0-8/13923482_10154370620440350_5139544698328793073_o.jpg?oh=b51301b4ff6287ba6edc94493a936d65&oe=5A28AE0E',
+        title: 'Alvaro Saburido',
+        subtitle: 'Tech Leader Cross in Slashmobility',
+        msg: `Venmo banjo semiotics, scenester hexagon beard schlit` +
+      `shoreditch delectus organic shabby chic flannel coloring boo` +
+      `portland kickstarter`,
+        fab: new Action(null, () => {
+            console.log('Fab Action');
+        }, 'plus', null, false, 'btn-primary', 'mdi', 'md'),
+        stats: [
+            {
+                label: 'Posts',
+                value: 653
+            },
+            {
+                label: 'Followers',
+                value: 1250
+            },
+            {
+                label: 'Following',
+                value: 240
+            }
+        ]
+    };
     constructor() {}
 
     public ngOnInit() {}
