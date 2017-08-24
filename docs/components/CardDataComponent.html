@@ -70,7 +70,7 @@
                                     <a href="../components/CardComponent.html" >CardComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/CardDataComponent.html" >CardDataComponent</a>
+                                    <a href="../components/CardDataComponent.html"  data-type="entity-link" class="active" >CardDataComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CardImageComponent.html" >CardImageComponent</a>
@@ -79,7 +79,7 @@
                                     <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/SampleComponent.html"  data-type="entity-link" class="active" >SampleComponent</a>
+                                    <a href="../components/SampleComponent.html" >SampleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -216,7 +216,7 @@
                                            <a href="../components/CardComponent.html" >CardComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/CardDataComponent.html" >CardDataComponent</a>
+                                           <a href="../components/CardDataComponent.html"  data-type="entity-link" class="active" >CardDataComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CardImageComponent.html" >CardImageComponent</a>
@@ -225,7 +225,7 @@
                                            <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/SampleComponent.html"  data-type="entity-link" class="active" >SampleComponent</a>
+                                           <a href="../components/SampleComponent.html" >SampleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -314,7 +314,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>SampleComponent</li>
+  <li>CardDataComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -327,6 +327,9 @@
     </li>
 
     <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
         <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
     </li>
 </ul>
@@ -336,11 +339,17 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/sample.component.ts</code>
+    <code>src/cards/card-data/card-data.component.ts</code>
 </p>
 
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnInit-interface.html" target="_blank" >OnInit</a></code>
+    </p>
 
 
 <section>
@@ -361,64 +370,346 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>sample-component</code></td>
+                <td class="col-md-9"><code>as-card-data</code></td>
             </tr>
+
 
 
 
             <tr>
-                <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;h1&gt;Sample component&lt;/h1&gt;</code></pre></td>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>card-data.component.html</code></td>
             </tr>
-
 
 
         </tbody>
     </table>
 </section>
 
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <span class="modifier">Public</span> <a href="#hover">hover</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <span class="modifier">Public</span> <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actions">actions</a>
+                            </li>
+                            <li>
+                                <a href="#customClass">customClass</a>
+                            </li>
+                            <li>
+                                <a href="#img">img</a>
+                            </li>
+                            <li>
+                                <a href="#shadow">shadow</a>
+                            </li>
+                            <li>
+                                <a href="#subtitle">subtitle</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
 
     <section>
-        <h3 id="constructor">Constructor</h3>
+        <h3 id="inputs">Inputs</h3>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
-                        <td class="col-md-4">
-                            <code>constructor()</code>
+                        <td class="col-md-2">
+                            <a name="actions"></a>
+                            <code>actions</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>[]</code>
+
+                              </p>
                         </td>
                     </tr>
                             <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/sample.component.ts:7</a></div>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/cards/card-data/card-data.component.ts:15</a></div>
                                 </td>
                             </tr>
-    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="customClass"></a>
+                            <code>customClass</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/cards/card-data/card-data.component.ts:17</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="img"></a>
+                            <code>img</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/cards/card-data/card-data.component.ts:12</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="shadow"></a>
+                            <code>shadow</code>
+                        </td>
+                        <td class="col-md-10">
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/cards/card-data/card-data.component.ts:16</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="subtitle"></a>
+                            <code>subtitle</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/cards/card-data/card-data.component.ts:14</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="title"></a>
+                            <code>title</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/cards/card-data/card-data.component.ts:13</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
     </section>
 
 
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnInit"></a>
+                            <b><span class="modifier">Public</span> ngOnInit</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon method fa fa-play "></span>
+                            <code>ngOnInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/cards/card-data/card-data.component.ts:20</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
-
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="hover"></a>
+                            <b><span class="modifier">Public</span> hover</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <span class="modifier-icon fa fa-"></span><code>hover:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/cards/card-data/card-data.component.ts:18</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+    </section>
 </div>
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-
+        <pre class="line-numbers"><code class="language-typescript">import {
+    Component,
+    OnInit,
+    Input,
+} from &#x27;@angular/core&#x27;;
+import { Action } from &#x27;./../../action&#x27;;
 @Component({
-  selector: &#x27;sample-component&#x27;,
-  template: &#x60;&lt;h1&gt;Sample component&lt;/h1&gt;&#x60;
+    selector: &#x27;as-card-data&#x27;,
+    templateUrl: &#x27;card-data.component.html&#x27;
 })
-export class SampleComponent {
+export class CardDataComponent implements OnInit {
+    @Input(&#x27;img&#x27;) public img: string;
+    @Input(&#x27;title&#x27;) public title: string;
+    @Input(&#x27;subtitle&#x27;) public subtitle: string;
+    @Input(&#x27;actions&#x27;) public actions: Action[];
+    @Input(&#x27;shadow&#x27;) public shadow: [any];
+    @Input(&#x27;customClass&#x27;) public customClass: string;
+    public hover: boolean;
 
-  constructor() {
-  }
+    public ngOnInit() {
+        this.hover &#x3D; false;
+     }
 
-}
-</code></pre>
+}</code></pre>
     </div>
 
+    <div class="tab-pane fade" id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card card--data shadow-{{shadow}} {{customClass}}&quot;&gt;
+    &lt;div class&#x3D;&quot;card__thumb&quot; 
+        *ngIf&#x3D;&quot;img&quot;
+        (mouseover)&#x3D;&#x27;hover &#x3D; true&#x27;
+        (mouseleave)&#x3D;&#x27;hover &#x3D; false&#x27;
+        &gt;
+        &lt;div class&#x3D;&quot;card--data__img circle&quot;
+        [ngStyle]&#x3D;&quot;{&#x27;background-image&#x27;: img &amp;&amp; &#x27;url(&#x27; + img + &#x27;)&#x27;}&quot;
+        *ngIf&#x3D;&quot;!hover&quot;&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;checkbox&quot; *ngIf&#x3D;&quot;hover&quot;&gt;
+        &lt;label&gt;
+            &lt;input type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;&quot;&gt;
+            
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card__content&quot;&gt;
+       &lt;h5 class&#x3D;&quot;card--data__title&quot;&gt;{{title}}&lt;/h5&gt;
+       &lt;span class&#x3D;&quot;card--data__subtitle&quot;&gt;{{subtitle}}&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card--data__actions&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
+        &lt;i class&#x3D;&quot;{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}&quot; (click)&#x3D;&quot;action.callback(); action.value &#x3D; ! action.value&quot; *ngFor&#x3D;&quot;let action of actions&quot; &gt;&lt;/i&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
 
     <div class="tab-pane fade" id="tree">
         <div id="tree-container"></div>
@@ -443,10 +734,10 @@ export class SampleComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1>Sample component</h1></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card card--data shadow-{{shadow}} {{customClass}}">    <div class="card__thumb"         *ngIf="img"        (mouseover)=\'hover = true\'        (mouseleave)=\'hover = false\'        >        <div class="card--data__img circle"        [ngStyle]="{\'background-image\': img && \'url(\' + img + \')\'}"        *ngIf="!hover"></div>        <div class="checkbox" *ngIf="hover">        <label>            <input type="checkbox" value="">                    </label>    </div>    </div>    <div class="card__content">       <h5 class="card--data__title">{{title}}</h5>       <span class="card--data__subtitle">{{subtitle}}</span>    </div>    <div class="card--data__actions" *ngIf="actions">        <i class="{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}" (click)="action.callback(); action.value = ! action.value" *ngFor="let action of actions" ></i>    </div></div></div>'
     var COMPONENTS = [{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'SampleComponent', 'selector': 'sample-component'}];
     var DIRECTIVES = [{'name': 'SampleDirective', 'selector': '[sampleDirective]'}];
-    var ACTUAL_COMPONENT = {'name': 'SampleComponent'};
+    var ACTUAL_COMPONENT = {'name': 'CardDataComponent'};
 </script>
 <script src="../js/tree.js"></script>
 

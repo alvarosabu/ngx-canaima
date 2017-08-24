@@ -64,7 +64,7 @@
                                 id="xs-components-links"
                             >
                                 <li class="link">
-                                    <a href="../components/CardBgComponent.html" >CardBgComponent</a>
+                                    <a href="../components/CardBgComponent.html"  data-type="entity-link" class="active" >CardBgComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CardComponent.html" >CardComponent</a>
@@ -79,7 +79,7 @@
                                     <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/SampleComponent.html"  data-type="entity-link" class="active" >SampleComponent</a>
+                                    <a href="../components/SampleComponent.html" >SampleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -210,7 +210,7 @@
                                        id="components-links"
                    >
                                        <li class="link">
-                                           <a href="../components/CardBgComponent.html" >CardBgComponent</a>
+                                           <a href="../components/CardBgComponent.html"  data-type="entity-link" class="active" >CardBgComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CardComponent.html" >CardComponent</a>
@@ -225,7 +225,7 @@
                                            <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/SampleComponent.html"  data-type="entity-link" class="active" >SampleComponent</a>
+                                           <a href="../components/SampleComponent.html" >SampleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -314,7 +314,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>SampleComponent</li>
+  <li>CardBgComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -327,6 +327,9 @@
     </li>
 
     <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
         <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
     </li>
 </ul>
@@ -336,7 +339,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/sample.component.ts</code>
+    <code>src/cards/card-bg/card-bg.component.ts</code>
 </p>
 
 
@@ -361,42 +364,261 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>sample-component</code></td>
+                <td class="col-md-9"><code>as-card-bg</code></td>
             </tr>
+
 
 
 
             <tr>
-                <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;h1&gt;Sample component&lt;/h1&gt;</code></pre></td>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>card-bg.component.html</code></td>
             </tr>
-
 
 
         </tbody>
     </table>
 </section>
 
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actions">actions</a>
+                            </li>
+                            <li>
+                                <a href="#bg">bg</a>
+                            </li>
+                            <li>
+                                <a href="#customClass">customClass</a>
+                            </li>
+                            <li>
+                                <a href="#footer">footer</a>
+                            </li>
+                            <li>
+                                <a href="#optionsLeft">optionsLeft</a>
+                            </li>
+                            <li>
+                                <a href="#optionsRight">optionsRight</a>
+                            </li>
+                            <li>
+                                <a href="#shadow">shadow</a>
+                            </li>
+                            <li>
+                                <a href="#subtitle">subtitle</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
 
     <section>
-        <h3 id="constructor">Constructor</h3>
+        <h3 id="inputs">Inputs</h3>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
-                        <td class="col-md-4">
-                            <code>constructor()</code>
+                        <td class="col-md-2">
+                            <a name="actions"></a>
+                            <code>actions</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>[]</code>
+
+                              </p>
                         </td>
                     </tr>
                             <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/sample.component.ts:7</a></div>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:17</a></div>
                                 </td>
                             </tr>
-    
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="bg"></a>
+                            <code>bg</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:11</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="customClass"></a>
+                            <code>customClass</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:14</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="footer"></a>
+                            <code>footer</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:18</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="optionsLeft"></a>
+                            <code>optionsLeft</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>[]</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:15</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="optionsRight"></a>
+                            <code>optionsRight</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:16</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="shadow"></a>
+                            <code>shadow</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:19</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="subtitle"></a>
+                            <code>subtitle</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:13</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="title"></a>
+                            <code>title</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/cards/card-bg/card-bg.component.ts:12</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
     </section>
-
 
 
 
@@ -404,21 +626,82 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-
+        <pre class="line-numbers"><code class="language-typescript">import {
+    Component,
+    Input,
+} from &#x27;@angular/core&#x27;;
+import { Action } from &#x27;./../../action&#x27;;
 @Component({
-  selector: &#x27;sample-component&#x27;,
-  template: &#x60;&lt;h1&gt;Sample component&lt;/h1&gt;&#x60;
+    selector: &#x27;as-card-bg&#x27;,
+    templateUrl: &#x27;card-bg.component.html&#x27;
 })
-export class SampleComponent {
-
-  constructor() {
-  }
-
+export class CardBgComponent {
+    @Input(&#x27;bg&#x27;) public bg: string;
+    @Input(&#x27;title&#x27;) public title: string;
+    @Input(&#x27;subtitle&#x27;) public subtitle: string;
+    @Input(&#x27;customClass&#x27;) public customClass: string;
+    @Input(&#x27;optionsLeft&#x27;) public optionsLeft: Action[];
+    @Input(&#x27;optionsRight&#x27;) public optionsRight: any;
+    @Input(&#x27;actions&#x27;) public actions: Action[];
+    @Input(&#x27;footer&#x27;) public footer: any;
+    @Input(&#x27;shadow&#x27;) public shadow: string;
 }
 </code></pre>
     </div>
 
+    <div class="tab-pane fade" id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card card--bg {{customClass}} shadow-{{shadow}}&quot;  [ngStyle]&#x3D;&quot;{&#x27;background-image&#x27;: bg &amp;&amp; &#x27;url(&#x27; + bg + &#x27;)&#x27;}&quot; &gt;
+    &lt;div class&#x3D;&quot;card__options card__options--left&quot;
+    *ngIf&#x3D;&quot;optionsLeft?.length &gt; 0&quot;&gt;
+        &lt;div class&#x3D;&quot;card__option&quot; 
+        *ngFor&#x3D;&quot;let option of optionsLeft&quot;
+        (click)&#x3D;&quot;option.callback()&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-link&quot; 
+            (click)&#x3D;&quot;option.callback()&quot;&gt;
+                &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;card__options card__options--right&quot; 
+    *ngIf&#x3D;&quot;optionsRight?.length &gt; 0&quot;&gt;
+        &lt;div class&#x3D;&quot;card__option&quot; 
+        [hidden]&#x3D;&quot;option.dropdown !&#x3D;&#x3D; undefined&quot; 
+        *ngFor&#x3D;&quot;let option of optionsRight&quot;
+        &gt;
+            &lt;button class&#x3D;&quot;btn btn-link&quot; 
+            (click)&#x3D;&quot;option.callback()&quot;&gt;
+                &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card__option&quot; [hidden]&#x3D;&quot;option.dropdown &#x3D;&#x3D;&#x3D; undefined&quot; dropdown *ngFor&#x3D;&quot;let option of optionsRight&quot;&gt;
+            &lt;button dropdownToggle class&#x3D;&quot;btn btn-link dropdown-toggle&quot;&gt;
+                &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu dropdown-menu-right&quot; [hidden]&#x3D;&quot;option.dropdown !&#x3D;&#x3D; undefined&quot; role&#x3D;&quot;menu&quot;&gt;
+                &lt;li *ngFor&#x3D;&quot;let choice of option.dropdown&quot;&gt;
+                    &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;choice.callback()&quot;&gt;&lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{choice.icon}}&quot;&gt;&lt;/i&gt;{{choice.label}}&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card__body&quot; &gt;     
+        &lt;h4 class&#x3D;&quot;card__title&quot;&gt;{{title}}&lt;/h4&gt;
+        &lt;h6 class&#x3D;&quot;card__subtitle&quot;&gt;{{subtitle}}&lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card__footer&quot; 
+    *ngIf&#x3D;&quot;actions&quot;&gt;
+        &lt;div class&#x3D;&quot;card__actions&quot; [ngStyle]&#x3D;&quot;{&#x27;justify-content&#x27;: footer.justify}&quot;&gt;
+            &lt;button class&#x3D;&quot;btn {{action?.customClass}} card__action&quot;  
+            *ngFor&#x3D;&quot;let action of actions&quot; 
+            [disabled]&#x3D;&quot;action.disabled&quot; 
+            (click)&#x3D;&quot;action.callback()&quot;&gt;
+                {{action.label}}
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
 
     <div class="tab-pane fade" id="tree">
         <div id="tree-container"></div>
@@ -443,10 +726,10 @@ export class SampleComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1>Sample component</h1></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card card--bg {{customClass}} shadow-{{shadow}}"  [ngStyle]="{\'background-image\': bg && \'url(\' + bg + \')\'}" >    <div class="card__options card__options--left"    *ngIf="optionsLeft?.length > 0">        <div class="card__option"         *ngFor="let option of optionsLeft"        (click)="option.callback()">            <button class="btn btn-link"             (click)="option.callback()">                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>            </button>        </div>    </div>    <div class="card__options card__options--right"     *ngIf="optionsRight?.length > 0">        <div class="card__option"         [hidden]="option.dropdown !== undefined"         *ngFor="let option of optionsRight"        >            <button class="btn btn-link"             (click)="option.callback()">                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>            </button>        </div>        <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">            <button dropdownToggle class="btn btn-link dropdown-toggle">                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>            </button>            <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">                <li *ngFor="let choice of option.dropdown">                    <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>                </li>            </ul>        </div>    </div>    <div class="card__body" >             <h4 class="card__title">{{title}}</h4>        <h6 class="card__subtitle">{{subtitle}}</h6>    </div>    <div class="card__footer"     *ngIf="actions">        <div class="card__actions" [ngStyle]="{\'justify-content\': footer.justify}">            <button class="btn {{action?.customClass}} card__action"              *ngFor="let action of actions"             [disabled]="action.disabled"             (click)="action.callback()">                {{action.label}}            </button>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'SampleComponent', 'selector': 'sample-component'}];
     var DIRECTIVES = [{'name': 'SampleDirective', 'selector': '[sampleDirective]'}];
-    var ACTUAL_COMPONENT = {'name': 'SampleComponent'};
+    var ACTUAL_COMPONENT = {'name': 'CardBgComponent'};
 </script>
 <script src="../js/tree.js"></script>
 

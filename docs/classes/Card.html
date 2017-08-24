@@ -79,7 +79,7 @@
                                     <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/SampleComponent.html"  data-type="entity-link" class="active" >SampleComponent</a>
+                                    <a href="../components/SampleComponent.html" >SampleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -119,7 +119,7 @@
                                     <a href="../classes/ActionDropdown.html" >ActionDropdown</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../classes/Card.html" >Card</a>
+                                    <a href="../classes/Card.html"  data-type="entity-link" class="active" >Card</a>
                                 </li>
                         </ul>
                     </li>
@@ -225,7 +225,7 @@
                                            <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/SampleComponent.html"  data-type="entity-link" class="active" >SampleComponent</a>
+                                           <a href="../components/SampleComponent.html" >SampleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -265,7 +265,7 @@
                                            <a href="../classes/ActionDropdown.html" >ActionDropdown</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/Card.html" >Card</a>
+                                           <a href="../classes/Card.html"  data-type="entity-link" class="active" >Card</a>
                                        </li>
                                </ul>
                            </li>
@@ -306,15 +306,19 @@
                    
                    </nav>
                </div>
-               <div class="content component">
+               <div class="content class">
                    <div class="content-data">
 
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li>SampleComponent</li>
+  <li>Classes</li>
+  <li>Card</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -322,31 +326,20 @@
         <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
     </li>
 
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 
     <li>
-        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
     </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
-    <h3>File</h3>
-</p>
-<p class="comment">
-    <code>src/sample.component.ts</code>
-</p>
-
-
-
-
-
-<section>
-    <h3>Metadata</h3>
-    <table class="table table-sm table-hover">
-        <tbody>
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/cards/card/card.ts</code>
+        </p>
 
 
 
@@ -356,103 +349,15 @@
 
 
 
-
-
-
-            <tr>
-                <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>sample-component</code></td>
-            </tr>
-
-
-
-            <tr>
-                <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;h1&gt;Sample component&lt;/h1&gt;</code></pre></td>
-            </tr>
-
-
-
-        </tbody>
-    </table>
-</section>
-
-
-    <section>
-        <h3 id="constructor">Constructor</h3>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>constructor()</code>
-                        </td>
-                    </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/sample.component.ts:7</a></div>
-                                </td>
-                            </tr>
-    
-                </tbody>
-            </table>
-    </section>
-
-
-
-
-</div>
+    </div>
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-
-@Component({
-  selector: &#x27;sample-component&#x27;,
-  template: &#x60;&lt;h1&gt;Sample component&lt;/h1&gt;&#x60;
-})
-export class SampleComponent {
-
-  constructor() {
-  }
-
-}
-</code></pre>
-    </div>
-
-
-    <div class="tab-pane fade" id="tree">
-        <div id="tree-container"></div>
-        <div class="tree-legend">
-            <div class="title">
-                <b>Legend</b>
-            </div>
-            <div>
-                <div class="color htmlelement"></div><span>Html element</span>
-            </div>
-            <div>
-                <div class="color component"></div><span>Component</span>
-            </div>
-            <div>
-                <div class="color directive"></div><span>Html element with directive</span>
-            </div>
-        </div>
+        <pre class="line-numbers"><code class="language-typescript">export class Card {
+    
+}</code></pre>
     </div>
 </div>
-
-<script src="../js/libs/vis.min.js"></script>
-<script src="../js/libs/htmlparser.js"></script>
-<script src="../js/libs/deep-iterator.js"></script>
-<script>
-        var COMPONENT_TEMPLATE = '<div><h1>Sample component</h1></div>'
-    var COMPONENTS = [{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'SampleComponent', 'selector': 'sample-component'}];
-    var DIRECTIVES = [{'name': 'SampleDirective', 'selector': '[sampleDirective]'}];
-    var ACTUAL_COMPONENT = {'name': 'SampleComponent'};
-</script>
-<script src="../js/tree.js"></script>
-
-
-
-
 
 
 

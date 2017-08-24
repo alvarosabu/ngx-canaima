@@ -26,5 +26,9 @@
   },
   "files": [
     "./index.ts"
+  ],
+  "exclude": [
+    "demo/**.*",
+    "node_modules"
   ]
 }

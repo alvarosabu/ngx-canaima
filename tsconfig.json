@@ -10,5 +10,11 @@
     ],
     "skipLibCheck": true,
     "types": []
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "demo/**/*"
+  ]
 }
