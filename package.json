@@ -1,6 +1,6 @@
 {
   "name": "ngx-canaima",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -33,7 +33,7 @@
     "@angular/core": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
-    "@compodoc/compodoc": "^1.0.0-beta.10",
+    "@compodoc/compodoc": "^1.0.0-beta.14",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
@@ -66,6 +66,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "ngx-bootstrap": "^1.9.0"
   }
 }

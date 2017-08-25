@@ -2,7 +2,7 @@
     Cards
 \*------------------------------------*/
 @import '../_variables.scss';
-$avatar: 150px;
+@import '../_mixins.scss';
 .card {
     background: $as-card-bg;
     border-radius: $as-card-border-radius;
@@ -42,11 +42,11 @@ $avatar: 150px;
         }
         i {
             color: $as-card-header-color;
-            font-size: 18px;
+            font-size: $as-card-options-font-size;
         }
         
         .mdi-chevron-left, .mdi-dots-vertical {
-            font-size: 24px;
+            font-size: $as-card-options-font-size;
         }
         &--left {
             order: 1;
@@ -62,6 +62,9 @@ $avatar: 150px;
         padding: $as-card-subtitle-padding;
         margin-bottom: 12px !important;
     }
+    &__body {
+        position: relative;
+    }
     &__content {
         padding: $as-card-content-padding;
         flex: 3;
@@ -72,12 +75,13 @@ $avatar: 150px;
         border-top: $as-card-footer-border-top;
         border-bottom: $as-card-footer-border-bottom;
         border-color: $as-card-footer-border-color;
-        .btn-link {
-            color: $as-card-footer-color;
+        .btn {
+            margin: 0 .5rem;
+            /* color: $as-card-footer-color; */
         }
     }
     &__list {
-        .mdi {
+        i {
             margin-right: 16px;
             font-size: 18px;
             vertical-align: middle;
@@ -85,6 +89,12 @@ $avatar: 150px;
         a {
             cursor: pointer;
         }
+    }
+    &__actions {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
     }
     &__stats {
         display: flex;
@@ -114,7 +124,11 @@ $avatar: 150px;
         }
     }
     &__thumb {
-        padding: 16px 8px 16px 16px;
+        background: $as-card-data-thumb-bg;
+        color: $as-card-data-thumb-color;
+        border-right: $as-card-data-thumb-border-right;
+        border-color: $as-card-data-thumb-border-color;
+        padding: $as-card-data-padding;
         min-width: 69px;
         display: flex;
         justify-content: center;
@@ -133,17 +147,15 @@ $avatar: 150px;
     }
      &__avatar {
         background-color: $white;
-        width: $avatar;
-        height: $avatar;
+        width: $as-card-profile-avatar-size;
+        height: $as-card-profile-avatar-size;
         background-size: cover;
         background-position: center;
-        margin-top: -($avatar/2);
-        border: 3px solid $as-card-bg; 
+        margin-top: -($as-card-profile-avatar-size/2);
+        border: $as-card-profile-avatar-border $as-card-profile-avatar-border-color; 
     }
     &__fabs {
         display: flex;
-        justify-content: flex-end;
-        padding: 0 5rem;
         height: 0;
         .btn-fab-sm {
             margin-top: -18px;
@@ -160,8 +172,9 @@ $avatar: 150px;
         }
     }
     &--bg {
-        height: 300px;
-        background-size: 100%;
+        position: relative;
+        height: $as-card-bg-height;
+        background-size: cover;
         background-position: center; 
         transition: all .5s ease;
         &:hover {
@@ -179,63 +192,175 @@ $avatar: 150px;
                 padding: 0.5rem !important;
             }
         }
+        .card__title {
+            order: 1;
+        }
+        .card__subtitle {
+            order: 2;
+        }
         .card__title, .card__subtitle {
             flex: none;
         }
+        .card__footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            .btn-link {
+                color: $as-card-bg-actions-color !important;
+            };
+        }
+    }
+    &--top,  &--bottom {
+        display: flex;
+
+        .card__fabs {
+            justify-content: flex-end;
+            padding: 0 5rem;
+        }
+    }
+    &--top {
+        flex-direction: column;   
+    }
+    &--bottom {
+        flex-direction: column-reverse; 
+        .card__title {
+            padding-left: 5rem;
+        }
+        .card__fabs {
+            position: absolute;
+            bottom: 0;
+            .btn-fab-sm {
+                margin-top: 22px;
+            }
+            .btn-fab-md {
+                margin-top: 36px;
+            }
+        }  
+    }
+    &--left, &--right {
+
+        display: flex;
+        .card--image__header,
+        .card--illustration__header,
+         .card__flex {
+            flex: 1;
+        }
+        @include breakpoint('gamma') {
+            .card--image__img {
+                height: 100%;
+            }
+        }
+        
+
+    }
+    &--left {
+        .card--image__img {
+            height: as-card-image-height / 2;
+        }
+        flex-direction: column;
+        .card__fabs {
+            position: absolute;
+            right: 3rem;
+        }
+        @include breakpoint('gamma') {
+            flex-direction: row;
+            .card__fabs {
+                bottom: -2rem;
+                left: -3rem;
+            }
+        }
+    }
+    &--right {
+        @include breakpoint('gamma') {
+            flex-direction: row-reverse;
+            .card__fabs {
+                position: absolute;
+                bottom: -2rem;
+                right: -3rem;
+            }
+        }
+    }
+    &--image &--top,
+    &--image &--right, 
+    &--profile, 
+    &--bg {
+        .card__options {
+            .btn > i {
+                color: $as-card-options-color-inverse;
+                font-size: 24px;
+            }
+        }
+    }
+    &--image &--bottom, 
+    &--image &--left {
+        .card__options {
+            .btn > i {
+                color: $as-card-options-color;
+                font-size: 24px;
+            }
+        }
     }
     &--image {
-        &__header {
-           position: relative;
-        }
+        position: relative;
         &__img {
-            height: 300px;
+            height: $as-card-image-height;
             background-size: cover;
             background-position: center;
             width: 100%;
-        }
-        &__options {
-            position: absolute;
-            right: .5rem;
-            display: flex;
-            .btn {
-                border-radius: 50px !important;
-                overflow: hidden;
-                padding: 3px !important; 
-            }
-            .btn > .mdi {
-                color: $white;
-                font-size: 24px;
-            }
-            &--left {
-                left: .5rem;
-            }
-            &--right {
-                right: .5rem;
+            @include breakpoint('reverse-gamma') {
+                height: $as-card-image-height / 2;
             }
         }
     }
-     &--profile {
+    &--illustration {
+        position: relative;
+        &__header {
+            background:  $as-card-illustration-header-bg;
+            height: $as-card-illustration-height;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            @include breakpoint('reverse-gamma') {
+                height: $as-card-illustration-height / 1.2;
+            }
+        }
+        &__img {
+            width: $as-card-illustration-size;
+            height: $as-card-illustration-size;
+            border-radius: $as-card-illustration-border-radius;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    &--profile {
         .card__header, .card__subheader {
             position: relative;
         }
         &__img {
-            height: 200px;
+            height: $as-card-profile-bg-height;
             background-size: cover;
             background-position: center;
             width: 100%;
+            border-bottom: $as-card-profile-bg-border $as-card-profile-bg-border-color;
+
         }
-         &__options {
+        .card__actions {
+            margin-top: 2rem;
+        }
+        
+    }
+    &--image, &--profile, &--bg, &--illustration {
+        .card__options {
             position: absolute;
             right: .5rem;
             display: flex;
+            z-index: 2;
             .btn {
-                border-radius: 50px !important;
-                overflow: hidden;
                 padding: 3px !important; 
             }
-            .btn > .mdi {
-                color: $white;
-                font-size: 24px;
+            .btn > i {
+                font-size: $as-card-options-font-size;
             }
             &--left {
                 left: .5rem;
@@ -249,8 +374,8 @@ $avatar: 150px;
         display: flex;
         flex-direction: row;
         &__img {
-            width: 45px;
-            height: 45px;
+            width: $as-card-data-thumb-size;
+            height: $as-card-data-thumb-size;
             background-size: cover;
             background-position: center;
         }
@@ -260,7 +385,7 @@ $avatar: 150px;
         }
         &__subtitle {
             font-size: 1.4rem;
-            color: $gray;
+            color: $as-card-color;
         }
         &__actions {
             display: flex;
@@ -269,9 +394,10 @@ $avatar: 150px;
             flex: 1;
             padding: 16px;
             i {
-                font-size: 24px;
+                font-size: $as-card-actions-font-size;
                 margin-left: 1rem;
                 cursor: pointer;
+                color: $as-card-data-actions-color !important;
             }
         }
     }

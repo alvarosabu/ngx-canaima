@@ -1,0 +1,173 @@
+<as-navbar 
+[shadow]=1 
+[customClass]="'navbar--primary navbar--subheader'" 
+[brand]="navBar.brand" 
+[fixed]=true>
+    <div class="left-content"></div>
+    <div class="center-content">
+        <div class="navbar__title">Ngx-Canaima</div>
+    </div>
+    <div class="right-content"></div>
+</as-navbar>
+<div class="container-fluid wrap has-navbar"
+fxLayout="row"
+fxFlexAlign="start start"
+fxLayoutWrap>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+		<as-card 
+		[title]="cardSimple.title"
+		[subtitle]="cardSimple.subtitle"
+        [shadow]="1"
+        [actions]="cardSimple.actions"
+        [msg]="cardSimple.msg">
+        <div class="card__content">
+           
+        </div>
+		</as-card>
+	</div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+		<as-card 
+		[title]="cardSimple.title + ' with stuff'"
+        [shadow]="1"
+        [optionsLeft]="cardSimple.optionsLeft"
+		[optionsRight]="cardSimple.optionsRight"
+		[actions]="cardSimple.specialActions"
+		[msg]="cardSimple.msg">
+		</as-card>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-image
+        [img]="cardImage.img"
+        [title]="cardImage.title"
+        [orientation]="'top'"
+        [subtitle]="cardImage.subtitle"
+        [fab]="cardImage.fab"
+        [optionsLeft]="cardImage.optionsLeft"
+        [optionsRight]="cardImage.optionsRight"
+        [actions]="cardImage.actions"
+        [footer]="cardImage.footer"
+		[shadow]="1"
+        [msg]="cardImage.msg"
+        >
+		</as-card-image>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-image
+        [img]="'https://upload.wikimedia.org/wikipedia/en/f/fa/Linkin_Park%2C_The_Hunting_Party%2C_album_art_final.jpg'"
+        [title]="cardImage.title"
+        [orientation]="'left'"
+        [subtitle]="cardImage.subtitle"
+        [fab]="cardImage.fab"
+        [actions]="cardImage.actions"
+        [optionsRight]="cardImage.optionsRight"
+        [footer]="cardImage.footer"
+		[shadow]="1"
+        [msg]="cardImage.msg">
+        </as-card-image>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-data
+        [img]="cardData.img"
+        [title]="cardData.title"
+        [subtitle]="cardData.subtitle"
+        [actions]="cardData.actions"
+        [shadow]=1
+        ></as-card-data>
+    </div>
+    <div class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-bg 
+        [title]="cardBg.title"
+        [subtitle]="cardBg.subtitle"
+        [bg]="cardBg.bg"
+        [optionsLeft]="cardBg.optionsLeft"
+        [optionsRight]="cardBg.optionsRight"
+        [actions]="cardBg.actions"
+        [footer]="cardBg.footer"
+        [shadow]="1">
+        </as-card-bg>
+        
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card-illustration
+        [img]="cardImage.img"
+        [title]="cardImage.title"
+        [orientation]="'left'"
+        [subtitle]="cardImage.subtitle"
+        [fab]="cardImage.fab"
+        [optionsLeft]="cardImage.optionsLeft"
+        [optionsRight]="cardImage.optionsRight"
+        [actions]="cardImage.actions"
+        [footer]="cardImage.footer"
+		[shadow]="1"
+        [msg]="cardImage.msg"
+        >
+		</as-card-illustration>
+    </div>
+    <div class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+            <as-card-profile
+            [bg]="cardProfile.bg"
+            [avatar]="cardProfile.avatar"
+            [title]="cardProfile.title"
+            [subtitle]="cardProfile.subtitle"
+            [msg]="cardProfile.msg"
+            [optionsLeft]="cardSimple.optionsLeft"
+            [optionsRight]="cardSimple.optionsRight"
+            [fab] ="cardProfile.fab"
+            [stats] ="cardProfile.stats"
+            [actions]="cardBg.actions"
+            [footer]="cardBg.footer"
+            [shadow]=0
+            >
+             <div class="card__content">
+                <div class="card__list">
+                    <div>
+                        <i class="mdi mdi-twitter"></i>
+                        <a target="_blank" href="http://twitter.com/@shevastation">@shevastation</a>     
+                    </div>
+                    <div>
+                        <i class="mdi mdi-instagram"></i>
+                        <a target="_blank" href="https://www.instagram.com/alvarosaburido">alvarosaburido</a>      
+                    </div>
+                    <div>
+                        <i class="mdi mdi-email"></i>
+                        <a target="_blank" href="mailto:alvaro.saburido@gmail.com">alvaro.saburido@gmail.com</a>      
+                    </div>
+                    <div>
+                        <i class="mdi mdi-phone"></i>
+                        <a target="_blank" href="tel:+34-655-17-23-86">+34-655-17-23-86</a>        
+                    </div>
+                    <div>
+                        <i class="mdi mdi-linkedin"></i>
+                        <a target="_blank" href="https://www.linkedin.com/in/alvarosaburido/">alvarosaburido</a>        
+                    </div>
+                </div>
+            </div>
+      </as-card-profile>
+    </div>
+</div>

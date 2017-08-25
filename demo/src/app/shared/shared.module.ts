@@ -23,7 +23,7 @@ import {
 } from '@ngx-translate/http-loader';
 import { NavbarModule } from './navbar/navbar.module';
 
-import { CardsModule } from './../../../../src/cards/cards.module';
+import { NgxCanaimaModule } from './../../../../src/index';
 
 @NgModule({
   imports: [
@@ -31,7 +31,7 @@ import { CardsModule } from './../../../../src/cards/cards.module';
     FormsModule,
     FlexLayoutModule,
     NavbarModule,
-    CardsModule,
+    NgxCanaimaModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -51,7 +51,7 @@ import { CardsModule } from './../../../../src/cards/cards.module';
     FlexLayoutModule,
     HttpModule,
     NavbarModule,
-    CardsModule
+    NgxCanaimaModule
   ]
 })
 export class SharedModule { }

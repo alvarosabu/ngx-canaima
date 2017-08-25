@@ -34,6 +34,11 @@ gulp.task('copy:source', function () {
     .pipe(gulp.dest(tmpFolder));
 });
 
+gulp.task('copy:sass', function () {
+  return gulp.src([`${tmpFolder}/**/*.scss`])
+    .pipe(gulp.dest(`${distFolder}/assets/stylesheet`));
+});
+
 /**
  * 3. Inline template (.html) and style (.css) files into the the component .ts files.
  *    We do this on the /.tmp folder to avoid editing the original /src files
@@ -191,6 +196,7 @@ gulp.task('compile', function () {
     'ngc',
     'rollup:fesm',
     'rollup:umd',
+    'copy:sass',
     'copy:build',
     'copy:manifest',
     'copy:readme',

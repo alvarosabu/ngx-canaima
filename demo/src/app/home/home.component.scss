@@ -8,40 +8,40 @@
     background: $brand-primary;
     width: 100%;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 23%;
+        background: #eeeeee;
+        border-radius: 50px;
+        padding: .5rem 2rem;
+    }
+    img {
+        width: 75px;
+    }
+    strong {
+        color: $gray;
+    }
 }
 .container-negative {
     margin-top: -10rem !important;
 }
-.multiselect-btn {
-    padding: 8px 16px;
-    box-shadow: inset 0 -1px 0 $gray-light;
-    font-size: 14px;
-    font-weight: 600;
-}
-.dropdown-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    i {
-        font-size: 24px;
+.card {
+    &--component {
+        border-top: 3px solid #E5F5FC;
     }
-}
-textarea {
-    padding: 16px 0;
-}
-.form-footer {
-    padding: 16px;
-    width: 100%;
-}
-.list-item {
-    align-items: center;
-}
-.list-item__thumb {
-    display: flex;
-    justify-content: center !important;
-    background: $brand-primary;
-    border-radius: 50%;
-    color: white;
-    width: 40px !important;
-    height: 40px !important;
+    &--commingsoon {
+        filter: grayscale(90%);
+        .card__title, p {
+            color: $gray-light !important;
+        }
+        .card--illustration__img {
+            opacity: 0.4;
+        }
+        
+    }
 }

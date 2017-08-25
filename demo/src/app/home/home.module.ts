@@ -8,8 +8,6 @@ import { HomeComponent } from './home.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { BsDropdownModule } from 'ngx-bootstrap';
-
-import { NotesService } from './../core/note/notes.service';
 @NgModule({
     imports: [
         SharedModule,
@@ -21,7 +19,7 @@ import { NotesService } from './../core/note/notes.service';
         HomeComponent
     ],
     providers: [
-        NotesService
+
     ],
 })
 export class HomeModule { }

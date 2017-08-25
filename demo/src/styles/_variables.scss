@@ -22,7 +22,7 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white:                  #f3f3f3 !default;
 
 $brand-app:             #3B9DFF !default;
-$brand-primary:         red !default;
+$brand-primary:         #2D93F9 !default;
 $brand-secundary:       #F47027 !default;
 $brand-ternary:         #bfbebd !default;
 $brand-success:         #4CAF50 !default;
@@ -893,3 +893,12 @@ $as-card-header-border-color: $brand-secundary;
 
 // $as-card-footer-bg: $brand-primary;
 // $as-card-footer-color: $white; 
+
+// $as-card-data-thumb-bg: $gray-dark;
+// $as-card-data-thumb-color: $gray-dark;
+// $as-card-data-thumb-border-right: 1px solid !default;
+// $as-card-data-thumb-border-color: red !default;
+// $as-card-data-actions-color: red;
+// $as-card-profile-bg-border: 3px solid;
+// $as-card-profile-bg-border-color: $brand-primary;
+$as-card-illustration-height: 200px !default;

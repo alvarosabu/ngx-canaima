@@ -63,7 +63,6 @@ type StoreType = {
     CoreModule,
     SharedModule,
     SidebarModule,
-    HomeModule,
     ToastyModule.forRoot(),
     ModalModule.forRoot(),
     TabsModule.forRoot(),

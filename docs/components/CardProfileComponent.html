@@ -1,0 +1,827 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-canaima</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ngx-canaima</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">ngx-canaima</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./changelog.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/CardBgComponent.html" >CardBgComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CardComponent.html" >CardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CardDataComponent.html" >CardDataComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CardIllustrationComponent.html" >CardIllustrationComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CardImageComponent.html" >CardImageComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CardProfileComponent.html"  data-type="entity-link" class="active" >CardProfileComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/Action.html" >Action</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/ActionDropdown.html" >ActionDropdown</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Card.html" >Card</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">ngx-canaima</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./changelog.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/CardBgComponent.html" >CardBgComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CardComponent.html" >CardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CardDataComponent.html" >CardDataComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CardIllustrationComponent.html" >CardIllustrationComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CardImageComponent.html" >CardImageComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CardProfileComponent.html"  data-type="entity-link" class="active" >CardProfileComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/Action.html" >Action</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/ActionDropdown.html" >ActionDropdown</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Card.html" >Card</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>CardProfileComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/cards/card-profile/card-profile.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>as-card-profile</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>card-profile.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#actions">actions</a>
+                            </li>
+                            <li>
+                                <a href="#avatar">avatar</a>
+                            </li>
+                            <li>
+                                <a href="#bg">bg</a>
+                            </li>
+                            <li>
+                                <a href="#customClass">customClass</a>
+                            </li>
+                            <li>
+                                <a href="#fab">fab</a>
+                            </li>
+                            <li>
+                                <a href="#footer">footer</a>
+                            </li>
+                            <li>
+                                <a href="#msg">msg</a>
+                            </li>
+                            <li>
+                                <a href="#optionsLeft">optionsLeft</a>
+                            </li>
+                            <li>
+                                <a href="#optionsRight">optionsRight</a>
+                            </li>
+                            <li>
+                                <a href="#shadow">shadow</a>
+                            </li>
+                            <li>
+                                <a href="#stats">stats</a>
+                            </li>
+                            <li>
+                                <a href="#subtitle">subtitle</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="actions"></a>
+                            <code>actions</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>[]</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:24</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="avatar"></a>
+                            <code>avatar</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:14</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="bg"></a>
+                            <code>bg</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:13</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="customClass"></a>
+                            <code>customClass</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:20</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="fab"></a>
+                            <code>fab</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:18</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="footer"></a>
+                            <code>footer</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:25</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="msg"></a>
+                            <code>msg</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:17</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="optionsLeft"></a>
+                            <code>optionsLeft</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>[]</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:22</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="optionsRight"></a>
+                            <code>optionsRight</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>any[]</code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:23</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="shadow"></a>
+                            <code>shadow</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:21</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="stats"></a>
+                            <code>stats</code>
+                        </td>
+                        <td class="col-md-10">
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:19</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="subtitle"></a>
+                            <code>subtitle</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:16</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="title"></a>
+                            <code>title</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/cards/card-profile/card-profile.component.ts:15</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+    </section>
+
+
+
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import {
+    Component,
+    Input,
+
+} from &#x27;@angular/core&#x27;;
+import { Action } from &#x27;./../../action&#x27;;
+@Component({
+    selector: &#x27;as-card-profile&#x27;,
+    templateUrl: &#x27;card-profile.component.html&#x27;,
+
+})
+export class CardProfileComponent {
+    @Input(&#x27;bg&#x27;) public bg: string;
+    @Input(&#x27;avatar&#x27;) public avatar: string;
+    @Input(&#x27;title&#x27;) public title: string;
+    @Input(&#x27;subtitle&#x27;) public subtitle: string;
+    @Input(&#x27;msg&#x27;) public msg: string;
+    @Input(&#x27;fab&#x27;) public fab: any;
+    @Input(&#x27;stats&#x27;) public stats: [any];
+    @Input(&#x27;customClass&#x27;) public customClass: string;
+    @Input(&#x27;shadow&#x27;) public shadow: string;
+    @Input(&#x27;optionsLeft&#x27;) public optionsLeft: Action[];
+    @Input(&#x27;optionsRight&#x27;) public optionsRight: any[];
+    @Input(&#x27;actions&#x27;) public actions: Action[];
+    @Input(&#x27;footer&#x27;) public footer: any;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card card--profile {{customClass}} shadow-{{shadow}}&quot; &gt;
+    &lt;div class&#x3D;&quot;card__header&quot;&gt;
+        &lt;div class&#x3D;&quot;card--profile__img&quot; 
+        [ngStyle]&#x3D;&quot;{&#x27;background-image&#x27;: bg &amp;&amp; &#x27;url(&#x27; + bg + &#x27;)&#x27;}&quot;&gt;
+
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card__options card__options--left&quot; *ngIf&#x3D;&quot;optionsLeft?.length &gt; 0&quot;&gt;
+            &lt;div class&#x3D;&quot;card__option&quot; *ngFor&#x3D;&quot;let option of optionsLeft&quot;
+            (click)&#x3D;&quot;option.callback()&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-link&quot; (click)&#x3D;&quot;option.callback()&quot;&gt;
+                    &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt; 
+        &lt;div class&#x3D;&quot;card__options card__options--right&quot; *ngIf&#x3D;&quot;optionsRight?.length &gt; 0&quot;&gt;
+            &lt;div class&#x3D;&quot;card__option&quot; [hidden]&#x3D;&quot;option.dropdown !&#x3D;&#x3D; undefined&quot; *ngFor&#x3D;&quot;let option of optionsRight&quot;
+            (click)&#x3D;&quot;option.callback()&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-link&quot; (click)&#x3D;&quot;option.callback()&quot;&gt;
+                    &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;card__option&quot; [hidden]&#x3D;&quot;option.dropdown &#x3D;&#x3D;&#x3D; undefined&quot; dropdown *ngFor&#x3D;&quot;let option of optionsRight&quot;&gt;
+                &lt;button dropdownToggle class&#x3D;&quot;btn btn-link dropdown-toggle&quot;&gt;
+                    &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+                &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu dropdown-menu-right&quot; [hidden]&#x3D;&quot;option.dropdown !&#x3D;&#x3D; undefined&quot; role&#x3D;&quot;menu&quot;&gt;
+                    &lt;li *ngFor&#x3D;&quot;let choice of option.dropdown&quot;&gt;
+                        &lt;a class&#x3D;&quot;dropdown-item&quot; (click)&#x3D;&quot;choice.callback()&quot;&gt;&lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{choice.icon}}&quot;&gt;&lt;/i&gt;{{choice.label}}&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card__body&quot;&gt;
+        &lt;div class&#x3D;&quot;card__subheader&quot;&gt;
+            &lt;div class&#x3D;&quot;card__avatar circle shadow-1&quot;
+            [ngStyle]&#x3D;&quot;{&#x27;background-image&#x27;: avatar &amp;&amp; &#x27;url(&#x27; + avatar + &#x27;)&#x27;}&quot;&gt;
+
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;btn btn-fab {{fab.customClass}} btn-fab-{{fab.size}}&quot; *ngIf&#x3D;&quot;fab&quot; (click)&#x3D;&quot;fab.callback()&quot;&gt;
+                &lt;i class&#x3D;&quot;{{fab.prefix}} {{fab.prefix}}-{{fab.icon}}&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;h4 class&#x3D;&quot;card__title&quot;&gt;{{title}}&lt;/h4&gt;
+        &lt;h6 class&#x3D;&quot;card__subtitle&quot;&gt;{{subtitle}}&lt;/h6&gt;
+        &lt;!-- single slot transclusion here --&gt;
+        &lt;ng-content select&#x3D;&quot;.card__content&quot;&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card__footer&quot; *ngIf&#x3D;&quot;stats?.length &gt; 0&quot;&gt;
+        &lt;div class&#x3D;&quot;card__stats&quot;&gt;
+            &lt;div class&#x3D;&quot;card__stat&quot;  *ngFor&#x3D;&quot;let stat of stats&quot;&gt;
+                &lt;span class&#x3D;&quot;stat__value&quot;&gt;{{stat.value }}&lt;/span&gt;
+                &lt;span class&#x3D;&quot;stat__line&quot;&gt;&lt;/span&gt;
+                &lt;span class&#x3D;&quot;stat__label&quot;&gt;{{stat.label}}&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card__actions&quot; [ngStyle]&#x3D;&quot;{&#x27;justify-content&#x27;: footer.justify}&quot;&gt;
+            &lt;button class&#x3D;&quot;btn {{action?.customClass}} card__action&quot;  
+            *ngFor&#x3D;&quot;let action of actions&quot; 
+            [disabled]&#x3D;&quot;action.disabled&quot; 
+            (click)&#x3D;&quot;action.callback()&quot;&gt;
+                {{action.label}}
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="card card--profile {{customClass}} shadow-{{shadow}}" >    <div class="card__header">        <div class="card--profile__img"         [ngStyle]="{\'background-image\': bg && \'url(\' + bg + \')\'}">        </div>        <div class="card__options card__options--left" *ngIf="optionsLeft?.length > 0">            <div class="card__option" *ngFor="let option of optionsLeft"            (click)="option.callback()">                <button class="btn btn-link" (click)="option.callback()">                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>                </button>            </div>        </div>         <div class="card__options card__options--right" *ngIf="optionsRight?.length > 0">            <div class="card__option" [hidden]="option.dropdown !== undefined" *ngFor="let option of optionsRight"            (click)="option.callback()">                <button class="btn btn-link" (click)="option.callback()">                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>                </button>            </div>            <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">                <button dropdownToggle class="btn btn-link dropdown-toggle">                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>                </button>                <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">                    <li *ngFor="let choice of option.dropdown">                        <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>                    </li>                </ul>            </div>        </div>    </div>    <div class="card__body">        <div class="card__subheader">            <div class="card__avatar circle shadow-1"            [ngStyle]="{\'background-image\': avatar && \'url(\' + avatar + \')\'}">            </div>            <div class="btn btn-fab {{fab.customClass}} btn-fab-{{fab.size}}" *ngIf="fab" (click)="fab.callback()">                <i class="{{fab.prefix}} {{fab.prefix}}-{{fab.icon}}"></i>            </div>        </div>        <h4 class="card__title">{{title}}</h4>        <h6 class="card__subtitle">{{subtitle}}</h6>        <!-- single slot transclusion here -->        <ng-content select=".card__content"></ng-content>    </div>    <div class="card__footer" *ngIf="stats?.length > 0">        <div class="card__stats">            <div class="card__stat"  *ngFor="let stat of stats">                <span class="stat__value">{{stat.value }}</span>                <span class="stat__line"></span>                <span class="stat__label">{{stat.label}}</span>            </div>        </div>        <div class="card__actions" [ngStyle]="{\'justify-content\': footer.justify}">            <button class="btn {{action?.customClass}} card__action"              *ngFor="let action of actions"             [disabled]="action.disabled"             (click)="action.callback()">                {{action.label}}            </button>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'CardProfileComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>
