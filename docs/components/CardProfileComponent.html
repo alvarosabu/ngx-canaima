@@ -47,6 +47,12 @@
                                 <li class="link">
                                   <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
+                                <li class="link">
+                                    <a href="./changelog.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
@@ -73,33 +79,17 @@
                                     <a href="../components/CardDataComponent.html" >CardDataComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/CardIllustrationComponent.html" >CardIllustrationComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/CardImageComponent.html" >CardImageComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/CardProfileComponent.html"  data-type="entity-link" class="active" >CardProfileComponent</a>
                                 </li>
-                                <li class="link">
-                                    <a href="../components/SampleComponent.html" >SampleComponent</a>
-                                </li>
                         </ul>
                     </li>
             
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-directives-links"
-                            >
-                            <span class="fa fa-code"></span>
-                            <span>Directives</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-directives-links"
-                            >
-                                <li class="link">
-                                    <a href="../directives/SampleDirective.html" >SampleDirective</a>
-                                </li>
-                        </ul>
-                    </li>
             
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
@@ -124,28 +114,6 @@
                         </ul>
                     </li>
             
-                    <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse"
-                                data-target="#xs-injectables-links"
-                            >
-                            <span class="fa fa-long-arrow-down"></span>
-                            <span>Injectables</span>
-                            <span class="fa fa-angle-down"></span>
-                        </div>
-                        <ul class="links collapse "
-                                id="xs-injectables-links"
-                            >
-                                <li class="link">
-                                    <a href="../injectables/SamplePipe.html" >SamplePipe</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/SamplePipe.html" >SamplePipe</a>
-                                </li>
-                                <li class="link">
-                                    <a href="../injectables/SampleService.html" >SampleService</a>
-                                </li>
-                        </ul>
-                    </li>
             
             
             
@@ -193,6 +161,12 @@
                                        <li class="link">
                                          <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="./changelog.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
@@ -219,33 +193,17 @@
                                            <a href="../components/CardDataComponent.html" >CardDataComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/CardIllustrationComponent.html" >CardIllustrationComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/CardImageComponent.html" >CardImageComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/CardProfileComponent.html"  data-type="entity-link" class="active" >CardProfileComponent</a>
                                        </li>
-                                       <li class="link">
-                                           <a href="../components/SampleComponent.html" >SampleComponent</a>
-                                       </li>
                                </ul>
                            </li>
                    
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#directives-links"
-                   >
-                                   <span class="fa fa-code"></span>
-                                   <span>Directives</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="directives-links"
-                   >
-                                       <li class="link">
-                                           <a href="../directives/SampleDirective.html" >SampleDirective</a>
-                                       </li>
-                               </ul>
-                           </li>
                    
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
@@ -270,28 +228,6 @@
                                </ul>
                            </li>
                    
-                           <li class="chapter">
-                               <div class="simple menu-toggler" data-toggle="collapse"
-                                       data-target="#injectables-links"
-                   >
-                                   <span class="fa fa-long-arrow-down"></span>
-                                   <span>Injectables</span>
-                                   <span class="fa fa-angle-down"></span>
-                               </div>
-                               <ul class="links collapse "
-                                       id="injectables-links"
-                   >
-                                       <li class="link">
-                                           <a href="../injectables/SamplePipe.html" >SamplePipe</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/SamplePipe.html" >SamplePipe</a>
-                                       </li>
-                                       <li class="link">
-                                           <a href="../injectables/SampleService.html" >SampleService</a>
-                                       </li>
-                               </ul>
-                           </li>
                    
                    
                    
@@ -839,8 +775,8 @@ export class CardProfileComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="card card--profile {{customClass}} shadow-{{shadow}}" >    <div class="card__header">        <div class="card--profile__img"         [ngStyle]="{\'background-image\': bg && \'url(\' + bg + \')\'}">        </div>        <div class="card__options card__options--left" *ngIf="optionsLeft?.length > 0">            <div class="card__option" *ngFor="let option of optionsLeft"            (click)="option.callback()">                <button class="btn btn-link" (click)="option.callback()">                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>                </button>            </div>        </div>         <div class="card__options card__options--right" *ngIf="optionsRight?.length > 0">            <div class="card__option" [hidden]="option.dropdown !== undefined" *ngFor="let option of optionsRight"            (click)="option.callback()">                <button class="btn btn-link" (click)="option.callback()">                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>                </button>            </div>            <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">                <button dropdownToggle class="btn btn-link dropdown-toggle">                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>                </button>                <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">                    <li *ngFor="let choice of option.dropdown">                        <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>                    </li>                </ul>            </div>        </div>    </div>    <div class="card__body">        <div class="card__subheader">            <div class="card__avatar circle shadow-1"            [ngStyle]="{\'background-image\': avatar && \'url(\' + avatar + \')\'}">            </div>            <div class="btn btn-fab {{fab.customClass}} btn-fab-{{fab.size}}" *ngIf="fab" (click)="fab.callback()">                <i class="{{fab.prefix}} {{fab.prefix}}-{{fab.icon}}"></i>            </div>        </div>        <h4 class="card__title">{{title}}</h4>        <h6 class="card__subtitle">{{subtitle}}</h6>        <!-- single slot transclusion here -->        <ng-content select=".card__content"></ng-content>    </div>    <div class="card__footer" *ngIf="stats?.length > 0">        <div class="card__stats">            <div class="card__stat"  *ngFor="let stat of stats">                <span class="stat__value">{{stat.value }}</span>                <span class="stat__line"></span>                <span class="stat__label">{{stat.label}}</span>            </div>        </div>        <div class="card__actions" [ngStyle]="{\'justify-content\': footer.justify}">            <button class="btn {{action?.customClass}} card__action"              *ngFor="let action of actions"             [disabled]="action.disabled"             (click)="action.callback()">                {{action.label}}            </button>        </div>    </div></div></div>'
-    var COMPONENTS = [{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'SampleComponent', 'selector': 'sample-component'}];
-    var DIRECTIVES = [{'name': 'SampleDirective', 'selector': '[sampleDirective]'}];
+    var COMPONENTS = [{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'}];
+    var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardProfileComponent'};
 </script>
 <script src="../js/tree.js"></script>
