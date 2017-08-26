@@ -1,0 +1,52 @@
+<as-navbar 
+[shadow]=1 
+[customClass]="'navbar--primary navbar--subheader'" 
+[brand]="navBar.brand" 
+[fixed]=true>
+    <div class="left-content"></div>
+    <div class="center-content">
+        <div class="navbar__title">Ngx-Canaima</div>
+    </div>
+    <div class="right-content"></div>
+</as-navbar>
+<div 
+    class="container-fluid wrap has-navbar"
+    fxLayout="row"
+    fxFlexAlign="start start"
+    fxLayoutWrap>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="50"
+        fxFlex.lt-md="100">
+        <as-card 
+        [title]="'Normal Form'"
+        [shadow]="1">
+            <div class="card__content">
+                <dynamic-form
+                [inputs]="inputs"
+                (onSubmit)="submitForm($event)"
+                [actions]="normalForm.actions"
+                ></dynamic-form>
+            </div>
+        </as-card>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card 
+        [title]="'Float Label Form'"
+        [shadow]="1">
+            <div class="card__content">
+                <dynamic-form
+                [inputs]="inputs"
+                [style]="'float'"
+                (onSubmit)="submitForm($event)"
+                [actions]="normalForm.actions"
+                ></dynamic-form>
+            </div>
+        </as-card>
+    </div>
+</div>

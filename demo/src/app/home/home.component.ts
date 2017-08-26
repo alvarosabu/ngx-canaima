@@ -36,6 +36,13 @@ export class HomeComponent implements OnInit {
             illustration: '/assets/svg/lists-illustration.svg',
             comming: true,
             msg: `Lists present multiple line items vertically as a single continuous element`
+        },
+        {
+            label: 'Forms',
+            illustration: '/assets/svg/forms-illustration.svg',
+            comming: false,
+            slug: 'forms',
+            msg: `Forms represent a way for the user to interact with the business logic`
         }
     ];
     constructor(

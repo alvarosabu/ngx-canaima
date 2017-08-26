@@ -8,13 +8,15 @@ import { NumberFormatterPipe } from './misc/number-formatter.pipe';
 import { FormatService } from './misc/format.service';
 import { HomeModule } from '../home/home.module';
 import { CardsActivityModule } from '../cards/cards.module';
+import { FormsActivityModule } from '../forms/forms.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HomeModule,
-    CardsActivityModule
+    CardsActivityModule,
+    FormsActivityModule
 
   ],
   declarations: [
@@ -29,6 +31,7 @@ import { CardsActivityModule } from '../cards/cards.module';
     FormsModule,
     HomeModule,
     CardsActivityModule,
+    FormsActivityModule,
     NumberFormatterPipe,
   ]
 })

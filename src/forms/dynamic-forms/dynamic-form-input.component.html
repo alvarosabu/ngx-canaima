@@ -1,0 +1,34 @@
+<div [formGroup]="form">
+
+
+  <div [ngSwitch]="input.controlType" [ngClass]="{ 'has-error': submitted && !isValid,
+  'has-success': isValid && !isPristine && submitted }">
+    <label
+    class="float-label"
+    *ngIf="style != 'float'"
+    [attr.for]="input.key">{{input.label}}</label>
+    <span [ngClass]="{'has-float-label': style == 'float'}">
+      <input
+      class="form-control"
+      [placeholder]="' '"
+      *ngSwitchCase="'textbox'"
+      [formControlName]="input.key"
+      [id]="input.key"
+      [type]="input.type">
+
+      <select
+      class="form-control"
+      [id]="input.key"
+      *ngSwitchCase="'dropdown'"
+      [formControlName]="input.key">
+        <option *ngFor="let opt of input.options" [value]="opt.key">{{opt.value}}</option>
+      </select>
+      <label
+      class="float-label"
+      *ngIf="style == 'float'"
+      [attr.for]="input.key">{{input.label}}</label>
+    </span>
+    <div class="help-block" *ngIf="!isValid && submitted">{{input.label}} is required</div>
+  </div>
+
+</div>
