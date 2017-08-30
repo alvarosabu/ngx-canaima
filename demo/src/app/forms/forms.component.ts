@@ -1,3 +1,4 @@
+import { Validation } from './../../../../src/validation';
 
 import {
     Component,
@@ -5,8 +6,10 @@ import {
     ViewEncapsulation
 } from '@angular/core';
 import { Action } from './../../../../src/action';
-import { TextInput } from './../../../../src/forms/text-input';
+
 import { InputBase } from './../../../../src/forms/input-base';
+import { TextInput } from './../../../../src/forms/text-input';
+import { SelectInput } from './../../../../src/forms/select-input';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'forms',
@@ -26,15 +29,40 @@ export class FormsComponent implements OnInit {
           key: 'username',
           label: 'Username',
           type: 'text',
-          required: true,
-          order: 1
+          validations: [
+            new Validation('required', true, 'Username is required')
+        ],
+          order: 1,
+          customClass: 'fcol-xs-12 fcol-md-6'
         }),
         new TextInput({
           key: 'password',
           label: 'Password',
           type: 'password',
-          required: true,
-          order: 2
+          order: 2,
+          customClass: 'fcol-xs-12 fcol-md-6'
+        }),
+        new TextInput({
+            key: 'email',
+            label: 'Email',
+            type: 'email',
+            validations: [
+                new Validation('required', true, 'Email is required'),
+                new Validation('email', true, 'Email format is incorrect')
+            ],
+            order: 3,
+            customClass: 'fcol-xs-12 fcol-md-6'
+        }),
+        new SelectInput({
+            key: 'brave',
+            label: 'Bravery Rating',
+            options: [
+              {key: 'solid',  value: 'Solid'},
+              {key: 'great',  value: 'Great'},
+              {key: 'good',   value: 'Good'},
+              {key: 'unproven', value: 'Unproven'}
+            ],
+            order: 3
         }),
       ];
     public normalForm: any = {
@@ -46,4 +74,11 @@ export class FormsComponent implements OnInit {
     constructor() { }
 
     public ngOnInit() { }
+
+    /**
+     * submitForm
+     */
+    public submitForm(e) {
+        console.log('Submitted', e);
+    }
 }

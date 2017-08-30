@@ -1,14 +1,17 @@
 <div>
   <form
+  class="frow"
   (ngSubmit)="submit()"
   [formGroup]="form">
 
-    <div *ngFor="let input of inputs" class="form-group">
-      <df-input
+    <div 
+    class="form-group {{input.customClass}}"
+    *ngFor="let input of inputs">
+      <as-df-input
       [input]="input"
       [form]="form"
       [submitted]="submitted"
-      [style]="style"></df-input>
+      [style]="style"></as-df-input>
 
     </div>
 

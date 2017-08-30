@@ -23,11 +23,11 @@
         [title]="'Normal Form'"
         [shadow]="1">
             <div class="card__content">
-                <dynamic-form
+                <as-dynamic-form
                 [inputs]="inputs"
                 (onSubmit)="submitForm($event)"
                 [actions]="normalForm.actions"
-                ></dynamic-form>
+                ></as-dynamic-form>
             </div>
         </as-card>
     </div>
@@ -40,12 +40,12 @@
         [title]="'Float Label Form'"
         [shadow]="1">
             <div class="card__content">
-                <dynamic-form
+                <as-dynamic-form
                 [inputs]="inputs"
                 [style]="'float'"
                 (onSubmit)="submitForm($event)"
                 [actions]="normalForm.actions"
-                ></dynamic-form>
+                ></as-dynamic-form>
             </div>
         </as-card>
     </div>

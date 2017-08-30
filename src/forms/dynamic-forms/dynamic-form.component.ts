@@ -7,7 +7,7 @@ import { InputControlService } from '../input-control.service';
 import { Action } from './../../action';
 
 @Component({
-  selector: 'dynamic-form',
+  selector: 'as-dynamic-form',
   templateUrl: './dynamic-form.component.html',
   styleUrls: [
     './dynamic-form.component.scss'
@@ -39,6 +39,7 @@ export class DynamicFormComponent implements OnInit {
 
       this.onSubmit.emit(this.form.value);
       this.form.reset();
+      this.submitted = false;
     }
   }
 }
