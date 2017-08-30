@@ -39,6 +39,10 @@ export class FormsComponent implements OnInit {
           key: 'password',
           label: 'Password',
           type: 'password',
+          validations: [
+            // tslint:disable-next-line:max-line-length
+            new Validation('pattern', '(?=.*)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!$%@#£€*?Ññ.<>?;:\'`!%^*(){}_+=|-]{8,}', 'Password format is incorrect')
+          ],
           order: 2,
           customClass: 'fcol-xs-12 fcol-md-6'
         }),
@@ -53,6 +57,16 @@ export class FormsComponent implements OnInit {
             order: 3,
             customClass: 'fcol-xs-12 fcol-md-6'
         }),
+        new TextInput({
+            key: 'ip',
+            label: 'IP',
+            type: 'text',
+            validations: [
+              new Validation('required', true, 'IP is required')
+          ],
+            order: 4,
+            customClass: 'fcol-xs-12 fcol-md-6'
+          }),
         new SelectInput({
             key: 'brave',
             label: 'Bravery Rating',
@@ -62,7 +76,7 @@ export class FormsComponent implements OnInit {
               {key: 'good',   value: 'Good'},
               {key: 'unproven', value: 'Unproven'}
             ],
-            order: 3
+            order: 5
         }),
       ];
     public normalForm: any = {
@@ -81,4 +95,4 @@ export class FormsComponent implements OnInit {
     public submitForm(e) {
         console.log('Submitted', e);
     }
-}
+};

@@ -1,11 +1,11 @@
 
 export class Validation {
     public type?: string;
-    public value?: boolean;
+    public value?: any;
     public msg?: string;
     constructor(
         type?: string,
-        value?: boolean,
+        value?: any,
         msg?: string
     ) {
         this.type = type;

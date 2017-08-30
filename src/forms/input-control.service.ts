@@ -15,9 +15,18 @@ export class InputControlService {
         group[input.key] = new FormControl(input.value || '');
       }else {
         input.validations.forEach((validation) => {
-          validations.push(Validators[validation.type]);
+          let valFormat;
+          let type = validation.type;
+          if (type === 'pattern') {
+            valFormat = Validators.pattern(validation.value);
+          }else {
+            valFormat = Validators[type];
+          }
+          console.log('validation', valFormat);
+          validations.push(valFormat);
         });
         group[input.key] = new FormControl(input.value || '', validations);
+        validations = [];
       }
       /* group[input.key] = control ? new FormControl(input.value || '', Validators.required) : new FormControl(input.value || ''); */
     });
