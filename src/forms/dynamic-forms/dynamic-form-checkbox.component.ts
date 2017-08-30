@@ -1,13 +1,13 @@
 
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 import { InputBase } from '../input-base';
 import { Validation } from './../../validation';
 
 @Component({
-  selector: 'as-df-input',
-  templateUrl: './dynamic-form-input.component.html',
+  selector: 'as-df-checkbox',
+  templateUrl: './dynamic-form-checkbox.component.html',
   styleUrls: [
     './dynamic-form.component.scss'
   ]

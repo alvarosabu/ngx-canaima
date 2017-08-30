@@ -16,7 +16,7 @@ import { Action } from './../../action';
 export class DynamicFormComponent implements OnInit {
 
   @Input('inputs') public inputs: Array<InputBase<any>> = [];
-  @Input('style') public style: string = 'default';
+  @Input('style') public style = 'default';
   @Input('actions') public actions: Action[] = [];
   @Input('footer') public footer: any = {
     justify: 'flex-end',
@@ -26,7 +26,7 @@ export class DynamicFormComponent implements OnInit {
   // Default, Float, Icon
   public form: FormGroup;
   public payLoad = '';
-  public submitted: boolean = false;
+  public submitted = false;
   constructor(private ics: InputControlService) {  }
 
   public ngOnInit() {

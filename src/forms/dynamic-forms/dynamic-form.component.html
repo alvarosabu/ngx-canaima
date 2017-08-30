@@ -6,8 +6,10 @@
 
     <div 
     class="form-group {{input.customClass}}"
-    *ngFor="let input of inputs">
+    *ngFor="let input of inputs"
+    [ngSwitch]="input.controlType" >
       <as-df-input
+      *ngSwitchCase="'textbox' || 'dropdown'"
       [input]="input"
       [form]="form"
       [submitted]="submitted"

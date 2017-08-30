@@ -66,7 +66,29 @@ export class FormsComponent implements OnInit {
           ],
             order: 4,
             customClass: 'fcol-xs-12 fcol-md-6'
-          }),
+        }),
+        new TextInput({
+            key: 'age',
+            label: 'Age',
+            type: 'number',
+            validations: [
+                /* new Validation('min', 1, 'Min Age'),
+                new Validation('max', 90, 'Max Age') */
+          ],
+            order: 5,
+            customClass: 'fcol-xs-12 fcol-md-6'
+        }),
+        new TextInput({
+            key: 'age',
+            label: 'Age',
+            type: 'checkbox',
+            validations: [
+                /* new Validation('min', 1, 'Min Age'),
+                new Validation('max', 90, 'Max Age') */
+          ],
+            order: 5,
+            customClass: 'fcol-xs-12 fcol-md-6'
+        }),
         new SelectInput({
             key: 'brave',
             label: 'Bravery Rating',
@@ -76,7 +98,7 @@ export class FormsComponent implements OnInit {
               {key: 'good',   value: 'Good'},
               {key: 'unproven', value: 'Unproven'}
             ],
-            order: 5
+            order: 6
         }),
       ];
     public normalForm: any = {

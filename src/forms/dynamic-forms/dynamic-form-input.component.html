@@ -33,7 +33,6 @@
     *ngFor="let val of validations">
       <span *ngIf="errors && errors[val.type] && submitted">{{val.msg}}</span>
     </div>
-    <pre   (click)="doSomething()">{{errors | json}}</pre>
   </div>
 
 </div>

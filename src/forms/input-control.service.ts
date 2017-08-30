@@ -19,10 +19,13 @@ export class InputControlService {
           let type = validation.type;
           if (type === 'pattern') {
             valFormat = Validators.pattern(validation.value);
-          }else {
+          } else if (type === 'min') {
+            valFormat = Validators.min(validation.value);
+          } else if (type === 'max') {
+            valFormat = Validators.max(validation.value);
+          } else {
             valFormat = Validators[type];
           }
-          console.log('validation', valFormat);
           validations.push(valFormat);
         });
         group[input.key] = new FormControl(input.value || '', validations);
