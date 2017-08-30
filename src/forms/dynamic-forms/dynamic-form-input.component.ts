@@ -29,10 +29,14 @@ export class DynamicFormInputComponent implements OnInit {
     this.key = this.input.key;
     this.validations = this.input.validations || [];
     this.errors = this.formControl[this.key].errors || null;
+    this.formControl[this.key].valueChanges.subscribe((value) => {
+      // called when the value is updated
+      this.errors = this.formControl[this.key].errors || null;
+    });
   }
   public isValid() { return this.form.controls[this.input.key].valid; }
   public isPristine() { return this.form.controls[this.input.key].pristine; }
   public isValidInput(key) {
     return this.form.controls[key].valid && this.form.controls[key].pristine;
-  }
+  
 }

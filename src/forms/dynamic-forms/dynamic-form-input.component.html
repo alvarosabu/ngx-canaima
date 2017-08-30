@@ -1,6 +1,5 @@
 <div 
   [formGroup]="form">
-
   <div 
   [ngSwitch]="input.controlType" 
   [ngClass]="{ 'has-error': submitted && !isValid(),
@@ -32,9 +31,9 @@
     </span>
     <div class="help-block" 
     *ngFor="let val of validations">
-      <span *ngIf="submitted">{{val.msg}}</span>
+      <span *ngIf="errors && errors[val.type] && submitted">{{val.msg}}</span>
     </div>
-    <pre>{{errors | json}}</pre>
+    <pre   (click)="doSomething()">{{errors | json}}</pre>
   </div>
 
 </div>
