@@ -12,7 +12,7 @@ import { Validation } from './../../validation';
     './dynamic-form.component.scss'
   ]
 })
-export class DynamicFormInputComponent implements OnInit {
+export class DynamicFormCheckboxComponent implements OnInit {
   @Input() public input: InputBase<any>;
   @Input() public form: FormGroup;
   @Input() public style: string;
@@ -38,5 +38,6 @@ export class DynamicFormInputComponent implements OnInit {
   public isPristine() { return this.form.controls[this.input.key].pristine; }
   public isValidInput(key) {
     return this.form.controls[key].valid && this.form.controls[key].pristine;
+  }
 }
 

@@ -10,6 +10,7 @@ import { Action } from './../../../../src/action';
 import { InputBase } from './../../../../src/forms/input-base';
 import { TextInput } from './../../../../src/forms/text-input';
 import { SelectInput } from './../../../../src/forms/select-input';
+import { CheckboxInput } from '../../../../src/forms/checkbox-input';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'forms',
@@ -78,9 +79,9 @@ export class FormsComponent implements OnInit {
             order: 5,
             customClass: 'fcol-xs-12 fcol-md-6'
         }),
-        new TextInput({
-            key: 'age',
-            label: 'Age',
+        new CheckboxInput({
+            key: 'terms',
+            label: 'Terms and Conditions',
             type: 'checkbox',
             validations: [
                 /* new Validation('min', 1, 'Min Age'),

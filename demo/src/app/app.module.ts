@@ -26,6 +26,10 @@ import { SidebarModule } from 'ng-sidebar';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 /*
+ * Styles
+ */
+import '../styles/styles.scss';
+/*
  * Platform and Environment providers/directives/pipes
  */
 import { ENV_PROVIDERS } from './environment';

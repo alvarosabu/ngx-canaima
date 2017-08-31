@@ -1,6 +1,6 @@
 
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 import { InputBase } from '../input-base';
 import { Validation } from './../../validation';
@@ -38,5 +38,5 @@ export class DynamicFormInputComponent implements OnInit {
   public isPristine() { return this.form.controls[this.input.key].pristine; }
   public isValidInput(key) {
     return this.form.controls[key].valid && this.form.controls[key].pristine;
+  }
 }
-
