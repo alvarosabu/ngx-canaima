@@ -7,6 +7,7 @@ import { InputControlService } from '../input-control.service';
 import { DynamicFormCheckboxComponent } from './dynamic-form-checkbox.component';
 import { DynamicFormSelectComponent } from './dynamic-form-select.component';
 import { DynamicFormRadioComponent } from './dynamic-form-radio.component';
+import { DynamicFormTextAreaComponent } from './dynamic-form-textarea.component';
 
 @NgModule({
   imports: [
@@ -20,14 +21,16 @@ import { DynamicFormRadioComponent } from './dynamic-form-radio.component';
     DynamicFormInputComponent,
     DynamicFormSelectComponent,
     DynamicFormCheckboxComponent,
-    DynamicFormRadioComponent
+    DynamicFormRadioComponent,
+    DynamicFormTextAreaComponent
   ],
   declarations: [
     DynamicFormComponent,
     DynamicFormInputComponent,
     DynamicFormSelectComponent,
     DynamicFormCheckboxComponent,
-    DynamicFormRadioComponent
+    DynamicFormRadioComponent,
+    DynamicFormTextAreaComponent
   ],
   providers: [
     InputControlService

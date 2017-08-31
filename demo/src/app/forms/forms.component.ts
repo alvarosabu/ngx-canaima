@@ -1,5 +1,3 @@
-
-
 import {
     Component,
     OnInit,
@@ -12,6 +10,7 @@ import { TextInput } from './../../../../src/forms/text-input';
 import { SelectInput } from './../../../../src/forms/select-input';
 import { CheckboxInput } from '../../../../src/forms/checkbox-input';
 import { RadioInput } from '../../../../src/forms/radio-input';
+import { TextAreaInput } from '../../../../src/forms/textarea-input';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'forms',
@@ -111,7 +110,19 @@ export class FormsComponent implements OnInit {
               {key: 'unproven', value: 'Unproven'}
             ],
             order: 8
-        })
+        }),
+        new TextAreaInput({
+            key: 'about',
+            label: 'About',
+            type: 'textarea',
+            validations: [
+                new Validation('required', true, 'About is required')
+                /* new Validation('min', 1, 'Min Age'),
+                new Validation('max', 90, 'Max Age') */
+            ],
+            order: 9,
+            customClass: 'fcol-xs-12 fcol-md-6'
+        }),
       ];
     public normalForm: any = {
         actions: [

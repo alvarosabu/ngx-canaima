@@ -13,6 +13,9 @@
     class="form-control"
     [placeholder]="' '"
     [formControlName]="input.key"
+    (change)="input.value = $event.target.checked" 
+    [(ngModel)]="input.value" 
+    [attr.checked]="input.value ? true : null" 
     [id]="input.key"
     [type]="input.type">
 

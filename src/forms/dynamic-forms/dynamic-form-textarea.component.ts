@@ -6,13 +6,13 @@ import { InputBase } from '../input-base';
 import { Validation } from './../../validation';
 
 @Component({
-  selector: 'as-df-radio',
-  templateUrl: './dynamic-form-radio.component.html',
+  selector: 'as-df-textarea',
+  templateUrl: './dynamic-form-textarea.component.html',
   styleUrls: [
     './dynamic-form.component.scss'
   ]
 })
-export class DynamicFormRadioComponent implements OnInit {
+export class DynamicFormTextAreaComponent implements OnInit {
   @Input() public input: InputBase<any>;
   @Input() public form: FormGroup;
   @Input() public style: string;
@@ -34,11 +34,9 @@ export class DynamicFormRadioComponent implements OnInit {
       this.errors = this.formControl[this.key].errors || null;
     });
   }
-
   public isValid() { return this.form.controls[this.input.key].valid; }
   public isPristine() { return this.form.controls[this.input.key].pristine; }
   public isValidInput(key) {
     return this.form.controls[key].valid && this.form.controls[key].pristine;
   }
 }
-

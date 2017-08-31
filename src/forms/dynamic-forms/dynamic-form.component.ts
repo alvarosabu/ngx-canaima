@@ -31,6 +31,10 @@ export class DynamicFormComponent implements OnInit {
 
   public ngOnInit() {
     this.form = this.ics.toFormGroup(this.inputs);
+    this.form.valueChanges.subscribe((value) => {
+      // called when the value is updated
+      console.log(value);
+    });
   }
 
   public submit() {
