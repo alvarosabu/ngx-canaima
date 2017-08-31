@@ -9,7 +9,7 @@ import { Validation } from './../../validation';
   selector: 'as-df-checkbox',
   templateUrl: './dynamic-form-checkbox.component.html',
   styleUrls: [
-    './dynamic-form.component.scss'
+    
   ]
 })
 export class DynamicFormCheckboxComponent implements OnInit {

@@ -9,7 +9,7 @@ import { Validation } from './../../validation';
   selector: 'as-df-textarea',
   templateUrl: './dynamic-form-textarea.component.html',
   styleUrls: [
-    './dynamic-form.component.scss'
+    
   ]
 })
 export class DynamicFormTextAreaComponent implements OnInit {

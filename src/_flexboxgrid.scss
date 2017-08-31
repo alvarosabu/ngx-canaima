@@ -7,7 +7,10 @@
     padding-left: 2rem;
   }
   .box {
-      padding: 2rem;
+      padding: 2rem 0;
+      @include breakpoint('epsilon') {
+        padding: 2rem;
+      }
   }
   .frow {
     box-sizing: border-box;

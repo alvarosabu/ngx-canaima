@@ -20,5 +20,4 @@ export class CardDataComponent implements OnInit {
     public ngOnInit() {
         this.hover = false;
      }
-
 }

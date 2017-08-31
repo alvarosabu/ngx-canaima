@@ -4,7 +4,7 @@
 @import "./_mixins.scss";
 @import "./_globals.scss";
 @import "./cards/cards.scss";
-
+@import "./forms/dynamic-forms/dynamic-form.scss";
 *:focus {
     outline: none !important;
 }

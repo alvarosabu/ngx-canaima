@@ -9,7 +9,7 @@ import { Validation } from './../../validation';
   selector: 'as-df-input',
   templateUrl: './dynamic-form-input.component.html',
   styleUrls: [
-    './dynamic-form.component.scss'
+    
   ]
 })
 export class DynamicFormInputComponent implements OnInit {

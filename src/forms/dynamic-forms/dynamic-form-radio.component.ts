@@ -9,7 +9,7 @@ import { Validation } from './../../validation';
   selector: 'as-df-radio',
   templateUrl: './dynamic-form-radio.component.html',
   styleUrls: [
-    './dynamic-form.component.scss'
+    
   ]
 })
 export class DynamicFormRadioComponent implements OnInit {

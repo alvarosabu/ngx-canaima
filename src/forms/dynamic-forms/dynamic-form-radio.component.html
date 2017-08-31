@@ -15,14 +15,13 @@
       class="form-control"
       [formControlName]="input.key" 
       [(ngModel)]="input.value" 
-      [attr.checked]="input.value ? true : null" 
+      [name]="input.value"
       (change)="input.value = opt.value"
+      [attr.checked]="input.value == opt.value ? true : null" 
       [type]="input.type" 
       [id]="input.key"
       [value]="opt.value">
-      {{opt.value}}
-      {{input.value}}
-      {{opt.key}}
+      <span>{{opt.value}}</span>
     </label>
   <div class="help-block" 
   *ngFor="let val of validations">
