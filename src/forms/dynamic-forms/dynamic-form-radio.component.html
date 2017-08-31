@@ -1,0 +1,28 @@
+<div 
+[formGroup]="form">
+<div
+  class="flex-group radio-group"
+  [ngClass]="{ 'has-error': submitted && !isValid(),
+  'has-success': isValid() && !isPristine() && submitted }">
+  <label
+  class="float-label"
+  [attr.for]="input.key">{{input.label}}</label>
+  <br>
+    <label 
+    class="radio-inline" 
+    *ngFor="let opt of input.options">
+      <input 
+      class="form-control"
+      [formControlName]="input.key"
+      [type]="input.type" 
+      [id]="input.key"
+      [value]="opt.key">
+      {{opt.value}}
+    </label>
+  <div class="help-block" 
+  *ngFor="let val of validations">
+    <span *ngIf="errors && errors[val.type] && submitted">{{val.msg}}</span>
+  </div>
+</div>
+
+</div>

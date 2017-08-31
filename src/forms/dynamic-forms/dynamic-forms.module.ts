@@ -5,6 +5,8 @@ import { DynamicFormComponent } from './dynamic-form.component';
 import { DynamicFormInputComponent } from './dynamic-form-input.component';
 import { InputControlService } from '../input-control.service';
 import { DynamicFormCheckboxComponent } from './dynamic-form-checkbox.component';
+import { DynamicFormSelectComponent } from './dynamic-form-select.component';
+import { DynamicFormRadioComponent } from './dynamic-form-radio.component';
 
 @NgModule({
   imports: [
@@ -16,12 +18,16 @@ import { DynamicFormCheckboxComponent } from './dynamic-form-checkbox.component'
     ReactiveFormsModule,
     DynamicFormComponent,
     DynamicFormInputComponent,
-    DynamicFormCheckboxComponent
+    DynamicFormSelectComponent,
+    DynamicFormCheckboxComponent,
+    DynamicFormRadioComponent
   ],
   declarations: [
     DynamicFormComponent,
     DynamicFormInputComponent,
-    DynamicFormCheckboxComponent
+    DynamicFormSelectComponent,
+    DynamicFormCheckboxComponent,
+    DynamicFormRadioComponent
   ],
   providers: [
     InputControlService

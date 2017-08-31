@@ -1,4 +1,4 @@
-import { Validation } from './../../../../src/validation';
+
 
 import {
     Component,
@@ -6,11 +6,12 @@ import {
     ViewEncapsulation
 } from '@angular/core';
 import { Action } from './../../../../src/action';
-
+import { Validation } from './../../../../src/validation';
 import { InputBase } from './../../../../src/forms/input-base';
 import { TextInput } from './../../../../src/forms/text-input';
 import { SelectInput } from './../../../../src/forms/select-input';
 import { CheckboxInput } from '../../../../src/forms/checkbox-input';
+import { RadioInput } from '../../../../src/forms/radio-input';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'forms',
@@ -87,8 +88,18 @@ export class FormsComponent implements OnInit {
                 /* new Validation('min', 1, 'Min Age'),
                 new Validation('max', 90, 'Max Age') */
           ],
-            order: 5,
+            order: 6,
             customClass: 'fcol-xs-12 fcol-md-6'
+        }),
+        new RadioInput({
+            key: 'gender',
+            label: 'Gender',
+            type: 'radio',
+            options: [
+              {key: 'male',  value: 'Male'},
+              {key: 'female',  value: 'Female'},
+            ],
+            order: 7
         }),
         new SelectInput({
             key: 'brave',
@@ -99,8 +110,8 @@ export class FormsComponent implements OnInit {
               {key: 'good',   value: 'Good'},
               {key: 'unproven', value: 'Unproven'}
             ],
-            order: 6
-        }),
+            order: 8
+        })
       ];
     public normalForm: any = {
         actions: [

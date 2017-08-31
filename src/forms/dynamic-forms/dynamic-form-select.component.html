@@ -9,14 +9,13 @@
     *ngIf="style != 'float'"
     [attr.for]="input.key">{{input.label}}</label>
     <span [ngClass]="{'has-float-label': style == 'float'}">
-      <input
+      <select
       class="form-control"
-      [placeholder]="' '"
-      *ngSwitchCase="'textbox'"
-      [formControlName]="input.key"
       [id]="input.key"
-      [type]="input.type">
-
+      *ngSwitchCase="'dropdown'"
+      [formControlName]="input.key">
+        <option *ngFor="let opt of input.options" [value]="opt.key">{{opt.value}}</option>
+      </select>
       <label
       class="float-label"
       *ngIf="style == 'float'"

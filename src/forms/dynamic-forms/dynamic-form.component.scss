@@ -7,9 +7,23 @@
 .flex-group {
   display: flex;
   justify-content: flex-start;
-  input[type=checkbox].form-control {
+  input[type=checkbox].form-control,
+  input[type=radio].form-control {
     width: 20%;
-  } 
+  }
+  input[type=radio].form-control {
+    margin-left: -1.9rem;
+  }
+  .radio-inline {
+    display: flex;
+    flex:1;
+  }
+}
+.radio-group {
+  flex-wrap: wrap;
+  .float-label {
+    width: 100%;
+  }
 }
 .has-float-label {
   display: block;
@@ -225,6 +239,7 @@ input[type="radio"],
   vertical-align: top;
   border: none;
   background-color: transparent;
+  box-shadow: none !important; 
   -webkit-appearance: none;
   cursor: pointer;
 

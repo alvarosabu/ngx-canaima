@@ -9,17 +9,29 @@
     *ngFor="let input of inputs"
     [ngSwitch]="input.controlType" >
       <as-df-input
-      *ngSwitchCase="'textbox' || 'dropdown'"
+      *ngSwitchCase=" 'textbox'"
       [input]="input"
       [form]="form"
       [submitted]="submitted"
       [style]="style"></as-df-input>
+      <as-df-select
+      *ngSwitchCase="'dropdown'"
+      [input]="input"
+      [form]="form"
+      [submitted]="submitted"
+      [style]="style"></as-df-select>
       <as-df-checkbox
       *ngSwitchCase="'checkbox'"
       [input]="input"
       [form]="form"
       [submitted]="submitted"
       [style]="style"></as-df-checkbox>
+      <as-df-radio
+      *ngSwitchCase="'radio'"
+      [input]="input"
+      [form]="form"
+      [submitted]="submitted"
+      [style]="style"></as-df-radio>
     </div>
 
     <div
