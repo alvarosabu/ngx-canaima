@@ -1,0 +1,67 @@
+<div>
+  <form
+  class="frow"
+  (ngSubmit)="submit()"
+  [formGroup]="form">
+
+    <div 
+    class="form-group {{input.customClass}}"
+    *ngFor="let input of inputs"
+    [ngSwitch]="input.controlType" >
+      <as-df-input
+      *ngSwitchCase=" 'textbox'"
+      [input]="input"
+      [form]="form"
+      [submitted]="submitted"
+      [style]="style"></as-df-input>
+      <as-df-select
+      *ngSwitchCase="'dropdown'"
+      [input]="input"
+      [form]="form"
+      [submitted]="submitted"
+      [style]="style"></as-df-select>
+      <as-df-checkbox
+      *ngSwitchCase="'checkbox'"
+      [input]="input"
+      [form]="form"
+      [submitted]="submitted"
+      [style]="style"></as-df-checkbox>
+      <as-df-radio
+      *ngSwitchCase="'radio'"
+      [input]="input"
+      [form]="form"
+      [submitted]="submitted"
+      [style]="style"></as-df-radio>
+      <as-df-textarea
+      *ngSwitchCase=" 'textareabox'"
+      [input]="input"
+      [form]="form"
+      [submitted]="submitted"
+      [style]="style"></as-df-textarea>
+    </div>
+    <div
+    class="form-group form-footer"
+    [ngStyle]="{'justify-content': footer?.justify}">
+      <div
+      *ngFor="let action of actions">
+        <div *ngIf="!action.value"
+        class="btn btn-primary {{action.customClass}}"
+        >
+        {{action.label}}
+        </div>
+        <button
+        class="btn btn-primary"
+        *ngIf="action.value"
+        type="submit" >
+         {{action.label}}
+        </button>
+      </div>
+    </div>
+    <pre>
+      {{ form.value | json}}
+    </pre>
+  </form>
+  <!-- <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div> -->
+</div>

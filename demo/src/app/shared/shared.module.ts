@@ -23,7 +23,9 @@ import {
 } from '@ngx-translate/http-loader';
 import { NavbarModule } from './navbar/navbar.module';
 
-import { NgxCanaimaModule } from './../../../../src/index';
+import {
+  NgxCanaimaModule
+} from './../../../../src/index';
 
 @NgModule({
   imports: [
