@@ -98,7 +98,8 @@ export class FormsComponent implements OnInit {
               {key: 'male',  value: 'Male'},
               {key: 'female',  value: 'Female'},
             ],
-            order: 7
+            order: 7,
+            customClass: 'fcol-xs-12 fcol-md-6'
         }),
         new SelectInput({
             key: 'brave',
@@ -109,7 +110,8 @@ export class FormsComponent implements OnInit {
               {key: 'good',   value: 'Good'},
               {key: 'unproven', value: 'Unproven'}
             ],
-            order: 8
+            order: 8,
+            customClass: 'fcol-xs-12 fcol-md-6'
         }),
         new TextAreaInput({
             key: 'about',
@@ -121,7 +123,7 @@ export class FormsComponent implements OnInit {
                 new Validation('max', 90, 'Max Age') */
             ],
             order: 9,
-            customClass: 'fcol-xs-12 fcol-md-6'
+            customClass: 'fcol-xs-12'
         }),
       ];
     public normalForm: any = {

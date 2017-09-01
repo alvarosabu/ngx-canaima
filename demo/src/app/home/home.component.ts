@@ -34,7 +34,8 @@ export class HomeComponent implements OnInit {
         {
             label: 'Lists',
             illustration: '/assets/svg/lists-illustration.svg',
-            comming: true,
+            comming: false,
+            slug: 'lists',
             msg: `Lists present multiple line items vertically as a single continuous element`
         },
         {

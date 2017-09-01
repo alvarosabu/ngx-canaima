@@ -31,6 +31,9 @@
     margin-top: -10rem !important;
 }
 .card {
+    &--illustration__img {
+        background-color: transparent !important;
+    }
     &--component {
         border-top: 3px solid #E5F5FC;
     }
