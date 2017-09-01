@@ -13,7 +13,10 @@ export class CardIllustrationComponent {
     @Input('orientation') public orientation;
     @Input('subtitle') public subtitle: string;
     @Input('customClass') public customClass: string;
-    @Input('footer') public footer: any;
+    @Input('footer') public footer: any = {
+        justify: 'flex-end',
+        alignment: 'center'
+    };
     @Input('msg') public msg: string;
     @Input('fab') public fab: Action;
     @Input('optionsLeft') public optionsLeft: Action[];

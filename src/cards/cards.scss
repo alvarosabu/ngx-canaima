@@ -114,7 +114,7 @@
         }
         .stat__line {
             height: 1px;
-            background-color: $gray-light;
+            background-color: $gray-lighter;
             width: 20px;
             margin: 8px;
         }
@@ -124,7 +124,7 @@
         }
     }
     &__thumb {
-        background: $as-card-data-thumb-bg;
+        background: $gray-light $as-card-data-thumb-bg;
         color: $as-card-data-thumb-color;
         border-right: $as-card-data-thumb-border-right;
         border-color: $as-card-data-thumb-border-color;
@@ -145,7 +145,7 @@
             margin-top: -28px;
         }
     }
-     &__avatar {
+    &__avatar {
         background-color: $white;
         width: $as-card-profile-avatar-size;
         height: $as-card-profile-avatar-size;
@@ -280,29 +280,30 @@
             }
         }
     }
-    &--image &--top,
-    &--image &--right, 
+    &--image.card--top,
+    &--image.card--right, 
     &--profile, 
     &--bg {
         .card__options {
             .btn > i {
                 color: $as-card-options-color-inverse;
-                font-size: 24px;
+                font-size: $as-card-options-font-size;
             }
         }
     }
-    &--image &--bottom, 
-    &--image &--left {
+    &--image.card--bottom, 
+    &--image.card--left {
         .card__options {
             .btn > i {
                 color: $as-card-options-color;
-                font-size: 24px;
+                font-size: $as-card-options-font-size;
             }
         }
     }
     &--image {
         position: relative;
         &__img {
+            background-color: $gray-light;
             height: $as-card-image-height;
             background-size: cover;
             background-position: center;
@@ -315,7 +316,7 @@
     &--illustration {
         position: relative;
         &__header {
-            background:  $as-card-illustration-header-bg;
+            background: $as-card-illustration-header-bg;
             height: $as-card-illustration-height;
             display: flex;
             justify-content: center;
@@ -326,6 +327,7 @@
             }
         }
         &__img {
+            background-color: $gray-lighter;
             width: $as-card-illustration-size;
             height: $as-card-illustration-size;
             border-radius: $as-card-illustration-border-radius;
@@ -338,6 +340,7 @@
             position: relative;
         }
         &__img {
+            background-color: $gray-lighter;
             height: $as-card-profile-bg-height;
             background-size: cover;
             background-position: center;
