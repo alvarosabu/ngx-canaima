@@ -1,0 +1,142 @@
+<as-navbar 
+[shadow]=1 
+[customClass]="'navbar--primary navbar--subheader'" 
+[brand]="navBar.brand" 
+[fixed]=true>
+    <div class="left-content"></div>
+    <div class="center-content">
+        <div class="navbar__title">Ngx-Canaima</div>
+    </div>
+    <div class="right-content"></div>
+</as-navbar>
+<div
+    class="container-fluid wrap has-navbar"
+    fxLayout="row"
+    fxFlexAlign="start start"
+    fxLayoutWrap>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="50"
+        fxFlex.lt-md="100">
+        <as-card 
+        [title]="'Basic List'"
+        [shadow]="1">
+            <div class="card__content">
+                <as-list> 
+                     <div class="list__body" list-body>
+                        <as-list-item 
+                            *ngFor="let item of simpleList"
+                            [index]="item._id"
+                            [title]="item.title"
+                            [subtitle]="item.subtitle"
+                            [actions]="item.actions"
+                            [hasLine]="true"
+                            (onSelected)="onSelected($event)">
+                                
+                        </as-list-item>
+                    </div>
+                </as-list>
+            </div>
+        </as-card>
+    </div>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="50"
+        fxFlex.lt-md="100">
+        <as-card 
+            [title]="'Icon List'"
+            [shadow]="1">
+            <div class="card__content">
+                <as-list> 
+                    <div class="list__body" list-body>
+                       <as-list-item-icon
+                           *ngFor="let item of iconList"
+                           [index]="item._id"
+                           [title]="item.title"
+                           [subtitle]="item.subtitle"
+                           [prefix]="'mdi'"
+                           [icon]="item.icon"
+                           [actions]="item.actions"
+                           (onSelected)="onSelected(event)">
+                       </as-list-item-icon>
+                   </div>
+               </as-list>
+            </div>
+        </as-card>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.lt-md="100">
+        <as-card 
+            [title]="'Avatar List'"
+            [shadow]="1">
+            <div class="card__content">
+                <as-list> 
+                    <div class="list__body" list-body>
+                    <as-list-item-avatar
+                        *ngFor="let item of gotList"
+                        [index]="item._id"
+                        [img]="item.img"
+                        [title]="item.title"
+                        [subtitle]="item.subtitle"
+                        [least]="item.least"
+                        [actions]="item.actions"
+                        (onSelected)="onSelected(event)">
+                    </as-list-item-avatar>
+                </div>
+            </as-list>
+            </div>
+        </as-card>
+    </div>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="50"
+        fxFlex.lt-md="100">
+        <as-card 
+            [title]="'Check List'"
+            [shadow]="1">
+            <div class="card__content">
+                <as-list> 
+                     <div class="list__body" list-body>
+                        <as-list-item-check
+                            *ngFor="let item of todoList"
+                            [index]="item._id"
+                            [title]="item.title"
+                            [least]="item.least"
+                            [actions]="item.actions"
+                            (onSelected)="onSelected(event)">
+                        </as-list-item-check>
+                    </div>
+                </as-list>
+            </div>
+        </as-card>
+    </div>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="50"
+        fxFlex.lt-md="100">
+        <as-card 
+            [title]="'Property List'"
+            [shadow]="1">
+             <div class="card__content">
+                 <as-list> 
+                      <div class="list__body" list-body>
+                         <as-list-item-property
+                             *ngFor="let item of propertyList"
+                             [index]="item._id"
+                             [key]="item.key"
+                             [value]="item.value"
+                             (onSelected)="onSelected(event)">
+                         </as-list-item-property>
+                     </div>
+                 </as-list>
+             </div>
+        </as-card>
+    </div>
+</div>

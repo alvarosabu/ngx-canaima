@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,6 +7,7 @@ import { NumberFormatterPipe } from './misc/number-formatter.pipe';
 import { FormatService } from './misc/format.service';
 import { HomeModule } from '../home/home.module';
 import { CardsActivityModule } from '../cards/cards.module';
+import { ListsActivityModule } from './../lists/lists.module';
 import { FormsActivityModule } from '../forms/forms.module';
 
 @NgModule({
@@ -16,6 +16,7 @@ import { FormsActivityModule } from '../forms/forms.module';
     FormsModule,
     HomeModule,
     CardsActivityModule,
+    ListsActivityModule,
     FormsActivityModule
 
   ],
@@ -31,6 +32,7 @@ import { FormsActivityModule } from '../forms/forms.module';
     FormsModule,
     HomeModule,
     CardsActivityModule,
+    ListsActivityModule,
     FormsActivityModule,
     NumberFormatterPipe,
   ]
