@@ -16,5 +16,9 @@ export class CardComponent {
     @Input('optionsRight') public optionsRight: any[];
     @Input('actions') public actions: any[];
     @Input('shadow') public shadow: string;
+    @Input('footer') public footer: any = {
+        justify: 'flex-end',
+        alignment: 'center'
+    };
 
 }

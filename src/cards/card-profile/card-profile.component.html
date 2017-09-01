@@ -54,7 +54,9 @@
                 <span class="stat__label">{{stat.label}}</span>
             </div>
         </div>
-        <div class="card__actions" [ngStyle]="{'justify-content': footer.justify}">
+        <div class="card__actions"
+        [ngStyle]="{'justify-content': footer.justify,
+        'align-items': footer.alignment}">
             <button class="btn {{action?.customClass}} card__action"  
             *ngFor="let action of actions" 
             [disabled]="action.disabled" 

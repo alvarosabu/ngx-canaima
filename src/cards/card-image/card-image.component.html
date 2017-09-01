@@ -46,13 +46,17 @@ shadow-{{shadow}}
     </div>
     <div class="card__flex">
         <div class="card__body">
-            <div class="card__fabs">
+            <div class="card__fabs" *ngIf="fab">
                 <div class="btn btn-fab {{fab.customClass}} btn-fab-{{fab.size}}" *ngIf="fab" (click)="fab.callback()">
                     <i class="{{fab.prefix}} {{fab.prefix}}-{{fab.icon}}"></i>
                 </div>
             </div>
-            <h4 class="card__title">{{title}}</h4>
-            <h6 class="card__subtitle">{{subtitle}}</h6>
+            <h4 
+            class="card__title"
+            *ngIf="title">{{title}}</h4>
+            <h6 
+            class="card__subtitle"
+            *ngIf="subtitle">{{subtitle}}</h6>
             <div #cardContent>
                 <ng-content selector=".card__content" ></ng-content>
             </div>
@@ -63,7 +67,9 @@ shadow-{{shadow}}
         </div>
         <div class="card__footer" 
         *ngIf="actions">
-            <div class="card__actions" [ngStyle]="{'justify-content': footer.justify}">
+            <div class="card__actions" 
+            [ngStyle]="{'justify-content': footer.justify,
+            'align-items': footer.alignment}">
                 <button class="btn {{action?.customClass}} card__action"  
                 *ngFor="let action of actions" 
                 [disabled]="action.disabled" 
