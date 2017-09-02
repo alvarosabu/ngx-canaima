@@ -34,8 +34,24 @@ export class HomeComponent implements OnInit {
         {
             label: 'Lists',
             illustration: '/assets/svg/lists-illustration.svg',
-            comming: true,
+            comming: false,
+            slug: 'lists',
             msg: `Lists present multiple line items vertically as a single continuous element`
+        },
+        {
+            label: 'Forms',
+            illustration: '/assets/svg/forms-illustration.svg',
+            comming: false,
+            slug: 'forms',
+            msg: `Forms represent a way for the user to interact with the business logic`
+        },
+        {
+            label: 'Grid',
+            illustration: '/assets/svg/grid-illustration.svg',
+            comming: false,
+            slug: 'grid',
+            // tslint:disable-next-line:max-line-length
+            msg: `A grid list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
         }
     ];
     constructor(

@@ -882,14 +882,14 @@ $hr-border:                   $gray-lighter !default;
 //== Cards
 //
 //##
-// $as-card-bg: $gray-dark ; 
+//$as-card-bg: $gray-dark ; 
 // $as-card-color: $white;
 // $as-card-header-bg: $brand-primary;
 // $as-card-header-color: $white; 
 
-$as-card-header-border-top: none;
-$as-card-header-border-bottom: none;
-$as-card-header-border-color: $brand-secundary;
+//$as-card-header-border-top: none;
+//$as-card-header-border-bottom: none;
+//$as-card-header-border-color: $brand-secundary;
 
 // $as-card-footer-bg: $brand-primary;
 // $as-card-footer-color: $white; 
@@ -901,4 +901,11 @@ $as-card-header-border-color: $brand-secundary;
 // $as-card-data-actions-color: red;
 // $as-card-profile-bg-border: 3px solid;
 // $as-card-profile-bg-border-color: $brand-primary;
-$as-card-illustration-height: 200px !default;
+//$as-card-illustration-height: 200px !default;
+//$as-card-illustration-border-radius: 0;
+
+//$as-form-primary-color: $brand-primary;
+//$as-form-input-bg: $gray-dark;
+//$as-form-input-color: $gray-lighter;
+//$as-form-input-border-color: #ddd;
+//$as-form-input-border-radius: 100px;

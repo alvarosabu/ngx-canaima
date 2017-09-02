@@ -1,0 +1,20 @@
+<div class="grid-list-item {{customClass}} shadow-{{shadow}}"
+(mouseover)="showFooter = true"
+(mouseleave)="showFooter = false">
+    
+    <div class="grid-list-item__content" [ngStyle]="{'background-image': 'url(' + img + ')'}">
+       
+    </div>
+    <div 
+    class="grid-list-item__footer"
+    [ngStyle]="!action && {'justify-content': 'center'}" 
+    *ngIf="showFooter || persistent">
+        <span class="grid-list-item__title">{{title}}</span>
+        <div class="grid-list-item__action" *ngIf="action">
+            <i class="{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}"
+            [ngStyle]="{'font-size': action.size + 'px'}"
+            (click)="action.callback(); action.value = ! action.value"></i>
+        </div>
+    </div>
+    
+</div>

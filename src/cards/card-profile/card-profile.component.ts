@@ -22,5 +22,8 @@ export class CardProfileComponent {
     @Input('optionsLeft') public optionsLeft: Action[];
     @Input('optionsRight') public optionsRight: any[];
     @Input('actions') public actions: Action[];
-    @Input('footer') public footer: any;
+    @Input('footer') public footer: any = {
+        justify: 'flex-end',
+        alignment: 'center'
+    };
 }

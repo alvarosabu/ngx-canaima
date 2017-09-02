@@ -2,7 +2,7 @@
     <div class="left-content"></div>
     <div class="center-content">
         <div class="navbar__title">
-			Ngx-Canaima <span class="badge">v0.2.0</span>
+			Ngx-Canaima <span class="badge">v0.3.0</span>
 		</div>
     </div>
     <div class="right-content"></div>
@@ -10,13 +10,14 @@
 <header class="header">
 
 </header>
-<div class="container-fluid wrap has-navbar container-negative"
-fxLayout="row"
-fxLayoutWrap="wrap"
-fxLayoutAlign="start">
+	<div class="container-fluid wrap has-navbar container-negative"
+	fxLayout="row"
+	fxLayoutWrap="wrap"
+	fxLayoutAlign="start">
 	<div class="box"
-	fxFlex="33"
-	fxFlex.lt-md="100"
+	fxFlex="100"
+	fxFlex.gt-xs="50"
+	fxFlex.gt-sm="33"
 	*ngFor="let comp of components"
 	[ngClass]="{ 'card--commingsoon' : comp.comming }">
 		<as-card-illustration

@@ -1,20 +1,37 @@
 
+
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsModule } from './cards/cards.module';
+import { ListsModule } from './lists/lists.module';
+import { GridListsModule } from './grid-list/grid-list.module';
 
-export * from './cards/card/card.component';
+import { DynamicFormsModule } from './forms/dynamic-forms/dynamic-forms.module';
+import { BgImagePreviewDirective } from './bg-image-preview.directive';
+import { ImagePreviewDirective } from './image-preview.directive';
+
 export * from './action';
+export * from './cards';
+export * from './forms';
+export * from './lists';
+export * from './grid-list';
 
 @NgModule({
   imports: [
     CommonModule,
-    CardsModule
+    CardsModule,
+    ListsModule,
+    DynamicFormsModule,
+    GridListsModule
   ],
   declarations: [
+
   ],
   exports: [
     CardsModule,
+    ListsModule,
+    DynamicFormsModule,
+    GridListsModule
   ]
 })
 export class NgxCanaimaModule {

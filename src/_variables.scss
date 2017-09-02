@@ -1,3 +1,5 @@
+$font-family-base:  "Roboto", sans-serif !default;
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -10,7 +12,14 @@ $gray-light:             #bbb !default;
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white:                  #f3f3f3 !default;
 
-
+$brand-primary:         #2D93F9 !default;
+$brand-secundary:       #F47027 !default;
+$brand-ternary:         #bfbebd !default;
+$brand-success:         #4CAF50 !default;
+$brand-info:            #9C27B0 !default;
+$brand-warning:         #ff9800 !default;
+$brand-danger:          #e51c23 !default;
+$brand-sidebar:         #234765 !default;
 
 //== Cards
 $as-card-bg: rgb(98.4%, 98.4%, 98.4%) !default;
@@ -67,3 +76,67 @@ $as-card-illustration-height: 300px !default;
 $as-card-illustration-size: 150px !default;
 $as-card-illustration-border-radius: 50% !default;
 $as-card-illustration-header-bg: $as-card-bg;
+
+
+//== Form
+$as-form-primary-color: $brand-primary !default;
+$as-form-input-bg: transparent !default;
+$as-form-input-color: $gray-dark !default;
+$as-form-input-border-color: #ddd !default;
+$as-form-input-border-radius: 0 !default;
+$as-form-input-padding: 0 1rem !default;
+
+//== Lists
+$as-list-padding: 0 !default;
+$as-list-bg: transparent !default;
+//== List-item
+$as-list-item-bg: transparent !default;
+$as-list-item-color: $gray-dark !default;
+$as-list-item-border: 1px solid !default;
+$as-list-item-border-color: $gray-light !default;
+$as-list-item-title-font-size: 16px !default;
+$as-list-item-title-bg: transparent !default;
+$as-list-item-title-color: $gray-dark !default;
+$as-list-item-title-padding: 0 !default;
+$as-list-item-title-margin: 0 0 2px 0 !default;
+$as-list-item-title-border: none !default;
+$as-list-item-title-border-color: $gray-light !default;
+$as-list-item-subtitle-font-size: 14px !default;
+$as-list-item-subtitle-bg: transparent !default;
+$as-list-item-subtitle-color: lighten($gray, 15%) !default;
+$as-list-item-subtitle-padding: 0 !default;
+$as-list-item-subtitle-margin: 0 0 2px 0 !default;
+$as-list-item-least-font-size: 12px !default;
+$as-list-item-least-bg: transparent !default;
+$as-list-item-least-color: $gray-light !default;
+$as-list-item-action-font-size: 12px !default;
+$as-list-item-action-color: $gray !default;
+$as-list-item-content-padding: 8px 8px 8px 0 !default;
+
+//== List-avatar
+$as-list-item-avatar-size: 45px !default;
+$as-list-item-avatar-border: 1px solid !default;
+$as-list-item-avatar-border-color: $gray-light !default;
+$as-list-item-avatar-bg: $gray-lighter !default;
+$as-list-item-avatar-bg-size: cover !default;
+$as-list-item-avatar-bg-position: center !default;
+
+//== List-property
+$as-list-item-property-key-padding: 8px 8px 8px 0 !default;
+$as-list-item-property-value-padding: 8px 8px 8px 0 !default;
+
+//== Grid-List
+$as-grid-list-bg: transparent !default;
+$as-grid-list-item-height: 200px !default;
+$as-grid-list-item-margin: 0.5rem !default;
+$as-grid-list-item-bg-size: cover !default;
+$as-grid-list-item-bg-position: center !default;
+
+$as-grid-list-item-footer-height: 48px !default;
+$as-grid-list-item-footer-bg: rgba(0,0,0,0.4) !default;
+$as-grid-list-item-padding: 8px 16px;
+$as-grid-list-item-footer-title-color: $white !default;
+$as-grid-list-item-footer-title-font-size: 14px !default;
+$as-grid-list-item-footer-title-font-weight: 500 !default;
+
+$as-grid-list-item-action-color: white !default;
