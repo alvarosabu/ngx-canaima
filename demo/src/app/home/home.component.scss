@@ -31,6 +31,9 @@
     margin-top: -10rem !important;
 }
 .card {
+    &--illustration__header {
+        height: 170px !important;
+    }
     &--illustration__img {
         background-color: transparent !important;
     }
