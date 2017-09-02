@@ -1,10 +1,9 @@
-
-
 import {
     Component,
     OnInit,
     ViewEncapsulation
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Action } from '../../../../src/action';
 import { ActionDropdown } from '../../../../src/action-dropdown';
 import { CardProfile } from './../../../../src/cards/card-profile/card-profile';
@@ -23,8 +22,9 @@ import { Card } from './../../../../src/cards/card/card';
 export class CardsComponent implements OnInit {
     public navBar: any = {
         brand: {
-            logo: '/assets/img/ngx-canaima.png'
-        }
+            logo: '/assets/svg/ngx-canaima.svg'
+        },
+        title: this.route.snapshot.data['title']
     };
     public cardSimple: Card = new Card(
         {
@@ -162,7 +162,9 @@ export class CardsComponent implements OnInit {
             ]
         }
     );
-    constructor() {}
+    constructor(
+        private route: ActivatedRoute,
+    ) { }
 
     public ngOnInit() {}
 }

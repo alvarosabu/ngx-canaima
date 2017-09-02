@@ -5,6 +5,7 @@ import { CardsComponent } from './cards.component';
 export const ROUTES: Routes = [
     {
          path: 'cards',
-         component: CardsComponent
+         component: CardsComponent,
+         data: { title: 'Cards' }
     }
 ];

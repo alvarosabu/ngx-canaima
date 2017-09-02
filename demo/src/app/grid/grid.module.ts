@@ -3,8 +3,8 @@ import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
-import { ROUTES } from './<%= name %>.routes';
-import { <%= capitalname %>Component } from './<%= name %>.component';
+import { ROUTES } from './grid.routes';
+import { GridComponent } from './grid.component';
 
 import { SharedModule } from '../shared/shared.module';
 @NgModule({
@@ -14,8 +14,8 @@ import { SharedModule } from '../shared/shared.module';
     ],
     exports: [],
     declarations: [
-        <%= capitalname %>Component
+        GridComponent
     ],
     providers: [],
 })
-export class <%= capitalname %>Module { }
+export class GridActivityModule { }

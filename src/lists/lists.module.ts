@@ -1,3 +1,4 @@
+
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ListComponent } from './list.component';
@@ -6,6 +7,7 @@ import { ListItemIconComponent } from './list-item-icon/list-item-icon.component
 import { ListItemAvatarComponent } from './list-item-avatar/list-item-avatar.component';
 import { ListItemCheckComponent } from './list-item-check/list-item-check.component';
 import { ListItemPropertyComponent } from './list-item-property/list-item-property.component';
+import { ListItemFileQeueComponent } from './list-item-fileqeue/list-item-fileqeue.component';
 import { BgImagePreviewDirective } from './../bg-image-preview.directive';
 import { ImagePreviewDirective } from './../image-preview.directive';
 
@@ -19,7 +21,10 @@ import { ImagePreviewDirective } from './../image-preview.directive';
         ListItemIconComponent,
         ListItemAvatarComponent,
         ListItemCheckComponent,
-        ListItemPropertyComponent
+        ListItemFileQeueComponent,
+        ListItemPropertyComponent,
+        BgImagePreviewDirective,
+        ImagePreviewDirective
     ],
     declarations: [
         ListComponent,
@@ -27,7 +32,10 @@ import { ImagePreviewDirective } from './../image-preview.directive';
         ListItemIconComponent,
         ListItemAvatarComponent,
         ListItemCheckComponent,
+        ListItemFileQeueComponent,
         ListItemPropertyComponent,
+        BgImagePreviewDirective,
+        ImagePreviewDirective
     ],
     providers: [],
 })

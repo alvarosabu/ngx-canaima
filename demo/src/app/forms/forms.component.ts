@@ -3,6 +3,8 @@ import {
     OnInit,
     ViewEncapsulation
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { Action } from './../../../../src/action';
 import { Validation } from './../../../../src/validation';
 import { InputBase } from './../../../../src/forms/input-base';
@@ -22,8 +24,9 @@ import { TextAreaInput } from '../../../../src/forms/textarea-input';
 export class FormsComponent implements OnInit {
     public navBar: any = {
         brand: {
-            logo: '/assets/img/ngx-canaima.png'
-        }
+            logo: '/assets/svg/ngx-canaima.svg'
+        },
+        title: this.route.snapshot.data['title']
     };
     public inputs: Array<InputBase<any>>  = [
         new TextInput({
@@ -132,7 +135,9 @@ export class FormsComponent implements OnInit {
         new Action('Login', null, null, null, true, 'btn-primary')
         ]
     };
-    constructor() { }
+    constructor(
+        private route: ActivatedRoute,
+    ) { }
 
     public ngOnInit() { }
 

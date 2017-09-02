@@ -44,6 +44,14 @@ export class HomeComponent implements OnInit {
             comming: false,
             slug: 'forms',
             msg: `Forms represent a way for the user to interact with the business logic`
+        },
+        {
+            label: 'Grid',
+            illustration: '/assets/svg/grid-illustration.svg',
+            comming: false,
+            slug: 'grid',
+            // tslint:disable-next-line:max-line-length
+            msg: `A grid list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
         }
     ];
     constructor(

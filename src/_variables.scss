@@ -120,7 +120,23 @@ $as-list-item-avatar-border-color: $gray-light !default;
 $as-list-item-avatar-bg: $gray-lighter !default;
 $as-list-item-avatar-bg-size: cover !default;
 $as-list-item-avatar-bg-position: center !default;
+
 //== List-property
 $as-list-item-property-key-padding: 8px 8px 8px 0 !default;
 $as-list-item-property-value-padding: 8px 8px 8px 0 !default;
 
+//== Grid-List
+$as-grid-list-bg: transparent !default;
+$as-grid-list-item-height: 200px !default;
+$as-grid-list-item-margin: 0.5rem !default;
+$as-grid-list-item-bg-size: cover !default;
+$as-grid-list-item-bg-position: center !default;
+
+$as-grid-list-item-footer-height: 48px !default;
+$as-grid-list-item-footer-bg: rgba(0,0,0,0.4) !default;
+$as-grid-list-item-padding: 8px 16px;
+$as-grid-list-item-footer-title-color: $white !default;
+$as-grid-list-item-footer-title-font-size: 14px !default;
+$as-grid-list-item-footer-title-font-weight: 500 !default;
+
+$as-grid-list-item-action-color: white !default;
