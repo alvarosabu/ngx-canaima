@@ -13,8 +13,8 @@ export class CardComponent {
     @Input('customClass') public customClass: string;
     @Input('msg') public msg: string;
     @Input('optionsLeft') public optionsLeft: Action[];
-    @Input('optionsRight') public optionsRight: any[];
-    @Input('actions') public actions: any[];
+    @Input('optionsRight') public optionsRight: Action[];
+    @Input('actions') public actions: Action[];
     @Input('shadow') public shadow: string;
     @Input('footer') public footer: any = {
         justify: 'flex-end',
