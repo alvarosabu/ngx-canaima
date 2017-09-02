@@ -1,3 +1,22 @@
+## 0.3.0 - 2017-09-02
+### Added
+- Dynamic Forms
+- Text Input
+- Select Input
+- Radio Input
+- Checkbox Input
+- TextArea Input
+- List Module
+- Basic List Item
+- Avatar List Item
+- Icon List Item
+- Checkbox List Item
+- File Qeue List item
+- Property (key, value) List Item
+- Grid List Module with responsive
+### Fixed
+- Card Image transclude content
+- Cards visual validations
 ## 0.2.0 - 2017-04-25
 ### Added
 - Image Card Component
