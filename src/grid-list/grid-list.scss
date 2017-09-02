@@ -15,6 +15,7 @@
     }
 }
 .grid-list-item {
+    min-width: $as-grid-list-item-height;
     height: $as-grid-list-item-height;
     margin: $as-grid-list-item-margin;
     cursor: pointer;
