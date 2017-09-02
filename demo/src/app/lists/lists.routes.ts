@@ -7,5 +7,6 @@ export const ROUTES: Routes = [
     {
          path: 'lists',
          component: ListsComponent,
+         data: { title: 'Lists' }
     }
 ];

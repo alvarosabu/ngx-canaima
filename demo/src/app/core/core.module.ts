@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +10,7 @@ import { HomeModule } from '../home/home.module';
 import { CardsActivityModule } from '../cards/cards.module';
 import { ListsActivityModule } from './../lists/lists.module';
 import { FormsActivityModule } from '../forms/forms.module';
+import { GridActivityModule } from './../grid/grid.module';
 
 @NgModule({
   imports: [
@@ -17,7 +19,8 @@ import { FormsActivityModule } from '../forms/forms.module';
     HomeModule,
     CardsActivityModule,
     ListsActivityModule,
-    FormsActivityModule
+    FormsActivityModule,
+    GridActivityModule
 
   ],
   declarations: [
@@ -35,6 +38,7 @@ import { FormsActivityModule } from '../forms/forms.module';
     ListsActivityModule,
     FormsActivityModule,
     NumberFormatterPipe,
+    GridActivityModule
   ]
 })
 export class CoreModule { }

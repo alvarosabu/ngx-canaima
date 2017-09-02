@@ -10,13 +10,10 @@ import {
 } from '@angular/core';
 
 @Component({
-    selector: 'as-list-item-filepreview',
-    templateUrl: 'list-item-filepreview.component.html',
-    styleUrls: [
-        './lists.component.scss'
-    ]
+    selector: 'as-list-item-fileqeue',
+    templateUrl: 'list-item-fileqeue.component.html'
 })
-export class ListItemFilePreviewComponent {
+export class ListItemFileQeueComponent {
     @Input('index') public index: string;
     @Input('hasLine') public hasLine: boolean;
     @Input('data') public data: any;

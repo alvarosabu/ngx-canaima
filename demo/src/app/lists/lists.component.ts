@@ -3,6 +3,8 @@ import {
     OnInit,
     ViewEncapsulation
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { Action } from '../../../../src/action';
 import { ListItemAvatar } from './../../../../src/lists/list-item-avatar/list-item-avatar';
 import { ListItemIcon } from './../../../../src/lists/list-item-icon/list-item-icon';
@@ -22,7 +24,8 @@ export class ListsComponent implements OnInit {
     public navBar: any = {
         brand: {
             logo: '/assets/svg/ngx-canaima.svg'
-        }
+        },
+        title: this.route.snapshot.data['title']
     };
     public simpleList: ListItem[] = [
         new ListItem({
@@ -131,7 +134,37 @@ export class ListsComponent implements OnInit {
                 title: 'Daenery Targaryen',
                 subtitle: 'a.k.a The mother of Dragons',
                 img: '../assets/img/daenerys-targaryen.jpg',
-                least: '15 min',
+                least: '20 min',
+                actions: [
+                    new Action(null, () => {
+                        console.log('Shared 1');
+                    }, 'share-variant', 'share-variant',
+                    false, null, 'mdi', '24')
+                ]
+            }
+        ),
+        new ListItemAvatar(
+            {
+                _id: 4,
+                title: 'Jaime Lannister',
+                subtitle: 'a.k.a The King\'s Slayer',
+                img: '../assets/img/jaime-lannister.jpg',
+                least: '25 min',
+                actions: [
+                    new Action(null, () => {
+                        console.log('Shared 1');
+                    }, 'share-variant', 'share-variant',
+                    false, null, 'mdi', '24')
+                ]
+            }
+        ),
+        new ListItemAvatar(
+            {
+                _id: 5,
+                title: 'Tyrion Lannister',
+                subtitle: 'a.k.a The Dwarf',
+                img: '../assets/img/tyrion-lannister.png',
+                least: '35 min',
                 actions: [
                     new Action(null, () => {
                         console.log('Shared 1');
@@ -192,7 +225,9 @@ export class ListsComponent implements OnInit {
             }
         )
     ];
-    constructor() { }
+    constructor(
+        private route: ActivatedRoute,
+    ) { }
 
     public ngOnInit() { }
 }
