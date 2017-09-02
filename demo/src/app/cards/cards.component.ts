@@ -1,3 +1,4 @@
+import { Toolbar } from './../../../../src/toolbar/toolbar';
 import {
     Component,
     OnInit,
@@ -20,12 +21,16 @@ import { Card } from './../../../../src/cards/card/card';
     ]
 })
 export class CardsComponent implements OnInit {
-    public navBar: any = {
-        brand: {
-            logo: '/assets/svg/ngx-canaima.svg'
-        },
-        title: this.route.snapshot.data['title']
-    };
+    public toolBar: Toolbar = new Toolbar(
+        {
+            brand: {
+                logo: '/assets/svg/ngx-canaima.svg'
+            },
+            title: this.route.snapshot.data['title'],
+            customClass: 'navbar--primary navbar--subheader',
+            fixed: true
+        }
+    );
     public cardSimple: Card = new Card(
         {
             title: 'Simple Card',

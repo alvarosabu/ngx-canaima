@@ -1,0 +1,51 @@
+<nav #toolbar
+    class="toolbar toolbar--flex toolbar--default shadow-{{shadow}} {{customClass}}"
+    [ngClass]="{'toolbar--fixed': fixed}">
+    <div class="container-fluid">
+       <div 
+       class="toolbar__brand" (click)="openCollapsable()">
+       <img  class="toolbar__logo" 
+          *ngIf="brand"
+         [fxHide.xs]="brand"
+         [src]="brand?.logo" alt="">
+          <span  class="toolbar__logo">{{brand?.name}}</span>
+          <div class="material-burger left"
+          
+          [ngClass]="{'material-burger-transformed': collapsable}"
+           [fxHide.gt-xs]="brand !== undefined">
+            <span></span>
+          </div>
+       </div>
+       <div 
+       class="nav toolbar__left hidden-xs " 
+       #leftContent 
+       [ngStyle]="{'width': left + '%'}" >
+ 
+          <ng-content select=".left-content">
+
+          </ng-content>
+    
+        </div>
+        <div 
+        class="nav toolbar__center" 
+        #centerContent 
+        [ngStyle]="{'width': center + '%'}" >
+          <ng-content select=".center-content"></ng-content>
+        </div>
+        
+        <div class="nav toolbar__right hidden-xs " 
+        #rightContent 
+        [ngStyle]="{'width': right + '%'}" >
+          <ng-content select=".right-content"></ng-content>
+        </div>
+        <!-- <div 
+        class="toolbar__burger hidden-sm hidden-md hidden-lg" *ngIf="navlist" (click)="openCollapsable()">
+          <i class="mdi mdi-menu" ></i>
+        </div> -->
+    </div>
+    <!-- <div class="toolbar__navlist hidden-sm hidden-md hidden-lg" *ngIf="navlist && collapsable" >
+      <div class="toolbar__navitem" *ngFor="let nav of navlist">
+        <a routerLink="/{{nav.slugName}}" (click)="_toggleOpened()" routerLinkActive="active" title="{{nav.title}}">{{nav.title}}</a>
+      </div>
+    </div> -->
+  </nav>

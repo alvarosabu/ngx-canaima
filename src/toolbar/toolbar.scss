@@ -1,0 +1,157 @@
+/*------------------------------------*\
+    Toolbar
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+.toolbar {
+  z-index: 3;
+  width: 100%;
+  &--flex {
+    .container-fluid {
+      display: flex;
+      align-items: center;
+      min-height: $as-toolbar-min-height;
+    }
+  }
+  &--fixed {
+    position: fixed;
+    top: 0;
+  }
+  &--open {
+    .toolbar__center {
+      width: 30%;
+      transition: all .5s ease;
+    }
+    .toolbar-brand {
+      margin-right: 200px;
+      transition: all .5s ease;
+    }
+    
+
+  }
+  &__center {
+    flex: 50;
+    text-align: center;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .5s ease;
+  }
+  &__brand, &__burger {
+    flex: 2;
+    z-index: 3;
+  }
+  &__title {
+    font-weight: 500;
+    .badge {
+      background-color: darken($brand-primary, 5%);
+    }
+  }
+  &__subtitle {
+    font-size: 10px;
+  }
+  &__logo {
+    width: 30px;
+    height: 30px;
+  }
+  &__burger {
+    font-size: 24px;
+    min-width: 40px;
+  }
+  &__navitem {
+    a {
+      width: 100%;
+      padding: 10px;
+      display: block;
+      font-weight: 500;
+    }
+  }
+  &__left, &__right {
+    height: $as-toolbar-min-height;
+    flex: 25;
+  }
+  &__right {
+
+    .right-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+    }
+  }
+  &__left{
+    .left-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+  
+}
+
+.material-burger{
+	position: relative;
+	font-size: 12px;
+	width: 20px;
+	height: 15px;
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.material-burger span{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	top: 50%;
+	left: 0;
+	background: $as-toolbar-color;
+	margin-top: -2px;
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+.material-burger span:after,
+.material-burger span:before{
+	content: '';
+	position: absolute;
+	background: $as-toolbar-color;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.material-burger span:before{
+	-webkit-transform: translateY(-6px);
+	transform: translateY(-6px);
+}
+
+.material-burger span:after{
+	-webkit-transform: translateY(6px);
+	transform: translateY(6px);
+}
+
+/* Transformed State */
+
+.material-burger.material-burger-transformed{
+	/* -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); */
+  span {
+    background: transparent;
+  }
+  span:before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  span:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+}

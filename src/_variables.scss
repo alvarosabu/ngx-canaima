@@ -140,3 +140,18 @@ $as-grid-list-item-footer-title-font-size: 14px !default;
 $as-grid-list-item-footer-title-font-weight: 500 !default;
 
 $as-grid-list-item-action-color: white !default;
+
+//== Toolbar
+$as-toolbar-color: white !default;
+$as-toolbar-min-height: 54px !default;
+
+//== Navmenu
+$as-navmenu-min-height-top: $as-toolbar-min-height !default;
+$as-navmenu-bg: darken($brand-primary, 2%) !default;
+$as-navmenu-color: $white !default;
+
+$as-navmenu-item-padding: 8px 16px !default;
+$as-navmenu-item-bg: transparent !default;
+$as-navmenu-item-color: $white !default;
+$as-navmenu-item-color-hover: darken($white, 10%)!default;
+$as-navmenu-item-bg-hover: darken($as-navmenu-bg, 10%) !default;
