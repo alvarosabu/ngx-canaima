@@ -33,19 +33,43 @@
           <ng-content select=".center-content"></ng-content>
         </div>
         
-        <div class="nav toolbar__right hidden-xs " 
-        #rightContent 
+        <div 
+        class="nav toolbar__right"
+        #rightContent
+        [fxHide.xs]="true"
         [ngStyle]="{'width': right + '%'}" >
-          <ng-content select=".right-content"></ng-content>
+          <ng-content  select=".right-content"></ng-content>
         </div>
-        <!-- <div 
-        class="toolbar__burger hidden-sm hidden-md hidden-lg" *ngIf="navlist" (click)="openCollapsable()">
-          <i class="mdi mdi-menu" ></i>
-        </div> -->
-    </div>
-    <!-- <div class="toolbar__navlist hidden-sm hidden-md hidden-lg" *ngIf="navlist && collapsable" >
-      <div class="toolbar__navitem" *ngFor="let nav of navlist">
-        <a routerLink="/{{nav.slugName}}" (click)="_toggleOpened()" routerLinkActive="active" title="{{nav.title}}">{{nav.title}}</a>
-      </div>
-    </div> -->
+        <div 
+        [ngClass]="{'toolbar__right': actions}">
+          <div 
+          class="toolbar__options">
+              <div class="toolbar__option" 
+              [hidden]="option.dropdown != undefined"  
+              *ngFor="let option of actions">
+                  <button class="btn btn-link" 
+                  (click)="option.callback()">
+                      <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
+                  </button>
+              </div>
+              <div class="toolbar__option" 
+              [hidden]="option.dropdown === undefined" 
+              dropdown 
+              *ngFor="let option of actions">
+                  <button dropdownToggle class="btn btn-link dropdown-toggle">
+                      <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
+                  </button>
+                  <ul *dropdownMenu 
+                  class="dropdown-menu dropdown-menu-right" 
+                  [hidden]="option.dropdown !== undefined"
+                  role="menu">
+                      <li *ngFor="let choice of option.dropdown">
+                          <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>
+                      </li>
+                  </ul>
+              </div> 
+          </div> 
+        </div>
+        
+     </div>
   </nav>

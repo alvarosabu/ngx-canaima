@@ -45,6 +45,10 @@
   }
   &__title {
     font-weight: 500;
+    @include breakpoint('reverse-epsilon') {
+      text-align: left;
+      padding-left: 1rem;
+    }
     .badge {
       background-color: darken($brand-primary, 5%);
     }
@@ -70,10 +74,9 @@
   }
   &__left, &__right {
     height: $as-toolbar-min-height;
-    flex: 25;
   }
   &__right {
-
+    flex: 5;
     .right-content {
       display: flex;
       align-items: center;
@@ -82,6 +85,7 @@
     }
   }
   &__left{
+    flex: 5;
     .left-content {
       display: flex;
       align-items: center;
@@ -89,6 +93,33 @@
       height: 100%;
     }
   }
+  &__options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 9px 2px;
+    .btn {
+        overflow: hidden;
+        padding: 3px !important; 
+    }
+    .btn-link > i {
+        color: $as-toolbar-color;
+        font-size: $as-card-options-font-size;
+    }
+    
+    .mdi-chevron-left, .mdi-dots-vertical {
+        font-size: $as-card-options-font-size;
+    }
+    &--left {
+        order: 1;
+        flex: 1;
+        
+    }
+    &--right {
+        order: 3;
+        flex: 1;
+    }
+}
   
 }
 

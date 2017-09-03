@@ -1,4 +1,5 @@
 
+
 import {
     Component,
     OnInit,
@@ -7,6 +8,8 @@ import {
     ViewEncapsulation
 } from '@angular/core';
 import { ToolbarMenuService } from './menu.service';
+import { ActionDropdown } from '../action-dropdown';
+import { Action } from '../action';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'as-toolbar',
@@ -36,5 +39,8 @@ export class ToolbarComponent implements OnInit {
     public openCollapsable() {
         this.collapsable = !this.collapsable;
         this.menu.openMenu(this.collapsable);
+    }
+    public isActionDropdown(action: (Action | ActionDropdown)) {
+        return action instanceof ActionDropdown;
     }
 }
