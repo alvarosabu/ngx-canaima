@@ -8,6 +8,7 @@ import {
   RequestOptions,
   Http
 } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import {
   InterceptorService,
   Interceptor,
@@ -21,7 +22,6 @@ import {
 import {
   TranslateHttpLoader
 } from '@ngx-translate/http-loader';
-import { NavbarModule } from './navbar/navbar.module';
 
 import {
   NgxCanaimaModule
@@ -32,13 +32,12 @@ import {
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-    NavbarModule,
     NgxCanaimaModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: (http: Http) => new TranslateHttpLoader(http, '/assets/i18n/', '.json'),
-        deps: [Http]
+        useFactory: (http: HttpClient) => new TranslateHttpLoader(http, '/assets/i18n/', '.json'),
+        deps: [HttpClient]
       }
     })
   ],
@@ -52,7 +51,6 @@ import {
     FormsModule,
     FlexLayoutModule,
     HttpModule,
-    NavbarModule,
     NgxCanaimaModule
   ]
 })

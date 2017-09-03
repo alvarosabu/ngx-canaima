@@ -67,6 +67,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
+    "@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git",
     "@angular/forms": "^4.3.6",
     "bootstrap-sass": "^3.3.7",
     "ngx-bootstrap": "^1.9.1"

@@ -16,8 +16,7 @@
         *ngIf="optionsRight?.length > 0">
             <div class="card__option" 
             [hidden]="option.dropdown !== undefined" 
-            *ngFor="let option of optionsRight"
-            >
+            *ngFor="let option of optionsRight">
                 <button class="btn btn-link" 
                 (click)="option.callback()">
                     <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
