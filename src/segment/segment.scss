@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    Segment
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+.segment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: translateZ(0);
+  .tab-container {
+    width: 100%;
+  }
+  .nav-tabs { 
+    display: flex;
+  }
+  &--center {
+    .nav-tabs {
+      justify-content: center;
+    }
+  }
+  &--flex-start {
+    .nav-tabs {
+      justify-content: flex-start;
+    }
+  }
+  &--flex-end {
+    .nav-tabs {
+      justify-content: flex-end;
+    }
+  }
+}

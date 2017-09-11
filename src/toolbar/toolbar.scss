@@ -192,6 +192,7 @@
   justify-content: space-between;
   align-items: center;
   color: $as-toolbar-color;
+  cursor: pointer;
   &__icon {
     font-size: $as-toolbar-back-button-icon-size
   }

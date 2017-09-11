@@ -298,9 +298,15 @@ a {
 .progress {
   height: 3px !important;
 }
+
+// Segment =======================================================================
+
+@include segment(default,$btn-default-bg,$btn-default-color);
+@include segment(primary,$btn-primary-bg,$btn-primary-color);
+
 // Navs =======================================================================
 
-.nav-tabs {
+/* .nav-tabs {
   > li > a,
   > li > a:focus {
     margin-right: 0;
@@ -348,7 +354,7 @@ a {
   .dropdown-menu {
     margin-top: 0;
   }
-}
+} */
 
 .dropdown-menu {
   margin-top: 0;

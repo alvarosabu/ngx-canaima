@@ -15,6 +15,7 @@
         Awiwiwi
     </div>
 </as-toolbar>
+
 <div class="parallax-container">
     <as-header
         [title]="header.title"
@@ -23,20 +24,31 @@
         [bg]="header.bg" 
         [parallax]="header.parallax">
     </as-header>
+    <as-segment
+    [shadow]="1"
+    [align]="'center'"
+    [customClass]="'segment--primary'"
+    [segments]="segments"
+    [(selectedTab)]="selectedTab">
+    </as-segment>
     <div
-        class="container-fluid wrap has-navbar parallax"
+        [ngSwitch]="selectedTab?.value"
+        class="container-fluid parallax-container"
         fxLayout="row"
         fxFlexAlign="start start"
         fxLayoutWrap>
         <div
+            *ngSwitchCase="'buttons'"
             class="box"
             fxFlexAlign="start"
             fxFlex="100"
-            fxFlex.lt-md="100">
+            fxFlex.gt-md="50">
             <as-card 
-                [title]="'Awesome Title'"
+                [title]="'Buttons'"
                 [shadow]="1">
-                 <div class="card__content"></div>
+                 <div class="card__content">
+                     <pre>{{selectedTab | json}}</pre>
+                 </div>
             </as-card>
         </div>
     </div>
