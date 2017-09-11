@@ -40,6 +40,7 @@ export class NavbarComponent implements OnInit {
             this.menuOpen = e;
         });
         this.router.events.subscribe((path: any) => {
+            this.menuOpen = false;
             this.routeData = this.router.config.filter((route) => {
                 return route.path === path.url.replace('/', '');
             })[0];

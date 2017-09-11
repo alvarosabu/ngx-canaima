@@ -1120,3 +1120,39 @@ $breakpoints: (
     animation-duration: $duration;
     animation-fill-mode: forwards; /* this prevents the animation from restarting! */
 }
+
+// Navbar =====================================================================
+
+@mixin navbar($class,$bg,$color){
+	.navbar--#{$class} {
+	  background-color: $bg;
+	  color: $color;
+	  a {
+		color: $color;
+	  }
+	}
+	
+  }
+
+// Buttons ====================================================================
+
+@mixin btn($class,$bg,$color){
+	.btn-#{$class} {
+	  background-color: $bg;
+	  color: $color;
+	  /*&:focus {
+		background-color: $bg;
+	  }*/
+  
+	  &:hover,
+	  &:active:hover {
+		background-color: darken($bg, 6%);
+	  }
+  
+	  &:active {
+		@include box-shadow(2px 2px 4px rgba(0,0,0,.4));
+	  }
+  
+	  @include ripple($color);
+	}
+  }

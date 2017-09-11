@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    $Grid-List
+\*------------------------------------*/
+
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+.grid-list {
+    width: 100%;
+    &__body {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+}
+.grid-list-item {
+    min-width: $as-grid-list-item-height;
+    height: $as-grid-list-item-height;
+    margin: $as-grid-list-item-margin;
+    cursor: pointer;
+    position: relative;
+    &__content {
+        width: 100%;
+        height: 100%;
+        background-size: $as-grid-list-item-bg-size;
+        background-position: $as-grid-list-item-bg-position;
+    }
+    &__footer {
+        position: absolute;
+        height: $as-grid-list-item-footer-height;
+        padding: $as-grid-list-item-padding;
+        width: 100%;
+        background-color: $as-grid-list-item-footer-bg;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        transition: all 1s ease;
+    }
+    &__title {
+        color: $as-grid-list-item-footer-title-color;
+        font-size:$as-grid-list-item-footer-title-font-size;
+        display: flex;
+        align-items: center;
+        font-weight: $as-grid-list-item-footer-title-font-weight;
+        white-space: nowrap;
+        overflow:hidden !important;
+        text-overflow: ellipsis;
+    }
+    &__action {
+        color: $as-grid-list-item-action-color;
+        display: flex;
+        align-items: center;
+    }
+}
