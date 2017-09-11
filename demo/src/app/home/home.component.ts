@@ -52,6 +52,14 @@ export class HomeComponent implements OnInit {
             slug: 'grid',
             // tslint:disable-next-line:max-line-length
             msg: `A grid list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
+        },
+        {
+            label: 'Layout',
+            illustration: '/assets/svg/layout-illustration.svg',
+            comming: false,
+            slug: 'layout',
+            // tslint:disable-next-line:max-line-length
+            msg: `A layout list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
         }
     ];
     constructor(

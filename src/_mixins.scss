@@ -1134,6 +1134,59 @@ $breakpoints: (
 	
   }
 
+  // Segment =====================================================================
+
+@mixin segment($class,$bg,$color){
+	.segment--#{$class} {
+		background: $bg;
+		.nav-tabs {
+			> li > a,
+			> li > a:focus {
+			  margin-right: 0;
+			  background-color: transparent;
+			  border: none;
+			  color: darken($color, 15%);
+			  @include box-shadow(inset 0 -1px 0 transparent);
+			  @include transition(all 0.2s);
+		  
+			  &:hover {
+				background-color: transparent;
+				@include box-shadow(inset 0 -2px 0 $color);
+				color: $color;
+			  }
+			}
+		  
+			& > li.active > a,
+			& > li.active > a:focus {
+			  border: none;
+			  @include box-shadow(inset 0 -2px 0 $color);
+			  color: $color;
+		  
+			  &:hover {
+				border: none;
+				color: $color;
+			  }
+			}
+		  
+			& > li.disabled > a {
+			  @include box-shadow(inset 0 -1px 0 #ddd);
+			}
+			&.nav-justified {
+		  
+			  & > li > a,
+			  & > li > a:hover,
+			  & > li > a:focus,
+			  & > .active > a,
+			  & > .active > a:hover,
+			  & > .active > a:focus {
+				border: none;
+			  }
+			}
+		}
+	}
+	
+  }
+
 // Buttons ====================================================================
 
 @mixin btn($class,$bg,$color){

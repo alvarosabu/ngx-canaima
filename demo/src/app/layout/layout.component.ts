@@ -1,4 +1,3 @@
-
 import {
     Component,
     OnInit,
@@ -9,6 +8,7 @@ import { ActionDropdown } from './../../../../src/action-dropdown';
 import { Action } from './../../../../src/action';
 import { Toolbar } from './../../../../src/toolbar/toolbar';
 import { Header } from './../../../../src/header/header';
+import { Segment } from './../../../../src/segment/segment';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'layout',
@@ -42,13 +42,24 @@ export class LayoutComponent implements OnInit {
         {
             title: 'Header Title',
             subtitle: 'Waaaa subtitle',
-            bg: '../assets/img/header.png',
+            bg: '../assets/img/header2.png',
             msg: `Venmo banjo semiotics, scenester hexagon beard schlitz` +
                 `chic flannel coloring book portland kickstarter.`,
             customClass: null,
             parallax: true
         }
     );
+    public segments: Segment[] = [
+        new Segment({
+            label: 'Buttons',
+            value: 'buttons'
+        }),
+        new Segment({
+            label: 'FABs',
+            value: 'fabs'
+        })
+    ];
+    public selectedTab: Segment = this.segments[0];
     constructor(
         private route: ActivatedRoute,
     ) { }

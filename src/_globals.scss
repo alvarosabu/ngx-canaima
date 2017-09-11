@@ -8,9 +8,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     height: 100%;
     // height: calc( 100% - 54px ); 
 }
-.has-toolbar {
-    margin-top: $as-toolbar-min-height;
-}
 .parallax-container {
     max-height: 100%;
     overflow-x: hidden;
@@ -18,10 +15,22 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     perspective-origin: center top;
     transform-style: preserve-3d;
 } 
-.parallax {
+
+.parallax-container {
+    background-color: $white;
     transform: translateZ(0);
     min-height: 80vh;
 }
+.has-toolbar {
+    margin-top: $as-toolbar-min-height;
+    width: 100%;
+    display: flex;
+}
+
+.has-tabs {
+    box-shadow: none !important;
+}
+
 // Spacers =================================================================
 
 .spacer {
@@ -35,3 +44,32 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
         padding: 6rem;
     }
 }
+// Shadows =================================================================
+
+
+.shadow-0 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  
+  .shadow-0:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .shadow-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  .shadow-2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  
+  .shadow-3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  
+  .shadow-4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .shadow-5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
