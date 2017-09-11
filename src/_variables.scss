@@ -144,7 +144,7 @@ $as-grid-list-item-action-color: white !default;
 //== Toolbar
 $as-toolbar-color: white !default;
 $as-toolbar-min-height: 54px !default;
-
+$as-toolbar-back-button-icon-size: 36px !default;
 //== Navmenu
 $as-navmenu-min-height-top: $as-toolbar-min-height !default;
 $as-navmenu-bg: darken($brand-primary, 2%) !default;
@@ -155,3 +155,13 @@ $as-navmenu-item-bg: transparent !default;
 $as-navmenu-item-color: $white !default;
 $as-navmenu-item-color-hover: darken($white, 10%)!default;
 $as-navmenu-item-bg-hover: darken($as-navmenu-bg, 10%) !default;
+
+//== Header
+$as-header-bg:  $brand-primary !default;
+$as-header-color: white !default;
+$as-header-mobile-min-height: 225px !default;
+$as-header-min-height: 425px !default;
+$as-header-scroll-factor: .5 !default;
+$as-header-body-width: 500px !default;
+$as-header-body-padding: 1rem !default;
+$as-header-body-bg:  rgba(0,0,0,0.1) !default;

@@ -3,12 +3,41 @@
 [customClass]="toolBar.customClass" 
 [brand]="toolBar.brand"
 [actions]="toolBar.actions" 
-[fixed]=toolBar.fixed>
-    <div class="left-content"></div>
+[fixed]=toolBar.fixed>∫
+    <div class="left-content">
+        <as-back-button
+        [label]="'Back'"></as-back-button>
+    </div>
     <div class="center-content">
         <div class="toolbar__title">{{toolBar?.title}}</div>
     </div>
     <div class="right-content">
-      Awiwiwi
+        Awiwiwi
     </div>
 </as-toolbar>
+<div class="parallax-container">
+    <as-header
+        [title]="header.title"
+        [subtitle]="header.subtitle"
+        [msg]="header.msg"
+        [bg]="header.bg" 
+        [parallax]="header.parallax">
+    </as-header>
+    <div
+        class="container-fluid wrap has-navbar parallax"
+        fxLayout="row"
+        fxFlexAlign="start start"
+        fxLayoutWrap>
+        <div
+            class="box"
+            fxFlexAlign="start"
+            fxFlex="100"
+            fxFlex.lt-md="100">
+            <as-card 
+                [title]="'Awesome Title'"
+                [shadow]="1">
+                 <div class="card__content"></div>
+            </as-card>
+        </div>
+    </div>
+</div>

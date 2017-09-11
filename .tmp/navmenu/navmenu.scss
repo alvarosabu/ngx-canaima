@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    Navmenu
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+.navmenu {
+  width: 100%;
+  background: $as-navmenu-bg;
+  z-index: 2;
+  @include breakpoint('gamma') {
+    display: none;
+  }
+  a {
+    color: $as-navmenu-color;
+  }
+  &--collapsable {
+    position: fixed;
+    top: $as-navmenu-min-height-top;
+  }
+  &__item {
+    padding: $as-navmenu-item-padding;
+    background: $as-navmenu-item-bg;
+    transition: all .5s ease;
+    a {
+      color: $as-navmenu-item-color;
+      transition: all .5s ease;
+      cursor: pointer;
+      &:hover {
+        color: $as-navmenu-item-color-hover;
+      }
+    }
+    &:hover {
+      background: $as-navmenu-item-bg-hover;
+    }
+  }
+}

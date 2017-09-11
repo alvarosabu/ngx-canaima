@@ -1,3 +1,4 @@
+
 import {
     Component,
     OnInit,
@@ -7,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ActionDropdown } from './../../../../src/action-dropdown';
 import { Action } from './../../../../src/action';
 import { Toolbar } from './../../../../src/toolbar/toolbar';
+import { Header } from './../../../../src/header/header';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'layout',
@@ -36,7 +38,17 @@ export class LayoutComponent implements OnInit {
             ]
         }
     );
-    
+    public header: Header = new Header(
+        {
+            title: 'Header Title',
+            subtitle: 'Waaaa subtitle',
+            bg: '../assets/img/header.png',
+            msg: `Venmo banjo semiotics, scenester hexagon beard schlitz` +
+                `chic flannel coloring book portland kickstarter.`,
+            customClass: null,
+            parallax: true
+        }
+    );
     constructor(
         private route: ActivatedRoute,
     ) { }
