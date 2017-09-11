@@ -43,7 +43,9 @@ export class NavbarComponent implements OnInit {
             this.routeData = this.router.config.filter((route) => {
                 return route.path === path.url.replace('/', '');
             })[0];
-            this.toolBar.title = this.routeData.data.title;
+            if (this.routeData.data) {
+                this.toolBar.title = this.routeData.data.title;
+            }
         });
         this.getNavs();
     }
