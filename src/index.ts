@@ -12,6 +12,7 @@ import { SegmentModule } from './segment/segment.module';
 
 import { BgImagePreviewDirective } from './bg-image-preview.directive';
 import { ImagePreviewDirective } from './image-preview.directive';
+import { ButtonsModule } from './buttons/buttons.module';
 
 export * from './action';
 export * from './cards';
@@ -29,7 +30,8 @@ export * from './grid-list';
     ToolbarModule,
     NavmenuModule,
     HeaderModule,
-    SegmentModule
+    SegmentModule,
+    ButtonsModule
   ],
   declarations: [
 
@@ -42,7 +44,8 @@ export * from './grid-list';
     ToolbarModule,
     NavmenuModule,
     HeaderModule,
-    SegmentModule
+    SegmentModule,
+    ButtonsModule
   ]
 })
 export class NgxCanaimaModule {

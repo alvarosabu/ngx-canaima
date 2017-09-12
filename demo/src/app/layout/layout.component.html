@@ -42,13 +42,101 @@
             class="box"
             fxFlexAlign="start"
             fxFlex="100"
-            fxFlex.gt-md="50">
+            fxFlex.gt-md="25">
             <as-card 
-                [title]="'Buttons'"
+                [title]="'Simple Buttons'"
                 [shadow]="1">
                  <div class="card__content">
-                     <pre>{{selectedTab | json}}</pre>
+                     <button asButton color="primary">
+                        Primary
+                     </button>
+                     <button class="btn btn-secondary">
+                        Secondary
+                     </button>
+                     <button class="btn btn-ternary">
+                        Ternary
+                     </button>
+                     <button class="btn btn-success">
+                        Success
+                     </button>
+                     <button class="btn btn-info">
+                        Info
+                     </button>
+                     <button class="btn btn-warning">
+                        Warning
+                     </button>
+                     <button class="btn btn-danger">
+                        Danger
+                     </button>
                  </div>
+            </as-card>
+        </div>
+        <div
+        *ngSwitchCase="'buttons'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-md="25">
+            <as-card 
+                [title]="'Outline Buttons'"
+                [shadow]="1">
+                <div class="card__content">
+                    <button asButton color="primary" outline>
+                        Primary
+                    </button>
+                    <button class="btn btn-outline-secondary">
+                        Secondary
+                    </button>
+                    <button class="btn btn-outline-ternary">
+                        Ternary
+                    </button>
+                    <button class="btn btn-outline-success">
+                        Success
+                    </button>
+                    <button class="btn btn-outline-info">
+                        Info
+                    </button>
+                    <button class="btn btn-outline-warning">
+                        Warning
+                    </button>
+                    <button class="btn btn-outline-danger">
+                        Danger
+                    </button>
+                </div>
+            </as-card>
+        </div>
+        <div
+        *ngSwitchCase="'buttons'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-md="25">
+            <as-card 
+                [title]="'Rounded Buttons'"
+                [shadow]="1">
+                <div class="card__content">
+                    <button asButton color="primary" outline rounded>
+                        Primary
+                    </button>
+                    <button class="btn btn-outline-secondary">
+                        Secondary
+                    </button>
+                    <button class="btn btn-outline-ternary">
+                        Ternary
+                    </button>
+                    <button class="btn btn-outline-success">
+                        Success
+                    </button>
+                    <button class="btn btn-outline-info">
+                        Info
+                    </button>
+                    <button class="btn btn-outline-warning">
+                        Warning
+                    </button>
+                    <button class="btn btn-outline-danger">
+                        Danger
+                    </button>
+                </div>
             </as-card>
         </div>
     </div>

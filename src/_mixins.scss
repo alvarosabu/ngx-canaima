@@ -1199,6 +1199,7 @@ $breakpoints: (
   
 	  &:hover,
 	  &:active:hover {
+		color: darken($color, 6%);
 		background-color: darken($bg, 6%);
 	  }
   
@@ -1209,3 +1210,27 @@ $breakpoints: (
 	  @include ripple($color);
 	}
   }
+  @mixin btn-outline($class, $color, $border){
+	.btn-outline-#{$class} {
+	  background-color: transparent;
+	  color: $color;
+	  border: $border solid $color !important;
+	  /*&:focus {
+		background-color: $bg;
+	  }*/
+  
+	  &:hover,
+	  &:active:hover {
+		color: darken($color, 6%);
+		border: $border solid darken($color, 6%) !important;
+	  }
+  
+	 /*  &:active {
+		//@include box-shadow(2px 2px 4px rgba(0,0,0,.4));
+	  } */
+  
+	  @include ripple($color);
+	}
+
+
+}

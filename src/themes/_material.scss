@@ -107,12 +107,23 @@ a.active {
 
 @include btn(default,$btn-default-bg,$btn-default-color);
 @include btn(primary,$btn-primary-bg,$btn-primary-color);
-@include btn(secundary,$brand-secundary,$btn-primary-color);
+@include btn(secondary,$brand-secondary,$btn-primary-color);
+@include btn(ternary,$brand-ternary,$btn-primary-color);
 @include btn(success,$btn-success-bg,$btn-success-color);
 @include btn(info,$btn-info-bg,$btn-info-color);
 @include btn(warning,$btn-warning-bg,$btn-warning-color);
 @include btn(danger,$btn-danger-bg,$btn-danger-color);
 @include btn(link,#fff,$btn-default-color);
+
+@include btn-outline(default,$btn-default-bg, 2px);
+@include btn-outline(primary,$btn-primary-bg, 2px);
+@include btn-outline(secondary,$brand-secondary, 2px);
+@include btn-outline(ternary,$brand-ternary, 2px);
+@include btn-outline(success,$btn-success-bg, 2px);
+@include btn-outline(info,$btn-info-bg, 2px);
+@include btn-outline(warning,$btn-warning-bg, 2px);
+@include btn-outline(danger,$btn-danger-bg, 2px);
+@include btn-outline(link,$btn-default-bg, 2px);
 
 .btn {
   text-transform: uppercase;
@@ -169,7 +180,9 @@ a.active {
     }
   }
 }
-
+.btn-rounded {
+	border-radius: $btn-border-radius-base;
+}
 .btn-group {
   .btn + .btn,
   .btn + .btn-group,
@@ -302,59 +315,15 @@ a {
 // Segment =======================================================================
 
 @include segment(default,$btn-default-bg,$btn-default-color);
-@include segment(primary,$btn-primary-bg,$btn-primary-color);
-
+@include segment(primary,$brand-primary,$btn-primary-color);
+@include segment(secondary,$brand-secondary,$btn-primary-color);
+@include segment(success,$btn-success-bg,$btn-success-color);
+@include segment(info,$btn-info-bg,$btn-info-color);
+@include segment(warning,$btn-warning-bg,$btn-warning-color);
+@include segment(danger,$btn-danger-bg,$btn-danger-color);
+@include segment(link,#fff,$btn-default-color);
 // Navs =======================================================================
 
-/* .nav-tabs {
-  > li > a,
-  > li > a:focus {
-    margin-right: 0;
-    background-color: transparent;
-    border: none;
-    color: $navbar-default-link-color;
-    @include box-shadow(inset 0 -1px 0 #ddd);
-    @include transition(all 0.2s);
-
-    &:hover {
-      background-color: transparent;
-      @include box-shadow(inset 0 -2px 0 $brand-primary);
-      color: $brand-primary;
-    }
-  }
-
-  & > li.active > a,
-  & > li.active > a:focus {
-    border: none;
-    @include box-shadow(inset 0 -2px 0 $brand-primary);
-    color: $brand-primary;
-
-    &:hover {
-      border: none;
-      color: $brand-primary;
-    }
-  }
-
-  & > li.disabled > a {
-    @include box-shadow(inset 0 -1px 0 #ddd);
-  }
-
-  &.nav-justified {
-
-    & > li > a,
-    & > li > a:hover,
-    & > li > a:focus,
-    & > .active > a,
-    & > .active > a:hover,
-    & > .active > a:focus {
-      border: none;
-    }
-  }
-
-  .dropdown-menu {
-    margin-top: 0;
-  }
-} */
 
 .dropdown-menu {
   margin-top: 0;

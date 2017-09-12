@@ -3,3 +3,9 @@
 \*------------------------------------*/
 
 @import '../../styles/_variables.scss';
+
+.card__content {
+    button {
+        margin: .5rem;
+    }
+}
