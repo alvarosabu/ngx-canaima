@@ -1,3 +1,16 @@
+## 0.4.0 - 2017-09-12
+### Added
+- Toolbar Component
+- Header Component
+- Parallax Header Component
+- Back Button Component
+- Segments Component
+- Button Directive for size, colors.
+- Button Icon Directive
+- Loading Button
+### Changes
+- Distribution of sass files to mixins, variables, effects etc.
+- Material theme
 ## 0.3.0 - 2017-09-02
 ### Added
 - Dynamic Forms

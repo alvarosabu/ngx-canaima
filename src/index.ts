@@ -19,6 +19,9 @@ export * from './cards';
 export * from './forms';
 export * from './lists';
 export * from './grid-list';
+export * from './segment';
+export * from './navmenu';
+export * from './toolbar';
 
 @NgModule({
   imports: [
