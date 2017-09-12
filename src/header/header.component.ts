@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
     @Input('subtitle') public subtitle: string;
     @Input('msg') public msg: string;
     @Input('height') public height: string;
+    @Input('customClass') public customClass: string;
     @Input('contentAlign') public contentAlign = 'center';
     @Input('parallax') public parallax: boolean;
     constructor(

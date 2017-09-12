@@ -1,11 +1,17 @@
 /*------------------------------------*\
     $Home
 \*------------------------------------*/
-
+@import '../../../../src/_mixins.scss';
 @import '../../styles/_variables.scss';
-
 .container-negative {
     margin-top: -10rem !important;
+}
+.header-home {
+    background-size: 29%;
+    height: 210px;
+    @include breakpoint('reverse-gamma') {
+        background-size: 54%;
+    }
 }
 .card {
     &--illustration__header {

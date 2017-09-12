@@ -1,3 +1,4 @@
+
 import {
     Component,
     OnInit,
@@ -6,6 +7,7 @@ import {
 import {
     ToastyService
 } from 'ng2-toasty';
+import { Header } from './../../../../src/header/header';
 
 @Component({
     encapsulation: ViewEncapsulation.None,
@@ -62,6 +64,13 @@ export class HomeComponent implements OnInit {
             msg: `A layout list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
         }
     ];
+    public header: Header = new Header(
+        {
+            bg: '../assets/img/header-canaima.png',
+            customClass: 'header-home',
+            parallax: true
+        }
+    );
     constructor(
         public toastService: ToastyService
     ) {}

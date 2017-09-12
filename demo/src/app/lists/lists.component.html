@@ -3,7 +3,10 @@
 [customClass]="'navbar--primary navbar--subheader'" 
 [brand]="navBar.brand" 
 [fixed]=true>
-    <div class="left-content"></div>
+    <div class="left-content">
+        <as-back-button
+        [label]="'Back'"></as-back-button>
+    </div>
     <div class="center-content">
         <div class="toolbar__title">{{navBar?.title}}</div>
     </div>

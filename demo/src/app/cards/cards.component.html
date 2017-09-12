@@ -3,7 +3,10 @@
 [customClass]="toolBar.customClass" 
 [brand]="toolBar.brand" 
 [fixed]=toolBar.fixed>
-    <div class="left-content"></div>
+    <div class="left-content">
+        <as-back-button
+        [label]="'Back'"></as-back-button>
+    </div>
     <div class="center-content">
         <div class="toolbar__title">{{toolBar?.title}}</div>
     </div>
