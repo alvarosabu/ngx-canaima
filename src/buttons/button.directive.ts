@@ -15,7 +15,10 @@ export class AsButtonDirective implements OnInit {
     this.renderer.addClass(this.hostElement.nativeElement, `btn`);
     if (this.outline !== undefined) {
         this.renderer.addClass(this.hostElement.nativeElement, `btn-outline-${this.color}`);
-    }else if (this.rounded !== undefined) {
+    }else {
+        this.renderer.addClass(this.hostElement.nativeElement, `btn-${this.color}`);
+    }
+    if (this.rounded !== undefined) {
         this.renderer.addClass(this.hostElement.nativeElement, `btn-rounded`);
     }else {
         this.renderer.addClass(this.hostElement.nativeElement, `btn-${this.color}`);

@@ -107,8 +107,8 @@ a.active {
 
 @include btn(default,$btn-default-bg,$btn-default-color);
 @include btn(primary,$btn-primary-bg,$btn-primary-color);
-@include btn(secondary,$brand-secondary,$btn-primary-color);
-@include btn(ternary,$brand-ternary,$btn-primary-color);
+@include btn(secondary,$brand-secondary,$btn-secondary-color);
+@include btn(ternary,$brand-ternary,$btn-ternary-color);
 @include btn(success,$btn-success-bg,$btn-success-color);
 @include btn(info,$btn-info-bg,$btn-info-color);
 @include btn(warning,$btn-warning-bg,$btn-warning-color);
@@ -181,7 +181,7 @@ a.active {
   }
 }
 .btn-rounded {
-	border-radius: $btn-border-radius-base;
+	border-radius: 50px !important;
 }
 .btn-group {
   .btn + .btn,

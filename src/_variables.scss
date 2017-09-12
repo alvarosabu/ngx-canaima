@@ -21,6 +21,19 @@ $brand-warning:         #ff9800 !default;
 $brand-danger:          #e51c23 !default;
 $brand-sidebar:         #234765 !default;
 
+//== Buttons
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             transparent !default;
+
+$btn-secondary-color:              #fff !default;
+$btn-secondary-bg:                 $brand-secondary !default;
+$btn-secondary-border:             transparent !default;
+
+$btn-ternary-color:              #fff !default;
+$btn-ternary-bg:                 $brand-ternary !default;
+$btn-ternary-border:             transparent !default;
+
 //== Cards
 $as-card-bg: rgb(98.4%, 98.4%, 98.4%) !default;
 $as-card-color: $gray !default;
