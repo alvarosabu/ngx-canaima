@@ -115,26 +115,51 @@
                 [title]="'Rounded Buttons'"
                 [shadow]="1">
                 <div class="card__content">
-                    <button asButton color="primary" outline rounded>
+                    <button asButton color="primary" rounded>
                         Primary
                     </button>
                     <button asButton color="secondary" outline rounded>
                         Secondary
                     </button>
-                    <button asButton color="ternary" outline rounded>
+                    <button asButton color="ternary" rounded>
                         Ternary
                     </button>
-                    <button asButton color="success" outline rounded>
+                    <button asButton color="success" rounded>
                         Success
                     </button>
                     <button asButton color="info" outline rounded>
                         Info
                     </button>
-                    <button asButton color="warning" outline rounded>
+                    <button asButton color="warning" rounded>
                         Warning
                     </button>
                     <button asButton color="danger" outline rounded>
                         Danger
+                    </button>
+                </div>
+            </as-card>
+        </div>
+        <div
+        *ngSwitchCase="'buttons'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-md="25">
+            <as-card 
+                [title]="'Sizes'"
+                [shadow]="1">
+                <div class="card__content">
+                    <button asButton color="primary" rounded size="lg">
+                        Primary
+                    </button>
+                    <button asButton color="secondary" block>
+                        Secondary
+                    </button>
+                    <button asButton color="ternary" size="sm">
+                        Ternary
+                    </button>
+                    <button asButton color="success" rounded size="xs">
+                        Success
                     </button>
                 </div>
             </as-card>

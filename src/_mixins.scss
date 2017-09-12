@@ -1199,7 +1199,7 @@ $breakpoints: (
   
 	  &:hover,
 	  &:active:hover {
-		color: darken($color, 6%);
+		color: darken($color, 6%) !important;
 		background-color: darken($bg, 6%);
 	  }
   
@@ -1221,7 +1221,7 @@ $breakpoints: (
   
 	  &:hover,
 	  &:active:hover {
-		color: darken($color, 6%);
+		color: darken($color, 6%) !important;
 		border: $border solid darken($color, 6%) !important;
 	  }
   
