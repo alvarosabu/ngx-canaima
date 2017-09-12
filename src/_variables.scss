@@ -13,13 +13,26 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white:                  #f3f3f3 !default;
 
 $brand-primary:         #2D93F9 !default;
-$brand-secundary:       #F47027 !default;
+$brand-secondary:       #F47027 !default;
 $brand-ternary:         #bfbebd !default;
 $brand-success:         #4CAF50 !default;
 $brand-info:            #9C27B0 !default;
 $brand-warning:         #ff9800 !default;
 $brand-danger:          #e51c23 !default;
 $brand-sidebar:         #234765 !default;
+
+//== Buttons
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             transparent !default;
+
+$btn-secondary-color:              #fff !default;
+$btn-secondary-bg:                 $brand-secondary !default;
+$btn-secondary-border:             transparent !default;
+
+$btn-ternary-color:              #fff !default;
+$btn-ternary-bg:                 $brand-ternary !default;
+$btn-ternary-border:             transparent !default;
 
 //== Cards
 $as-card-bg: rgb(98.4%, 98.4%, 98.4%) !default;
@@ -140,3 +153,28 @@ $as-grid-list-item-footer-title-font-size: 14px !default;
 $as-grid-list-item-footer-title-font-weight: 500 !default;
 
 $as-grid-list-item-action-color: white !default;
+
+//== Toolbar
+$as-toolbar-color: white !default;
+$as-toolbar-min-height: 54px !default;
+$as-toolbar-back-button-icon-size: 36px !default;
+//== Navmenu
+$as-navmenu-min-height-top: $as-toolbar-min-height !default;
+$as-navmenu-bg: darken($brand-primary, 2%) !default;
+$as-navmenu-color: $white !default;
+
+$as-navmenu-item-padding: 8px 16px !default;
+$as-navmenu-item-bg: transparent !default;
+$as-navmenu-item-color: $white !default;
+$as-navmenu-item-color-hover: darken($white, 10%)!default;
+$as-navmenu-item-bg-hover: darken($as-navmenu-bg, 10%) !default;
+
+//== Header
+$as-header-bg:  $brand-primary !default;
+$as-header-color: white !default;
+$as-header-mobile-min-height: 225px !default;
+$as-header-min-height: 325px !default;
+$as-header-scroll-factor: .5 !default;
+$as-header-body-width: 300px !default;
+$as-header-body-padding: 1rem !default;
+$as-header-body-bg:  rgba(0,0,0,0.1) !default;

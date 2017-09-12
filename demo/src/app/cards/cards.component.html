@@ -1,16 +1,20 @@
-<as-navbar 
+<as-toolbar 
 [shadow]=1 
-[customClass]="'navbar--primary navbar--subheader'" 
-[brand]="navBar.brand" 
-[fixed]=true>
-    <div class="left-content"></div>
+[customClass]="toolBar.customClass" 
+[brand]="toolBar.brand" 
+[fixed]=toolBar.fixed>
+    <div class="left-content">
+        <as-back-button
+        [label]="'Back'"></as-back-button>
+    </div>
     <div class="center-content">
-        <div class="navbar__title">{{navBar?.title}}</div>
+        <div class="toolbar__title">{{toolBar?.title}}</div>
     </div>
     <div class="right-content"></div>
-</as-navbar>
+</as-toolbar>
 <div 
-    class="container-fluid wrap has-navbar"
+    class="container-fluid wrap"
+    [ngClass]="{'has-toolbar': toolBar.fixed}"
     fxLayout="row"
     fxFlexAlign="start start"
     fxLayoutWrap>

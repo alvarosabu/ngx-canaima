@@ -1,6 +1,6 @@
 {
   "name": "ngx-canaima",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -67,6 +67,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
+    "@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git",
     "@angular/forms": "^4.3.6",
     "bootstrap-sass": "^3.3.7",
     "ngx-bootstrap": "^1.9.1"

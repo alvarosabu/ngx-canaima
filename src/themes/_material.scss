@@ -1,0 +1,458 @@
+// Material design Bootstrap Theme
+
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
+@import url($web-font-path);
+html,
+body,
+app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+body {
+  background: #f1f1f1 !important;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a.active {
+  background-color: gray;
+}
+.full-height {
+  height: 100%;
+}
+[dropdown] {
+  position: relative;
+}
+.wrap {
+  width: 100%;
+  @include breakpoint('gamma') {
+    max-width: 1200px;
+  }
+}
+
+// Navbar =====================================================================
+
+
+@include navbar(default,$btn-default-bg,$btn-default-color);
+@include navbar(primary,$btn-primary-bg,$btn-primary-color);
+.navbar {
+  border: none;
+  //@include box-shadow(0 1px 2px rgba(0,0,0,.3));
+  &--subheader {
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+  }
+  &-brand {
+    font-size: 24px;
+  }
+  
+  &-inverse {
+    .navbar-form {
+
+      input[type=text],
+      input[type=password] {
+        color: #fff;
+        @include box-shadow(inset 0 -1px 0 $navbar-inverse-link-color);
+        @include placeholder($navbar-inverse-link-color);
+
+        &:focus {
+          @include box-shadow(inset 0 -2px 0 #fff);
+        }
+      }
+    }
+  }
+}
+
+// Buttons ====================================================================
+
+
+@include btn(default,$btn-default-bg,$btn-default-color);
+@include btn(primary,$btn-primary-bg,$btn-primary-color);
+@include btn(secondary,$brand-secondary,$btn-secondary-color);
+@include btn(ternary,$brand-ternary,$btn-ternary-color);
+@include btn(success,$btn-success-bg,$btn-success-color);
+@include btn(info,$btn-info-bg,$btn-info-color);
+@include btn(warning,$btn-warning-bg,$btn-warning-color);
+@include btn(danger,$btn-danger-bg,$btn-danger-color);
+@include btn(link,#fff,$btn-default-color);
+
+@include btn-outline(default,$btn-default-bg, 2px);
+@include btn-outline(primary,$btn-primary-bg, 2px);
+@include btn-outline(secondary,$brand-secondary, 2px);
+@include btn-outline(ternary,$brand-ternary, 2px);
+@include btn-outline(success,$btn-success-bg, 2px);
+@include btn-outline(info,$btn-info-bg, 2px);
+@include btn-outline(warning,$btn-warning-bg, 2px);
+@include btn-outline(danger,$btn-danger-bg, 2px);
+@include btn-outline(link,$btn-default-bg, 2px);
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
+  @include transition(all 0.4s);
+
+  &-link {
+    border-radius: $btn-border-radius-base;
+    @include box-shadow(none);
+    color: $btn-default-color;
+
+    &:hover,
+    &:focus {
+      @include box-shadow(none);
+      color: $btn-default-color;
+      text-decoration: none !important;
+    }
+
+    .disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:active:hover {
+        background-color: #fff;
+        color: $btn-default-color;
+      }
+    }
+  }
+
+  &-default {
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.4);
+      opacity: 1;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  &-loading {
+    display: inline-flex !important;
+    align-items: center;
+    flex-direction: row-reverse;
+    i {
+      margin-right:.5rem;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTYgMTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojRkZGRkZGO308L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04LDIuNVYxQzMuOSwxLDAuNSw0LjQsMC41LDguNUgyQzIsNS4yLDQuNywyLjUsOCwyLjV6Ii8+PC9zdmc+);
+      animation: spin 1s infinite linear;
+    }
+  }
+  &-rounded {
+    border-radius: 50px !important;
+  }
+  &-icon-left {
+    display: inline-flex !important;
+    flex-direction: row-reverse;
+    i {
+      margin-right:.5rem;
+    }
+  }
+  &-icon-right {
+    display: inline-flex !important;
+    flex-direction: row;
+    i {
+      margin-left: .5rem;
+    }
+  }
+}
+
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: 0;
+  }
+
+  &-vertical {
+    > .btn + .btn,
+    > .btn + .btn-group,
+    > .btn-group + .btn,
+    > .btn-group + .btn-group {
+      margin-top: 0;
+    }
+  }
+}
+.btn-fab {
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.btn-fab-mini {
+  width: 3em;
+  height: 3em;
+   border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px !important;
+}
+.btn-fab-sm {
+  width: 42px;
+  height: 42px;
+  font-size: 16px !important;
+}
+.btn-fab-md {
+  width: 56px;
+  height: 56px;
+  font-size: 24px !important;
+}
+.shadow-0 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.shadow-0:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.shadow-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.shadow-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.shadow-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+// Typography =================================================================
+
+body {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .1px;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+input,
+button {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .1px;
+}
+
+a {
+  @include transition(all 0.2s);
+  text-decoration: none !important;
+  &:focus {
+      outline: 0 !important;
+      
+  }
+}
+
+// Tables =====================================================================
+
+.table-hover {
+  > tbody > tr,
+  > tbody > tr > th,
+  > tbody > tr > td {
+    @include transition(all 0.2s);
+  }
+}
+
+
+
+// Remove the Bootstrap feedback styles for input addons
+.input-group-addon {
+  .has-warning &, .has-error &, .has-success & {
+    color: $input-color;
+    border-color: $input-group-addon-border-color;
+    background-color: $input-group-addon-bg;
+  }
+}
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.form-group-lg {
+  select,
+  select.form-control {
+    line-height: 1.5;
+  }
+}
+.progress {
+  height: 3px !important;
+}
+
+// Segment =======================================================================
+
+@include segment(default,$btn-default-bg,$btn-default-color);
+@include segment(primary,$brand-primary,$btn-primary-color);
+@include segment(secondary,$brand-secondary,$btn-primary-color);
+@include segment(success,$btn-success-bg,$btn-success-color);
+@include segment(info,$btn-info-bg,$btn-info-color);
+@include segment(warning,$btn-warning-bg,$btn-warning-color);
+@include segment(danger,$btn-danger-bg,$btn-danger-color);
+@include segment(link,#fff,$btn-default-color);
+// Navs =======================================================================
+
+
+.dropdown-menu {
+  margin-top: 0;
+  border: none;
+  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
+}
+
+// Indicators =================================================================
+
+.alert {
+  border: none;
+}
+
+.badge {
+  padding: 4px 6px 4px;
+}
+
+.progress {
+  position: relative;
+  z-index: 1;
+  height: 6px;
+  border-radius: 0;
+
+  @include box-shadow(none);
+
+  &-bar {
+    @include box-shadow(none);
+
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
+
+    &:last-child {
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-color: lighten($progress-bar-bg, 35%);
+      }
+    }
+
+    &-success:last-child.progress-bar:before {
+      background-color: lighten($progress-bar-success-bg, 35%);
+    }
+
+    &-info:last-child.progress-bar:before {
+      background-color: lighten($progress-bar-info-bg, 45%);
+    }
+    &-warning:last-child.progress-bar:before {
+      background-color: lighten($progress-bar-warning-bg, 35%);
+    }
+
+    &-danger:last-child.progress-bar:before {
+      background-color: lighten($progress-bar-danger-bg, 25%);
+    }
+  }
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.close {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 24px;
+  opacity: 0.6;
+  @include transition(all 0.2s);
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.list-group {
+
+  &-item {
+    padding: 15px;
+  }
+
+  &-item-text {
+    color: $gray-light;
+  }
+}
+
+.well {
+  border-radius: 0;
+  @include box-shadow(none);
+}
+
+.panel {
+  border: none;
+  border-radius: 2px;
+  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
+
+  &-heading {
+    border-bottom: none;
+  }
+
+  &-footer {
+    border-top: none;
+  }
+}
+
+.popover {
+  border: none;
+  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
+}
+
+.carousel {
+  &-caption {
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
+  }
+}
+.circle {
+  border-radius: 50%; 
+}
+
+.my-drop-zone { 
+  border: dotted 3px lightgray; 
+  width: 100%;
+  padding: 1rem;
+  background: $gray-lighter;
+  color: $gray-light;
+  text-align: center;
+}
+
+.nv-file-over { 
+  border: dotted 3px $brand-app; 
+} 
+
+
+// Spacers =================================================================
+
+.spacer {
+  &--sm {
+    padding: 2rem;
+  }
+}

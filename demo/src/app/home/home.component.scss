@@ -1,34 +1,17 @@
 /*------------------------------------*\
     $Home
 \*------------------------------------*/
-
+@import '../../../../src/_mixins.scss';
 @import '../../styles/_variables.scss';
-
-.header {
-    background: $brand-primary;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    &__logo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 23%;
-        background: #eeeeee;
-        border-radius: 50px;
-        padding: .5rem 2rem;
-    }
-    img {
-        width: 75px;
-    }
-    strong {
-        color: $gray;
-    }
-}
 .container-negative {
     margin-top: -10rem !important;
+}
+.header-home {
+    background-size: 29%;
+    height: 210px;
+    @include breakpoint('reverse-gamma') {
+        background-size: 54%;
+    }
 }
 .card {
     &--illustration__header {
@@ -36,6 +19,7 @@
     }
     &--illustration__img {
         background-color: transparent !important;
+        border-radius: 0 !important;
     }
     &--component {
         border-top: 3px solid #E5F5FC;

@@ -1,0 +1,16 @@
+<div 
+  class="segment {{customClass}} {{ align && 'segment--'+ align}} shadow-{{shadow}}">
+    <tabset>
+      <tab 
+        class="segment"
+        *ngFor="let segment of segments"
+        [heading]="segment.label"
+        (select)="selectTab(segment)"
+        (deselect)="segment.active = false">
+    
+      </tab>
+      <!-- <tab heading="Justified">Justified content</tab>
+      <tab heading="SJ">Short Labeled Justified content</tab>
+      <tab heading="Long Justified">Long Labeled Justified content</tab> -->
+    </tabset>
+</div>

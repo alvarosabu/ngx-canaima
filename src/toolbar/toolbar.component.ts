@@ -1,3 +1,5 @@
+
+
 import {
     Component,
     OnInit,
@@ -5,35 +7,27 @@ import {
     Output,
     ViewEncapsulation
 } from '@angular/core';
-import { Router } from '@angular/router';
-import { NavService } from '../../core/nav/nav.service';
-import {
-  User
-} from '../user';
-import { Nav } from '../../core/nav/nav';
-
+import { ToolbarMenuService } from './menu.service';
+import { ActionDropdown } from '../action-dropdown';
+import { Action } from '../action';
 @Component({
     encapsulation: ViewEncapsulation.None,
-    selector: 'as-navbar',
-    templateUrl: 'navbar.component.html',
-    styleUrls: [
-        './navbar.component.scss'
-    ]
+    selector: 'as-toolbar',
+    templateUrl: 'toolbar.component.html'
 })
-export class NavbarComponent implements OnInit {
+export class ToolbarComponent implements OnInit {
     @Input('brand') public brand: any;
     @Input('actions') public actions: [any];
     @Input('back') public back: string;
     @Input('title') public title: string;
     @Input('subtitle') public subtitle: any;
-    @Input('shadow') public shadow: [any];
+    @Input('shadow') public shadow: string;
     @Input('fixed') public fixed: boolean;
-    @Input('searchBar') public searchBar: any;
     @Input('customClass') public customClass: any;
 
     public collapsable = false;
     constructor(
-        private router: Router,
+        private menu: ToolbarMenuService
     ) {
 
     }
@@ -44,5 +38,9 @@ export class NavbarComponent implements OnInit {
      */
     public openCollapsable() {
         this.collapsable = !this.collapsable;
+        this.menu.openMenu(this.collapsable);
+    }
+    public isActionDropdown(action: (Action | ActionDropdown)) {
+        return action instanceof ActionDropdown;
     }
 }
