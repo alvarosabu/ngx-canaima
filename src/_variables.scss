@@ -13,13 +13,26 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $white:                  #f3f3f3 !default;
 
 $brand-primary:         #2D93F9 !default;
-$brand-secundary:       #F47027 !default;
+$brand-secondary:       #F47027 !default;
 $brand-ternary:         #bfbebd !default;
 $brand-success:         #4CAF50 !default;
 $brand-info:            #9C27B0 !default;
 $brand-warning:         #ff9800 !default;
 $brand-danger:          #e51c23 !default;
 $brand-sidebar:         #234765 !default;
+
+//== Buttons
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             transparent !default;
+
+$btn-secondary-color:              #fff !default;
+$btn-secondary-bg:                 $brand-secondary !default;
+$btn-secondary-border:             transparent !default;
+
+$btn-ternary-color:              #fff !default;
+$btn-ternary-bg:                 $brand-ternary !default;
+$btn-ternary-border:             transparent !default;
 
 //== Cards
 $as-card-bg: rgb(98.4%, 98.4%, 98.4%) !default;

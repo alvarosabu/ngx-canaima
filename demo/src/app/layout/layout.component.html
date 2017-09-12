@@ -42,13 +42,126 @@
             class="box"
             fxFlexAlign="start"
             fxFlex="100"
-            fxFlex.gt-md="50">
+            fxFlex.gt-md="25">
             <as-card 
-                [title]="'Buttons'"
+                [title]="'Simple Buttons'"
                 [shadow]="1">
                  <div class="card__content">
-                     <pre>{{selectedTab | json}}</pre>
+                    <button asButton color="primary">
+                        Primary
+                    </button>
+                    <button asButton color="secondary">
+                        Secondary
+                    </button>
+                    <button asButton color="ternary">
+                        Ternary
+                    </button>
+                    <button asButton color="success">
+                        Success
+                    </button>
+                    <button asButton color="info">
+                        Info
+                    </button>
+                    <button asButton color="warning">
+                        Warning
+                    </button>
+                    <button asButton color="danger">
+                        Danger
+                    </button>
                  </div>
+            </as-card>
+        </div>
+        <div
+        *ngSwitchCase="'buttons'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-md="25">
+            <as-card 
+                [title]="'Outline Buttons'"
+                [shadow]="1">
+                <div class="card__content">
+                    <button asButton color="primary" outline>
+                        Primary
+                    </button>
+                    <button asButton color="secondary" outline>
+                        Secondary
+                    </button>
+                    <button asButton color="ternary" outline>
+                        Ternary
+                    </button>
+                    <button asButton color="success" outline>
+                        Success
+                    </button>
+                    <button asButton color="info" outline>
+                        Info
+                    </button>
+                    <button asButton color="warning" outline>
+                        Warning
+                    </button>
+                    <button asButton color="danger" outline>
+                        Danger
+                    </button>
+                </div>
+            </as-card>
+        </div>
+        <div
+        *ngSwitchCase="'buttons'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-md="25">
+            <as-card 
+                [title]="'Rounded Buttons'"
+                [shadow]="1">
+                <div class="card__content">
+                    <button asButton color="primary" rounded>
+                        Primary
+                    </button>
+                    <button asButton color="secondary" outline rounded>
+                        Secondary
+                    </button>
+                    <button asButton color="ternary" rounded>
+                        Ternary
+                    </button>
+                    <button asButton color="success" rounded>
+                        Success
+                    </button>
+                    <button asButton color="info" outline rounded>
+                        Info
+                    </button>
+                    <button asButton color="warning" rounded>
+                        Warning
+                    </button>
+                    <button asButton color="danger" outline rounded>
+                        Danger
+                    </button>
+                </div>
+            </as-card>
+        </div>
+        <div
+        *ngSwitchCase="'buttons'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-md="25">
+            <as-card 
+                [title]="'Sizes'"
+                [shadow]="1">
+                <div class="card__content">
+                    <button asButton color="primary" rounded size="lg">
+                        Primary
+                    </button>
+                    <button asButton color="secondary" block>
+                        Secondary
+                    </button>
+                    <button asButton color="ternary" size="sm">
+                        Ternary
+                    </button>
+                    <button asButton color="success" rounded size="xs">
+                        Success
+                    </button>
+                </div>
             </as-card>
         </div>
     </div>
