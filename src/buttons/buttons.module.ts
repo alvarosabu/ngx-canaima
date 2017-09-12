@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AsButtonDirective } from './button.directive';
-
+import { AsIconButtonDirective } from './button-icon.directive';
 
 @NgModule({
     imports: [
         CommonModule,
     ],
     exports: [
-        AsButtonDirective
+        AsButtonDirective,
+        AsIconButtonDirective
     ],
     declarations: [
-        AsButtonDirective
+        AsButtonDirective,
+        AsIconButtonDirective
     ],
     providers: [
 

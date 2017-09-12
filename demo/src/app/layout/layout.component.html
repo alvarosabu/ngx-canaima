@@ -164,5 +164,30 @@
                 </div>
             </as-card>
         </div>
+        <div
+        *ngSwitchCase="'buttons'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-md="25">
+            <as-card 
+                [title]="'Icon Buttons'"
+                [shadow]="1">
+                <div class="card__content">
+                    <button asIconButton color="primary" rounded size="lg" icon="home">
+                     Home
+                    </button>
+                    <button asIconButton color="success" rounded size="lg" icon="android" side="right">
+                        Android
+                    </button>
+                    <button asButton color="primary" loading>
+                        Loading
+                    </button>
+                    <button (click)="loadingVar = !loadingVar" asButton color="secondary" [loading]="loadingVar">
+                        Click Me! {{loadingVar}}
+                    </button>
+                </div>
+            </as-card>
+        </div>
     </div>
 </div>
