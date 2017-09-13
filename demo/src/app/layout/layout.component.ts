@@ -29,12 +29,15 @@ export class LayoutComponent implements OnInit {
             actions: [
                 new ActionDropdown(null,
                     [
-                        new Action('Action 1'),
-                        new Action('Action 2')
+                        new Action({label:'Action 1'}),
+                        new Action({label:'Action 12'})
                     ]),
-                new Action(null, () => {
-                    console.log('Filter');
-                }, 'filter')
+                new Action({
+                    callback: () => {
+                        console.log('Filter');
+                    },
+                    icon:'filter'
+                })
             ]
         }
     );

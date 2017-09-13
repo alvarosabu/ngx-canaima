@@ -1130,6 +1130,9 @@ $breakpoints: (
 	  a {
 		color: $color;
 	  }
+	  .badge {
+		background-color: darken($bg, 5%);
+	  }
 	}
 	
   }

@@ -131,8 +131,17 @@ export class FormsComponent implements OnInit {
       ];
     public normalForm: any = {
         actions: [
-        new Action('Cancel', null, null, null, false),
-        new Action('Login', null, null, null, true, 'btn-primary')
+        new Action(
+            {
+                label: 'Cancel'
+            }
+        ),
+        new Action(
+            {
+                label: 'Login',
+                color: 'primary'
+            }
+        ),
         ]
     };
     constructor(

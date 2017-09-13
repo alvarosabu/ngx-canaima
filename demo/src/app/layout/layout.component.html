@@ -136,6 +136,13 @@
                     <button asButton color="danger" outline rounded>
                         Danger
                     </button>
+                    <button 
+                    asButton
+                    (click)="buttonColor = !buttonColor"
+                    [color]="buttonColor ? 'primary': 'secondary'" 
+                    >
+                        Click Me {{buttonColor ? 'primary': 'secondary'}}
+                    </button>
                 </div>
             </as-card>
         </div>

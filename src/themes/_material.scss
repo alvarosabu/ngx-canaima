@@ -42,7 +42,16 @@ a.active {
 
 
 @include navbar(default,$btn-default-bg,$btn-default-color);
+@include navbar(transparent,transparent,$btn-primary-color);
 @include navbar(primary,$btn-primary-bg,$btn-primary-color);
+@include navbar(secondary,$brand-secondary,$btn-secondary-color);
+@include navbar(ternary,$brand-ternary,$btn-ternary-color);
+@include navbar(success,$btn-success-bg,$btn-success-color);
+@include navbar(info,$btn-info-bg,$btn-info-color);
+@include navbar(warning,$btn-warning-bg,$btn-warning-color);
+@include navbar(danger,$btn-danger-bg,$btn-danger-color);
+@include navbar(link,#fff,$btn-default-color);
+
 .navbar {
   border: none;
   //@include box-shadow(0 1px 2px rgba(0,0,0,.3));
@@ -101,12 +110,14 @@ a.active {
   @include transition(all 0.4s);
 
   &-link {
+    background: transparent;
     border-radius: $btn-border-radius-base;
     @include box-shadow(none);
     color: $btn-default-color;
 
     &:hover,
     &:focus {
+      background: transparent;
       @include box-shadow(none);
       color: $btn-default-color;
       text-decoration: none !important;
