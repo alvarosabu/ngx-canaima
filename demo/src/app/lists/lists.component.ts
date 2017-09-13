@@ -33,10 +33,14 @@ export class ListsComponent implements OnInit {
             title: 'Monsters Cards',
             subtitle: 'Yup!! Subtitle here',
             actions: [
-                new Action(null, () => {
-                    console.log('Liked 1');
-                }, 'chevron-right', 'chevron-right',
-                false, null, 'mdi', '18')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'chevron-right',
+                    iconActive: 'chevron-right',
+                    size: '18'
+                })
             ]
         }),
         new ListItem({
@@ -44,10 +48,14 @@ export class ListsComponent implements OnInit {
             title: 'Spell Cards',
             subtitle: 'Yup!! Subtitle here',
             actions: [
-                new Action(null, () => {
-                    console.log('Liked 1');
-                }, 'chevron-right', 'chevron-right',
-                false, null, 'mdi', '18')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'chevron-right',
+                    iconActive: 'chevron-right',
+                    size: '18'
+                })
             ]
         })
     ];
@@ -58,10 +66,14 @@ export class ListsComponent implements OnInit {
             subtitle: 'Yup!! Subtitle here',
             icon: 'amazon',
             actions: [
-                new Action(null, () => {
-                    console.log('Liked 1');
-                }, 'information', 'information',
-                false, null, 'mdi', '18')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'information',
+                    iconActive: 'information',
+                    size: '18'
+                })
             ]
         }),
         new ListItemIcon({
@@ -70,10 +82,14 @@ export class ListsComponent implements OnInit {
             subtitle: 'Yup!! Subtitle here',
             icon: 'android',
             actions: [
-                new Action(null, () => {
-                    console.log('Liked 1');
-                }, 'information', 'information',
-                false, null, 'mdi', '18')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'information',
+                    iconActive: 'information',
+                    size: '18'
+                })
             ]
         }),
         new ListItemIcon({
@@ -82,10 +98,14 @@ export class ListsComponent implements OnInit {
             subtitle: 'Yup!! Subtitle here',
             icon: 'apple',
             actions: [
-                new Action(null, () => {
-                    console.log('Liked 1');
-                }, 'information', 'information',
-                false, null, 'mdi', '18')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'information',
+                    iconActive: 'information',
+                    size: '18'
+                })
             ]
         }),
         new ListItemIcon({
@@ -94,10 +114,14 @@ export class ListsComponent implements OnInit {
             subtitle: 'Yup!! Subtitle here',
             icon: 'angular',
             actions: [
-                new Action(null, () => {
-                    console.log('Liked 1');
-                }, 'information', 'information',
-                false, null, 'mdi', '18')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'information',
+                    iconActive: 'information',
+                    size: '18'
+                })
             ]
         })
     ];
@@ -109,10 +133,14 @@ export class ListsComponent implements OnInit {
             img: '../assets/img/jonsnow.png',
             least: '5 min',
             actions: [
-                new Action(null, () => {
-                    console.log('Shared 1');
-                }, 'share-variant', 'share-variant',
-                false, null, 'mdi', '24')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'share-variant',
+                    iconActive: 'share-variant',
+                    size: '24'
+                })
             ]
         }),
         new ListItemAvatar({
@@ -122,10 +150,14 @@ export class ListsComponent implements OnInit {
             img: '../assets/img/cersei-lannister.jpg',
             least: '15 min',
             actions: [
-                new Action(null, () => {
-                    console.log('Shared 1');
-                }, 'share-variant', 'share-variant',
-                false, null, 'mdi', '24')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'share-variant',
+                    iconActive: 'share-variant',
+                    size: '24'
+                })
             ]
         }),
         new ListItemAvatar(
@@ -136,10 +168,14 @@ export class ListsComponent implements OnInit {
                 img: '../assets/img/daenerys-targaryen.jpg',
                 least: '20 min',
                 actions: [
-                    new Action(null, () => {
-                        console.log('Shared 1');
-                    }, 'share-variant', 'share-variant',
-                    false, null, 'mdi', '24')
+                    new Action({
+                        callback: () => {
+                            console.log('Liked 1');
+                        },
+                        icon: 'share-variant',
+                        iconActive: 'share-variant',
+                        size: '24'
+                    })
                 ]
             }
         ),
@@ -151,10 +187,14 @@ export class ListsComponent implements OnInit {
                 img: '../assets/img/jaime-lannister.jpg',
                 least: '25 min',
                 actions: [
-                    new Action(null, () => {
-                        console.log('Shared 1');
-                    }, 'share-variant', 'share-variant',
-                    false, null, 'mdi', '24')
+                    new Action({
+                        callback: () => {
+                            console.log('Liked 1');
+                        },
+                        icon: 'share-variant',
+                        iconActive: 'share-variant',
+                        size: '24'
+                    })
                 ]
             }
         ),
@@ -166,10 +206,14 @@ export class ListsComponent implements OnInit {
                 img: '../assets/img/tyrion-lannister.png',
                 least: '35 min',
                 actions: [
-                    new Action(null, () => {
-                        console.log('Shared 1');
-                    }, 'share-variant', 'share-variant',
-                    false, null, 'mdi', '24')
+                    new Action({
+                        callback: () => {
+                            console.log('Liked 1');
+                        },
+                        icon: 'share-variant',
+                        iconActive: 'share-variant',
+                        size: '24'
+                    })
                 ]
             }
         )
@@ -180,10 +224,14 @@ export class ListsComponent implements OnInit {
             title: 'Do Laundry',
             least: '5 min',
             actions: [
-                new Action(null, () => {
-                    console.log('Shared 1');
-                }, 'delete', 'delete',
-                false, null, 'mdi', '24')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'delete',
+                    iconActive: 'delete',
+                    size: '24'
+                })
             ]
         }),
         new ListItemCheck({
@@ -191,10 +239,14 @@ export class ListsComponent implements OnInit {
             title: 'Be Awesome',
             least: '5 min',
             actions: [
-                new Action(null, () => {
-                    console.log('Shared 1');
-                }, 'delete', 'delete',
-                false, null, 'mdi', '24')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'delete',
+                    iconActive: 'delete',
+                    size: '24'
+                })
             ]
         }),
         new ListItemCheck({
@@ -202,10 +254,15 @@ export class ListsComponent implements OnInit {
             title: 'Buy some Pizza with Bacon',
             least: '5 min',
             actions: [
-                new Action(null, () => {
-                    console.log('Shared 1');
-                }, 'delete', 'delete',
-                false, null, 'mdi', '24')
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'delete',
+                    iconActive: 'delete',
+                    size: '24',
+                    color: 'primary'
+                })
             ]
         })
     ];

@@ -6,7 +6,13 @@
         *ngIf="optionsLeft?.length > 0">
             <div class="card__option" 
             *ngFor="let option of optionsLeft">
-                <button class="btn btn-link" (click)="option.callback()">
+                <button
+                asButton
+                [color]="option?.color"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
+                (click)="option.callback()">
                     <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
                 </button>
             </div>
@@ -17,7 +23,12 @@
             <div class="card__option" 
             [hidden]="option.dropdown !== undefined" 
             *ngFor="let option of optionsRight">
-                <button class="btn btn-link" 
+                <button
+                asButton
+                [color]="option?.color"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
                 (click)="option.callback()">
                     <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
                 </button>
@@ -55,7 +66,11 @@
             <button 
             asButton
             [color]="action.color"
-            class=" card__action"  
+            [outline]="action.outline"
+            [rounded]="action.rounded"
+            [size]="action.size"
+            class=" card__action"
+            [ngClass]="action?.customClass"  
             *ngFor="let action of actions" 
             [disabled]="action.disabled" 
             (click)="action.callback()">

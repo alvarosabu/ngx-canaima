@@ -19,43 +19,93 @@ export class AsButtonDirective implements OnInit, OnChanges {
     // tslint:disable-next-line:no-inferrable-types
     @Input() loading: any = false;
     @Input('asButton') asButton ;
+    private cls = {}
+    public attributes = [];
     private nativeElement: any;
   constructor(public renderer: Renderer2, public hostElement: ElementRef) {
     this.nativeElement = hostElement.nativeElement;
   }
   public ngOnInit() {
+    this.cls = {
+        rounded: `btn-rounded`,
+        block: `btn-block`,
+        size: `btn-${this.size}`,
+        outline: `btn-outline-${this.color}`,
+        color: `btn-${this.color}`
+    }
+    this.attributes = Object.keys(this.cls);
     this.renderer.addClass(this.nativeElement, `btn`);
-    if (this.loading === true || this.loading === '') {
+    /* this.attributes.forEach(attr => {
+        if (this[attr] !== undefined) {
+            if (typeof(this[attr] === 'boolean')) {
+                if (this.checkInput(this[attr])) {
+                    attr === 'loading' ?
+                    this.appendLoading() :
+                    this.addClass(this.cls[attr]);
+                }
+            }else {
+                this.addClass(this.cls['color']);
+            }
+        }
+    }); */
+    if (this.checkInput(this.loading)) {
         this.appendLoading();
     }
-    if (this.rounded === true || this.rounded === '') {
-        this.addClass(`btn-rounded`);
+    if (this.checkInput(this.rounded)) {
+        this.addClass(this.cls['rounded']);
     }
-    if (this.block === true || this.block === '') {
-        this.addClass(`btn-block`);
+    if (this.checkInput(this.block)) {
+        this.addClass(this.cls['block']);
     }
-    if (this.size === true || this.size === '') {
-        this.addClass(`btn-${this.size}`);
+    if (this.checkInput(this.size)) {
+        this.addClass(this.cls['size']);
     }
-    if (this.outline === true || this.outline === '') {
-        this.addClass(`btn-outline-${this.color}`);
+    if (this.checkInput(this.outline)) {
+        this.addClass(this.cls['outline']);
     } else {
-        this.addClass(`btn-${this.color}`);
+        this.addClass(this.cls['color']);
     }
   }
   public ngOnChanges(changes) {
-    if (changes['color'] && !changes['color'].firstChange) {
+      console.log(changes);
+      for (const key in changes) {
+          if (changes.hasOwnProperty(key) && !changes[key].firstChange) {
+              this[key] = changes[key].currentValue;
+              if (key === 'loading') {
+                changes['loading'].currentValue ?
+                this.appendLoading() : this.removeLoading();
+              } else {
+                if (key === 'color') {
+                    this.addClass(`btn-${changes[key].currentValue}`, `btn-${changes[key].previousValue}`)
+                }else if (key === 'outline') {
+                    let isOutline = changes[key].currentValue;
+                    let isColor = changes['color'] !== undefined; // There is a change in color two
+                    this.addClass(
+                        `btn-${isOutline ? 'outline-' : ''}${this.color}`,
+                        `btn-${!isOutline ? 'outline-' : ''}${this.color}`)
+                }else {
+                    this.addClass(`btn-${key}`)
+                }
+              }
+          }
+      }
+    /* if (changes['color'] && !changes['color'].firstChange) {
         this.color = changes['color'].currentValue;
         this.addClass(`btn-${this.color}`);
     }
-    if (changes['loading'] && !changes['loading'].firstChange) {
-        if (changes['loading'] && changes['loading'].currentValue) {
+    if (changes['loading']
+    && !changes['loading'].firstChange) {
+        if (changes['loading']
+        && changes['loading'].currentValue) {
             this.appendLoading();
         }else {
             this.removeLoading();
         }
-    }
+    } */
 
+  }
+  private checkInput(input) {
+      return (input === true || input === '');
   }
   private appendLoading() {
     let child = this.renderer.createElement(`i`);
@@ -67,10 +117,13 @@ export class AsButtonDirective implements OnInit, OnChanges {
     this.renderer.removeChild(this.nativeElement, child);
     this.renderer.removeClass(this.nativeElement, `btn-loading`);
   }
-  private addClass(cl: string) {
-    if (this.nativeElement.classList.contains(cl)) {
-        this.renderer.removeClass(this.nativeElement, cl);
+  private addClass(current: string, prev = null ) {
+    if (prev) {
+        this.renderer.removeClass(this.nativeElement, prev);
+    }
+    if (this.nativeElement.classList.contains(current)) {
+        this.renderer.removeClass(this.nativeElement, current);
     }else {
-        this.renderer.addClass(this.nativeElement, cl);
-  }
+        this.renderer.addClass(this.nativeElement, current);
+    }
 }

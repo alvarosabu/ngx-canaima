@@ -68,6 +68,13 @@
                     <button asButton color="danger">
                         Danger
                     </button>
+                    <button 
+                    asButton
+                    (click)="buttonColor = !buttonColor"
+                    [color]="buttonColor ? 'primary': 'secondary'" 
+                    >
+                        Click Me {{buttonColor ? 'primary': 'secondary'}}
+                    </button>
                  </div>
             </as-card>
         </div>
@@ -101,6 +108,15 @@
                     </button>
                     <button asButton color="danger" outline>
                         Danger
+                    </button>
+                    <button 
+                    asButton
+                    color="primary"
+                    
+                    (click)="buttonOutline = !buttonOutline"
+                    [outline]="buttonOutline" 
+                    >
+                        Click Me {{buttonOutline}}
                     </button>
                 </div>
             </as-card>
@@ -138,10 +154,11 @@
                     </button>
                     <button 
                     asButton
-                    (click)="buttonColor = !buttonColor"
-                    [color]="buttonColor ? 'primary': 'secondary'" 
+                    color="primary"
+                    (click)="buttonRounded = !buttonRounded"
+                    [rounded]="buttonRounded" 
                     >
-                        Click Me {{buttonColor ? 'primary': 'secondary'}}
+                        Click Me {{buttonRounded}}
                     </button>
                 </div>
             </as-card>
