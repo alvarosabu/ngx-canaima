@@ -22,6 +22,7 @@ export * from './grid-list';
 export * from './segment';
 export * from './navmenu';
 export * from './toolbar';
+export * from './header';
 
 @NgModule({
   imports: [
