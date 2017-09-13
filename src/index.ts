@@ -9,12 +9,12 @@ import { ToolbarModule } from './toolbar/toolbar.module';
 import { HeaderModule } from './header/header.module';
 import { NavmenuModule } from './navmenu/navmenu.module';
 import { SegmentModule } from './segment/segment.module';
-
-import { BgImagePreviewDirective } from './bg-image-preview.directive';
-import { ImagePreviewDirective } from './image-preview.directive';
 import { ButtonsModule } from './buttons/buttons.module';
 
 export * from './action';
+export * from './action-dropdown';
+export * from './bg-image-preview.directive';
+export * from './image-preview.directive';
 export * from './cards';
 export * from './forms';
 export * from './lists';
