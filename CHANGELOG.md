@@ -1,3 +1,7 @@
+## 0.4.1 - 2017-09-13
+### Fixed
+- Export Action Dropdown
+- Export Image and Bg Preview Directives
 ## 0.4.0 - 2017-09-12
 ### Added
 - Toolbar Component
