@@ -12,7 +12,8 @@
     "types": []
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "node_modules"
   ],
   "exclude": [
     "demo/**/*"

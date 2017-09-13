@@ -1,23 +1,28 @@
-<as-navbar 
+<as-toolbar 
 [shadow]=1 
-[customClass]="'navbar--primary navbar--subheader'" 
-[brand]="navBar.brand" 
-[fixed]=true>
-    <div class="left-content"></div>
+[customClass]="toolBar.customClass" 
+[brand]="toolBar.brand" 
+[fixed]=toolBar.fixed>
+    <div class="left-content">
+        <as-back-button
+        [label]="'Back'"></as-back-button>
+    </div>
     <div class="center-content">
-        <div class="navbar__title">Ngx-Canaima</div>
+        <div class="toolbar__title">{{toolBar?.title}}</div>
     </div>
     <div class="right-content"></div>
-</as-navbar>
-<div class="container-fluid wrap has-navbar"
-fxLayout="row"
-fxFlexAlign="start start"
-fxLayoutWrap>
+</as-toolbar>
+<div 
+    class="container-fluid wrap"
+    [ngClass]="{'has-toolbar': toolBar.fixed}"
+    fxLayout="row"
+    fxFlexAlign="start start"
+    fxLayoutWrap>
     <div
     class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-md="50">
 		<as-card 
 		[title]="cardSimple.title"
 		[subtitle]="cardSimple.subtitle"
@@ -32,22 +37,23 @@ fxLayoutWrap>
     <div
     class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-md="50">
 		<as-card 
 		[title]="cardSimple.title + ' with stuff'"
         [shadow]="1"
         [optionsLeft]="cardSimple.optionsLeft"
 		[optionsRight]="cardSimple.optionsRight"
-		[actions]="cardSimple.specialActions"
+        [actions]="cardSimple.specialActions"
+        [footer]="cardSimple.footer"
 		[msg]="cardSimple.msg">
 		</as-card>
     </div>
     <div
     class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-md="50">
         <as-card-image
         [img]="cardImage.img"
         [title]="cardImage.title"
@@ -59,15 +65,20 @@ fxLayoutWrap>
         [actions]="cardImage.actions"
         [footer]="cardImage.footer"
 		[shadow]="1"
-        [msg]="cardImage.msg"
         >
+        <div class="card__content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident est saepe labore aut voluptate deserunt quas impedit, facilis sequi blanditiis eos in error dolor ullam soluta, amet omnis fugit iure.
+            </p>
+            <button class="btn btn-primary">Content sexyness</button>
+        </div>
 		</as-card-image>
     </div>
     <div
     class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-md="50">
         <as-card-image
         [img]="'https://upload.wikimedia.org/wikipedia/en/f/fa/Linkin_Park%2C_The_Hunting_Party%2C_album_art_final.jpg'"
         [title]="cardImage.title"
@@ -92,8 +103,8 @@ fxLayoutWrap>
     </div>
     <div class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-md="50">
         <as-card-bg 
         [title]="cardBg.title"
         [subtitle]="cardBg.subtitle"
@@ -109,8 +120,8 @@ fxLayoutWrap>
     <div
     class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-md="50">
         <as-card-illustration
         [img]="cardImage.img"
         [title]="cardImage.title"
@@ -128,8 +139,8 @@ fxLayoutWrap>
     </div>
     <div class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-md="50">
             <as-card-profile
             [bg]="cardProfile.bg"
             [avatar]="cardProfile.avatar"

@@ -1,0 +1,46 @@
+<as-toolbar 
+[shadow]=1 
+[customClass]="'navbar--primary navbar--subheader'" 
+[brand]="navBar.brand" 
+[fixed]=true>
+    <div class="left-content">
+        <as-back-button
+        [label]="'Back'"></as-back-button>
+    </div>
+    <div class="center-content">
+        <div class="toolbar__title">{{navBar?.title}}</div>
+    </div>
+    <div class="right-content"></div>
+</as-toolbar>
+<div
+    class="container-fluid wrap has-toolbar"
+    fxLayout="row"
+    fxFlexAlign="start start"
+    fxLayoutWrap>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100">
+        <as-grid-list> 
+             <div class="grid-list__body" gridlist-body 
+             fxLayout="row"
+             fxFlexAlign="start start"
+             fxLayoutWrap>
+                <as-grid-list-item
+                    fxFlexAlign="start"
+                    fxFlex="100"
+                    fxFlex.gt-xs="50"
+                    fxFlex.gt-sm="25"
+                    fxFlex.gt-md="20"
+                    *ngFor="let item of gridList"
+                    [index]="item._id"
+                    [img]="item.img"
+                    [title]="item.title"
+                    [action]="item.action"
+                    [persistent]="item.persistent"
+                    (onSelected)="onSelected(event)">
+                </as-grid-list-item>
+            </div>
+        </as-grid-list>
+    </div>
+</div>

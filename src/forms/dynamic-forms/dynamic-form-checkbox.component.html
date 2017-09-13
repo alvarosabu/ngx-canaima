@@ -1,0 +1,30 @@
+<div 
+[formGroup]="form">
+<div
+  class="flex-group"
+  [ngClass]="{ 'has-error': submitted && !isValid(),
+  'has-success': isValid() && !isPristine() && submitted }">
+  <!-- <label
+  class="float-label"
+  *ngIf="style != 'float'"
+  [attr.for]="input.key">{{input.label}}</label> -->
+
+    <input
+    class="form-control"
+    [placeholder]="' '"
+    [formControlName]="input.key"
+    (change)="input.value = $event.target.checked" 
+    [(ngModel)]="input.value" 
+    [attr.checked]="input.value ? true : null" 
+    [id]="input.key"
+    [type]="input.type">
+
+    <label
+    [attr.for]="input.key">{{input.label}}</label>
+  <div class="help-block" 
+  *ngFor="let val of validations">
+    <span *ngIf="errors && errors[val.type] && submitted">{{val.msg}}</span>
+  </div>
+</div>
+
+</div>

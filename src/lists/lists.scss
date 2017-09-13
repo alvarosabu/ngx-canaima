@@ -1,0 +1,159 @@
+/*------------------------------------*\
+    $Lists
+\*------------------------------------*/
+
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+.list {
+    padding: $as-list-padding;
+    background: $as-list-bg;
+    &--scrollable {
+        overflow-y: scroll;
+    }
+    &__body {
+        width: 100%;
+    }
+}
+
+.list-item {
+    background: $as-list-item-bg;
+    color: $as-list-item-color; 
+    border-radius: 2px;
+    width: 100%;   
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+    display: flex;
+    flex-direction: row;
+    &--line {
+        border-bottom: $as-list-item-border $as-list-item-border-color;
+    }
+    &--icon {
+        .list-item__thumb {
+            padding: 8px;
+            justify-content: flex-start;
+            i {
+                font-size: 24px;
+            }
+        }
+        .list-item__content {
+            padding-left: 16px;
+        }
+    }
+    &--avatar {
+        .list-item__thumb {
+            padding-left: 0;
+        }
+        .list-item__content {
+            padding-left: 16px;
+        }
+    }
+    
+    &__img {
+        width: $as-list-item-avatar-size;
+        height: $as-list-item-avatar-size;
+        border: $as-list-item-avatar-border $as-list-item-avatar-border-color;
+        background-color: $as-list-item-avatar-bg;
+        background-size: $as-list-item-avatar-bg-size;
+        background-position: $as-list-item-avatar-bg-position;
+        transition: all .4s ease-out;
+        
+    }
+    &__filepreview {
+        border-radius: 50%;
+        overflow: hidden;
+        height: $as-list-item-avatar-size;
+        width: $as-list-item-avatar-size;
+        position: relative;
+        img {
+            width: 135%;
+        }
+    }
+    &__filesuccess {
+        position: absolute;
+        background: rgba(0,0,0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 33;
+        i {
+            color: white;
+            font-size: 24px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        }
+    }
+    &__title {
+        background: $as-list-item-title-bg;
+        color: $as-list-item-title-color; 
+        font-size: $as-list-item-title-font-size;
+        padding: $as-list-item-title-padding;
+        margin: $as-list-item-title-margin !important;
+        border-bottom: $as-list-item-title-border $as-list-item-title-border-color;
+    }
+    &__subtitle {
+        background: $as-list-item-subtitle-bg;
+        color: $as-list-item-subtitle-color; 
+        font-size: $as-list-item-subtitle-font-size;
+        padding: $as-list-item-subtitle-padding;
+    }
+    &__side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 1;
+        padding: 8px;
+    }
+    &__least {
+        background: $as-list-item-least-bg;
+        color: $as-list-item-least-color; 
+        font-size: $as-list-item-least-font-size;
+    }
+    &__actions {
+        i {
+            color: $as-list-item-action-color; 
+            font-size: $as-list-item-action-font-size;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+    }
+    &__content {
+        padding: $as-list-item-content-padding;
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__key {
+        padding: $as-list-item-property-key-padding;
+        flex: 1;
+        font-weight: 600;
+    }
+    &__value {
+        padding: $as-list-item-property-value-padding;
+        flex: 3;
+        word-break: break-all;
+    }
+    
+    &__stats {
+        display: flex;
+        justify-content: space-around;
+        padding: 8px 16px;
+        border-top: 1px solid $gray-lighter;
+    }
+    
+    &__thumb {
+        padding: 16px 8px 16px 16px;
+        min-width: 69px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in-out 1s;
+    }
+    &__body {
+        width: 100%;
+    }
+}

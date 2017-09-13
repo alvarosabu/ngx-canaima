@@ -1,0 +1,411 @@
+
+.form-footer {
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+}
+.flex-group {
+  display: flex;
+  justify-content: flex-start;
+  input[type=checkbox].form-control,
+  input[type=radio].form-control {
+    width: 20%;
+  }
+  input[type=radio].form-control {
+    margin-left: -1.9rem;
+  }
+  .radio-inline {
+    display: flex;
+    flex:1;
+    span {
+      padding-left: 1rem;
+    }
+  }
+}
+.radio-group {
+  flex-wrap: wrap;
+  .float-label {
+    width: 100%;
+  }
+}
+.has-float-label {
+  display: block;
+  position: relative;
+}
+.has-float-label label, .has-float-label > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $as-form-input-color;
+  cursor: text;
+  font-size: 75%;
+  opacity: 1;
+  -webkit-transition: all .2s;
+          transition: all .2s;
+  top: -.5em;
+  z-index: 3;
+  line-height: 1;
+  padding: 0 1px;
+
+}
+.has-float-label label::after, .has-float-label > span::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background: transparent;
+  height: 2px;
+  top: 50%;
+  left: -.2em;
+  right: -.2em;
+  z-index: -1;
+}
+.has-float-label .form-control::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+          transition: all .2s;
+}
+.has-float-label .form-control::-moz-placeholder {
+  opacity: 1;
+  transition: all .2s;
+}
+.has-float-label .form-control:-ms-input-placeholder {
+  opacity: 1;
+  transition: all .2s;
+}
+.has-float-label .form-control::placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+          transition: all .2s;
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0 !important;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
+  opacity: 0 !important;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
+  opacity: 0 !important;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder {
+  opacity: 0 !important;
+}
+.has-float-label .form-control:placeholder-shown:not(:focus) + * {
+  font-size: 130%;
+  top: .6em;
+  font-weight: 400;
+  color: $as-form-input-color;
+}
+
+.input-group .has-float-label {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.input-group .has-float-label .form-control {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+.input-group .has-float-label:not(:last-child), .input-group .has-float-label:not(:last-child) .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+}
+.input-group .has-float-label:not(:first-child), .input-group .has-float-label:not(:first-child) .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.has-float-label {
+  .form-control:focus + .float-label {
+    color: $as-form-primary-color;
+  }
+}
+
+// Forms ======================================================================
+
+label {
+  font-weight: normal;
+}
+
+textarea,
+textarea.form-control,
+input.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+[type=text].form-control,
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control,
+[contenteditable].form-control {
+  padding: $as-form-input-padding;
+  border: none;
+  border-radius: $as-form-input-border-radius;
+  color: $as-form-input-color;
+  background-color: $as-form-input-bg;
+  -webkit-appearance: none;
+  @include box-shadow(inset 0 -1px 0 $as-form-input-border-color);
+  font-size: 16px;
+
+  &:focus {
+    @include box-shadow(inset 0 -2px 0 $as-form-primary-color);
+  }
+
+  &[disabled],
+  &[readonly] {
+    @include box-shadow(none);
+    border-bottom: 1px dotted $as-form-input-border-color;
+  }
+
+  &.input {
+    &-sm {
+      font-size: 11px;
+    }
+
+    &-lg {
+      font-size: 14px;
+    }
+  }
+}
+
+select,
+select.form-control {
+  position: relative;
+  border: 0;
+  border-radius: $as-form-input-border-radius !important;
+  padding-left: $as-form-input-padding;
+  padding-right: 0\9; // remove padding for < ie9 since default arrow can't be removed
+  -webkit-appearance: none;
+  color: $as-form-input-color;
+  background-color: $as-form-input-bg;
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  @include box-shadow(inset 0 -1px 0 $as-form-input-border-color);
+  font-size: 16px;
+  line-height: 1.5;
+  &:before {
+    content: "\e113";
+    position: absolute;
+    right: 0;
+  }
+  &::-ms-expand {
+    display: none;
+  }
+
+  &.input {
+    &-sm {
+      font-size: 11px;
+    }
+
+    &-lg {
+      font-size: 14px;
+    }
+  }
+
+  &:focus {
+    @include box-shadow(inset 0 -2px 0 $as-form-primary-color);
+
+  }
+
+  &[multiple] {
+    background: none;
+  }
+}
+
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline {
+  label {
+    padding-left: 25px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-left: -25px;
+  }
+}
+
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+  position: relative;
+  margin-top: 6px;
+  margin-right: 4px;
+  vertical-align: top;
+  border: none;
+  background-color: transparent;
+  box-shadow: none !important; 
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    @include transition(240ms);
+  }
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: -3px;
+    background-color: $as-form-primary-color;
+    @include scale(0);
+  }
+
+  &:after {
+    position: relative;
+    top: -3px;
+    border: 2px solid $gray;
+  }
+
+  &:checked:before {
+    @include scale(0.5);
+  }
+
+  &:disabled:checked:before {
+    background-color: $gray-light;
+  }
+
+  &:checked:after {
+    border-color: $as-form-primary-color;
+  }
+
+  &:disabled:after,
+  &:disabled:checked:after {
+    border-color: $gray-light;
+  }
+}
+
+input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: relative;
+  border: none;
+  margin-bottom: -4px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  cursor: pointer;
+  box-shadow: none !important; 
+  &:focus {
+    outline: none;
+  }
+
+  &:focus:after {
+    border-color: $as-form-primary-color;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: -2px;
+    margin-right: 5px;
+    border: 2px solid $gray;
+    border-radius: 2px;
+    @include transition(240ms);
+  }
+
+  &:checked:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+    display: table;
+    width: 6px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-top-width: 0;
+    border-left-width: 0;
+    @include rotate(45deg);
+  }
+
+  &:checked:after {
+    background-color: $as-form-primary-color;
+    border-color: $as-form-primary-color;
+  }
+
+  &:disabled:after {
+    border-color: $gray-light;
+  }
+
+  &:disabled:checked:after {
+    background-color: $gray-light;
+    border-color: transparent;
+  }
+}
+.has-warning {
+  .float-label {
+    color: $brand-warning !important;
+  }
+  input:not([type=checkbox]),
+  .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
+  input:not([type=checkbox]):focus,
+  .form-control:focus {
+    border-bottom: none;
+    box-shadow: inset 0 -2px 0 $brand-warning;
+  }
+}
+
+.has-error {
+  .float-label {
+    color: $brand-danger !important;
+  }
+  input:not([type=checkbox]),
+  .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
+  input:not([type=checkbox]):focus,
+  .form-control:focus {
+    border-bottom: none;
+    box-shadow: inset 0 -2px 0 $brand-danger;
+  }
+}
+
+.has-success {
+  .float-label {
+    color: $brand-success !important;
+  }
+  input:not([type=checkbox]),
+  .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
+  input:not([type=checkbox]):focus,
+  .form-control:focus {
+    border-bottom: none;
+    box-shadow: inset 0 -2px 0 $brand-success;
+  }
+}
+
+

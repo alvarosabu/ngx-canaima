@@ -6,7 +6,7 @@ import {
 import { ROUTES } from './<%= name %>.routes';
 import { <%= capitalname %>Component } from './<%= name %>.component';
 
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
     imports: [
         SharedModule,

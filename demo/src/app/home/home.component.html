@@ -1,22 +1,25 @@
-<as-navbar [shadow]=1 [customClass]="'navbar--primary navbar--subheader'" [brand]="navBar.brand" [fixed]=true>
-    <div class="left-content"></div>
+<as-toolbar 
+[shadow]=1 
+[customClass]="'navbar--primary navbar--subheader'" [brand]="navBar.brand" [fixed]=true>
     <div class="center-content">
-        <div class="navbar__title">
-			Ngx-Canaima <span class="badge">v0.2.0</span>
+        <div class="toolbar__title">
+			Ngx-Canaima <span class="badge">v0.3.0</span>
 		</div>
     </div>
     <div class="right-content"></div>
-</as-navbar>
-<header class="header">
-
-</header>
-<div class="container-fluid wrap has-navbar container-negative"
-fxLayout="row"
-fxLayoutWrap="wrap"
-fxLayoutAlign="start">
+</as-toolbar>
+<as-header
+	[customClass]="header.customClass"
+	[bg]="header.bg">
+</as-header>
+	<div class="container-fluid wrap has-toolbar container-negative parallax"
+	fxLayout="row"
+	fxLayoutWrap="wrap"
+	fxLayoutAlign="start">
 	<div class="box"
-	fxFlex="33"
-	fxFlex.lt-md="100"
+	fxFlex="100"
+	fxFlex.gt-xs="50"
+	fxFlex.gt-sm="33"
 	*ngFor="let comp of components"
 	[ngClass]="{ 'card--commingsoon' : comp.comming }">
 		<as-card-illustration

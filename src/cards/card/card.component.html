@@ -16,8 +16,7 @@
         *ngIf="optionsRight?.length > 0">
             <div class="card__option" 
             [hidden]="option.dropdown !== undefined" 
-            *ngFor="let option of optionsRight"
-            >
+            *ngFor="let option of optionsRight">
                 <button class="btn btn-link" 
                 (click)="option.callback()">
                     <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
@@ -50,7 +49,9 @@
     </div>
     <div class="card__footer" 
     *ngIf="actions">
-        <div class="card__actions">
+        <div class="card__actions"
+        [ngStyle]="{'justify-content': footer.justify,
+        'align-items': footer.alignment}">
             <button class="btn {{action.customClass}} card__action"  
             *ngFor="let action of actions" 
             [disabled]="action.disabled" 
