@@ -210,6 +210,11 @@
                     <button (click)="loadingVar = !loadingVar" asButton color="secondary" [loading]="loadingVar">
                         Click Me! {{loadingVar}}
                     </button>
+                    <button 
+                    [asButton]="!isIcon" 
+                    [asIconButton]="isIcon" 
+                    icon="home" color="primary"
+                    (click)="isIcon = !isIcon">Click Me {{isIcon}}</button>
                 </div>
             </as-card>
         </div>

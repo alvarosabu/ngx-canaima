@@ -39,16 +39,18 @@ export class CardsComponent implements OnInit {
                 `chic flannel coloring book portland kickstarter.`,
             actions: [
                 new Action(
-                {label: 'Action 1',
-                color: 'primary',
-                rounded: true}),
+                {
+                    label: 'Action 1',
+                    color: 'primary',
+                    rounded: true
+                }),
                 new Action(
-                    {
-                        label: 'Action 12',
+                {
+                        label: 'Action Icon',
                         color: 'primary',
-                        outline: true
-                    }
-                )
+                        outline: true,
+                        icon: 'android'
+                })
             ],
             optionsLeft: [
                 new Action({

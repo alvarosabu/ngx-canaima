@@ -19,7 +19,7 @@ export class AsButtonDirective implements OnInit, OnChanges {
     // tslint:disable-next-line:no-inferrable-types
     @Input() loading: any = false;
     @Input('asButton') asButton ;
-    private cls = {}
+    private cls = {};
     public attributes = [];
     private nativeElement: any;
   constructor(public renderer: Renderer2, public hostElement: ElementRef) {
@@ -79,29 +79,15 @@ export class AsButtonDirective implements OnInit, OnChanges {
                     this.addClass(`btn-${changes[key].currentValue}`, `btn-${changes[key].previousValue}`)
                 }else if (key === 'outline') {
                     let isOutline = changes[key].currentValue;
-                    let isColor = changes['color'] !== undefined; // There is a change in color two
                     this.addClass(
                         `btn-${isOutline ? 'outline-' : ''}${this.color}`,
                         `btn-${!isOutline ? 'outline-' : ''}${this.color}`)
                 }else {
-                    this.addClass(`btn-${key}`)
+                    this.addClass(`btn-${key}`);
                 }
               }
           }
       }
-    /* if (changes['color'] && !changes['color'].firstChange) {
-        this.color = changes['color'].currentValue;
-        this.addClass(`btn-${this.color}`);
-    }
-    if (changes['loading']
-    && !changes['loading'].firstChange) {
-        if (changes['loading']
-        && changes['loading'].currentValue) {
-            this.appendLoading();
-        }else {
-            this.removeLoading();
-        }
-    } */
 
   }
   private checkInput(input) {

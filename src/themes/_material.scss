@@ -108,18 +108,25 @@ a.active {
   border: none;
   @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
   @include transition(all 0.4s);
-
+  &-circle {
+    border-radius: 50px !important;
+    padding: 5px !important;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &-link {
     background: transparent;
+    color: $gray;
     border-radius: $btn-border-radius-base;
     @include box-shadow(none);
-    color: $btn-default-color;
 
     &:hover,
     &:focus {
       background: transparent;
       @include box-shadow(none);
-      color: $btn-default-color;
       text-decoration: none !important;
     }
 

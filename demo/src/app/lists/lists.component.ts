@@ -39,7 +39,9 @@ export class ListsComponent implements OnInit {
                     },
                     icon: 'chevron-right',
                     iconActive: 'chevron-right',
-                    size: '18'
+                    size: 'sm',
+                    color: 'primary',
+                    rounded: true
                 })
             ]
         }),
@@ -139,7 +141,9 @@ export class ListsComponent implements OnInit {
                     },
                     icon: 'share-variant',
                     iconActive: 'share-variant',
-                    size: '24'
+                    size: '24',
+                    circle: true,
+                    color: 'primary'
                 })
             ]
         }),

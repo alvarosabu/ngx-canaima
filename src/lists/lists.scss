@@ -113,11 +113,10 @@
         font-size: $as-list-item-least-font-size;
     }
     &__actions {
-        i {
+        .btn {
             color: $as-list-item-action-color; 
             font-size: $as-list-item-action-font-size;
             cursor: pointer;
-            margin-left: 1rem;
         }
     }
     &__content {

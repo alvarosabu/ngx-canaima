@@ -10,6 +10,7 @@ export class Action {
     public color?: string;
     public outline?: boolean;
     public rounded?: boolean;
+    public circle?: boolean;
     constructor(
         options: {
             label?: string;
@@ -23,6 +24,7 @@ export class Action {
             color?: string;
             outline?: boolean;
             rounded?: boolean;
+            circle?: boolean;
         }
     ) {
         this.label = options.label;
@@ -36,6 +38,7 @@ export class Action {
         this.color = options.color || 'link';
         this.outline = options.outline;
         this.rounded = options.rounded;
+        this.circle = options.circle;
     }
 }
 
