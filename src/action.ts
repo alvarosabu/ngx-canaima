@@ -1,31 +1,59 @@
 export class Action {
-    public label: string;
-    public callback: any;
-    public icon: string;
-    public iconActive: string;
-    public value: boolean;
-    public size: string;
-    public prefix: string;
-    public customClass: string;
+    public label?: string;
+    public callback?: any;
+    public icon?: string;
+    public iconActive?: string;
+    public value?: boolean;
+    public size?: string;
+    public prefix?: string;
+    public customClass?: string;
+    public color?: string;
+    public outline?: boolean;
+    public rounded?: boolean;
+    public circle?: boolean;
     constructor(
-        label = null,
+        options: {
+            label?: string;
+            callback?: any;
+            icon?: string;
+            iconActive?: string;
+            value?: boolean;
+            size?: string;
+            prefix?: string;
+            customClass?: string;
+            color?: string;
+            outline?: boolean;
+            rounded?: boolean;
+            circle?: boolean;
+        }
+    ) {
+        this.label = options.label;
+        this.icon = options.icon;
+        this.iconActive = options.iconActive;
+        this.prefix = options.prefix || 'mdi';
+        this.customClass = options.customClass;
+        this.callback = options.callback;
+        this.size = options.size;
+        this.value = options.value;
+        this.color = options.color || 'plain';
+        this.outline = options.outline;
+        this.rounded = options.rounded;
+        this.circle = options.circle;
+    }
+}
+
+/*
+label = null,
         callback = () => {
             console.log('Simple action');
         },
         icon = null,
         iconActive= null,
         value= false,
-        customClass = 'btn-link',
+        customClass = null,
         prefix = 'mdi',
-        size = 'md'
-    ) {
-        this.label = label;
-        this.icon = icon;
-        this.iconActive = iconActive;
-        this.prefix = prefix;
-        this.customClass = customClass;
-        this.callback = callback;
-        this.size = size;
-        this.value = value;
-    }
-}
+        size = 'md',
+        color = 'link',
+        outline?: boolean,
+        rounded?: boolean
+*/

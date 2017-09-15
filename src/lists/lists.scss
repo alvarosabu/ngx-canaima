@@ -113,11 +113,11 @@
         font-size: $as-list-item-least-font-size;
     }
     &__actions {
-        i {
-            color: $as-list-item-action-color; 
+        .btn {/* 
+            color: $as-list-item-action-color;  */
+            padding: 7% 25%;
             font-size: $as-list-item-action-font-size;
             cursor: pointer;
-            margin-left: 1rem;
         }
     }
     &__content {

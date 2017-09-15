@@ -8,9 +8,14 @@ shadow-{{shadow}}
         <div class="card__option" 
         *ngFor="let option of optionsLeft"
         (click)="option.callback()">
-            <button class="btn btn-link" 
+            <button
+            asIconButton
+            [prefix]="option?.prefix"
+            [icon]="option?.icon"
+            [outline]="option?.outline"
+            [rounded]="option?.rounded"
+            [size]="option?.size" 
             (click)="option.callback()">
-                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
             </button>
         </div>
     </div>
@@ -21,14 +26,25 @@ shadow-{{shadow}}
         [hidden]="option.dropdown !== undefined" 
         *ngFor="let option of optionsRight"
         >
-            <button class="btn btn-link" 
+            <button
+            asIconButton
+            [prefix]="option?.prefix"
+            [icon]="option?.icon"
+            [outline]="option?.outline"
+            [rounded]="option?.rounded"
+            [size]="option?.size" 
             (click)="option.callback()">
-                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
             </button>
         </div>
         <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">
-            <button dropdownToggle class="btn btn-link dropdown-toggle">
-                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
+            <button dropdownToggle 
+            class="dropdown-toggle"
+            asIconButton
+            [prefix]="option?.prefix"
+            [icon]="option?.icon"
+            [outline]="option?.outline"
+            [rounded]="option?.rounded"
+            [size]="option?.size">
             </button>
             <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">
                 <li *ngFor="let choice of option.dropdown">
@@ -70,7 +86,16 @@ shadow-{{shadow}}
             <div class="card__actions" 
             [ngStyle]="{'justify-content': footer.justify,
             'align-items': footer.alignment}">
-                <button class="btn {{action?.customClass}} card__action"  
+                <button 
+                asIconButton
+                [prefix]="action.prefix"
+                [icon]="action.icon"
+                [color]="action.color"
+                [outline]="action.outline"
+                [rounded]="action.rounded"
+                [size]="action.size"
+                [ngClass]="action?.customClass"
+                class=" card__action"  
                 *ngFor="let action of actions" 
                 [disabled]="action.disabled" 
                 (click)="action.callback()">

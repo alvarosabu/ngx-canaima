@@ -8,12 +8,14 @@ import { DynamicFormCheckboxComponent } from './dynamic-form-checkbox.component'
 import { DynamicFormSelectComponent } from './dynamic-form-select.component';
 import { DynamicFormRadioComponent } from './dynamic-form-radio.component';
 import { DynamicFormTextAreaComponent } from './dynamic-form-textarea.component';
+import { ButtonsModule } from '../../buttons/buttons.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    ButtonsModule
   ],
   exports: [
     ReactiveFormsModule,

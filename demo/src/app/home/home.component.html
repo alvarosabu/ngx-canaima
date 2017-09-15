@@ -1,9 +1,10 @@
-<as-toolbar 
-[shadow]=1 
-[customClass]="'navbar--primary navbar--subheader'" [brand]="navBar.brand" [fixed]=true>
+<as-toolbar
+[customClass]="'navbar--primary'"
+[brand]="toolBar.brand"
+[fixed]=true>
     <div class="center-content">
         <div class="toolbar__title">
-			Ngx-Canaima <span class="badge">v0.3.0</span>
+			Ngx-Canaima <span class="badge">v0.4.1</span>
 		</div>
     </div>
     <div class="right-content"></div>
@@ -29,13 +30,20 @@
 		[shadow]="1">
 		<div class="card__content">
 			<p>{{comp.msg}}</p>
-			<button *ngIf="!comp.comming"
+			<button 
+			asButton
+			color="primary"
+			block
+			*ngIf="!comp.comming"
 			[routerLink]="['/'+ comp.slug +'']"
-			class="btn btn-block btn-primary">
+			>
 				See More
 			</button>
-			<button *ngIf="comp.comming"
-			class="btn btn-block btn-link" disabled>
+			<button 
+			asButton
+			color="link"
+			block
+			*ngIf="comp.comming" disabled>
 				Cooming Soon...
 			</button>
 		</div>

@@ -4,13 +4,15 @@
     <div class="container-fluid">
        <div 
        class="toolbar__brand" 
-       (click)="openCollapsable()">
+       >
         <img  class="toolbar__logo" 
+        (click)="brand.action && brand.action()"
          *ngIf="brand && leftContent.children.length == 0"
          [fxHide.xs]="brand && leftContent.children.length == 0"
          [src]="brand?.logo" alt="">
           <span  class="toolbar__logo">{{brand?.name}}</span>
           <div class="material-burger left"
+          (click)="openCollapsable()"
           *ngIf="brand !== undefined && leftContent.children.length == 0"
           [ngClass]="{'material-burger-transformed': collapsable}"
            [fxHide.gt-xs]="brand !== undefined && leftContent.children.length == 0">

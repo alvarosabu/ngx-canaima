@@ -36,10 +36,13 @@ export class GridComponent implements OnInit {
             subtitle: 'a.k.a The mad Queen',
             img: '../assets/img/cersei-lannister.jpg',
             action:
-                new Action(null, () => {
-                    console.log('Shared 1');
-                }, 'share-variant', 'share-variant',
-                false, null, 'mdi', '24'),
+            new Action({
+                callback: () => {
+                    console.log('Liked 1');
+                },
+                icon: 'share-variant',
+                iconActive: 'share-variant',
+            }),
             persistent: false
         }),
         new GridListItem(
@@ -49,10 +52,13 @@ export class GridComponent implements OnInit {
                 subtitle: 'a.k.a The mother of Dragons',
                 img: '../assets/img/daenerys-targaryen.jpg',
                 action:
-                    new Action(null, () => {
-                        console.log('Shared 1');
-                    }, 'share-variant', 'share-variant',
-                    false, null, 'mdi', '24'),
+                new Action({
+                    callback: () => {
+                        console.log('Liked 1');
+                    },
+                    icon: 'share-variant',
+                    iconActive: 'share-variant',
+                }),
                 persistent: true
             }
         ),
@@ -63,10 +69,13 @@ export class GridComponent implements OnInit {
                 subtitle: 'a.k.a The King\'s Slayer',
                 img: '../assets/img/jaime-lannister.jpg',
                 action:
-                    new Action(null, () => {
-                        console.log('Shared 1');
-                    }, 'share-variant', 'share-variant',
-                    false, null, 'mdi', '24'),
+                    new Action({
+                        callback: () => {
+                            console.log('Liked 1');
+                        },
+                        icon: 'share-variant',
+                        iconActive: 'share-variant',
+                    }),
                 persistent: true
             }
         ),
@@ -77,10 +86,13 @@ export class GridComponent implements OnInit {
                 subtitle: 'a.k.a The Dwarf',
                 img: '../assets/img/tyrion-lannister.png',
                 action:
-                    new Action(null, () => {
-                        console.log('Shared 1');
-                    }, 'share-variant', 'share-variant',
-                    false, null, 'mdi', '24'),
+                    new Action({
+                        callback: () => {
+                            console.log('Liked 1');
+                        },
+                        icon: 'share-variant',
+                        iconActive: 'share-variant',
+                    }),
                 persistent: true
             }
         ),
@@ -91,10 +103,13 @@ export class GridComponent implements OnInit {
                 subtitle: 'a.k.a The White Walker\'s papa',
                 img: '../assets/img/knight-king.jpg',
                 action:
-                    new Action(null, () => {
-                        console.log('Shared 1');
-                    }, 'share-variant', 'share-variant',
-                    false, null, 'mdi', '24'),
+                    new Action({
+                        callback: () => {
+                            console.log('Liked 1');
+                        },
+                        icon: 'share-variant',
+                        iconActive: 'share-variant',
+                    }),
                 persistent: true
             }
         )
