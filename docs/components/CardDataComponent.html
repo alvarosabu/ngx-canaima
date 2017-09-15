@@ -1087,8 +1087,21 @@ export class CardDataComponent implements OnInit {
        *ngIf&#x3D;&quot;subtitle&quot;&gt;{{subtitle}}&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;card--data__actions&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
-        &lt;i class&#x3D;&quot;{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}&quot; (click)&#x3D;&quot;action.callback(); action.value &#x3D; ! action.value&quot; *ngFor&#x3D;&quot;let action of actions&quot; &gt;&lt;/i&gt;
-    &lt;/div&gt;
+        &lt;button 
+        asIconButton
+        [prefix]&#x3D;&quot;action.prefix&quot;
+        [icon]&#x3D;&quot;action.icon&quot;
+        [color]&#x3D;&quot;action.color&quot;
+        [outline]&#x3D;&quot;action.outline&quot;
+        [rounded]&#x3D;&quot;action.rounded&quot;
+        [size]&#x3D;&quot;action.size&quot;
+        class&#x3D;&quot; card__action&quot;
+        [ngClass]&#x3D;&quot;action?.customClass&quot;  
+        *ngFor&#x3D;&quot;let action of actions&quot; 
+        [disabled]&#x3D;&quot;action.disabled&quot; 
+        (click)&#x3D;&quot;action.callback()&quot;&gt;
+            {{action.label}} 
+        &lt;/button&gt;
 &lt;/div&gt;</code></pre>
     </div>
 
@@ -1115,7 +1128,7 @@ export class CardDataComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card card--data shadow-{{shadow}} {{customClass}}">    <div class="card__thumb"         *ngIf="img"        (mouseover)=\'hover = true\'        (mouseleave)=\'hover = false\'        >        <div class="card--data__img circle"        [ngStyle]="{\'background-image\': img && \'url(\' + img + \')\'}"        *ngIf="!hover"></div>        <div class="checkbox" *ngIf="hover">        <label>            <input type="checkbox" value="">        </label>    </div>    </div>    <div class="card__content">       <h5        class="card--data__title"       *ngIf="title">{{title}}</h5>       <span        class="card--data__subtitle"       *ngIf="subtitle">{{subtitle}}</span>    </div>    <div class="card--data__actions" *ngIf="actions">        <i class="{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}" (click)="action.callback(); action.value = ! action.value" *ngFor="let action of actions" ></i>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card card--data shadow-{{shadow}} {{customClass}}">    <div class="card__thumb"         *ngIf="img"        (mouseover)=\'hover = true\'        (mouseleave)=\'hover = false\'        >        <div class="card--data__img circle"        [ngStyle]="{\'background-image\': img && \'url(\' + img + \')\'}"        *ngIf="!hover"></div>        <div class="checkbox" *ngIf="hover">        <label>            <input type="checkbox" value="">        </label>    </div>    </div>    <div class="card__content">       <h5        class="card--data__title"       *ngIf="title">{{title}}</h5>       <span        class="card--data__subtitle"       *ngIf="subtitle">{{subtitle}}</span>    </div>    <div class="card--data__actions" *ngIf="actions">        <button         asIconButton        [prefix]="action.prefix"        [icon]="action.icon"        [color]="action.color"        [outline]="action.outline"        [rounded]="action.rounded"        [size]="action.size"        class=" card__action"        [ngClass]="action?.customClass"          *ngFor="let action of actions"         [disabled]="action.disabled"         (click)="action.callback()">            {{action.label}}         </button></div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
     var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'CardDataComponent'};
