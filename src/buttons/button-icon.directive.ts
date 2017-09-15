@@ -11,7 +11,7 @@ import {
     selector: '[asIconButton]',
 })
 export class AsIconButtonDirective implements OnInit, OnChanges {
-    @Input() color = 'link';
+    @Input() color = 'plain';
     @Input() size;
     @Input() outline;
     @Input() rounded;
@@ -86,7 +86,9 @@ export class AsIconButtonDirective implements OnInit, OnChanges {
     }
     private appendIcon() {
         let child = this.renderer.createElement(`i`);
-        this.renderer.addClass(this.nativeElement, `btn-icon-${this.side}`);
+        if (this.nativeElement.innerText.length > 0) {
+            this.renderer.addClass(this.nativeElement, `btn-icon-${this.side}`);
+        }
         this.renderer.addClass(child, `${this.prefix}`);
         this.renderer.addClass(child, `${this.prefix}-${this.icon}`);
         this.renderer.appendChild(this.nativeElement, child);

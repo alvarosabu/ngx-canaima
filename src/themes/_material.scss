@@ -2,7 +2,7 @@
 
 @import '../_variables.scss';
 @import '../_mixins.scss';
-
+@import '../_effects.scss';
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
 @import url($web-font-path);
@@ -110,9 +110,7 @@ a.active {
   @include transition(all 0.4s);
   &-circle {
     border-radius: 50px !important;
-    padding: 5px !important;
-    width: 36px;
-    height: 36px;
+    padding: 6% 24% !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +174,7 @@ a.active {
         color: $btn-default-color;
       }
     }
-    @include ripple($color);
+    @include ripple($btn-default-color);
   }
   &-loading {
     display: inline-flex !important;

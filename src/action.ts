@@ -35,7 +35,7 @@ export class Action {
         this.callback = options.callback;
         this.size = options.size;
         this.value = options.value;
-        this.color = options.color || 'link';
+        this.color = options.color || 'plain';
         this.outline = options.outline;
         this.rounded = options.rounded;
         this.circle = options.circle;

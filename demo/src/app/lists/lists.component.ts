@@ -178,7 +178,6 @@ export class ListsComponent implements OnInit {
                         },
                         icon: 'share-variant',
                         iconActive: 'share-variant',
-                        size: '24'
                     })
                 ]
             }
