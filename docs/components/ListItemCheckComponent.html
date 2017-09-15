@@ -1151,9 +1151,22 @@ export class ListItemCheckComponent {
         &lt;span class&#x3D;&quot;list-item__least&quot;
         *ngIf&#x3D;&quot;least&quot;&gt;{{least}}&lt;/span&gt;
             &lt;div class&#x3D;&quot;list-item__actions&quot; *ngIf&#x3D;&quot;actions&quot;&gt;
-            &lt;i class&#x3D;&quot;{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}&quot;
-            [ngStyle]&#x3D;&quot;{&#x27;font-size&#x27;: action.size + &#x27;px&#x27;}&quot;
-            (click)&#x3D;&quot;action.callback(); action.value &#x3D; ! action.value&quot; *ngFor&#x3D;&quot;let action of actions&quot; &gt;&lt;/i&gt;
+                &lt;button 
+                asIconButton
+                [prefix]&#x3D;&quot;action.prefix&quot;
+                [icon]&#x3D;&quot;action.icon&quot;
+                [color]&#x3D;&quot;action.color&quot;
+                [outline]&#x3D;&quot;action.outline&quot;
+                [rounded]&#x3D;&quot;action.rounded&quot;
+                [circle]&#x3D;&quot;action.circle&quot;
+                [size]&#x3D;&quot;action.size&quot;
+                class&#x3D;&quot; card__action&quot;
+                [ngClass]&#x3D;&quot;action?.customClass&quot;  
+                *ngFor&#x3D;&quot;let action of actions&quot; 
+                [disabled]&#x3D;&quot;action.disabled&quot; 
+                (click)&#x3D;&quot;action.callback()&quot;&gt;
+                    {{action.label}} 
+                &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -1182,7 +1195,7 @@ export class ListItemCheckComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div     class="list-item list-item--avatar {{customClass}} "    [ngClass]="{\'list-item--line\': hasLine}">    <div class="list-item__thumb">        <div class="checkbox">        <label>            <input             type="checkbox"             [checked]="isChecked"             (click)="select()">        </label>    </div>    </div>    <div class="list-item__content">       <h5        class="list-item__title"       *ngIf="title">{{title}}</h5>       <span        class="list-item__subtitle" *ngIf="subtitle">{{subtitle}}</span>    </div>    <div class="list-item__side">        <span class="list-item__least"        *ngIf="least">{{least}}</span>            <div class="list-item__actions" *ngIf="actions">            <i class="{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}"            [ngStyle]="{\'font-size\': action.size + \'px\'}"            (click)="action.callback(); action.value = ! action.value" *ngFor="let action of actions" ></i>        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div     class="list-item list-item--avatar {{customClass}} "    [ngClass]="{\'list-item--line\': hasLine}">    <div class="list-item__thumb">        <div class="checkbox">        <label>            <input             type="checkbox"             [checked]="isChecked"             (click)="select()">        </label>    </div>    </div>    <div class="list-item__content">       <h5        class="list-item__title"       *ngIf="title">{{title}}</h5>       <span        class="list-item__subtitle" *ngIf="subtitle">{{subtitle}}</span>    </div>    <div class="list-item__side">        <span class="list-item__least"        *ngIf="least">{{least}}</span>            <div class="list-item__actions" *ngIf="actions">                <button                 asIconButton                [prefix]="action.prefix"                [icon]="action.icon"                [color]="action.color"                [outline]="action.outline"                [rounded]="action.rounded"                [circle]="action.circle"                [size]="action.size"                class=" card__action"                [ngClass]="action?.customClass"                  *ngFor="let action of actions"                 [disabled]="action.disabled"                 (click)="action.callback()">                    {{action.label}}                 </button>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
     var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'ListItemCheckComponent'};

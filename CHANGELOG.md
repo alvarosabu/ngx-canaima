@@ -1,3 +1,13 @@
+## 0.4.2 - 2017-09-15
+### Added
+- Transparent and diverse navbar colors
+- Buttons directives onChanges function
+- btn-plain and btn-circle classes
+### Changes
+- Actions now support buttons attributes
+- Button directive inside other components
+### Fixed
+- Brand toolbar action override
 ## 0.4.1 - 2017-09-13
 ### Fixed
 - Export Action Dropdown

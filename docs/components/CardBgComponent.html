@@ -1037,9 +1037,15 @@ export class CardBgComponent {
         &lt;div class&#x3D;&quot;card__option&quot; 
         *ngFor&#x3D;&quot;let option of optionsLeft&quot;
         (click)&#x3D;&quot;option.callback()&quot;&gt;
-            &lt;button class&#x3D;&quot;btn btn-link&quot; 
+            &lt;button
+            asIconButton
+            [prefix]&#x3D;&quot;option?.prefix&quot;
+            [icon]&#x3D;&quot;option?.icon&quot;
+            [color]&#x3D;&quot;option?.color&quot;
+            [outline]&#x3D;&quot;option?.outline&quot;
+            [rounded]&#x3D;&quot;option?.rounded&quot;
+            [size]&#x3D;&quot;option?.size&quot;
             (click)&#x3D;&quot;option.callback()&quot;&gt;
-                &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -1050,14 +1056,27 @@ export class CardBgComponent {
         [hidden]&#x3D;&quot;option.dropdown !&#x3D;&#x3D; undefined&quot; 
         *ngFor&#x3D;&quot;let option of optionsRight&quot;
         &gt;
-            &lt;button class&#x3D;&quot;btn btn-link&quot; 
+            &lt;button
+            asIconButton
+            [prefix]&#x3D;&quot;option?.prefix&quot;
+            [icon]&#x3D;&quot;option?.icon&quot;
+            [outline]&#x3D;&quot;option?.outline&quot;
+            [rounded]&#x3D;&quot;option?.rounded&quot;
+            [size]&#x3D;&quot;option?.size&quot;
             (click)&#x3D;&quot;option.callback()&quot;&gt;
-                &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+            
             &lt;/button&gt;
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;card__option&quot; [hidden]&#x3D;&quot;option.dropdown &#x3D;&#x3D;&#x3D; undefined&quot; dropdown *ngFor&#x3D;&quot;let option of optionsRight&quot;&gt;
-            &lt;button dropdownToggle class&#x3D;&quot;btn btn-link dropdown-toggle&quot;&gt;
-                &lt;i class&#x3D;&quot;{{option.prefix}} {{option.prefix}}-{{option.icon}}&quot;&gt;&lt;/i&gt;
+            &lt;button 
+            dropdownToggle
+            asIconButton
+            [prefix]&#x3D;&quot;option?.prefix&quot;
+            [icon]&#x3D;&quot;option?.icon&quot;
+            [outline]&#x3D;&quot;option?.outline&quot;
+            [rounded]&#x3D;&quot;option?.rounded&quot;
+            [size]&#x3D;&quot;option?.size&quot;
+            class&#x3D;&quot;dropdown-toggle&quot;&gt;
             &lt;/button&gt;
             &lt;ul *dropdownMenu class&#x3D;&quot;dropdown-menu dropdown-menu-right&quot; [hidden]&#x3D;&quot;option.dropdown !&#x3D;&#x3D; undefined&quot; role&#x3D;&quot;menu&quot;&gt;
                 &lt;li *ngFor&#x3D;&quot;let choice of option.dropdown&quot;&gt;
@@ -1079,11 +1098,20 @@ export class CardBgComponent {
         &lt;div class&#x3D;&quot;card__actions&quot;
         [ngStyle]&#x3D;&quot;{&#x27;justify-content&#x27;: footer.justify,
         &#x27;align-items&#x27;: footer.alignment}&quot;&gt;
-            &lt;button class&#x3D;&quot;btn {{action?.customClass}} card__action&quot;  
+            &lt;button 
+            asIconButton
+            [prefix]&#x3D;&quot;action.prefix&quot;
+            [icon]&#x3D;&quot;action.icon&quot;
+            [color]&#x3D;&quot;action.color&quot;
+            [outline]&#x3D;&quot;action.outline&quot;
+            [rounded]&#x3D;&quot;action.rounded&quot;
+            [size]&#x3D;&quot;action.size&quot;
+            class&#x3D;&quot; card__action&quot;
+            [ngClass]&#x3D;&quot;action?.customClass&quot;  
             *ngFor&#x3D;&quot;let action of actions&quot; 
             [disabled]&#x3D;&quot;action.disabled&quot; 
             (click)&#x3D;&quot;action.callback()&quot;&gt;
-                {{action.label}}
+                {{action.label}} 
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -1113,7 +1141,7 @@ export class CardBgComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card card--bg {{customClass}} shadow-{{shadow}}"  [ngStyle]="{\'background-image\': bg && \'url(\' + bg + \')\'}" >    <div class="card__options card__options--left"    *ngIf="optionsLeft?.length > 0">        <div class="card__option"         *ngFor="let option of optionsLeft"        (click)="option.callback()">            <button class="btn btn-link"             (click)="option.callback()">                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>            </button>        </div>    </div>    <div class="card__options card__options--right"     *ngIf="optionsRight?.length > 0">        <div class="card__option"         [hidden]="option.dropdown !== undefined"         *ngFor="let option of optionsRight"        >            <button class="btn btn-link"             (click)="option.callback()">                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>            </button>        </div>        <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">            <button dropdownToggle class="btn btn-link dropdown-toggle">                <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>            </button>            <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">                <li *ngFor="let choice of option.dropdown">                    <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>                </li>            </ul>        </div>    </div>    <div class="card__body" >             <h4         class="card__title"        *ngIf="title">{{title}}</h4>        <h6         class="card__subtitle"        *ngIf="subtitle">{{subtitle}}</h6>    </div>    <div class="card__footer"     *ngIf="actions">        <div class="card__actions"        [ngStyle]="{\'justify-content\': footer.justify,        \'align-items\': footer.alignment}">            <button class="btn {{action?.customClass}} card__action"              *ngFor="let action of actions"             [disabled]="action.disabled"             (click)="action.callback()">                {{action.label}}            </button>        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card card--bg {{customClass}} shadow-{{shadow}}"  [ngStyle]="{\'background-image\': bg && \'url(\' + bg + \')\'}" >    <div class="card__options card__options--left"    *ngIf="optionsLeft?.length > 0">        <div class="card__option"         *ngFor="let option of optionsLeft"        (click)="option.callback()">            <button            asIconButton            [prefix]="option?.prefix"            [icon]="option?.icon"            [color]="option?.color"            [outline]="option?.outline"            [rounded]="option?.rounded"            [size]="option?.size"            (click)="option.callback()">            </button>        </div>    </div>    <div class="card__options card__options--right"     *ngIf="optionsRight?.length > 0">        <div class="card__option"         [hidden]="option.dropdown !== undefined"         *ngFor="let option of optionsRight"        >            <button            asIconButton            [prefix]="option?.prefix"            [icon]="option?.icon"            [outline]="option?.outline"            [rounded]="option?.rounded"            [size]="option?.size"            (click)="option.callback()">                        </button>        </div>        <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">            <button             dropdownToggle            asIconButton            [prefix]="option?.prefix"            [icon]="option?.icon"            [outline]="option?.outline"            [rounded]="option?.rounded"            [size]="option?.size"            class="dropdown-toggle">            </button>            <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">                <li *ngFor="let choice of option.dropdown">                    <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>                </li>            </ul>        </div>    </div>    <div class="card__body" >             <h4         class="card__title"        *ngIf="title">{{title}}</h4>        <h6         class="card__subtitle"        *ngIf="subtitle">{{subtitle}}</h6>    </div>    <div class="card__footer"     *ngIf="actions">        <div class="card__actions"        [ngStyle]="{\'justify-content\': footer.justify,        \'align-items\': footer.alignment}">            <button             asIconButton            [prefix]="action.prefix"            [icon]="action.icon"            [color]="action.color"            [outline]="action.outline"            [rounded]="action.rounded"            [size]="action.size"            class=" card__action"            [ngClass]="action?.customClass"              *ngFor="let action of actions"             [disabled]="action.disabled"             (click)="action.callback()">                {{action.label}}             </button>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
     var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'CardBgComponent'};
