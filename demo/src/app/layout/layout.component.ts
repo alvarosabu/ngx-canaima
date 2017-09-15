@@ -36,7 +36,7 @@ export class LayoutComponent implements OnInit {
                     callback: () => {
                         console.log('Filter');
                     },
-                    icon:'filter'
+                    icon: 'filter'
                 })
             ]
         }

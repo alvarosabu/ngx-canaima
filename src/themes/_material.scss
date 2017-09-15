@@ -155,6 +155,29 @@ a.active {
       }
     }
   }
+  &-plain {
+    background: transparent;
+    color: $gray;
+    border-radius: $btn-border-radius-base;
+    @include box-shadow(none);
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      @include box-shadow(none);
+      text-decoration: none !important;
+    }
+
+    .disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:active:hover {
+        color: $btn-default-color;
+      }
+    }
+    @include ripple($color);
+  }
   &-loading {
     display: inline-flex !important;
     align-items: center;
