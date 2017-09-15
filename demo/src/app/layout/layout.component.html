@@ -224,5 +224,50 @@
                 </div>
             </as-card>
         </div>
+        <div
+            *ngSwitchCase="'chips-badges'"
+            class="box"
+            fxFlexAlign="start"
+            fxFlex="100"
+            fxFlex.gt-sm="25">
+            <as-card 
+                [title]="'Chips'"
+                [shadow]="1">
+                 <div class="card__content">
+                     <div class="chips">
+                        <as-chip
+                        [img]="avatarChip.img"
+                        [content]="avatarChip.content"
+                        [delete]="avatarChip.delete"
+                        (onClicked)="clickedChip(avatarChip)"
+                        (onDeleted)="deletedChip(avatarChip)"
+                        ></as-chip>
+                        <as-chip 
+                            *ngFor="let tag of tagChips; let i of index;"
+                            [img]="tag.img"
+                            [content]="tag.content"
+                            [delete]="tag.delete"
+                            (onClicked)="clickedChip(tag)"
+                            (onDeleted)="deletedChip(tag)">
+                        </as-chip>
+                        <as-chip
+                        [img]="'../assets/img/cersei-lannister.jpg'"
+                        [content]="'Cersei Lannister'"
+                        [delete]="avatarChip.delete"
+                        [customClass]="'chip--dark'"
+                        (onClicked)="clickedChip(avatarChip)"
+                        (onDeleted)="deletedChip(avatarChip)"
+                        ></as-chip>
+                        <as-chip
+                        [icon]="iconChip.icon"
+                        [content]="iconChip.content"
+                        [delete]="iconChip.delete"
+                        (onClicked)="clickedChip(iconChip)"
+                        (onDeleted)="deletedChip(iconChip)"
+                        ></as-chip>
+                     </div>
+                 </div>
+            </as-card>
+        </div>
     </div>
 </div>

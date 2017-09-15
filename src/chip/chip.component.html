@@ -1,0 +1,11 @@
+<div class="chip {{customClass}} shadow-{{shadow}}" 
+
+[ngClass]="{'chip--image': img, 'chip--icon': icon && !img }">
+  <div class="chip--image__thumb circle" [ngStyle]="{'background-image': img && 'url(' + img + ')'}" *ngIf="img" (click)="clickedChip()"></div>
+  <div class="chip--icon__thumb circle" *ngIf="icon && !img" (click)="clickedChip()">
+    <i class="{{prefix}} {{prefix}}-{{icon}}"></i>  
+  </div>
+  <span (click)="clickedChip()">{{content}}</span>
+  <i class="mdi mdi-close-circle" *ngIf="delete"
+  (click)="deleteChip()"></i>
+</div>

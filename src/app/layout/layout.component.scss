@@ -3,3 +3,10 @@
 \*------------------------------------*/
 
 @import '../../styles/_variables.scss';
+.chips {
+    display: flex;
+    flex-wrap: nowrap;
+    .chip {
+        margin-right: 1rem;
+    }
+}

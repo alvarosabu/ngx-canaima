@@ -1,3 +1,4 @@
+import { Chip } from './../../../../src/chip/chip';
 import {
     Component,
     OnInit,
@@ -17,6 +18,7 @@ import { Segment } from './../../../../src/segment/segment';
         './layout.component.scss'
     ]
 })
+
 export class LayoutComponent implements OnInit {
     public toolBar: Toolbar = new Toolbar(
         {
@@ -58,14 +60,51 @@ export class LayoutComponent implements OnInit {
             value: 'buttons'
         }),
         new Segment({
+            label: 'Chips & Badges',
+            value: 'chips-badges'
+        }),
+        new Segment({
             label: 'FABs',
             value: 'fabs'
         })
     ];
     public selectedTab: Segment = this.segments[0];
+    public avatarChip: Chip = new Chip({
+        img: '../assets/img/jonsnow.png',
+        content: 'Jon Snow'
+    });
+    public iconChip: Chip = new Chip({
+        prefix: 'mdi',
+        icon: 'folder',
+        content: 'Folder 1'
+    });
+    public tagChips: Chip[] = [];
     constructor(
         private route: ActivatedRoute,
     ) { }
 
-    public ngOnInit() { }
+    public ngOnInit() {
+        for (let i = 0; i < 5; i++) {
+            this.tagChips.push(new Chip(
+                {
+                    id: i,
+                    content: `Tag ${i}`,
+                    delete: true,
+                }
+            ));
+        }
+    }
+    /**
+     * clickedChip
+     */
+    public clickedChip(chip: Chip) {
+        console.log('Chip selected', chip);
+    }
+    /**
+     * deletedChip
+     */
+    public deletedChip(chip: Chip) {
+        this.tagChips = this.tagChips.filter((item) => item.id !== chip.id);
+        console.log('Chip deleted', chip);
+    }
 }
