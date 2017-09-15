@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    Segment
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+.chip {
+    background-color: $as-chip-bg;
+    border-radius: $as-chip-border-radius;
+    font-size: $as-chip-font-size;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $as-chip-padding;
+    cursor: pointer;
+    .mdi {
+        color: $as-chip-action-color;
+        font-size: $as-chip-action-font-size;
+        margin-left: .75rem;
+    }
+    &--image {
+        padding: $as-chip-image-padding;
+        &__thumb {
+            width: $as-chip-thumb-size;
+            height: $as-chip-thumb-size;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-right: 1rem;
+        }
+    }
+    &--icon {
+        padding: $as-chip-icon-padding;
+        &__thumb {
+            width: $as-chip-icon-size;
+            height: $as-chip-icon-size;
+            background-color: $as-chip-icon-bg;
+            color: $as-chip-icon-color;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-right: 1rem;
+        }
+    }
+   
+}

@@ -26,7 +26,7 @@ import { NavService } from './navmenu/nav.service';
     ListsActivityModule,
     FormsActivityModule,
     GridActivityModule,
-    LayoutModule
+    LayoutModule,
 
   ],
   declarations: [
@@ -47,7 +47,7 @@ import { NavService } from './navmenu/nav.service';
     FormsActivityModule,
     NumberFormatterPipe,
     GridActivityModule,
-    LayoutModule
+    LayoutModule,
   ]
 })
 export class CoreModule { }
