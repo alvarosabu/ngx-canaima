@@ -3,7 +3,7 @@
 [customClass]="toolBar.customClass" 
 [brand]="toolBar.brand"
 [actions]="toolBar.actions" 
-[fixed]=toolBar.fixed>∫
+[fixed]=toolBar.fixed>
     <div class="left-content">
         <as-back-button
         [label]="'Back'"></as-back-button>
@@ -47,6 +47,12 @@
                 [title]="'Simple Buttons'"
                 [shadow]="1">
                  <div class="card__content">
+                    <button asButton color="plain">
+                        Plain
+                    </button>
+                    <button asButton color="link">
+                        Link
+                    </button>
                     <button asButton color="primary">
                         Primary
                     </button>
@@ -67,6 +73,13 @@
                     </button>
                     <button asButton color="danger">
                         Danger
+                    </button>
+                    <button 
+                    asButton
+                    (click)="buttonColor = !buttonColor"
+                    [color]="buttonColor ? 'primary': 'secondary'" 
+                    >
+                        Click Me {{buttonColor ? 'primary': 'secondary'}}
                     </button>
                  </div>
             </as-card>
@@ -102,6 +115,15 @@
                     <button asButton color="danger" outline>
                         Danger
                     </button>
+                    <button 
+                    asButton
+                    color="primary"
+                    
+                    (click)="buttonOutline = !buttonOutline"
+                    [outline]="buttonOutline" 
+                    >
+                        Click Me {{buttonOutline}}
+                    </button>
                 </div>
             </as-card>
         </div>
@@ -111,7 +133,7 @@
         fxFlexAlign="start"
         fxFlex="100"
         fxFlex.gt-md="25">
-            <as-card 
+            <as-card
                 [title]="'Rounded Buttons'"
                 [shadow]="1">
                 <div class="card__content">
@@ -135,6 +157,14 @@
                     </button>
                     <button asButton color="danger" outline rounded>
                         Danger
+                    </button>
+                    <button 
+                    asButton
+                    color="primary"
+                    (click)="buttonRounded = !buttonRounded"
+                    [rounded]="buttonRounded" 
+                    >
+                        Click Me {{buttonRounded}}
                     </button>
                 </div>
             </as-card>
@@ -186,6 +216,11 @@
                     <button (click)="loadingVar = !loadingVar" asButton color="secondary" [loading]="loadingVar">
                         Click Me! {{loadingVar}}
                     </button>
+                    <button 
+                    [asButton]="!isIcon" 
+                    [asIconButton]="isIcon" 
+                    icon="home" color="primary"
+                    (click)="isIcon = !isIcon">Click Me {{isIcon}}</button>
                 </div>
             </as-card>
         </div>

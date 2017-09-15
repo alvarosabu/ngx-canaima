@@ -2,7 +2,7 @@
 
 @import '../_variables.scss';
 @import '../_mixins.scss';
-
+@import '../_effects.scss';
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
 @import url($web-font-path);
@@ -42,7 +42,16 @@ a.active {
 
 
 @include navbar(default,$btn-default-bg,$btn-default-color);
+@include navbar(transparent,transparent,$btn-primary-color);
 @include navbar(primary,$btn-primary-bg,$btn-primary-color);
+@include navbar(secondary,$brand-secondary,$btn-secondary-color);
+@include navbar(ternary,$brand-ternary,$btn-ternary-color);
+@include navbar(success,$btn-success-bg,$btn-success-color);
+@include navbar(info,$btn-info-bg,$btn-info-color);
+@include navbar(warning,$btn-warning-bg,$btn-warning-color);
+@include navbar(danger,$btn-danger-bg,$btn-danger-color);
+@include navbar(link,#fff,$btn-default-color);
+
 .navbar {
   border: none;
   //@include box-shadow(0 1px 2px rgba(0,0,0,.3));
@@ -99,16 +108,23 @@ a.active {
   border: none;
   @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
   @include transition(all 0.4s);
-
+  &-circle {
+    border-radius: 50px !important;
+    padding: 6% 24% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &-link {
+    background: transparent;
+    color: $gray;
     border-radius: $btn-border-radius-base;
     @include box-shadow(none);
-    color: $btn-default-color;
 
     &:hover,
     &:focus {
+      background: transparent;
       @include box-shadow(none);
-      color: $btn-default-color;
       text-decoration: none !important;
     }
 
@@ -136,6 +152,29 @@ a.active {
         background-color: rgba(0, 0, 0, 0.1);
       }
     }
+  }
+  &-plain {
+    background: transparent;
+    color: $gray;
+    border-radius: $btn-border-radius-base;
+    @include box-shadow(none);
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      @include box-shadow(none);
+      text-decoration: none !important;
+    }
+
+    .disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:active:hover {
+        color: $btn-default-color;
+      }
+    }
+    @include ripple($btn-default-color);
   }
   &-loading {
     display: inline-flex !important;

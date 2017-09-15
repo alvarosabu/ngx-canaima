@@ -977,7 +977,9 @@ export class ActionDropdown {
     constructor(
         label &#x3D; null,
         dropdown: Action[] &#x3D; [
-            new Action(&#x27;Action 1&#x27;)
+            new Action({
+                label: &#x27;Action 1&#x27;
+            })
         ],
         icon &#x3D; &#x27;dots-vertical&#x27;,
         iconActive&#x3D; null,

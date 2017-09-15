@@ -1236,13 +1236,21 @@ export class DynamicFormComponent implements OnInit {
     [ngStyle]&#x3D;&quot;{&#x27;justify-content&#x27;: footer?.justify}&quot;&gt;
       &lt;div
       *ngFor&#x3D;&quot;let action of actions&quot;&gt;
-        &lt;div *ngIf&#x3D;&quot;!action.value&quot;
-        class&#x3D;&quot;btn btn-primary {{action.customClass}}&quot;
+        &lt;div 
+        asButton *ngIf&#x3D;&quot;!action.value&quot;
+        [color]&#x3D;&quot;action.color&quot;
+        [rounded]&#x3D;&quot;action.rounded&quot;
+        [outline]&#x3D;&quot;action.outline&quot;
+        [ngClass]&#x3D;&quot;action.customClass&quot;
         &gt;
         {{action.label}}
         &lt;/div&gt;
         &lt;button
-        class&#x3D;&quot;btn btn-primary&quot;
+        asButton
+        [color]&#x3D;&quot;action.color&quot;
+        [rounded]&#x3D;&quot;action.rounded&quot;
+        [outline]&#x3D;&quot;action.outline&quot;
+        [ngClass]&#x3D;&quot;action.customClass&quot;
         *ngIf&#x3D;&quot;action.value&quot;
         type&#x3D;&quot;submit&quot; &gt;
          {{action.label}}
@@ -1280,7 +1288,7 @@ export class DynamicFormComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <form  class="frow"  (ngSubmit)="submit()"  [formGroup]="form">    <div     class="form-group {{input.customClass}}"    *ngFor="let input of inputs"    [ngSwitch]="input.controlType" >      <as-df-input      *ngSwitchCase=" \'textbox\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-input>      <as-df-select      *ngSwitchCase="\'dropdown\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-select>      <as-df-checkbox      *ngSwitchCase="\'checkbox\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-checkbox>      <as-df-radio      *ngSwitchCase="\'radio\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-radio>      <as-df-textarea      *ngSwitchCase=" \'textareabox\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-textarea>    </div>    <div    class="form-group form-footer"    [ngStyle]="{\'justify-content\': footer?.justify}">      <div      *ngFor="let action of actions">        <div *ngIf="!action.value"        class="btn btn-primary {{action.customClass}}"        >        {{action.label}}        </div>        <button        class="btn btn-primary"        *ngIf="action.value"        type="submit" >         {{action.label}}        </button>      </div>    </div>  </form>  <!-- <div *ngIf="payLoad" class="form-row">    <strong>Saved the following values</strong><br>{{payLoad}}  </div> --></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <form  class="frow"  (ngSubmit)="submit()"  [formGroup]="form">    <div     class="form-group {{input.customClass}}"    *ngFor="let input of inputs"    [ngSwitch]="input.controlType" >      <as-df-input      *ngSwitchCase=" \'textbox\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-input>      <as-df-select      *ngSwitchCase="\'dropdown\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-select>      <as-df-checkbox      *ngSwitchCase="\'checkbox\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-checkbox>      <as-df-radio      *ngSwitchCase="\'radio\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-radio>      <as-df-textarea      *ngSwitchCase=" \'textareabox\'"      [input]="input"      [form]="form"      [submitted]="submitted"      [style]="style"></as-df-textarea>    </div>    <div    class="form-group form-footer"    [ngStyle]="{\'justify-content\': footer?.justify}">      <div      *ngFor="let action of actions">        <div         asButton *ngIf="!action.value"        [color]="action.color"        [rounded]="action.rounded"        [outline]="action.outline"        [ngClass]="action.customClass"        >        {{action.label}}        </div>        <button        asButton        [color]="action.color"        [rounded]="action.rounded"        [outline]="action.outline"        [ngClass]="action.customClass"        *ngIf="action.value"        type="submit" >         {{action.label}}        </button>      </div>    </div>  </form>  <!-- <div *ngIf="payLoad" class="form-row">    <strong>Saved the following values</strong><br>{{payLoad}}  </div> --></div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
     var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'DynamicFormComponent'};

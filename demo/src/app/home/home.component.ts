@@ -19,7 +19,7 @@ import { Header } from './../../../../src/header/header';
 export class HomeComponent implements OnInit {
 
     public openDropdown: boolean = false;
-    public navBar: any = {
+    public toolBar: any = {
         brand: {
             logo: '/assets/svg/ngx-canaima.svg'
         }

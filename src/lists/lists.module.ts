@@ -10,9 +10,11 @@ import { ListItemPropertyComponent } from './list-item-property/list-item-proper
 import { ListItemFileQeueComponent } from './list-item-fileqeue/list-item-fileqeue.component';
 import { BgImagePreviewDirective } from './../bg-image-preview.directive';
 import { ImagePreviewDirective } from './../image-preview.directive';
+import { ButtonsModule } from '../buttons/buttons.module';
 
 @NgModule({
     imports: [
+        ButtonsModule,
         CommonModule
     ],
     exports: [
