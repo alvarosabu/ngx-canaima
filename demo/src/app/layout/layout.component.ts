@@ -90,6 +90,30 @@ export class LayoutComponent implements OnInit {
         icon: 'plus',
         iconActive: 'plus'
     });
+    public menuFab: Fab = new Fab({
+        color: 'secondary',
+        icon: 'menu',
+        iconActive: 'plus',
+        type: 'circle',
+        menu: [
+            new Action({
+                color: 'primary',
+                icon: 'settings'
+            }),
+            new Action({
+                color: 'success',
+                icon: 'android'
+            }),
+            new Action({
+                color: 'info',
+                icon: 'message'
+            }),
+            new Action({
+                color: 'warning',
+                icon: 'message'
+            })
+        ]
+    });
     constructor(
         private route: ActivatedRoute,
     ) { }

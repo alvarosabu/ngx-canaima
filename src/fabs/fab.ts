@@ -1,3 +1,4 @@
+import { Action } from './../action';
 export class Fab {
     public callback?: any;
     public icon?: string;
@@ -8,6 +9,8 @@ export class Fab {
     public customClass?: string;
     public color?: string;
     public outline?: boolean;
+    public menu?: Action[];
+    public type?: string;
     constructor(
         options: {
             callback?: any,
@@ -18,7 +21,9 @@ export class Fab {
             prefix?: string,
             customClass?: string,
             color?: string,
-            outline?: boolean
+            outline?: boolean,
+            menu?: Action[];
+            type?: string;
         }
     ) {
         this.icon = options.icon;
@@ -30,6 +35,8 @@ export class Fab {
         this.size = options.size || 'md';
         this.color = options.color || 'plain';
         this.outline = options.outline;
+        this.menu = options.menu;
+        this.type = options.type;
     }
 }
 

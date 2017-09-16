@@ -346,9 +346,11 @@
     </div>
     <as-fab
     *ngIf="selectedTab.value == 'fabs'"
-    [position]="'bottom right'"
-    [color]="'secondary'"
-    [icon]="'menu'"
-    [iconActive]="'close'">
+    [position]="menuFab.position"
+    [color]="menuFab.color"
+    [icon]="menuFab.icon"
+    [iconActive]="menuFab.iconActive"
+    [menu]="menuFab.menu"
+    [type]="menuFab.type">
     </as-fab> 
 </div>

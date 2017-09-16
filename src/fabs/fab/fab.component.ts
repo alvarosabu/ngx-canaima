@@ -1,3 +1,4 @@
+
 import {
     Component,
     OnInit,
@@ -6,6 +7,7 @@ import {
     Output,
     EventEmitter
 } from '@angular/core';
+import { Action } from './../../action';
 @Component({
     selector: 'as-fab',
     templateUrl: 'fab.component.html',
@@ -25,7 +27,8 @@ export class FabComponent implements OnInit {
     @Input('outline') public outline: boolean;
     // Circle
     @Input('bg') public bg: boolean;
-    @Input('menu') public menu: any;
+    @Input('menu') public menu: Action[];
+    @Input('type') public type;
     public active= false;
     public style: any = {};
     constructor() { }
@@ -59,7 +62,7 @@ export class FabComponent implements OnInit {
     public getPos() {
         return this.style;
     }
-    public openCircle() {
+    public openMenu() {
         this.active = !this.active;
     }
 }
