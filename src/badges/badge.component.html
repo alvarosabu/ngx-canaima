@@ -1,0 +1,24 @@
+<button
+    asButton
+    [color]="color"
+    [outline]="outline"
+    [rounded]="rounded"
+    [size]="size"
+    class="asbadge"
+    [ngClass]="customClass">
+    <span class="asbadge__icon {{prefix}} {{prefix}}-{{icon}}">
+        <span
+        *ngIf="count" 
+        class="asbadge__counter asbadge__counter--{{badge}}"
+        [ngStyle]="getPos()">
+            {{count}}
+        </span>
+        <span
+        *ngIf="badgeIcon && !count" 
+        class="asbadge__counter asbadge__counter--{{badge}}"
+        [ngStyle]="getPos()">
+            <i class="{{prefix}} {{prefix}}-{{badgeIcon}}"></i>
+        </span>
+    </span>
+    
+</button>

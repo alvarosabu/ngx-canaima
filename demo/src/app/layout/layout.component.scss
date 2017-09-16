@@ -10,10 +10,10 @@
     }
 }
 
-.chips {
+.chips, .badges{
     display: flex;
     flex-wrap: wrap;
-    .chip {
+    .chip, .asbadge {
         margin: 0 1rem 1rem 0;
     }
     .chip--dark {

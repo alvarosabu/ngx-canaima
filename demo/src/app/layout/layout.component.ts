@@ -1,3 +1,4 @@
+import { Badge } from './../../../../src/badges/badge';
 import { Chip } from './../../../../src/chip/chip';
 import {
     Component,
@@ -79,6 +80,10 @@ export class LayoutComponent implements OnInit {
         content: 'Folder 1'
     });
     public tagChips: Chip[] = [];
+    public badgeIcon: Badge = new Badge({
+        icon: 'bell',
+        count: '2'
+    });
     constructor(
         private route: ActivatedRoute,
     ) { }

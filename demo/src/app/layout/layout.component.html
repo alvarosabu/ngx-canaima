@@ -269,5 +269,71 @@
                  </div>
             </as-card>
         </div>
+        <div
+            class="box"
+            fxFlexAlign="start"
+            fxFlex="100"
+            fxFlex.gt-sm="25">
+                <as-card 
+                    [title]="'Badges'"
+                    [shadow]="1">
+                     <div class="card__content">
+                         <div class="badges">
+                            <as-badge
+                            [icon]="badgeIcon.icon"
+                            [count]="badgeIcon.count"
+                            ></as-badge>
+                            <as-badge
+                            [color]="'primary'"
+                            [icon]="badgeIcon.icon"
+                            [count]="8"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'primary'"
+                            [icon]="'email'"
+                            [count]="2"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'secondary'"
+                            [icon]="'email'"
+                            [count]="75"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'ternary'"
+                            [icon]="'email'"
+                            [count]="'1K'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'success'"
+                            [icon]="'message'"
+                            [badgeIcon]="'check'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'info'"
+                            [icon]="'message'"
+                            [badgeIcon]="'information-variant'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'warning'"
+                            [icon]="'android'"
+                            [badgeIcon]="'exclamation'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'danger'"
+                            [icon]="'bug'"
+                            [badgeIcon]="'skull'"
+                            ></as-badge>
+                            <as-badge
+                            [color]="'secondary'"
+                            [outline]="true"
+                            [badge]="'success'"
+                            [icon]="'android'"
+                            [badgeIcon]="'check'"
+                            [count]="8"
+                            ></as-badge>
+                         </div>
+                     </div>
+                </as-card>
+        </div>
     </div>
 </div>
