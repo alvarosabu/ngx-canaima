@@ -495,3 +495,15 @@ a {
     padding: 2rem;
   }
 }
+
+// asBadgeCounter =================================================================
+
+@include asBadgeCounter(default,$gray-light,$white);
+@include asBadgeCounter(primary,$btn-primary-bg,$btn-primary-color);
+@include asBadgeCounter(secondary,$brand-secondary,$btn-secondary-color);
+@include asBadgeCounter(ternary,$brand-ternary,$btn-ternary-color);
+@include asBadgeCounter(success,$btn-success-bg,$btn-success-color);
+@include asBadgeCounter(info,$btn-info-bg,$btn-info-color);
+@include asBadgeCounter(warning,$btn-warning-bg,$btn-warning-color);
+@include asBadgeCounter(danger,$btn-danger-bg,$btn-danger-color);
+@include asBadgeCounter(link,#fff,$btn-default-color);

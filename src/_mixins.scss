@@ -1237,3 +1237,11 @@ $breakpoints: (
 
 
 }
+// AsBasge Counter ====================================================================
+@mixin asBadgeCounter($class,$bg,$color){
+	.asbadge__counter--#{$class} {
+	  background-color: $bg;
+	  color: $color;
+	  @include ripple($color);
+	}
+  }
