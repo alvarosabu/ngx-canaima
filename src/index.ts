@@ -1,3 +1,4 @@
+
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsModule } from './cards/cards.module';
@@ -12,6 +13,7 @@ import { SegmentModule } from './segment/segment.module';
 import { ButtonsModule } from './buttons/buttons.module';
 import { ChipModule } from './chip/chip.module';
 import { BadgesModule } from './badges/badges.module';
+import { FabsModule } from './fabs/fabs.module';
 
 export * from './action';
 export * from './action-dropdown';
@@ -27,6 +29,7 @@ export * from './toolbar';
 export * from './header';
 export * from './chip';
 export * from './badges';
+export * from './fabs';
 
 @NgModule({
   imports: [
@@ -41,7 +44,8 @@ export * from './badges';
     SegmentModule,
     ButtonsModule,
     ChipModule,
-    BadgesModule
+    BadgesModule,
+    FabsModule
   ],
   declarations: [
 
@@ -57,7 +61,8 @@ export * from './badges';
     SegmentModule,
     ButtonsModule,
     ChipModule,
-    BadgesModule
+    BadgesModule,
+    FabsModule
   ]
 })
 export class NgxCanaimaModule {

@@ -1,3 +1,4 @@
+import { Fab } from './../../../../src/fabs/fab';
 import { Badge } from './../../../../src/badges/badge';
 import { Chip } from './../../../../src/chip/chip';
 import {
@@ -83,6 +84,11 @@ export class LayoutComponent implements OnInit {
     public badgeIcon: Badge = new Badge({
         icon: 'bell',
         count: '2'
+    });
+    public simpleFab: Fab = new Fab({
+        color: 'primary',
+        icon: 'plus',
+        iconActive: 'plus'
     });
     constructor(
         private route: ActivatedRoute,

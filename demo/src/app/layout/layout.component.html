@@ -270,6 +270,7 @@
             </as-card>
         </div>
         <div
+            *ngSwitchCase="'chips-badges'"
             class="box"
             fxFlexAlign="start"
             fxFlex="100"
@@ -335,5 +336,19 @@
                      </div>
                 </as-card>
         </div>
+        <as-fab
+        *ngSwitchCase="'fabs'"
+        [position]="'top right'"
+        [color]="simpleFab.color"
+        [icon]="simpleFab.icon"
+        [iconActive]="simpleFab.iconActive">
+        </as-fab> 
     </div>
+    <as-fab
+    *ngIf="selectedTab.value == 'fabs'"
+    [position]="'bottom right'"
+    [color]="'secondary'"
+    [icon]="'menu'"
+    [iconActive]="'close'">
+    </as-fab> 
 </div>

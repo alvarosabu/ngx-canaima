@@ -1,31 +1,35 @@
 import {
     Component,
     OnInit,
+    ViewEncapsulation,
     Input,
-    ViewEncapsulation
+    Output,
+    EventEmitter
 } from '@angular/core';
-
 @Component({
-    encapsulation: ViewEncapsulation.None,
-    selector: 'as-badge',
-    templateUrl: 'badge.component.html',
+    selector: 'as-fab',
+    templateUrl: 'fab.component.html',
     styleUrls: [
-        './badge.component.scss'
+        '../fabs.component.scss'
     ]
 })
-export class BadgeComponent implements OnInit {
-    public style: any = {};
+export class FabComponent implements OnInit {
+    @Input('callback') public callback: any;
     @Input('icon') public icon: string;
-    @Input('prefix') public prefix = 'mdi';
+    @Input('iconActive') public iconActive: string;
     @Input('size') public size = 'md';
-    @Input('badge') public badge = 'default';
-    @Input('badgeIcon') public badgeIcon: string;
+    @Input('prefix') public prefix = 'mdi';
     @Input('customClass') public customClass: string;
-    @Input('count') public count: any;
-    @Input('position') public position: any;
-    @Input('color') public color = 'plain';
-    @Input('outline') public outline;
-    @Input('rounded') public rounded;
+    @Input('position') public position = 'bottom right';
+    @Input('color') public color = 'primary';
+    @Input('outline') public outline: boolean;
+    // Circle
+    @Input('bg') public bg: boolean;
+    @Input('menu') public menu: any;
+    public active= false;
+    public style: any = {};
+    constructor() { }
+
     public ngOnInit() {
         let h;
         let w;
@@ -40,12 +44,12 @@ export class BadgeComponent implements OnInit {
                     break;
                 }
             }
-            this.style[h] = 0;
-            this.style[w] = 0;
+            this.style[h] = '2rem';
+            this.style[w] = '2rem';
         }else {
             this.style = {
-                top: 0,
-                right: 0
+                bottom: '2rem',
+                right: '2rem'
             };
         }
     }
@@ -54,5 +58,8 @@ export class BadgeComponent implements OnInit {
      */
     public getPos() {
         return this.style;
+    }
+    public openCircle() {
+        this.active = !this.active;
     }
 }
