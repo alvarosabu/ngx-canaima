@@ -1,3 +1,4 @@
+import { Fab } from './../../../../src/fabs/fab';
 import { Badge } from './../../../../src/badges/badge';
 import { Chip } from './../../../../src/chip/chip';
 import {
@@ -83,6 +84,60 @@ export class LayoutComponent implements OnInit {
     public badgeIcon: Badge = new Badge({
         icon: 'bell',
         count: '2'
+    });
+    public simpleFab: Fab = new Fab({
+        color: 'primary',
+        icon: 'plus',
+        iconActive: 'plus'
+    });
+    public menuFab: Fab = new Fab({
+        color: 'secondary',
+        icon: 'menu',
+        iconActive: 'plus',
+        type: 'circle',
+        menu: [
+            new Action({
+                color: 'primary',
+                icon: 'settings'
+            }),
+            new Action({
+                color: 'success',
+                icon: 'android'
+            }),
+            new Action({
+                color: 'info',
+                icon: 'message'
+            }),
+            new Action({
+                color: 'warning',
+                icon: 'message'
+            })
+        ]
+    });
+    public settingsFab: Fab = new Fab({
+        color: 'success',
+        icon: 'settings',
+        iconActive: 'plus',
+        type: 'horizontal',
+        position: 'bottom left',
+        menu: [
+            new Action({
+                color: 'primary',
+                icon: 'settings',
+            }),
+            new Action({
+                color: 'success',
+                icon: 'android',
+            }),
+            new Action({
+                color: 'info',
+                icon: 'message',
+            }),
+            new Action({
+                color: 'warning',
+                icon: 'message',
+            })
+        ]
     });
     constructor(
         private route: ActivatedRoute,

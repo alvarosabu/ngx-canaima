@@ -17,7 +17,7 @@ export class BadgeComponent implements OnInit {
     public style: any = {};
     @Input('icon') public icon: string;
     @Input('prefix') public prefix = 'mdi';
-    @Input('size') public size: string;
+    @Input('size') public size = 'md';
     @Input('badge') public badge = 'default';
     @Input('badgeIcon') public badgeIcon: string;
     @Input('customClass') public customClass: string;
