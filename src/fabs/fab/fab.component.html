@@ -1,9 +1,13 @@
 <div 
-    class="fab fab-{{color}}"
+    class="fab fab-{{color}} {{positionClasses}}"
     [ngStyle]="getPos()" 
     [ngClass]="{'fab--active': active,
-    'fab--bg': bg, 'fab-circle': type == 'circle'}">
-        <div class="btn btn-fab btn-{{color}} btn-fab-{{size}}" (click)="callback ? callback() : openMenu()">
+    'fab--bg': bg, 'fab-circle': type == 'circle',
+    'fab-horizontal': type == 'horizontal',
+    'fab-vertical': type == 'vertical'}">
+        <div 
+        class="btn btn-fab btn-{{color}} btn-fab-{{size}}"
+        (click)="callback ? callback() : openMenu()">
             <i class="{{prefix}} {{prefix}}-{{active ? iconActive : icon}}"></i>
         </div>
     <div class="fab__menu" *ngIf="menu?.length > 0">

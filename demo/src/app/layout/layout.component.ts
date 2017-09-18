@@ -114,6 +114,31 @@ export class LayoutComponent implements OnInit {
             })
         ]
     });
+    public settingsFab: Fab = new Fab({
+        color: 'success',
+        icon: 'settings',
+        iconActive: 'plus',
+        type: 'horizontal',
+        position: 'bottom left',
+        menu: [
+            new Action({
+                color: 'primary',
+                icon: 'settings',
+            }),
+            new Action({
+                color: 'success',
+                icon: 'android',
+            }),
+            new Action({
+                color: 'info',
+                icon: 'message',
+            }),
+            new Action({
+                color: 'warning',
+                icon: 'message',
+            })
+        ]
+    });
     constructor(
         private route: ActivatedRoute,
     ) { }

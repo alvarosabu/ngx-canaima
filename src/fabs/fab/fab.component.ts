@@ -31,6 +31,7 @@ export class FabComponent implements OnInit {
     @Input('type') public type;
     public active= false;
     public style: any = {};
+    public positionClasses =  '';
     constructor() { }
 
     public ngOnInit() {
@@ -39,6 +40,7 @@ export class FabComponent implements OnInit {
         if (this.position) {
             const positions = this.position.split(' ');
             for (const pos of positions) {
+                this.positionClasses = this.positionClasses.concat(`fab-${pos} `);
                 if ((pos === 'top' || pos === 'bottom') && !h) {
                     h = pos;
                 }else if ((pos === 'left' || pos === 'right') && !w) {

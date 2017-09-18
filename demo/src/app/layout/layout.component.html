@@ -343,7 +343,34 @@
         [icon]="simpleFab.icon"
         [iconActive]="simpleFab.iconActive">
         </as-fab> 
+        <!-- <as-fab
+        *ngIf="selectedTab.value == 'fabs'"
+        [position]="'right top'"
+        [color]="menuFab.color"
+        [icon]="menuFab.icon"
+        [iconActive]="menuFab.iconActive"
+        [menu]="menuFab.menu"
+        [type]="menuFab.type">
+        </as-fab>  -->
+        <as-fab
+        *ngIf="selectedTab.value == 'fabs'"
+        [position]="'top left'"
+        [color]="'info'"
+        [icon]="menuFab.icon"
+        [iconActive]="menuFab.iconActive"
+        [menu]="menuFab.menu"
+        [type]="'vertical'">
+        </as-fab> 
     </div>
+    <as-fab
+    *ngIf="selectedTab.value == 'fabs'"
+    [position]="settingsFab.position"
+    [color]="settingsFab.color"
+    [icon]="settingsFab.icon"
+    [iconActive]="settingsFab.iconActive"
+    [menu]="settingsFab.menu"
+    [type]="settingsFab.type">
+    </as-fab> 
     <as-fab
     *ngIf="selectedTab.value == 'fabs'"
     [position]="menuFab.position"
@@ -351,6 +378,6 @@
     [icon]="menuFab.icon"
     [iconActive]="menuFab.iconActive"
     [menu]="menuFab.menu"
-    [type]="menuFab.type">
+    [type]="'circle'">
     </as-fab> 
 </div>
