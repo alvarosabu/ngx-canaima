@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    $Modal
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+@import '../_effects.scss';
+
+.modal {
+    &__content {
+        img {
+            width: 100%;
+        }
+    }
+    &__img {
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+        padding: 8px;
+        i {
+            font-size: 24px;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+    }
+    .form-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+    }
+    &--center {
+        h4, p {
+            text-align: center;
+        }
+    }
+}

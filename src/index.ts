@@ -1,4 +1,5 @@
 
+
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsModule } from './cards/cards.module';
@@ -14,7 +15,7 @@ import { ButtonsModule } from './buttons/buttons.module';
 import { ChipModule } from './chip/chip.module';
 import { BadgesModule } from './badges/badges.module';
 import { FabsModule } from './fabs/fabs.module';
-
+import { AsModalModule } from './modals/modals.module';
 export * from './action';
 export * from './action-dropdown';
 export * from './bg-image-preview.directive';
@@ -30,6 +31,7 @@ export * from './header';
 export * from './chip';
 export * from './badges';
 export * from './fabs';
+export * from './modals';
 
 @NgModule({
   imports: [
@@ -45,7 +47,8 @@ export * from './fabs';
     ButtonsModule,
     ChipModule,
     BadgesModule,
-    FabsModule
+    FabsModule,
+    AsModalModule
   ],
   declarations: [
 
@@ -62,7 +65,8 @@ export * from './fabs';
     ButtonsModule,
     ChipModule,
     BadgesModule,
-    FabsModule
+    FabsModule,
+    AsModalModule
   ]
 })
 export class NgxCanaimaModule {

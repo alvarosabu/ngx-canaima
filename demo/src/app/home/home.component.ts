@@ -62,6 +62,14 @@ export class HomeComponent implements OnInit {
             slug: 'layout',
             // tslint:disable-next-line:max-line-length
             msg: `A layout list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
+        },
+        {
+            label: 'Modals',
+            illustration: '/assets/svg/layout-illustration.svg',
+            comming: false,
+            slug: 'modals',
+            // tslint:disable-next-line:max-line-length
+            msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
         }
     ];
     public header: Header = new Header(

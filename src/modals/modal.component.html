@@ -1,0 +1,45 @@
+<div bsModal #asModal="bs-modal" class="modal {{customClass}} fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-{{size}}">
+    <div class="modal-content">
+      <div class="modal-header" *ngIf="title || img">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="asModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal__img" [ngStyle]="{'background-image': 'url(' + img + ')'}" *ngIf="img">
+
+        </div>
+        <h4 class="modal-title" *ngIf="title">{{title}}</h4>
+        
+      </div>
+      <div class="modal-body">
+        
+         <div #modalContent>
+            <ng-content selector=".modal__content" ></ng-content>
+        </div>
+        <p class="modal__msg center" *ngIf="modalContent.children.length == 0">
+            {{msg}}
+        </p>   
+      </div>
+      <div class="modal__footer" *ngIf="actions">
+          <div class="modal__actions"
+          [ngStyle]="{'justify-content': footer.justify,
+          'align-items': footer.alignment}">
+              <button 
+              asIconButton
+              [prefix]="action.prefix"
+              [icon]="action.icon"
+              [color]="action.color"
+              [outline]="action.outline"
+              [rounded]="action.rounded"
+              [size]="action.size"
+              class=" modal__action"
+              [ngClass]="action?.customClass"  
+              *ngFor="let action of actions" 
+              [disabled]="action.disabled" 
+              (click)="action.callback()">
+                  {{action.label}} 
+              </button>
+          </div>
+    </div>
+  </div>
+</div>
