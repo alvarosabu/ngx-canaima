@@ -12,12 +12,8 @@ import {
 import { ModalDirective } from 'ngx-bootstrap';
 import { Action } from '../action';
 @Component({
-    encapsulation: ViewEncapsulation.None,
     selector: 'as-modal',
-    templateUrl: 'modal.component.html',
-    styleUrls: [
-        './modals.component.scss'
-    ]
+    templateUrl: 'modal.component.html'
 })
 
 export class ModalComponent implements OnChanges, AfterViewInit  {

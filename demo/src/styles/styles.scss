@@ -2,10 +2,11 @@
 /* This file is for setting global styles  */
 
 @import 'variables';
+
 @import "../../../src/styles.scss";
 @import "../../../src/themes/_material.scss";
 @import 'common';
 @import "~mdi/css/materialdesignicons.css";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~ng2-toasty/style-material.css";
 @import "~ng2-slim-loading-bar/bundles/style.css";
+
+

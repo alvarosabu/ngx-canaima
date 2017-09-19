@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import { Modal } from './../../../../src/modals/modal';
 @Component({
-    encapsulation: ViewEncapsulation.None,
     selector: 'modals',
     templateUrl: 'modals.component.html',
     styleUrls: [
