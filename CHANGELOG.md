@@ -1,3 +1,10 @@
+## 0.5.0 - 2017-09-20
+### Added
+- Chip Component
+- Badge Icon Component
+- Fab Button Component
+- Fab Button menu circle, horizontal and vertical
+- Modal Component
 ## 0.4.2 - 2017-09-15
 ### Added
 - Transparent and diverse navbar colors
