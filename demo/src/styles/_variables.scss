@@ -4,9 +4,6 @@
 
 $font-family-base:  "Roboto", sans-serif !default;
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-// Paper 3.3.7
-// Variables
-// --------------------------------------------------
 
 
 //== Colors
@@ -23,7 +20,7 @@ $white:                  #f3f3f3 !default;
 
 $brand-app:             #3B9DFF !default;
 $brand-primary:         #2D93F9 !default;
-$brand-secundary:       #F47027 !default;
+$brand-secondary:       #F47027 !default;
 $brand-ternary:         #bfbebd !default;
 $brand-success:         #4CAF50 !default;
 $brand-info:            #9C27B0 !default;
@@ -878,10 +875,10 @@ $hr-border:                   $gray-lighter !default;
 //== Cards
 //
 //##
-//$as-card-bg: $gray-dark ; 
-// $as-card-color: $white;
-// $as-card-header-bg: $brand-primary;
-// $as-card-header-color: $white; 
+/* $as-card-bg: $gray-dark ; 
+$as-card-color: $white;
+$as-card-header-bg: $brand-primary;
+$as-card-header-color: $white;  */
 
 //$as-card-header-border-top: none;
 //$as-card-header-border-bottom: none;
@@ -905,3 +902,7 @@ $hr-border:                   $gray-lighter !default;
 //$as-form-input-color: $gray-lighter;
 //$as-form-input-border-color: #ddd;
 //$as-form-input-border-radius: 100px;
+/* $as-modal-header-bg: $gray-dark; 
+$as-modal-header-color: $white;
+$as-modal-header-border-bottom: 2px solid;
+$as-modal-header-border-color: $brand-secondary; */

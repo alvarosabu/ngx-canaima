@@ -1,3 +1,4 @@
+import { FabsModule } from './../fabs/fabs.module';
 import { ButtonsModule } from './../buttons/buttons.module';
 
 import { NgModule } from '@angular/core';
@@ -13,6 +14,7 @@ import { CardIllustrationComponent } from './card-illustration/card-illustration
 @NgModule({
   imports: [
     ButtonsModule,
+    FabsModule,
     CommonModule,
     BsDropdownModule
   ],

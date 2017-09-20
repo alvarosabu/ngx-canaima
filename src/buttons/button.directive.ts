@@ -35,19 +35,6 @@ export class AsButtonDirective implements OnInit, OnChanges {
         }
         this.attributes = Object.keys(this.cls);
         this.renderer.addClass(this.nativeElement, `btn`);
-        /* this.attributes.forEach(attr => {
-            if (this[attr] !== undefined) {
-                if (typeof(this[attr] === 'boolean')) {
-                    if (this.checkInput(this[attr])) {
-                        attr === 'loading' ?
-                        this.appendLoading() :
-                        this.addClass(this.cls[attr]);
-                    }
-                }else {
-                    this.addClass(this.cls['color']);
-                }
-            }
-        }); */
         if (this.checkInput(this.loading)) {
             this.appendLoading();
         }
@@ -67,7 +54,6 @@ export class AsButtonDirective implements OnInit, OnChanges {
         }
     }
     public ngOnChanges(changes) {
-        console.log(changes);
         for (const key in changes) {
             if (changes.hasOwnProperty(key) && !changes[key].firstChange) {
                 this[key] = changes[key].currentValue;
