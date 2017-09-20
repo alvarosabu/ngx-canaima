@@ -6,6 +6,15 @@
 @import '../_effects.scss';
 
 .modal {
+    &--sm {
+        width: 300px;
+    }
+    &--md {
+        width: 600px;
+    }
+    &--lg {
+        width: 900px;
+    }
     &__container {
         background-color: $as-modal-bg;
         position: relative;
@@ -41,8 +50,8 @@
         border-color: $as-modal-content-border-color;
     }
     &__img {
-        width: 150px;
-        height: 150px;
+        width: $as-modal-img-width;
+        height: $as-modal-img-height;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -57,14 +66,20 @@
     }
     &__actions {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        flex-wrap: wrap;
         align-items: center;
         flex: 1;
         padding: 8px;
-        i {
-            font-size: 24px;
-            margin-left: 1rem;
-            cursor: pointer;
+    }
+    &__footer {
+        padding: $as-modal-footer-padding;
+        background: $as-modal-footer-bg;
+        border-top: $as-modal-footer-border-top;
+        border-bottom: $as-modal-footer-border-bottom;
+        border-color: $as-modal-footer-border-color;
+        .btn {
+            margin: 0 .5rem;
         }
     }
     .form-footer {

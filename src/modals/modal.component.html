@@ -1,5 +1,5 @@
 <div bsModal #asModal="bs-modal" class="modal {{customClass}} fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-{{size}}">
+  <div class="modal-dialog modal--{{size}}">
     <div class="modal__container">
       <div class="modal__header" *ngIf="title || img">
         <button type="button" class="close pull-right" aria-label="Close" (click)="asModal.hide()">

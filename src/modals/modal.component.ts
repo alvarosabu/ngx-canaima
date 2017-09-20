@@ -21,15 +21,21 @@ export class ModalComponent implements OnChanges, AfterViewInit  {
     @Input('title') public title: string;
     @Input('img') public img: string;
     @Input('msg') public msg: string;
-    @Input('open') public open: string;
-    @Input('size') public size: string;
+    @Input('open') public open: boolean;
+    @Input('size') public size = 'sm';
     @Input('customClass') public customClass: string;
     @Input('actions') public actions: Action[];
-    @Output() public onClosed = new EventEmitter<any>();
+    @Input('footer') public footer: any = {
+        justify: 'flex-end',
+        alignment: 'center'
+    };
+    @Output() public onClosed = new EventEmitter<boolean>();
+    @Output() openChange: EventEmitter<boolean> = new EventEmitter();
     constructor() {}
     public ngAfterViewInit() {
          this.asModal.onHide
         .subscribe((res) => {
+            this.openChange.emit(false);
             this.onClosed.emit();
         });
     }

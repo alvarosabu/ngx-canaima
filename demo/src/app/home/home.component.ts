@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
         },
         {
             label: 'Modals',
-            illustration: '/assets/svg/layout-illustration.svg',
+            illustration: '/assets/svg/modals-illustration.svg',
             comming: false,
             slug: 'modals',
             // tslint:disable-next-line:max-line-length

@@ -32,15 +32,149 @@
                      (click)="openModal(smallModal)">
                      Small Modal
                     </button>
+                    <button
+                    asButton
+                    color="success"
+                    (click)="openModal(mediumModal)">
+                    Medium Modal
+                   </button>
+                    <button
+                    asButton
+                    color="secondary"
+                    (click)="openModal(largeModal)">
+                    Large Modal
+                   </button>
                  </div>
             </as-card>
+    </div>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-sm="50">
+            <as-card 
+                [title]="'Actions Modal'"
+                [shadow]="1">
+                 <div class="card__content">
+                    <button
+                    asButton
+                    color="primary"
+                    (click)="openModal(actionModal)">
+                    Action Modal
+                    </button>
+                    <button
+                    asButton
+                    color="success"
+                    (click)="openModal(confirmModal)">
+                    Confirm Modal
+                    </button>
+                    <button
+                    asButton
+                    color="danger"
+                    (click)="openModal(errorModal)">
+                    Error Modal
+                    </button>
+                 </div>
+            </as-card>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="100"
+    fxFlex.gt-sm="50">
+        <as-card 
+            [title]="'Content Modals'"
+            [shadow]="1">
+             <div class="card__content">
+                <button
+                asButton
+                color="primary"
+                (click)="openModal(contentModal)">
+                Content Modal
+                </button>
+                <button
+                asButton
+                color="success"
+                (click)="openModal(formModal)">
+                Form Modal
+                </button>
+             </div>
+        </as-card>
     </div>
 </div>
 <!--Small Modal-->
 <as-modal
 [title]="smallModal.title"
 [msg]="smallModal.msg"
-[open]="smallModal.open"
+[(open)]="smallModal.open"
 [size]="smallModal.size"
 (onClosed)="smallModal.onClosed($event)"
 >
+</as-modal>
+<!--Medium Modal-->
+<as-modal
+[title]="mediumModal.title"
+[msg]="mediumModal.msg"
+[(open)]="mediumModal.open"
+[size]="mediumModal.size"
+(onClosed)="mediumModal.onClosed($event)"
+>
+</as-modal>
+<!--Large Modal-->
+<as-modal
+[title]="largeModal.title"
+[msg]="largeModal.msg"
+[(open)]="largeModal.open"
+[size]="largeModal.size"
+(onClosed)="largeModal.onClosed($event)"
+>
+</as-modal>
+<!--Action Modal-->
+<as-modal
+[title]="actionModal.title"
+[msg]="actionModal.msg"
+[(open)]="actionModal.open"
+[size]="actionModal.size"
+[actions]="actionModal.actions"
+(onClosed)="actionModal.onClosed($event)"
+>
+</as-modal>
+<!--Confirm Modal-->
+<as-modal
+[img]="confirmModal.img"
+[title]="confirmModal.title"
+[msg]="confirmModal.msg"
+[(open)]="confirmModal.open"
+[size]="confirmModal.size"
+[actions]="confirmModal.actions"
+>
+</as-modal>
+<!--Error Modal-->
+<as-modal
+[img]="errorModal.img"
+[title]="errorModal.title"
+[msg]="errorModal.msg"
+[(open)]="errorModal.open"
+[size]="errorModal.size"
+[actions]="errorModal.actions"
+>
+</as-modal>
+<as-modal 
+    [title]="'Content Modal'"
+    [(open)]="contentModal.open">
+    <div class="modal__content">
+        <img src="https://esp.rt.com/actualidad/public_images/2017.08/article/59a457f7e9180fef388b4576.jpg" alt="">
+    </div>
+</as-modal>
+<as-modal 
+    [title]="'Form Modal'"
+    [(open)]="formModal.open">
+     <div class="modal__content">
+        <as-dynamic-form
+        [inputs]="inputs"
+        [style]="'float'"
+        (onSubmit)="submitForm($event)"
+        [actions]="normalForm.actions"
+        ></as-dynamic-form>
+     </div>
+</as-modal>
