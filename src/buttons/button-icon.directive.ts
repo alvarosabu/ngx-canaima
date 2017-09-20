@@ -49,7 +49,6 @@ export class AsIconButtonDirective implements OnInit, OnChanges {
         }
     }
     public ngOnChanges(changes) {
-        console.log(changes);
         for (const key in changes) {
             if (changes.hasOwnProperty(key) && !changes[key].firstChange) {
                 this[key] = changes[key].currentValue;

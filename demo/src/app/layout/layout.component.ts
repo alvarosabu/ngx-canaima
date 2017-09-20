@@ -1,3 +1,6 @@
+import { Fab } from './../../../../src/fabs/fab';
+import { Badge } from './../../../../src/badges/badge';
+import { Chip } from './../../../../src/chip/chip';
 import {
     Component,
     OnInit,
@@ -17,6 +20,7 @@ import { Segment } from './../../../../src/segment/segment';
         './layout.component.scss'
     ]
 })
+
 export class LayoutComponent implements OnInit {
     public toolBar: Toolbar = new Toolbar(
         {
@@ -58,14 +62,109 @@ export class LayoutComponent implements OnInit {
             value: 'buttons'
         }),
         new Segment({
+            label: 'Chips & Badges',
+            value: 'chips-badges'
+        }),
+        new Segment({
             label: 'FABs',
             value: 'fabs'
         })
     ];
     public selectedTab: Segment = this.segments[0];
+    public avatarChip: Chip = new Chip({
+        img: '../assets/img/jonsnow.png',
+        content: 'Jon Snow'
+    });
+    public iconChip: Chip = new Chip({
+        prefix: 'mdi',
+        icon: 'folder',
+        content: 'Folder 1'
+    });
+    public tagChips: Chip[] = [];
+    public badgeIcon: Badge = new Badge({
+        icon: 'bell',
+        count: '2'
+    });
+    public simpleFab: Fab = new Fab({
+        color: 'primary',
+        icon: 'plus',
+        iconActive: 'plus'
+    });
+    public menuFab: Fab = new Fab({
+        color: 'secondary',
+        icon: 'menu',
+        iconActive: 'plus',
+        type: 'circle',
+        menu: [
+            new Action({
+                color: 'primary',
+                icon: 'settings'
+            }),
+            new Action({
+                color: 'success',
+                icon: 'android'
+            }),
+            new Action({
+                color: 'info',
+                icon: 'message'
+            }),
+            new Action({
+                color: 'warning',
+                icon: 'message'
+            })
+        ]
+    });
+    public settingsFab: Fab = new Fab({
+        color: 'success',
+        icon: 'settings',
+        iconActive: 'plus',
+        type: 'horizontal',
+        position: 'bottom left',
+        menu: [
+            new Action({
+                color: 'primary',
+                icon: 'settings',
+            }),
+            new Action({
+                color: 'success',
+                icon: 'android',
+            }),
+            new Action({
+                color: 'info',
+                icon: 'message',
+            }),
+            new Action({
+                color: 'warning',
+                icon: 'message',
+            })
+        ]
+    });
     constructor(
         private route: ActivatedRoute,
     ) { }
 
-    public ngOnInit() { }
+    public ngOnInit() {
+        for (let i = 0; i < 5; i++) {
+            this.tagChips.push(new Chip(
+                {
+                    id: i,
+                    content: `Tag ${i}`,
+                    delete: true,
+                }
+            ));
+        }
+    }
+    /**
+     * clickedChip
+     */
+    public clickedChip(chip: Chip) {
+        console.log('Chip selected', chip);
+    }
+    /**
+     * deletedChip
+     */
+    public deletedChip(chip: Chip) {
+        this.tagChips = this.tagChips.filter((item) => item.id !== chip.id);
+        console.log('Chip deleted', chip);
+    }
 }

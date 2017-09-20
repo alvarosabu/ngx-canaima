@@ -9,3 +9,15 @@
         margin: .5rem;
     }
 }
+
+.chips, .badges{
+    display: flex;
+    flex-wrap: wrap;
+    .chip, .asbadge {
+        margin: 0 1rem 1rem 0;
+    }
+    .chip--dark {
+        background-color: $gray-dark !important;
+        color: $gray-lighter;
+    }
+}

@@ -1,4 +1,4 @@
-import { ButtonsModule } from './../buttons/buttons.module';
+
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,10 +9,12 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 import { CardDataComponent } from './card-data/card-data.component';
 import { CardProfileComponent } from './card-profile/card-profile.component';
 import { CardIllustrationComponent } from './card-illustration/card-illustration.component';
-
+import { FabsModule } from '../fabs/fabs.module';
+import { ButtonsModule } from '../buttons/buttons.module';
 @NgModule({
   imports: [
     ButtonsModule,
+    FabsModule,
     CommonModule,
     BsDropdownModule
   ],

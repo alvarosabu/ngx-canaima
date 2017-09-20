@@ -1,0 +1,16 @@
+<div 
+    class="fab fab-{{color}} {{positionClasses}}"
+    [ngStyle]="getPos()" 
+    [ngClass]="{'fab--active': active,
+    'fab--bg': bg, 'fab-circle': type == 'circle',
+    'fab-horizontal': type == 'horizontal',
+    'fab-vertical': type == 'vertical'}">
+        <div 
+        class="btn btn-fab btn-{{color}} btn-fab-{{size}}"
+        (click)="callback ? callback() : openMenu()">
+            <i class="{{prefix}} {{prefix}}-{{active ? iconActive : icon}}"></i>
+        </div>
+    <div class="fab__menu" *ngIf="menu?.length > 0">
+        <i class="fab__item btn btn-{{item.color}} btn-fab-mini {{item.prefix}} {{item.prefix}}-{{item.icon}}" *ngFor="let item of menu" (click)="item.callback()"></i>
+    </div>
+</div>

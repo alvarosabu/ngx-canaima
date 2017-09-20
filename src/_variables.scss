@@ -178,3 +178,77 @@ $as-header-scroll-factor: .5 !default;
 $as-header-body-width: 300px !default;
 $as-header-body-padding: 1rem !default;
 $as-header-body-bg:  rgba(0,0,0,0.1) !default;
+
+//== Chips
+$as-chip-bg: $gray-lighter !default;
+$as-chip-border-radius: 50px !default;
+$as-chip-font-size: 11px !default;
+$as-chip-padding: .2rem .5rem .2rem .75rem !default;
+$as-chip-image-padding: .2rem .75rem .2rem .2rem !default;
+$as-chip-icon-padding: .2rem .75rem .2rem .2rem !default;
+$as-chip-icon-bg: $gray !default;
+$as-chip-icon-color: $gray-lighter !default;
+$as-chip-icon-font-size: 16px !default;
+$as-chip-icon-size: 30px !default;
+$as-chip-action-font-size: 16px !default;
+$as-chip-action-color: $gray-light !default;
+$as-chip-thumb-size: 30px !default;
+
+//== Badge icon
+
+$as-badge-bg: $gray-lighter !default;
+$as-badge-icon-width: 34px !default;
+$as-badge-icon-height: 38px !default;
+$as-badge-icon-font-size: 24px !default;
+$as-badge-icon-counter-width: 18px !default;
+$as-badge-icon-counter-height: 18px !default;
+$as-badge-icon-counter-font-size: 10px !default;
+$as-badge-icon-counter-font-weight: 600 !default;
+
+//== Modals
+$as-modal-bg: rgb(98.4%, 98.4%, 98.4%) !default;
+$as-modal-color: $gray !default;
+$as-modal-border-radius: 3px !default;
+$as-modal-border: 1px solid !default;
+$as-modal-border-color: transparent !default;
+
+$as-modal-header-bg: transparent !default;
+$as-modal-header-color: $gray-dark !default;
+$as-modal-header-border-top: none !default;
+$as-modal-header-border-bottom: none !default;
+$as-modal-header-border-color: transparent !default;
+$as-modal-header-padding: 15px !default;
+
+$as-modal-options-color: $gray-dark;
+$as-modal-options-color-inverse: $white;
+$as-modal-options-font-size: 18px;
+$as-modal-actions-font-size: 24px;
+
+$as-modal-title-padding: 24px 16px 12px 16px !default;
+$as-modal-subtitle-padding: 24px 16px 8px 16px !default;
+
+$as-modal-img-width: 150px !default;
+$as-modal-img-height: 150px !default;
+
+$as-modal-msg-padding: 8px 16px 12px !default;
+$as-modal-msg-bg: transparent !default;
+$as-modal-msg-color: $gray-dark !default;
+$as-modal-msg-border-top: none !default;
+$as-modal-msg-border-bottom: none !default;
+$as-modal-msg-border-color: transparent !default;
+$as-modal-msg-padding: 15px !default;
+
+$as-modal-content-padding: 16px !default;
+$as-modal-content-bg: transparent !default;
+$as-modal-content-color: $gray-dark !default;
+$as-modal-content-border-top: none !default;
+$as-modal-content-border-bottom: none !default;
+$as-modal-content-border-color: transparent !default;
+$as-modal-content-padding: 15px !default;
+
+$as-modal-footer-bg: transparent !default;
+$as-modal-footer-color: $brand-primary !default;
+$as-modal-footer-border-top: none !default;
+$as-modal-footer-border-bottom: none !default;
+$as-modal-footer-border-color: transparent !default;
+$as-modal-footer-padding: 8px !default;

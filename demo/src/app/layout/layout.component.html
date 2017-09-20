@@ -224,5 +224,160 @@
                 </div>
             </as-card>
         </div>
+        <div
+            *ngSwitchCase="'chips-badges'"
+            class="box"
+            fxFlexAlign="start"
+            fxFlex="100"
+            fxFlex.gt-sm="25">
+            <as-card 
+                [title]="'Chips'"
+                [shadow]="1">
+                 <div class="card__content">
+                     <div class="chips">
+                        <as-chip
+                        [img]="avatarChip.img"
+                        [content]="avatarChip.content"
+                        [delete]="avatarChip.delete"
+                        (onClicked)="clickedChip(avatarChip)"
+                        (onDeleted)="deletedChip(avatarChip)"
+                        ></as-chip>
+                        <as-chip 
+                            *ngFor="let tag of tagChips; let i of index;"
+                            [img]="tag.img"
+                            [content]="tag.content"
+                            [delete]="tag.delete"
+                            (onClicked)="clickedChip(tag)"
+                            (onDeleted)="deletedChip(tag)">
+                        </as-chip>
+                        <as-chip
+                        [img]="'../assets/img/cersei-lannister.jpg'"
+                        [content]="'Cersei Lannister'"
+                        [delete]="avatarChip.delete"
+                        [customClass]="'chip--dark'"
+                        (onClicked)="clickedChip(avatarChip)"
+                        (onDeleted)="deletedChip(avatarChip)"
+                        ></as-chip>
+                        <as-chip
+                        [icon]="iconChip.icon"
+                        [content]="iconChip.content"
+                        [delete]="iconChip.delete"
+                        (onClicked)="clickedChip(iconChip)"
+                        (onDeleted)="deletedChip(iconChip)"
+                        ></as-chip>
+                     </div>
+                 </div>
+            </as-card>
+        </div>
+        <div
+            *ngSwitchCase="'chips-badges'"
+            class="box"
+            fxFlexAlign="start"
+            fxFlex="100"
+            fxFlex.gt-sm="25">
+                <as-card 
+                    [title]="'Badges'"
+                    [shadow]="1">
+                     <div class="card__content">
+                         <div class="badges">
+                            <as-badge
+                            [icon]="badgeIcon.icon"
+                            [count]="badgeIcon.count"
+                            ></as-badge>
+                            <as-badge
+                            [color]="'primary'"
+                            [icon]="badgeIcon.icon"
+                            [count]="8"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'primary'"
+                            [icon]="'email'"
+                            [count]="2"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'secondary'"
+                            [icon]="'email'"
+                            [count]="75"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'ternary'"
+                            [icon]="'email'"
+                            [count]="'1K'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'success'"
+                            [icon]="'message'"
+                            [badgeIcon]="'check'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'info'"
+                            [icon]="'message'"
+                            [badgeIcon]="'information-variant'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'warning'"
+                            [icon]="'android'"
+                            [badgeIcon]="'exclamation'"
+                            ></as-badge>
+                            <as-badge
+                            [badge]="'danger'"
+                            [icon]="'bug'"
+                            [badgeIcon]="'skull'"
+                            ></as-badge>
+                            <as-badge
+                            [color]="'secondary'"
+                            [outline]="true"
+                            [badge]="'success'"
+                            [icon]="'android'"
+                            [badgeIcon]="'check'"
+                            [count]="8"
+                            ></as-badge>
+                         </div>
+                     </div>
+                </as-card>
+        </div>
+        <as-fab
+        *ngSwitchCase="'fabs'"
+        [position]="'top right'"
+        [color]="simpleFab.color"
+        [icon]="simpleFab.icon"
+        [iconActive]="simpleFab.iconActive">
+        </as-fab> 
+        <!-- <as-fab
+        *ngIf="selectedTab.value == 'fabs'"
+        [position]="'right top'"
+        [color]="menuFab.color"
+        [icon]="menuFab.icon"
+        [iconActive]="menuFab.iconActive"
+        [menu]="menuFab.menu"
+        [type]="menuFab.type">
+        </as-fab>  -->
+        <as-fab
+        *ngIf="selectedTab.value == 'fabs'"
+        [position]="'top left'"
+        [color]="'info'"
+        [icon]="menuFab.icon"
+        [iconActive]="menuFab.iconActive"
+        [menu]="menuFab.menu"
+        [type]="'vertical'">
+        </as-fab> 
     </div>
+    <as-fab
+    *ngIf="selectedTab.value == 'fabs'"
+    [position]="settingsFab.position"
+    [color]="settingsFab.color"
+    [icon]="settingsFab.icon"
+    [iconActive]="settingsFab.iconActive"
+    [menu]="settingsFab.menu"
+    [type]="settingsFab.type">
+    </as-fab> 
+    <as-fab
+    *ngIf="selectedTab.value == 'fabs'"
+    [position]="menuFab.position"
+    [color]="menuFab.color"
+    [icon]="menuFab.icon"
+    [iconActive]="menuFab.iconActive"
+    [menu]="menuFab.menu"
+    [type]="'circle'">
+    </as-fab> 
 </div>

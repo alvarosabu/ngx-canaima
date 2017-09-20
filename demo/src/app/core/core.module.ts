@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +14,7 @@ import { FormsActivityModule } from '../forms/forms.module';
 import { GridActivityModule } from './../grid/grid.module';
 import { LayoutModule } from './../layout/layout.module';
 import { NavService } from './navmenu/nav.service';
+import { ModalsActivityModule } from './../modals/modals.module';
 
 @NgModule({
   imports: [
@@ -26,7 +26,8 @@ import { NavService } from './navmenu/nav.service';
     ListsActivityModule,
     FormsActivityModule,
     GridActivityModule,
-    LayoutModule
+    LayoutModule,
+    ModalsActivityModule
 
   ],
   declarations: [
@@ -47,7 +48,8 @@ import { NavService } from './navmenu/nav.service';
     FormsActivityModule,
     NumberFormatterPipe,
     GridActivityModule,
-    LayoutModule
+    LayoutModule,
+    ModalsActivityModule
   ]
 })
 export class CoreModule { }

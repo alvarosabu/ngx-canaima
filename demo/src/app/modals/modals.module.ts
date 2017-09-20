@@ -1,11 +1,11 @@
+
 import { NgModule } from '@angular/core';
 import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
-import { ROUTES } from './layout.routes';
-import { LayoutComponent } from './layout.component';
-
+import { ROUTES } from './modals.routes';
+import { ModalsComponent } from './modals.component';
 import { SharedModule } from '../shared/shared.module';
 @NgModule({
     imports: [
@@ -14,8 +14,8 @@ import { SharedModule } from '../shared/shared.module';
     ],
     exports: [],
     declarations: [
-        LayoutComponent
+        ModalsComponent
     ],
     providers: [],
 })
-export class LayoutModule { }
+export class ModalsActivityModule { }
