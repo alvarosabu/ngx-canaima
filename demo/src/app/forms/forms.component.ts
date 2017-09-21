@@ -139,7 +139,8 @@ export class FormsComponent implements OnInit {
         new Action(
             {
                 label: 'Login',
-                color: 'primary'
+                color: 'primary',
+                value: true
             }
         ),
         ]
