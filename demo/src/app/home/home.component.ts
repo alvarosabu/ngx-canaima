@@ -1,13 +1,20 @@
-
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
+    AfterViewInit
 } from '@angular/core';
 import {
     ToastyService
 } from 'ng2-toasty';
-import { Header } from './../../../../src/header/header';
+import {
+    VERSION
+} from './../core/constants';
+import {
+    Header
+} from './../../../../src/header/header';
+// tslint:disable-next-line:import-destructuring-spacing
+import * as apiNpm from 'api-npm';
 
 @Component({
     encapsulation: ViewEncapsulation.None,
@@ -16,16 +23,16 @@ import { Header } from './../../../../src/header/header';
         './home.component.scss'
     ]
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent implements OnInit, AfterViewInit {
+    
+    public version: string;
     public openDropdown: boolean = false;
     public toolBar: any = {
         brand: {
             logo: '/assets/svg/ngx-canaima.svg'
         }
     };
-    public components = [
-        {
+    public components = [{
             label: 'Cards',
             illustration: '/assets/svg/cards-illustration.svg',
             comming: false,
@@ -72,19 +79,27 @@ export class HomeComponent implements OnInit {
             msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
         }
     ];
-    public header: Header = new Header(
-        {
-            bg: '../assets/img/header-canaima.png',
-            customClass: 'header-home',
-            parallax: true
-        }
-    );
+    public header: Header = new Header({
+        bg: '../assets/img/header-canaima.png',
+        customClass: 'header-home',
+        parallax: true
+    });
     constructor(
         public toastService: ToastyService
-    ) {}
-
-    public ngOnInit() {
-
+    ) {
+        
     }
 
+    public ngOnInit() {
+        //
+    }
+    public ngAfterViewInit(): void {
+        this.getNpmData();
+    }
+    public getNpmData() {
+        apiNpm.getdetails('ngx-canaima', (data) => {
+            console.log('package', data['dist-tags'].latest);
+            this.version =  data['dist-tags'].latest;
+        });
+    }
 }
