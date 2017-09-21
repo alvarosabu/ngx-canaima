@@ -1,3 +1,6 @@
+## 0.5.1 - 2017-09-21
+### Fixed
+- Material variables by default
 ## 0.5.0 - 2017-09-20
 ### Added
 - Chip Component

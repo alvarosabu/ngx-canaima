@@ -56,10 +56,8 @@ export class AppComponent implements AfterViewInit {
   }
   public toolbarCheck() {
     setTimeout(() => {
-      console.log(this.elements);
       this.elements.forEach((element) => {
         const toolbars = element.nativeElement.getElementsByClassName('toolbar');
-        console.log(toolbars);
         if (toolbars.length > 1) {
           toolbars[0].hidden = true;
         }else {
