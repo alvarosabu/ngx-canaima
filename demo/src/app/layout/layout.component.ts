@@ -155,6 +155,12 @@ export class LayoutComponent implements OnInit {
         }
     }
     /**
+     * search
+     */
+    public search(e) {
+        console.log('Search', e);
+    }
+    /**
      * clickedChip
      */
     public clickedChip(chip: Chip) {

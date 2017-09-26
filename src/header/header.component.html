@@ -4,8 +4,7 @@
     [ngStyle]="{'background-image': bg && 'url(' + bg + ')', 'justify-content': contentAlign }">
    <div class="header__container">
         <div 
-            *ngIf="headerContent.children.length == 0
-            && (title || subtitle || msg)"
+            *ngIf="headerContent.children.length == 0"
             class="header__body">
             <h4 
             class="header__title"

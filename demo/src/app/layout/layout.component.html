@@ -12,7 +12,9 @@
         <div class="toolbar__title">{{toolBar?.title}}</div>
     </div>
     <div class="right-content">
-        Awiwiwi
+        <as-search-bar
+        [customClass]="''"
+        (onSearch)="search($event)"></as-search-bar>
     </div>
 </as-toolbar>
 
