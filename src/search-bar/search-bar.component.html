@@ -1,0 +1,12 @@
+ <form class="search-bar {{customClass}}" #searchBar="ngForm" novalidate>
+    <div class="form-group">
+        <i class="{{prefix}} {{prefix}}-{{icon}} search-bar__icon"></i>
+        <input type="text" 
+        class="form-control" 
+        placeholder="{{placeholder}}" 
+        id="search" 
+        name="search"
+        [(ngModel)]="search" 
+        (keydown)="searchTerm($event)">
+    </div>
+</form>
