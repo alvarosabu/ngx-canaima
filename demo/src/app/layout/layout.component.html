@@ -13,18 +13,17 @@
     </div>
     <div class="right-content">
         <as-search-bar
-        [customClass]="''"
         (onSearch)="search($event)"></as-search-bar>
     </div>
 </as-toolbar>
 
-<div class="parallax-container">
+<div [ngClass]="{'parallax-container': selectedTab?.value !== 'loading'}">
     <as-header
         [title]="header.title"
         [subtitle]="header.subtitle"
         [msg]="header.msg"
         [bg]="header.bg" 
-        [parallax]="header.parallax">
+        [parallax]="selectedTab?.value !== 'loading' && header.parallax">
     </as-header>
     <as-segment
     [shadow]="1"
@@ -35,7 +34,7 @@
     </as-segment>
     <div
         [ngSwitch]="selectedTab?.value"
-        class="container-fluid parallax-container"
+        class="container-fluid"
         fxLayout="row"
         fxFlexAlign="start start"
         fxLayoutWrap>
@@ -337,6 +336,112 @@
                          </div>
                      </div>
                 </as-card>
+        </div>
+        <div
+            *ngSwitchCase="'loading'"
+            class="box"
+            fxFlexAlign="start"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+            <as-card 
+                [title]="'Loaders'"
+                [shadow]="1">
+                 <div class="card__content">
+                    <div class="loaders">
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true">
+                            </as-loading>
+                            <span>Donnut</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'rotateplane'">
+                            </as-loading>
+                            <span>Rotate Plane</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'circle'">
+                            </as-loading>
+                            <span>Circle</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'bars'">
+                            </as-loading>
+                            <span>Bars</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'dots'">
+                            </as-loading>
+                            <span>Dots</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'pulse'">
+                            </as-loading>
+                            <span>Pulse</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'ios'">
+                            </as-loading>
+                            <span>iOS</span>
+                        </div>
+                        <!-- <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'dots-circle'">
+                            </as-loading>
+                            <span>Dots Circle</span>
+                        </div> -->
+                    </div>
+                 </div>
+            </as-card>
+        </div>
+        <div
+        *ngSwitchCase="'loading'"
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-sm="50">
+            <as-card 
+                [title]="'Fancy Loaders'"
+                [shadow]="1">
+                <div class="card__content">
+                    <div class="loaders">
+                        <div class="loader">
+                            <as-loading
+                            [animation]="'location'"
+                            [loading]="true">
+                            </as-loading>
+                            <span>Location</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'gplus'">
+                            </as-loading>
+                            <span>Google Plus</span>
+                        </div>
+                        <div class="loader">
+                            <as-loading
+                            [loading]="true"
+                            [animation]="'clock'">
+                            </as-loading>
+                            <span>Clock</span>
+                        </div>
+                    </div>
+                </div>
+            </as-card>
         </div>
         <as-fab
         *ngSwitchCase="'fabs'"

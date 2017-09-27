@@ -1107,3 +1107,87 @@ $as-searchbar-border-radius: 0px !default;
 $as-searchbar-border: none !default;
 $as-searchbar-border-color: transparent !default;
 $as-searchbar-border-style: solid !default;
+
+//== Loaders
+$as-loader-backdrop-bg: rgba(0,0,0,0.3) !default;
+$as-loader-container-bg: darken($gray, 20%) !default;
+$as-loader-container-border-radius: 50px !default;
+$as-loader-container-padding: .5rem !default;
+$as-loader-container-box-shadow: 0 1px 1px 2px rgba(0,0,0,0.2) !default;
+
+$as-loader-size: 50px !default;
+
+$as-loader-donnut-border-radius: 50% !default;
+$as-loader-donnut-opacity: .75 !default;
+$as-loader-donnut-border-size: .5rem !default;
+$as-loader-donnut-border-type: solid !default;
+$as-loader-donnut-border-color: $brand-primary !default;
+$as-loader-donnut-animation-duration: 1.1s !default;
+$as-loader-donnut-animation-time-function: linear !default;
+
+$as-loader-rotateplane-bg: $brand-primary !default;
+$as-loader-rotateplane-animation-duration: 1.1s !default;
+$as-loader-rotateplane-animation-time-function: ease-in-out !default;
+
+$as-loader-circle-border-radius: 50% !default;
+$as-loader-circle-border-size: .5rem !default;
+$as-loader-circle-border-type: solid !default;
+$as-loader-circle-border-color: $brand-primary !default;
+$as-loader-circle-animation-duration: 1.1s !default;
+$as-loader-circle-animation-time-function: linear !default;
+
+$as-loader-gplus-size: 48px !default;
+$as-loader-gplus-bg-1: $brand-primary !default;
+$as-loader-gplus-bg-2: $brand-danger !default;
+$as-loader-gplus-bg-3: $brand-warning !default;
+$as-loader-gplus-bg-4: $brand-success !default;
+$as-loader-gplus-animation-duration: 3s !default;
+$as-loader-gplus-animation-time-function: linear !default;
+
+$as-loader-bars-height: 30px !default;
+$as-loader-bars-width: 10px !default;
+$as-loader-bars-gap: 16px !default;
+$as-loader-bars-border-radius: 0 !default;
+$as-loader-bars-border-type: solid !default;
+$as-loader-bars-color: $brand-primary !default;
+$as-loader-bars-animation-duration: 1.1s !default;
+$as-loader-bars-animation-time-function: ease-in-out !default;
+
+$as-loader-dots-circle-font-size: 10px !default;
+$as-loader-dots-circle-border-radius: 50px !default;
+$as-loader-dots-circle-color: $brand-primary !default;
+$as-loader-dots-circle-animation-duration: 1.1s !default;
+$as-loader-dots-circle-animation-time-function: linear !default; 
+
+$as-loader-location-border-radius: 50px !default;
+$as-loader-location-color: $brand-primary !default;
+$as-loader-location-animation-duration: .8s !default;
+$as-loader-location-animation-time-function: ease-in-out !default;
+
+$as-loader-dots-size: 10px !default;
+$as-loader-dots-font-size: 10px !default;
+$as-loader-dots-border-radius: 50px !default;
+$as-loader-dots-color: $brand-primary !default;
+$as-loader-dots-animation-duration: 1.8s !default;
+$as-loader-dots-animation-time-function: ease-in-out !default;
+
+$as-loader-pulse-size: 35px !default;
+$as-loader-pulse-border-opacity: .4 !default;
+$as-loader-pulse-border-radius: 50px !default;
+$as-loader-pulse-color: $brand-primary !default;
+$as-loader-pulse-animation-duration: 2s !default;
+$as-loader-pulse-animation-time-function: ease-in-out !default;
+
+$as-loader-clock-size: 32px !default;
+$as-loader-clock-border-opacity: .4 !default;
+$as-loader-clock-border-radius: 50px !default;
+$as-loader-clock-color: $brand-primary !default;
+$as-loader-clock-animation-duration: 2s !default;
+$as-loader-clock-animation-time-function: linear !default;
+
+$as-loader-ios-size: 32px !default;
+$as-loader-ios-border-opacity: .4 !default;
+$as-loader-ios-border-radius: 50px !default;
+$as-loader-ios-color: $brand-primary !default;
+$as-loader-ios-animation-duration: 1s !default;
+$as-loader-ios-animation-time-function: linear !default; 

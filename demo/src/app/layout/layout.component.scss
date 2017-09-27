@@ -10,11 +10,23 @@
     }
 }
 
-.chips, .badges{
+.chips, .badges, .loaders{
     display: flex;
     flex-wrap: wrap;
+    perspective: 0px;
     .chip, .asbadge {
         margin: 0 1rem 1rem 0;
+    }
+    .loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2rem 2rem 0;
+        max-height: 83px;
+        span {
+            margin-top: 1rem;
+        }
     }
     .chip--dark {
         background-color: $gray-dark !important;
