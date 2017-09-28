@@ -6,14 +6,20 @@
 @import '../_effects.scss';
 
 .modal {
-    &--sm {
-        width: 300px;
+    &--sm {   
+        @include breakpoint('epsilon') {
+            width: 30% !important;
+        }
     }
     &--md {
-        width: 600px;
+        @include breakpoint('epsilon') {
+            width: 60% !important;
+        }
     }
-    &--lg {
-        width: 900px;
+    &--lg {  
+        @include breakpoint('epsilon') {
+            width: 90% !important;
+        }
     }
     &__container {
         background-color: $as-modal-bg;
