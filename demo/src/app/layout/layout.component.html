@@ -471,6 +471,18 @@
                 </div>
             </as-card>
         </div>
+        <div
+            *ngSwitchCase="'empty-state'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+                <as-empty-state 
+                    [title]="emptyState.title"
+                    [img]="emptyState.img"
+                    [msg]="emptyState.msg"
+                    [actions]="emptyState.actions">
+                </as-empty-state>
+        </div>
         <as-fab
         *ngSwitchCase="'fabs'"
         [position]="'top right'"

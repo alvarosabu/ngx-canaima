@@ -63,14 +63,14 @@ export class CardsComponent implements OnInit {
             optionsRight: [
                 new ActionDropdown(null,
                     [
-                        new Action({label:'Action 1'}),
-                        new Action({label:'Action 12'})
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
                     ]),
                 new Action({
                     callback: () => {
                         console.log('Filter');
                     },
-                    icon:'filter'
+                    icon: 'filter'
                 })
             ]
         }
@@ -132,14 +132,14 @@ export class CardsComponent implements OnInit {
             optionsRight: [
                 new ActionDropdown(null,
                     [
-                        new Action({label:'Action 1'}),
-                        new Action({label:'Action 12'})
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
                     ]),
                     new Action({
                         callback: () => {
                             console.log('Filter');
                         },
-                        icon:'filter'
+                        icon: 'filter'
                     })
             ],
             optionsLeft: [
@@ -147,12 +147,12 @@ export class CardsComponent implements OnInit {
                     callback: () => {
                         console.log('Back');
                     },
-                    icon:'chevron-left'
+                    icon: 'chevron-left'
                 })
             ],
             actions: [
-                new Action({label:'Action 1'}),
-                new Action({label:'Action 12'})
+                new Action({label: 'Action 1'}),
+                new Action({label: 'Action 12'})
             ],
             footer: {
                 justify: 'flex-end',
@@ -171,7 +171,7 @@ export class CardsComponent implements OnInit {
                     callback: () => {
                         console.log('fav');
                     },
-                    icon:'heart',
+                    icon: 'heart',
                     value: false
                 }),
             ]
@@ -190,7 +190,7 @@ export class CardsComponent implements OnInit {
                 callback: () => {
                     console.log('Fab Action');
                 },
-                icon:'plus',
+                icon: 'plus',
                 size: 'md',
                 customClass: 'btn-primary'
             }),

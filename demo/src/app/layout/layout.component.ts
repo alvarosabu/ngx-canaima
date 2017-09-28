@@ -1,3 +1,4 @@
+import { EmptyState } from './../../../../src/empty-state/empty-state';
 
 import {
     Component,
@@ -74,6 +75,10 @@ export class LayoutComponent implements OnInit {
         new Segment({
             label: 'Loaders',
             value: 'loading'
+        }),
+        new Segment({
+            label: 'Empty States',
+            value: 'empty-state'
         })
     ];
     public selectedTab: Segment = this.segments[0];
@@ -142,6 +147,19 @@ export class LayoutComponent implements OnInit {
             new Action({
                 color: 'warning',
                 icon: 'message',
+            })
+        ]
+    });
+    public emptyState: EmptyState = new EmptyState({
+        title: 'Oops, it looks like we have nothing to say yet',
+        // tslint:disable-next-line:max-line-length
+        msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi enim quibusdam illum architecto asperiores tempore tempora dolores perspiciatis saepe? Porro, necessitatibus ab cupiditate maiores minima in pariatur illum natus velit.',
+        img: '/assets/svg/empty-state.svg',
+        actions: [
+            new Action({
+                icon: 'refresh',
+                color: 'primary',
+                rounded: true
             })
         ]
     });

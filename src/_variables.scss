@@ -1108,6 +1108,17 @@ $as-searchbar-border: none !default;
 $as-searchbar-border-color: transparent !default;
 $as-searchbar-border-style: solid !default;
 
+//== Search Bar
+$as-empty-state-img-width: 200px !default;
+$as-empty-state-img-height: 200px !default;
+$as-empty-state-padding: 16px !default;
+$as-empty-state-title-font-size: 20px !default;
+$as-empty-state-msg-font-size: 16px !default;
+$as-empty-state-title-text-align: center !default;
+$as-empty-state-msg-text-align: center !default;
+$as-empty-state-title-font-color: $gray-light !default;
+$as-empty-state-msg-color: $gray-light !default;
+
 //== Loaders
 $as-loader-backdrop-bg: rgba(0,0,0,0.3) !default;
 $as-loader-container-bg: darken($gray, 20%) !default;
