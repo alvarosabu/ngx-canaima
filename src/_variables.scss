@@ -1144,7 +1144,7 @@ $as-loader-gplus-bg-4: $brand-success !default;
 $as-loader-gplus-animation-duration: 3s !default;
 $as-loader-gplus-animation-time-function: linear !default;
 
-$as-loader-bars-height: 30px !default;
+$as-loader-bars-height: 20px !default;
 $as-loader-bars-width: 10px !default;
 $as-loader-bars-gap: 16px !default;
 $as-loader-bars-border-radius: 0 !default;
@@ -1190,4 +1190,29 @@ $as-loader-ios-border-opacity: .4 !default;
 $as-loader-ios-border-radius: 50px !default;
 $as-loader-ios-color: $brand-primary !default;
 $as-loader-ios-animation-duration: 1s !default;
-$as-loader-ios-animation-time-function: linear !default; 
+$as-loader-ios-animation-time-function: linear !default;
+
+$as-loader-orbit-size: 32px !default;
+$as-loader-orbit-dot: 8px !default;
+$as-loader-orbit-border-size: 1px !default;
+$as-loader-orbit-border-opacity: .4 !default;
+$as-loader-orbit-border-radius: 50px !default;
+$as-loader-orbit-color: $brand-primary !default;
+$as-loader-orbit-animation-duration: 4s !default;
+$as-loader-orbit-animation-time-function: linear !default;
+
+$as-loader-dual-ring-size: 32px !default;
+$as-loader-dual-ring-border-size: 2px !default;
+$as-loader-dual-ring-border-opacity: .4 !default;
+$as-loader-dual-ring-border-radius: 50px !default;
+$as-loader-dual-ring-color: $brand-primary !default;
+$as-loader-dual-ring-animation-duration: 1s !default;
+$as-loader-dual-ring-animation-time-function: linear !default;
+
+$as-loader-ring-retard-size: 32px !default;
+$as-loader-ring-retard-border-size: 2px !default;
+$as-loader-ring-retard-border-opacity: .4 !default;
+$as-loader-ring-retard-border-radius: 50px !default;
+$as-loader-ring-retard-color: $brand-primary !default;
+$as-loader-ring-retard-animation-duration: 1.5s !default;
+$as-loader-ring-retard-animation-time-function: cubic-bezier(0.5,0,0.5,1) !default;

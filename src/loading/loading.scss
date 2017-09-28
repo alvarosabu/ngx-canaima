@@ -154,6 +154,109 @@
         z-index: 1;
     }
   }
+  &--orbit {
+    width: $as-loader-orbit-size;
+    height: $as-loader-orbit-size;
+    position: relative;
+    border: $as-loader-orbit-border-size solid rgba($as-loader-orbit-color, $as-loader-orbit-border-opacity);
+    border-radius: $as-loader-orbit-border-radius;
+    -webkit-animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+            animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+
+    &:before, &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      border-radius: $as-loader-orbit-border-radius;
+    }
+    &:before {
+      width: $as-loader-orbit-dot;
+      height: $as-loader-orbit-dot;
+      background: $as-loader-orbit-color;
+      -webkit-animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+              animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+    }
+    &:after {
+      width: $as-loader-orbit-dot / 2;
+      height: $as-loader-orbit-dot / 2;
+      top: $as-loader-orbit-dot;
+      left: $as-loader-orbit-dot;
+      background: $as-loader-orbit-color;
+      -webkit-transform-origin: -$as-loader-orbit-dot / 2 -$as-loader-orbit-dot / 2;
+              transform-origin: -$as-loader-orbit-dot / 2 -$as-loader-orbit-dot / 2;
+      -webkit-animation: spin $as-loader-orbit-animation-duration / 4 $as-loader-orbit-animation-time-function infinite;
+              animation: spin $as-loader-orbit-animation-duration / 4 $as-loader-orbit-animation-time-function infinite;
+    }
+    
+  }
+  &--dual-ring {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    span {
+      position: absolute;
+      width: $as-loader-dual-ring-size;
+      height: $as-loader-dual-ring-size;
+      border-radius: $as-loader-dual-ring-border-radius;
+      border: $as-loader-dual-ring-border-size solid;
+      border-color: $as-loader-dual-ring-color transparent $as-loader-dual-ring-color transparent;
+      -webkit-animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+      animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+    }
+  }
+  &--double-dual-ring {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    .first-ring, .second-ring {
+      position: absolute;
+      border-radius: $as-loader-dual-ring-border-radius;
+      border: $as-loader-dual-ring-border-size solid;
+    }
+    .first-ring {
+      width: $as-loader-dual-ring-size;
+      height: $as-loader-dual-ring-size;
+      border-color: $as-loader-dual-ring-color transparent $as-loader-dual-ring-color transparent;
+      -webkit-animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+      animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+    }
+    .second-ring {
+      top: $as-loader-dual-ring-size / 6.2;
+      left: $as-loader-dual-ring-size / 2.4;
+      width: $as-loader-dual-ring-size / 1.4;
+      height: $as-loader-dual-ring-size / 1.4;
+      border-color: $as-loader-dual-ring-color transparent $as-loader-dual-ring-color transparent;
+      -webkit-animation: counter-spin $as-loader-dual-ring-animation-duration  $as-loader-dual-ring-animation-time-function infinite;
+      animation: counter-spin $as-loader-dual-ring-animation-duration  $as-loader-dual-ring-animation-time-function infinite;
+      transform: rotate(15deg);
+    }
+  }
+  &--ring-retard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+      position: absolute;
+      width: $as-loader-ring-retard-size;
+      height: $as-loader-ring-retard-size;
+      border-radius: $as-loader-ring-retard-border-radius;
+      border: $as-loader-ring-retard-border-size solid;
+      border-color: $as-loader-ring-retard-color transparent transparent transparent;
+      animation: spin $as-loader-ring-retard-animation-duration $as-loader-ring-retard-animation-time-function infinite;
+    }
+    div:nth-child(2) {
+      animation-delay: .195s;
+    }
+    div:nth-child(3) {
+      animation-delay: .39s;
+    }
+    div:nth-child(4) {
+      animation-delay: .585s;
+    }
+  }
   &--dots {
     position: relative;
     display: flex;
