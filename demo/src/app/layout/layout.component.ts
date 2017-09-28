@@ -1,6 +1,4 @@
-import { Fab } from './../../../../src/fabs/fab';
-import { Badge } from './../../../../src/badges/badge';
-import { Chip } from './../../../../src/chip/chip';
+
 import {
     Component,
     OnInit,
@@ -12,6 +10,10 @@ import { Action } from './../../../../src/action';
 import { Toolbar } from './../../../../src/toolbar/toolbar';
 import { Header } from './../../../../src/header/header';
 import { Segment } from './../../../../src/segment/segment';
+import { Fab } from './../../../../src/fabs/fab';
+import { Badge } from './../../../../src/badges/badge';
+import { Chip } from './../../../../src/chip/chip';
+
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'layout',
@@ -33,8 +35,8 @@ export class LayoutComponent implements OnInit {
             actions: [
                 new ActionDropdown(null,
                     [
-                        new Action({label:'Action 1'}),
-                        new Action({label:'Action 12'})
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
                     ]),
                 new Action({
                     callback: () => {
@@ -68,6 +70,10 @@ export class LayoutComponent implements OnInit {
         new Segment({
             label: 'FABs',
             value: 'fabs'
+        }),
+        new Segment({
+            label: 'Loaders',
+            value: 'loading'
         })
     ];
     public selectedTab: Segment = this.segments[0];

@@ -7,7 +7,7 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class ToolbarMenuService {
-
+    
     public openMenuSrc = new Subject<boolean>();
     public openMenu$ = this.openMenuSrc.asObservable();
     constructor(
@@ -21,6 +21,13 @@ export class ToolbarMenuService {
      * @memberof NavService
      */
     public init() {
+        let observable = new Observable();
+        observable.then((res) => {
+            // do something
+        },
+        (error) => {
+            //trow error
+        })
     }
     public openMenu(open: boolean) {
         this.openMenuSrc.next(open);

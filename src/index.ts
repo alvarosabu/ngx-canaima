@@ -1,3 +1,4 @@
+import { LoadingModule } from './loading/loading.module';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsModule } from './cards/cards.module';
@@ -32,6 +33,8 @@ export * from './chip';
 export * from './badges';
 export * from './fabs';
 export * from './modals';
+export * from './search-bar';
+export * from './loading';
 
 @NgModule({
   imports: [
@@ -49,7 +52,8 @@ export * from './modals';
     BadgesModule,
     FabsModule,
     AsModalModule,
-    SearchBarModule
+    SearchBarModule,
+    LoadingModule
   ],
   declarations: [
 
@@ -68,7 +72,8 @@ export * from './modals';
     BadgesModule,
     FabsModule,
     AsModalModule,
-    SearchBarModule
+    SearchBarModule,
+    LoadingModule
   ]
 })
 export class NgxCanaimaModule {
