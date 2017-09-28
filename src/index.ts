@@ -1,4 +1,4 @@
-import { LoadingModule } from './loading/loading.module';
+
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsModule } from './cards/cards.module';
@@ -16,6 +16,9 @@ import { BadgesModule } from './badges/badges.module';
 import { FabsModule } from './fabs/fabs.module';
 import { AsModalModule } from './modals/modals.module';
 import { SearchBarModule } from './search-bar/search-bar.module';
+import { EmptyStateModule } from './empty-state/empty-state.module';
+import { LoadingModule } from
+'./loading/loading.module';
 
 export * from './action';
 export * from './action-dropdown';
@@ -35,7 +38,7 @@ export * from './fabs';
 export * from './modals';
 export * from './search-bar';
 export * from './loading';
-
+export * from './empty-state';
 @NgModule({
   imports: [
     CommonModule,
@@ -53,7 +56,8 @@ export * from './loading';
     FabsModule,
     AsModalModule,
     SearchBarModule,
-    LoadingModule
+    LoadingModule,
+    EmptyStateModule
   ],
   declarations: [
 
@@ -73,7 +77,8 @@ export * from './loading';
     FabsModule,
     AsModalModule,
     SearchBarModule,
-    LoadingModule
+    LoadingModule,
+    EmptyStateModule
   ]
 })
 export class NgxCanaimaModule {
