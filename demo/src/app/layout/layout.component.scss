@@ -3,7 +3,9 @@
 \*------------------------------------*/
 
 @import '../../styles/_variables.scss';
-
+.layout-container, .fab-container {
+    position: relative;
+}
 .card__content {
     button {
         margin: .5rem;

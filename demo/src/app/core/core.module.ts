@@ -14,8 +14,8 @@ import { FormsActivityModule } from '../forms/forms.module';
 import { GridActivityModule } from './../grid/grid.module';
 import { LayoutModule } from './../layout/layout.module';
 import { NavService } from './navmenu/nav.service';
-import { ModalsActivityModule } from './../modals/modals.module';
-
+import { ModalsActivityModule } from '../modals/modals.module';
+import { UploadersModule } from '../uploaders/uploaders.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -27,7 +27,8 @@ import { ModalsActivityModule } from './../modals/modals.module';
     FormsActivityModule,
     GridActivityModule,
     LayoutModule,
-    ModalsActivityModule
+    ModalsActivityModule,
+    UploadersModule
 
   ],
   declarations: [
@@ -49,7 +50,8 @@ import { ModalsActivityModule } from './../modals/modals.module';
     NumberFormatterPipe,
     GridActivityModule,
     LayoutModule,
-    ModalsActivityModule
+    ModalsActivityModule,
+    UploadersModule
   ]
 })
 export class CoreModule { }

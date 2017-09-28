@@ -77,6 +77,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
             slug: 'modals',
             // tslint:disable-next-line:max-line-length
             msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
+        },
+        {
+            label: 'File Upload',
+            illustration: '/assets/svg/modals-illustration.svg',
+            comming: false,
+            slug: 'uploaders',
+            // tslint:disable-next-line:max-line-length
+            msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
         }
     ];
     public header: Header = new Header({
@@ -87,7 +95,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     constructor(
         public toastService: ToastyService
     ) {
-        
+//
     }
 
     public ngOnInit() {
