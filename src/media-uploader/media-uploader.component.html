@@ -1,0 +1,32 @@
+<div class="media-uploader__uploadimg {{customClass}}">
+    <div ng2FileDrop
+        multiple="multiple"
+        [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+        (fileOver)="fileOverBase($event)"
+        [uploader]="uploader"
+        class="media-uploader__drop-zone"
+        *ngIf="!image && !uploader?.queue[0]?._file"
+        >
+        <i *ngIf="icon" class="{{prefix}} {{prefix}}-{{icon}}"></i>
+        <input type="file" 
+        ng2FileSelect
+            multiple="multiple" 
+        [uploader]="uploader" />
+    </div>
+    <div class="media-uploader__imgpreview" bgPreview 
+    *ngIf="!image && uploader?.queue[0]?._file"
+        [image]="uploader?.queue[0]?._file"
+       >
+        <span class="media-uploader__editbtn"  (click)="uploader?.queue[0].remove()">
+            <i class="mdi mdi-pencil"></i>
+        </span>
+    </div>
+    <div class="media-uploader__imgpreview"  
+    *ngIf="image"
+        [ngStyle]="{'background-image': 'url(' + image + ')'}"
+       >
+        <span class="media-uploader__editbtn"  (click)="image = undefined">
+            <i class="mdi mdi-pencil"></i>
+        </span>
+    </div>
+</div>

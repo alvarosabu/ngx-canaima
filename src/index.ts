@@ -1,3 +1,4 @@
+import { MediaUploaderModule } from './media-uploader/media-uploader.module';
 
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -19,11 +20,11 @@ import { SearchBarModule } from './search-bar/search-bar.module';
 import { EmptyStateModule } from './empty-state/empty-state.module';
 import { LoadingModule } from
 './loading/loading.module';
+import { PreviewModule } from './preview/preview.module';
 
 export * from './action';
 export * from './action-dropdown';
-export * from './bg-image-preview.directive';
-export * from './image-preview.directive';
+export * from './preview';
 export * from './cards';
 export * from './forms';
 export * from './lists';
@@ -44,6 +45,7 @@ export * from './empty-state';
     CommonModule,
     CardsModule,
     ListsModule,
+    PreviewModule,
     DynamicFormsModule,
     GridListsModule,
     ToolbarModule,
@@ -57,7 +59,8 @@ export * from './empty-state';
     AsModalModule,
     SearchBarModule,
     LoadingModule,
-    EmptyStateModule
+    EmptyStateModule,
+    MediaUploaderModule
   ],
   declarations: [
 
@@ -65,6 +68,7 @@ export * from './empty-state';
   exports: [
     CardsModule,
     ListsModule,
+    PreviewModule,
     DynamicFormsModule,
     GridListsModule,
     ToolbarModule,
@@ -78,7 +82,8 @@ export * from './empty-state';
     AsModalModule,
     SearchBarModule,
     LoadingModule,
-    EmptyStateModule
+    EmptyStateModule,
+    MediaUploaderModule
   ]
 })
 export class NgxCanaimaModule {

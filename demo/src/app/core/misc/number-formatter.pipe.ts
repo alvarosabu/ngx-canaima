@@ -8,7 +8,7 @@ export class NumberFormatterPipe implements PipeTransform {
     if (!value) {
         return value;
     }
-    let si = [
+    const si = [
         { value: 1E18, symbol: 'E' },
         { value: 1E15, symbol: 'P' },
         { value: 1E12, symbol: 'T' },
@@ -16,8 +16,8 @@ export class NumberFormatterPipe implements PipeTransform {
         { value: 1E6,  symbol: 'M' },
         { value: 1E3,  symbol: 'k' }
     ];
-    let rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
-    for (let it of si) {
+    const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
+    for (const it of si) {
         if (value >= it.value) {
         return (value / it.value).toFixed(parseInt(digits, 10)).replace(rx, '$1') + it.symbol;
         }

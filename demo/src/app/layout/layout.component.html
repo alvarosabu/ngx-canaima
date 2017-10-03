@@ -17,7 +17,9 @@
     </div>
 </as-toolbar>
 
-<div [ngClass]="{'parallax-container': selectedTab?.value !== 'loading'}">
+<div
+    class="layout-container" 
+    [ngClass]="{'parallax-container': selectedTab?.value !== 'loading'}">
     <as-header
         [title]="header.title"
         [subtitle]="header.subtitle"
@@ -483,31 +485,25 @@
                     [actions]="emptyState.actions">
                 </as-empty-state>
         </div>
-        <as-fab
-        *ngSwitchCase="'fabs'"
-        [position]="'top right'"
-        [color]="simpleFab.color"
-        [icon]="simpleFab.icon"
-        [iconActive]="simpleFab.iconActive">
-        </as-fab> 
-        <!-- <as-fab
-        *ngIf="selectedTab.value == 'fabs'"
-        [position]="'right top'"
-        [color]="menuFab.color"
-        [icon]="menuFab.icon"
-        [iconActive]="menuFab.iconActive"
-        [menu]="menuFab.menu"
-        [type]="menuFab.type">
-        </as-fab>  -->
-        <as-fab
-        *ngIf="selectedTab.value == 'fabs'"
-        [position]="'top left'"
-        [color]="'info'"
-        [icon]="menuFab.icon"
-        [iconActive]="menuFab.iconActive"
-        [menu]="menuFab.menu"
-        [type]="'vertical'">
-        </as-fab> 
+        <div class="fab-container">
+            <as-fab
+            *ngSwitchCase="'fabs'"
+            [position]="'top right'"
+            [color]="simpleFab.color"
+            [icon]="simpleFab.icon"
+            [iconActive]="simpleFab.iconActive">
+            </as-fab> 
+            <as-fab
+            *ngIf="selectedTab.value == 'fabs'"
+            [position]="'top left'"
+            [color]="'info'"
+            [icon]="menuFab.icon"
+            [iconActive]="menuFab.iconActive"
+            [menu]="menuFab.menu"
+            [type]="'vertical'">
+            </as-fab> 
+        </div>
+        
     </div>
     <as-fab
     *ngIf="selectedTab.value == 'fabs'"

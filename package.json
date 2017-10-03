@@ -74,6 +74,7 @@
   "dependencies": {
     "@angular/forms": "^4.3.6",
     "bootstrap-sass": "^3.3.7",
+    "ng2-file-upload": "^1.2.1",
     "ngx-bootstrap": "^1.9.1"
   },
   "peerDependencies": {
