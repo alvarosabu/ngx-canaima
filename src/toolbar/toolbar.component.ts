@@ -23,6 +23,7 @@ export class ToolbarComponent implements OnInit {
     @Input('subtitle') public subtitle: any;
     @Input('shadow') public shadow: string;
     @Input('fixed') public fixed: boolean;
+    @Input('menuSide') public menuSide = 'left';
     @Input('customClass') public customClass: any;
 
     public collapsable = false;
