@@ -25,6 +25,7 @@
 	*ngFor="let comp of components"
 	[ngClass]="{ 'card--commingsoon' : comp.comming }">
 		<as-card-illustration
+		[id]="comp.slug"
 		[customClass]="'card--component' + !comp.comming"
 		[img]="comp.illustration"
 		[title]="comp.label"

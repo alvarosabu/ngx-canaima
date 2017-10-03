@@ -1,9 +1,7 @@
+import { NumberSiPrefixPipe } from './misc/number-si-prefix.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { NumberFormatterPipe } from './misc/number-formatter.pipe';
-
 import { FormatService } from './misc/format.service';
 import { NavbarModule } from './navbar/navbar.module';
 
@@ -16,6 +14,7 @@ import { LayoutModule } from './../layout/layout.module';
 import { NavService } from './navmenu/nav.service';
 import { ModalsActivityModule } from '../modals/modals.module';
 import { UploadersModule } from '../uploaders/uploaders.module';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 @NgModule({
   imports: [
     CommonModule,
@@ -28,11 +27,11 @@ import { UploadersModule } from '../uploaders/uploaders.module';
     GridActivityModule,
     LayoutModule,
     ModalsActivityModule,
-    UploadersModule
-
+    UploadersModule,
+    Ng2PageScrollModule
   ],
   declarations: [
-    NumberFormatterPipe
+    NumberSiPrefixPipe
   ],
 
   providers: [
@@ -47,11 +46,12 @@ import { UploadersModule } from '../uploaders/uploaders.module';
     CardsActivityModule,
     ListsActivityModule,
     FormsActivityModule,
-    NumberFormatterPipe,
+    NumberSiPrefixPipe,
     GridActivityModule,
     LayoutModule,
     ModalsActivityModule,
-    UploadersModule
+    UploadersModule,
+    Ng2PageScrollModule
   ]
 })
 export class CoreModule { }
