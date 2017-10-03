@@ -35,14 +35,14 @@
                 <div class="spacer spacer--sm">    
                 </div>
                 <as-card 
-                [title]="'Media Uploader'"
+                [title]="'Media Queue'"
+                [optionsRight]="queueCard.optionsRight"
                 [shadow]="1">
                  <div class="card__content">
-                        <as-list-item-fileqeue                                       *ngFor="let item of uploader?.queue"
+                    <as-list-item-fileqeue                           *ngFor="let item of uploader?.queue"
                         [data]="item"
                         [hasLine]="true"
-                        [actions]="getActions(item)"
-                    >
+                        [actions]="getActions(item)">
                     </as-list-item-fileqeue>
                  </div>
             </as-card>

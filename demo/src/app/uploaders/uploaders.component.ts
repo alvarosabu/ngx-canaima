@@ -1,4 +1,4 @@
-import { Action } from './../../../../src/action';
+
 import { ActivatedRoute } from '@angular/router';
 import {
     Component,
@@ -7,6 +7,10 @@ import {
 } from '@angular/core';
 import { Toolbar } from './../../../../src/toolbar/toolbar';
 import { FileUploader } from 'ng2-file-upload';
+import { MediaUploaderService } from '../../../../src/media-uploader/media-uploader.service';
+import { ActionDropdown } from './../../../../src/action-dropdown';
+import { Card } from './../../../../src/cards/card/card';
+import { Action } from './../../../../src/action';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'uploaders',
@@ -26,11 +30,26 @@ export class UploadersComponent implements OnInit {
             fixed: true
         }
     );
-    /* public uploader = new FileUploader({
-        url: `${API_URL}/medias`,
-        itemAlias: 'body'
-    }); */
+    public queueCard: Card = new Card(
+        {
+            optionsRight: [
+                new Action({
+                    callback: () => {
+                        this.mediaUploaderService.uploadAll();
+                    },
+                    icon: 'cloud-upload'
+                }),
+                new Action({
+                    callback: () => {
+                        this.mediaUploaderService.clearQueue();
+                    },
+                    icon: 'delete'
+                })
+            ]
+        }
+    );
     constructor(
+        public mediaUploaderService: MediaUploaderService,
         private route: ActivatedRoute,
     ) { }
 

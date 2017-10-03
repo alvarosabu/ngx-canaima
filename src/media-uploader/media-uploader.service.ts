@@ -8,13 +8,24 @@ import {
     FileUploader,
     FileItem
 } from 'ng2-file-upload';
-
+declare var API_URL: string;
 @Injectable()
 export class MediaUploaderService {
     public uploader: FileUploader;
     public apiUrl: string;
     constructor() {
         //
+    }
+    public config(config?: any) {
+        if (config) {
+          //
+        } else {
+          const uploadApi = `${API_URL}/medias`;
+          this.uploader = new FileUploader({
+              url: uploadApi,
+              itemAlias: 'body'
+          });
+        }
     }
     public uploadMedia(fileItem: FileItem) {
         const complete = new Observable((observer) => {
@@ -32,10 +43,10 @@ export class MediaUploaderService {
         fileItem.upload();
         return complete
     }
-    public uploadAll(uploader: FileUploader) {
+    public uploadAll() {
         const complete = new Observable((observer) => {
             observer.next();
-            uploader.onCompleteAll = (() => {
+            this.uploader.onCompleteAll = (() => {
                 observer.next();
             })
             /* uploader.onCompleteAll.onComplete = (
@@ -48,7 +59,10 @@ export class MediaUploaderService {
                 });
             }; */
         });
-        uploader.uploadAll();
+        this.uploader.uploadAll();
         return complete
+    }
+    public clearQueue() {
+        this.uploader.clearQueue();
     }
 }
