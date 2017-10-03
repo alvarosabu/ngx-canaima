@@ -54,6 +54,24 @@ export class NavService {
                         icon: 'cards',
                         open: false,
                         sub: false
+                    }),
+                    new Nav({
+                        _id: '3',
+                        title: 'Layout (anchor)',
+                        slugName: 'layout',
+                        prefix: 'mdi',
+                        icon: 'cards',
+                        open: false,
+                        sub: false,
+                        anchor: true
+                    }),
+                    new Nav({
+                        _id: '4',
+                        title: 'AS - Github',
+                        slugName: 'as-github',
+                        link: 'https://alvarosaburido.github.io/#/',
+                        open: false,
+                        sub: false
                     })
                 ];
                 observer.next(this.navList);

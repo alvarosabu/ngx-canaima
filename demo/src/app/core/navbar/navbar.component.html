@@ -10,9 +10,10 @@
     </div>
 </as-toolbar>
 <!-- TODO: When Navmenu select issue fixed enabled again -->
-<!-- <as-navmenu
+<as-navmenu
 [open]="menuOpen"
 [collapsable]="true"
 [navs]="navList"
 [shadow]="'3'"
-[showIcons]="false"></as-navmenu> -->
+[showIcons]="false"
+(onSelect)="selectedNav($event)"></as-navmenu>

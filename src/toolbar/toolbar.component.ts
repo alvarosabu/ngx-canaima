@@ -32,6 +32,11 @@ export class ToolbarComponent implements OnInit {
 
     }
     public ngOnInit() {
+        this.menu.openMenu$
+        .subscribe((val) => {
+            this.collapsable = val;
+        }
+        );
     }
     /**
      * openCollapsable

@@ -1,10 +1,10 @@
-
 import {
     Component,
     OnInit,
     Input,
     Output,
-    ViewEncapsulation
+    ViewEncapsulation,
+    EventEmitter
 } from '@angular/core';
 import { Nav } from './nav';
 @Component({
@@ -17,8 +17,9 @@ export class NavmenuComponent implements OnInit {
     @Input('open') public open: boolean;
     @Input('collapsable') public collapsable: boolean;
     @Input('showIcons') public showIcons: boolean;
-    @Input('customClass') public customClass: any;
-    @Input('shadow') public shadow: any;
+    @Input('customClass') public customClass: string;
+    @Input('shadow') public shadow: string;
+    @Output() public onSelect = new EventEmitter<Nav>();
     constructor(
     ) {
 
@@ -30,5 +31,11 @@ export class NavmenuComponent implements OnInit {
      */
     public openCollapsable() {
         this.collapsable = !this.collapsable;
+    }
+    public selectNav(nav: Nav) {
+        this.onSelect.emit(nav);
+        /* if (nav.anchor) {
+            this.open = false;
+        } */
     }
 }

@@ -8,6 +8,8 @@ export class Nav {
      public sub?: boolean;
      public subitems?: (any | Nav)[];
      public badge?: any;
+     public anchor?: boolean;
+     public link?: string;
      constructor(
         options: {
             _id?: string,
@@ -18,7 +20,9 @@ export class Nav {
             open?: boolean,
             sub?: boolean,
             subitems?: (any | Nav)[],
-            badge?: any
+            badge?: any,
+            anchor?: boolean;
+            link?: string;
          }
      ) {
         this._id = options._id;
@@ -30,5 +34,7 @@ export class Nav {
         this.sub = options.sub;
         this.subitems = options.subitems;
         this.badge = options.badge;
+        this.anchor = options.anchor;
+        this.link = options.link;
      }
 }
