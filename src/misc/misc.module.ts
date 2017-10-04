@@ -1,6 +1,7 @@
-
 import { NgModule } from '@angular/core';
 import { NumberSiPrefixPipe } from './number-si-prefix.pipe';
+import { FormatCaseService } from './format-case.service';
+
 @NgModule({
     imports: [],
     exports: [
@@ -9,6 +10,8 @@ import { NumberSiPrefixPipe } from './number-si-prefix.pipe';
     declarations: [
         NumberSiPrefixPipe
     ],
-    providers: [],
+    providers: [
+        FormatCaseService
+    ],
 })
 export class MiscModule { }

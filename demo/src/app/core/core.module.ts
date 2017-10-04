@@ -1,4 +1,5 @@
 
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,7 @@ import { NavService } from './navmenu/nav.service';
 import { ModalsActivityModule } from '../modals/modals.module';
 import { UploadersModule } from '../uploaders/uploaders.module';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
+import { MiscActivityModule } from './../misc/misc.module';
 
 @NgModule({
   imports: [
@@ -29,7 +31,8 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
     LayoutModule,
     ModalsActivityModule,
     UploadersModule,
-    Ng2PageScrollModule
+    Ng2PageScrollModule,
+    MiscActivityModule
   ],
   declarations: [
   ],
@@ -50,7 +53,8 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
     LayoutModule,
     ModalsActivityModule,
     UploadersModule,
-    Ng2PageScrollModule
+    Ng2PageScrollModule,
+    MiscActivityModule
   ]
 })
 export class CoreModule { }
