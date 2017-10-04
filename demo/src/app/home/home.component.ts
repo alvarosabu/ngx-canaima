@@ -102,12 +102,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
         //
     }
     public ngAfterViewInit(): void {
-        this.getNpmData();
+        /* this.getNpmData(); */
     }
     public getNpmData() {
-        apiNpm.getdetails('ngx-canaima', (data) => {
+        /* apiNpm.getdetails('ngx-canaima', (data) => {
             console.log('package', data['dist-tags'].latest);
             this.version =  data['dist-tags'].latest;
-        });
+        }); */
     }
 }

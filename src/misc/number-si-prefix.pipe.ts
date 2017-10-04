@@ -8,7 +8,7 @@ export class NumberSiPrefixPipe implements PipeTransform {
     // tslint:disable-next-line:curly
     if (!value || value === undefined) return value;
     if (typeof(value) === 'string') {
-        value = parseInt(value.replace(',', ''), 0);
+        value = parseInt(value.replace(/,/g, ''), 0);
     }
     const si = [
         { value: 1E18, symbol: 'E' },
