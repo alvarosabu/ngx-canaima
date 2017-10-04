@@ -1,0 +1,94 @@
+<div class="card card--number {{customClass}} shadow-{{shadow}}" [ngStyle]="{ 'height': height +'px' }">
+    <div class="card__header" 
+        *ngIf="title || optionsLeft || optionsRight">
+        <div class="card__options card__options--left" 
+        *ngIf="optionsLeft?.length > 0">
+            <div class="card__option" 
+            *ngFor="let option of optionsLeft">
+                <button
+                asIconButton
+                [prefix]="option?.prefix"
+                [icon]="option?.icon"
+                [color]="option?.color"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
+                (click)="option.callback()">
+                </button>
+            </div>
+        </div>
+        <h4 class="card__title">{{title}}</h4>
+        <div class="card__options card__options--right" 
+        *ngIf="optionsRight?.length > 0">
+            <div class="card__option" 
+            [hidden]="option.dropdown !== undefined" 
+            *ngFor="let option of optionsRight">
+                <button
+                asIconButton
+                [prefix]="option?.prefix"
+                [icon]="option?.icon"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
+                (click)="option.callback()">
+                
+                </button>
+            </div>
+            <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">
+                <button 
+                dropdownToggle
+                asIconButton
+                [prefix]="option?.prefix"
+                [icon]="option?.icon"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
+                class="dropdown-toggle">
+                </button>
+                <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">
+                    <li *ngFor="let choice of option.dropdown">
+                        <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+    <div class="card__body">
+        <div class="card__value card__value--{{size}}" *ngIf="!countTo">
+            {{ value }}
+        </div>
+        <div *ngIf="countTo" class="card__value card__value--{{size}}" counto [step]="countTo.step" [countTo]="value" [countFrom]="countTo.countFrom" [duration]="countTo.duration" (countoChange)="counto = $event">
+            <span *ngIf="!pipe">{{ counto | number:'1.0-0'}}</span>
+            <span *ngIf="pipe && pipe.type === 'currency'">{{counto | currency:pipe.code:pipe.symbol:pipe.digitInfo }} </span>
+        </div>
+        <div class="card__label card__label--{{size}}">
+            {{label}}
+        </div>
+        <div #cardContent>
+            <ng-content select=".card__content" ></ng-content>
+        </div>
+    </div>
+    <div class="card__footer" 
+    *ngIf="actions">
+        <div class="card__actions"
+        [ngStyle]="{'justify-content': footer.justify,
+        'align-items': footer.alignment}">
+            <button 
+            asIconButton
+            [prefix]="action.prefix"
+            [icon]="action.icon"
+            [color]="action.color"
+            [outline]="action.outline"
+            [rounded]="action.rounded"
+            [size]="action.size"
+            class=" card__action"
+            [ngClass]="action?.customClass"  
+            *ngFor="let action of actions" 
+            [disabled]="action.disabled" 
+            (click)="action.callback()">
+                {{action.label}} 
+            </button>
+        </div>
+    </div>
+</div>
