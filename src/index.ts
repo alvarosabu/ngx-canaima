@@ -42,6 +42,8 @@ export * from './modals';
 export * from './search-bar';
 export * from './loading';
 export * from './empty-state';
+export * from './misc';
+
 @NgModule({
   imports: [
     CommonModule,
