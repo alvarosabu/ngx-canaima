@@ -56,13 +56,13 @@
     </div>
     <div class="card__body">
         <div class="card__value card__value--{{size}}" *ngIf="!countTo">
-            {{ value }}
+            {{ value | numberSiPrefix}}
         </div>
         <div *ngIf="countTo" class="card__value card__value--{{size}}" counto [step]="countTo.step" [countTo]="value" [countFrom]="countTo.countFrom" [duration]="countTo.duration" (countoChange)="counto = $event">
-            <span *ngIf="!pipe">{{ counto | number:'1.0-0'}}</span>
-            <span *ngIf="pipe && pipe.type === 'currency'">{{counto | currency:pipe.code:pipe.symbol:pipe.digitInfo }} </span>
+            <span *ngIf="!pipe">{{ counto | number:'1.0-0' }}</span>
+            <span *ngIf="pipe && pipe.type === 'currency'">{{counto | currency:pipe.code:pipe.symbol:pipe.digitInfo  }} </span>
         </div>
-        <div class="card__label card__label--{{size}}">
+        <div class="card__label card__label--{{size}">
             {{label}}
         </div>
         <div #cardContent>

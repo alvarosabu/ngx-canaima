@@ -215,7 +215,7 @@ export class CardsComponent implements OnInit {
         {
             title: 'Hola',
             pipe: null,
-            value: 50,
+            value: 50000,
             label: 'Posts',
             countTo: {
                 countFrom: 0,

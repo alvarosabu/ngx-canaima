@@ -1,4 +1,5 @@
-import { MediaUploaderModule } from './media-uploader/media-uploader.module';
+import { MiscModule } from './misc/misc.module';
+
 
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,6 +22,7 @@ import { EmptyStateModule } from './empty-state/empty-state.module';
 import { LoadingModule } from
 './loading/loading.module';
 import { PreviewModule } from './preview/preview.module';
+import { MediaUploaderModule } from './media-uploader/media-uploader.module';
 
 export * from './action';
 export * from './action-dropdown';
@@ -60,10 +62,11 @@ export * from './empty-state';
     SearchBarModule,
     LoadingModule,
     EmptyStateModule,
-    MediaUploaderModule
+    MediaUploaderModule,
+    MiscModule
   ],
   declarations: [
-
+    
   ],
   exports: [
     CardsModule,
@@ -83,7 +86,8 @@ export * from './empty-state';
     SearchBarModule,
     LoadingModule,
     EmptyStateModule,
-    MediaUploaderModule
+    MediaUploaderModule,
+    MiscModule
   ]
 })
 export class NgxCanaimaModule {

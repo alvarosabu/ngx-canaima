@@ -17,5 +17,4 @@ export class CardNumber extends CardBase {
         this.label = options['label'] || null;
         this.size = options['size'] || 'md';
     }
-    }
 }

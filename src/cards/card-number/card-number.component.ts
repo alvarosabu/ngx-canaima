@@ -17,6 +17,7 @@ export class CardNumberComponent {
     @Input('title') public title: string;
     @Input('subtitle') public subtitle: string;
     @Input('value') public value: string;
+    @Input('siPrefix') public siPrefix: string;
     @Input('label') public label: string;
     @Input('size') public size = 'md';
     @Input('pipe') public pipe: string;

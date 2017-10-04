@@ -1,3 +1,6 @@
+import { MiscModule } from './../misc/misc.module';
+
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
@@ -11,6 +14,7 @@ import { CardNumberComponent } from './card-number/card-number.component';
 import { FabsModule } from '../fabs/fabs.module';
 import { ButtonsModule } from '../buttons/buttons.module';
 import { CountoModule } from 'angular2-counto';
+
 @NgModule({
   imports: [
     ButtonsModule,
@@ -18,6 +22,7 @@ import { CountoModule } from 'angular2-counto';
     CommonModule,
     BsDropdownModule,
     CountoModule,
+    MiscModule
   ],
   exports: [
     CommonModule,
