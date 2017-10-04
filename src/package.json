@@ -1,6 +1,6 @@
 {
   "name": "ngx-canaima",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/alvarosaburido/ngx-canaima"
@@ -32,6 +32,8 @@
     "zone.js": "^0.8.4",
     "bootstrap-sass": "^3.3.7",
     "ngx-bootstrap": "^1.8.0",
-    "@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git"
+    "@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git",
+    "angular2-counto": "^1.2.3",
+    "ng2-page-scroll": "^4.0.0-beta.11"
   }
 }
