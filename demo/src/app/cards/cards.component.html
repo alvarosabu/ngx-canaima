@@ -140,8 +140,8 @@
     <div
         class="box"
         fxFlexAlign="start"
-        fxFlex="100"
-        fxFlex.gt-sm="50">
+        fxFlex="50"
+        fxFlex.gt-sm="25">
         <as-card-number
         [shadow]=1
         [customClass]="'card--kpis'"
@@ -149,6 +149,19 @@
         [label]="cardNumber.label"
         [pipe]="cardNumber.pipe"
         [countTo]="cardNumber.countTo"
+        [size]="cardNumber.size">
+        </as-card-number>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.gt-sm="25">
+        <as-card-number
+        [shadow]=1
+        [customClass]="'card--kpis'"
+        [value]="cardNumber.value * 32"
+        [label]="cardNumber.label"
         [size]="cardNumber.size">
         </as-card-number>
     </div>
