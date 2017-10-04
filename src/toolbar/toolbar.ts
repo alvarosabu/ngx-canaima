@@ -7,7 +7,7 @@ export class Toolbar {
     public customClass?: string;
     public actions?: (Action | ActionDropdown)[];
     public fixed?: boolean;
-    public menuSide: string;
+    public menuSide?: string;
     constructor(
        options: {
            brand?: any,
@@ -16,7 +16,7 @@ export class Toolbar {
            customClass?: string,
            actions?: (Action | ActionDropdown)[],
            fixed?: boolean,
-           menuSide: string
+           menuSide?: string
         }
     ) {
        this.brand = options.brand;
