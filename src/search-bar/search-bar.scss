@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    Segment
+\*------------------------------------*/
+@import '../_variables.scss';
+
+.search-bar {
+    .form-group {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-bottom: 0 !important;
+    min-width: 150px;
+    input {
+      border-radius: $as-searchbar-border-radius;
+      padding: $as-searchbar-padding;
+      background: $as-searchbar-bg;
+      color: $as-searchbar-color !important;
+      box-shadow: none !important;
+      border-width: $as-searchbar-border;
+      border-color: $as-searchbar-border-color;
+      border-style: $as-searchbar-border-style;
+      &::-webkit-input-placeholder {
+        color: $as-searchbar-color !important;
+      }
+    }
+    
+  }
+  &__icon {
+    font-size: $as-searchbar-icon-font-size;
+    position: absolute;
+    right: .5rem;
+    color: $as-searchbar-color !important;
+  }
+}

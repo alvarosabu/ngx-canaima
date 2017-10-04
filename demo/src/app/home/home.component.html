@@ -1,15 +1,16 @@
 <as-toolbar
 [customClass]="'navbar--primary'"
 [brand]="toolBar.brand"
-[fixed]=true>
+[fixed]=true
+[menuSide]="'left'">
     <div class="center-content">
         <div class="toolbar__title">
-			Ngx-Canaima <span class="badge">v0.5.1</span>
+			Ngx-Canaima <span class="badge">v0.6.0</span>
 		</div>
     </div>
-    <div class="right-content"></div>
 </as-toolbar>
 <as-header
+
 	[customClass]="header.customClass"
 	[bg]="header.bg">
 </as-header>
@@ -24,6 +25,7 @@
 	*ngFor="let comp of components"
 	[ngClass]="{ 'card--commingsoon' : comp.comming }">
 		<as-card-illustration
+		[id]="comp.slug"
 		[customClass]="'card--component' + !comp.comming"
 		[img]="comp.illustration"
 		[title]="comp.label"
@@ -37,7 +39,7 @@
 			*ngIf="!comp.comming"
 			[routerLink]="['/'+ comp.slug +'']"
 			>
-				See More
+				See More 
 			</button>
 			<button 
 			asButton

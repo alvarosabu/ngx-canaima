@@ -10,6 +10,13 @@
   <div 
   class="navmenu__item"
   *ngFor="let nav of navs">
-      <a (click)="selected()"title="{{nav.title}}">{{nav.title}}</a>
+      <a *ngIf="!nav.link"
+      (click)="selectNav(nav)"
+      title="{{nav.title}}">{{nav.title}}</a>
+      <a 
+      href="{{nav.link}}"
+      target="_blank"
+      *ngIf="nav.link"
+      title="{{nav.title}}">{{nav.title}}</a>
   </div>
 </div>

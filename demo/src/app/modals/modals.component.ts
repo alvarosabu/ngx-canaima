@@ -254,10 +254,12 @@ export class ModalsComponent implements OnInit {
     );
     public contentModal: Modal = new Modal({
         title: 'Content Modal',
+        size: 'md',
         open: false
     });
     public formModal: Modal = new Modal({
         title: 'Form Modal',
+        size: 'md',
         open: false
     });
     constructor(

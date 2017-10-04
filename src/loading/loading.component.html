@@ -1,0 +1,40 @@
+<div *ngIf="loading"
+[ngClass]="{'loading--fixed': fixed , 'loading-backdrop': backdrop}">
+  <div
+  [ngSwitch]="animation"
+  class="loading-container"
+  [ngStyle]="text && {'border-radius': '2px' }"
+  [ngClass]="{'loading-container--solid': container }">
+      <div
+      *ngSwitchDefault
+      class="loading loading--{{animation}}"></div>
+      <div
+      *ngSwitchCase="'dots'"
+      class="loading loading--{{animation}}">
+        <span class="dot"></span>
+      </div>
+      <div
+      *ngSwitchCase="'ios'"
+      class="loading loading--{{animation}}">
+        <span class="ios"></span>
+      </div>
+      <div
+      *ngSwitchCase="'dual-ring'"
+      class="loading loading--{{animation}}">
+        <span class="dual-ring"></span>
+      </div>
+      <div
+      *ngSwitchCase="'double-dual-ring'"
+      class="loading loading--{{animation}}">
+        <span class="first-ring"></span>
+        <span class="second-ring"></span>
+      </div>
+      <div
+      *ngSwitchCase="'ring-retard'"
+      class="loading loading--{{animation}}">
+        <div></div><div></div><div></div><div></div>
+      </div>
+      <div class="loading-text"
+      *ngIf="text">{{text}}</div>
+  </div>
+</div>

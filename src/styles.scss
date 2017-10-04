@@ -13,6 +13,11 @@
 @import "./header/header.scss";
 @import "./segment/segment.scss";
 @import "./modals/modals.scss";
+@import "./search-bar/search-bar.scss";
+@import "./loading/loading.scss";
+@import "./empty-state/empty-state.scss";
+@import "./media-uploader/media-uploader.scss";
+
 *:focus {
     outline: none !important;
 }

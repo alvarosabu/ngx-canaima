@@ -123,6 +123,43 @@
             color: $gray;
         }
     }
+    &__value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $as-card-number-value-font-size;
+        font-weight: $as-card-number-value-font-weigth;
+        letter-spacing: 2.6px;
+        text-align: center;
+        color: $as-card-number-value-color;
+        &--sm {
+            font-size: 36px;
+        }
+        &--md {
+            font-size: $as-card-number-value-font-size;
+        }
+        &--lg {
+            font-size: 75px;
+        }
+        
+    }
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: $as-card-number-label-font-weigth;
+        letter-spacing: 2.6px;
+        text-align: center;
+        &--sm {
+            font-size: 16px;
+        }
+        &--md {
+            font-size: $as-card-number-label-font-size;
+        }
+        &--lg {
+            font-size: 24px;
+        }
+    }
     &__thumb {
         background: $gray-light $as-card-data-thumb-bg;
         color: $as-card-data-thumb-color;
@@ -404,5 +441,19 @@
                 color: $as-card-data-actions-color !important;
             }
         }
+    }
+    &--number {
+        .card__body {
+            padding: 1rem;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        h4 {
+            font-size: 14px;
+        }
+        
     }
 }

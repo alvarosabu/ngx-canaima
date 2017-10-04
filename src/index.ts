@@ -1,3 +1,4 @@
+import { MiscModule } from './misc/misc.module';
 
 
 import { NgModule, ModuleWithProviders } from '@angular/core';
@@ -16,10 +17,16 @@ import { ChipModule } from './chip/chip.module';
 import { BadgesModule } from './badges/badges.module';
 import { FabsModule } from './fabs/fabs.module';
 import { AsModalModule } from './modals/modals.module';
+import { SearchBarModule } from './search-bar/search-bar.module';
+import { EmptyStateModule } from './empty-state/empty-state.module';
+import { LoadingModule } from
+'./loading/loading.module';
+import { PreviewModule } from './preview/preview.module';
+import { MediaUploaderModule } from './media-uploader/media-uploader.module';
+
 export * from './action';
 export * from './action-dropdown';
-export * from './bg-image-preview.directive';
-export * from './image-preview.directive';
+export * from './preview';
 export * from './cards';
 export * from './forms';
 export * from './lists';
@@ -32,12 +39,15 @@ export * from './chip';
 export * from './badges';
 export * from './fabs';
 export * from './modals';
-
+export * from './search-bar';
+export * from './loading';
+export * from './empty-state';
 @NgModule({
   imports: [
     CommonModule,
     CardsModule,
     ListsModule,
+    PreviewModule,
     DynamicFormsModule,
     GridListsModule,
     ToolbarModule,
@@ -48,14 +58,20 @@ export * from './modals';
     ChipModule,
     BadgesModule,
     FabsModule,
-    AsModalModule
+    AsModalModule,
+    SearchBarModule,
+    LoadingModule,
+    EmptyStateModule,
+    MediaUploaderModule,
+    MiscModule
   ],
   declarations: [
-
+    
   ],
   exports: [
     CardsModule,
     ListsModule,
+    PreviewModule,
     DynamicFormsModule,
     GridListsModule,
     ToolbarModule,
@@ -66,7 +82,12 @@ export * from './modals';
     ChipModule,
     BadgesModule,
     FabsModule,
-    AsModalModule
+    AsModalModule,
+    SearchBarModule,
+    LoadingModule,
+    EmptyStateModule,
+    MediaUploaderModule,
+    MiscModule
   ]
 })
 export class NgxCanaimaModule {
