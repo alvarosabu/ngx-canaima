@@ -1,5 +1,3 @@
-import { CardNumber } from './../../../../src/cards/card-number/card-number';
-import { Toolbar } from './../../../../src/toolbar/toolbar';
 import {
     Component,
     OnInit,
@@ -13,6 +11,8 @@ import { CardData } from './../../../../src/cards/card-data/card-data';
 import { CardBg } from './../../../../src/cards/card-bg/card-bg';
 import { CardImage } from './../../../../src/cards/card-image/card-image';
 import { Card } from './../../../../src/cards/card/card';
+import { CardNumber } from './../../../../src/cards/card-number/card-number';
+import { Toolbar } from './../../../../src/toolbar/toolbar';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'cards',

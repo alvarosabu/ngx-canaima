@@ -78,14 +78,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
             // tslint:disable-next-line:max-line-length
             msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
         },
-        /* {
+        {
             label: 'File Upload',
             illustration: '/assets/svg/modals-illustration.svg',
             comming: false,
             slug: 'uploaders',
             // tslint:disable-next-line:max-line-length
             msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
-        } */
+        },
+        {
+            label: 'Miscellaneus',
+            illustration: '/assets/svg/modals-illustration.svg',
+            comming: false,
+            slug: 'misc',
+            // tslint:disable-next-line:max-line-length
+            msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
+        }
     ];
     public header: Header = new Header({
         bg: '../assets/img/header-canaima.png',
