@@ -79,6 +79,10 @@ export class LayoutComponent implements OnInit {
         new Segment({
             label: 'Empty States',
             value: 'empty-state'
+        }),
+        new Segment({
+            label: 'Content Placeholder',
+            value: 'content-placeholder'
         })
     ];
     public selectedTab: Segment = this.segments[0];
@@ -163,6 +167,7 @@ export class LayoutComponent implements OnInit {
             })
         ]
     });
+    public contentLoading: boolean = true;
     constructor(
         private route: ActivatedRoute,
     ) { }
@@ -177,6 +182,9 @@ export class LayoutComponent implements OnInit {
                 }
             ));
         }
+        setTimeout(() => {
+            this.contentLoading = false;
+        }, 2000);
     }
     /**
      * search

@@ -485,6 +485,32 @@
                 </as-empty-state>
         </div>
         <div
+            *ngSwitchCase="'content-placeholder'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+                <as-card
+                    [contentPlaceholder]="contentLoading"
+                    [title]="'Im a card'"
+                    [subtitle]="'Wazaaaa'"
+                    [msg]="'Venmo banjo semiotics, scenester hexagon beard schlitz chic flannel coloring book portland kickstarter.'"
+                    [shadow]="1">        
+                </as-card>
+        </div>
+        <div
+            *ngSwitchCase="'content-placeholder'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+                <as-card-data
+                    [contentPlaceholder]="contentLoading"
+                    [img]="'https://s3-eu-west-1.amazonaws.com/asaburido/gyaradosrojo.jpg'"
+                    [title]="'Im a card data'"
+                    [shadow]="1">        
+                </as-card-data>
+                
+        </div>
+        <div
         *ngSwitchCase="'fabs'"
             class="box"
             fxFlex="100"

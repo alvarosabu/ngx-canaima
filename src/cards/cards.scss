@@ -6,7 +6,8 @@
 .card {
     background: $as-card-bg;
     border-radius: $as-card-border-radius;
-    width: 100%;   
+    width: 100%;
+    flex-direction: column;   
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
     }
