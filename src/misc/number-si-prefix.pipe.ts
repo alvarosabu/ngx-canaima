@@ -1,12 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-    name: 'myNumberFormatterPipe'
+    name: 'numberSiPrefix'
 })
-export class NumberFormatterPipe implements PipeTransform {
-  public transform(value: number, digits: string): any {
-    if (!value) {
-        return value;
+export class NumberSiPrefixPipe implements PipeTransform {
+  public transform(value: any, digits: string): any {
+    // tslint:disable-next-line:curly
+    if (!value || value === undefined) return value;
+    if (typeof(value) === 'string') {
+        value = parseInt(value.replace(/,/g, ''), 0);
     }
     const si = [
         { value: 1E18, symbol: 'E' },

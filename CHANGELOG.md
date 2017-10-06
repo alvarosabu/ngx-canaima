@@ -1,3 +1,16 @@
+## 0.6.0 - 2017-10-04
+### Added
+- Number si prefix Pipe
+- Card Number component
+- Searchbar component
+- Loaders and spinners
+- Empty State component
+- Toolbar menuSide option
+- Add anchor capability to navmenu items with Page Scroll
+- Add external url capaibility to navmenu items
+### Fixed
+- Navmenu select
+- Material variables by default
 ## 0.5.1 - 2017-09-21
 ### Fixed
 - Material variables by default

@@ -1,3 +1,4 @@
+import { MiscModule } from './../misc/misc.module';
 
 
 import { NgModule } from '@angular/core';
@@ -9,14 +10,19 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 import { CardDataComponent } from './card-data/card-data.component';
 import { CardProfileComponent } from './card-profile/card-profile.component';
 import { CardIllustrationComponent } from './card-illustration/card-illustration.component';
+import { CardNumberComponent } from './card-number/card-number.component';
 import { FabsModule } from '../fabs/fabs.module';
 import { ButtonsModule } from '../buttons/buttons.module';
+import { CountoModule } from 'angular2-counto';
+
 @NgModule({
   imports: [
     ButtonsModule,
     FabsModule,
     CommonModule,
-    BsDropdownModule
+    BsDropdownModule,
+    CountoModule,
+    MiscModule
   ],
   exports: [
     CommonModule,
@@ -25,7 +31,8 @@ import { ButtonsModule } from '../buttons/buttons.module';
     CardBgComponent,
     CardDataComponent,
     CardProfileComponent,
-    CardIllustrationComponent
+    CardIllustrationComponent,
+    CardNumberComponent
   ],
   declarations: [
     CardComponent,
@@ -33,7 +40,8 @@ import { ButtonsModule } from '../buttons/buttons.module';
     CardBgComponent,
     CardDataComponent,
     CardProfileComponent,
-    CardIllustrationComponent
+    CardIllustrationComponent,
+    CardNumberComponent
   ],
   providers: []
 })

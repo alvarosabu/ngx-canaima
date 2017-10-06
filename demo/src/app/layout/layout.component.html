@@ -476,8 +476,7 @@
         <div
             *ngSwitchCase="'empty-state'"
             class="box"
-            fxFlex="100"
-            fxFlex.gt-sm="50">
+            fxFlex="100">
                 <as-empty-state 
                     [title]="emptyState.title"
                     [img]="emptyState.img"
@@ -485,24 +484,55 @@
                     [actions]="emptyState.actions">
                 </as-empty-state>
         </div>
-        <div class="fab-container">
-            <as-fab
-            *ngSwitchCase="'fabs'"
-            [position]="'top right'"
-            [color]="simpleFab.color"
-            [icon]="simpleFab.icon"
-            [iconActive]="simpleFab.iconActive">
-            </as-fab> 
-            <as-fab
-            *ngIf="selectedTab.value == 'fabs'"
-            [position]="'top left'"
-            [color]="'info'"
-            [icon]="menuFab.icon"
-            [iconActive]="menuFab.iconActive"
-            [menu]="menuFab.menu"
-            [type]="'vertical'">
-            </as-fab> 
+        <div
+            *ngSwitchCase="'content-placeholder'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+                <as-card
+                    [contentPlaceholder]="contentLoading"
+                    [title]="'Im a card'"
+                    [subtitle]="'Wazaaaa'"
+                    [msg]="'Venmo banjo semiotics, scenester hexagon beard schlitz chic flannel coloring book portland kickstarter.'"
+                    [shadow]="1">        
+                </as-card>
         </div>
+        <div
+            *ngSwitchCase="'content-placeholder'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+                <as-card-data
+                    [contentPlaceholder]="contentLoading"
+                    [img]="'https://s3-eu-west-1.amazonaws.com/asaburido/gyaradosrojo.jpg'"
+                    [title]="'Im a card data'"
+                    [shadow]="1">        
+                </as-card-data>
+                
+        </div>
+        <div
+        *ngSwitchCase="'fabs'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+            <div class="fab-container">
+                <as-fab
+                [position]="'top right'"
+                [color]="simpleFab.color"
+                [icon]="simpleFab.icon"
+                [iconActive]="simpleFab.iconActive">
+                </as-fab> 
+                <as-fab
+                [position]="'top left'"
+                [color]="'info'"
+                [icon]="menuFab.icon"
+                [iconActive]="menuFab.iconActive"
+                [menu]="menuFab.menu"
+                [type]="'vertical'">
+                </as-fab> 
+            </div>
+        </div>
+        
         
     </div>
     <as-fab

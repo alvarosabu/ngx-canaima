@@ -85,6 +85,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
             slug: 'uploaders',
             // tslint:disable-next-line:max-line-length
             msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
+        },
+        {
+            label: 'Miscellaneus',
+            illustration: '/assets/svg/modals-illustration.svg',
+            comming: false,
+            slug: 'misc',
+            // tslint:disable-next-line:max-line-length
+            msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
         }
     ];
     public header: Header = new Header({
@@ -102,12 +110,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
         //
     }
     public ngAfterViewInit(): void {
-        this.getNpmData();
+        /* this.getNpmData(); */
     }
     public getNpmData() {
-        apiNpm.getdetails('ngx-canaima', (data) => {
+        /* apiNpm.getdetails('ngx-canaima', (data) => {
             console.log('package', data['dist-tags'].latest);
             this.version =  data['dist-tags'].latest;
-        });
+        }); */
     }
 }

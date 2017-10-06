@@ -935,6 +935,13 @@ $as-card-illustration-size: 150px !default;
 $as-card-illustration-border-radius: 50% !default;
 $as-card-illustration-header-bg: $as-card-bg;
 
+$as-card-number-height: 300px !default;
+$as-card-number-value-font-size: 48px !default;
+$as-card-number-value-font-weigth: 100 !default;
+$as-card-number-value-color: $gray-dark !default;
+$as-card-number-label-font-size: 18px !default;
+$as-card-number-label-font-weigth: 400 !default;
+$as-card-number-label-color: $gray-dark !default;
 
 //== Form
 $as-form-primary-color: $brand-primary !default;

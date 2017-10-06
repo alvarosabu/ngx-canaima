@@ -1,18 +1,18 @@
 <as-toolbar 
 [shadow]=1 
 [customClass]="toolBar.customClass" 
-[brand]="toolBar.brand" >
+[brand]="toolBar.brand">
     <div class="left-content"></div>
     <div class="center-content">
         <div class="toolbar__title">{{toolBar?.title}}</div>
     </div>
-    <div class="right-content">
-    </div>
+
 </as-toolbar>
 <!-- TODO: When Navmenu select issue fixed enabled again -->
-<!-- <as-navmenu
+<as-navmenu
 [open]="menuOpen"
 [collapsable]="true"
 [navs]="navList"
 [shadow]="'3'"
-[showIcons]="false"></as-navmenu> -->
+[showIcons]="false"
+(onSelect)="selectedNav($event)"></as-navmenu>

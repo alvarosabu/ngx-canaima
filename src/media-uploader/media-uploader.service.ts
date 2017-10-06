@@ -16,16 +16,12 @@ export class MediaUploaderService {
     constructor() {
         //
     }
-    public config(config?: any) {
-        if (config) {
-          //
-        } else {
-          const uploadApi = `${API_URL}/medias`;
-          this.uploader = new FileUploader({
-              url: uploadApi,
-              itemAlias: 'body'
-          });
-        }
+    public config({url, itemAlias, disableMultipart = false}: any) {
+        this.uploader = new FileUploader({
+            url,
+            itemAlias,
+            disableMultipart
+        });
     }
     public uploadMedia(fileItem: FileItem) {
         const complete = new Observable((observer) => {

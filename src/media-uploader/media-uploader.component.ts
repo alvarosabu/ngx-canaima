@@ -30,8 +30,8 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
     @Input('icon') public icon = 'image';
     @Input('multiple') public multiple = false;
     @Input('config') public config?: FileUploaderOptions = {
-      url: `${API_URL}/medias`,
-      itemAlias: 'body'
+      url: 'http://localhost:5678/api/medias/upload',
+      itemAlias: 'asmedia'
     };
     @Input('uploader') public uploader: FileUploader;
     @Output() public uploaderChange = new EventEmitter<FileUploader>();
@@ -42,10 +42,12 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
     constructor(
       public mediaUploaderService: MediaUploaderService,
     ) {
-      
-      
+      this.mediaUploaderService.config(
+        this.config
+      );
     }
     public ngOnInit() {
+      this.uploader = this.mediaUploaderService.uploader;
       setTimeout(() => {
         if (this.uploader === undefined || this.uploader) {
           this.uploader = new FileUploader(this.config);
@@ -55,7 +57,7 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
           };
         }
         this.uploaderChange.emit(this.uploader);
-      });
+      }, 500);
     }
     public ngAfterViewInit() {
       /* this.uploader = new FileUploader({

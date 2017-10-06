@@ -1,4 +1,3 @@
-import { Toolbar } from './../../../../src/toolbar/toolbar';
 import {
     Component,
     OnInit,
@@ -12,6 +11,8 @@ import { CardData } from './../../../../src/cards/card-data/card-data';
 import { CardBg } from './../../../../src/cards/card-bg/card-bg';
 import { CardImage } from './../../../../src/cards/card-image/card-image';
 import { Card } from './../../../../src/cards/card/card';
+import { CardNumber } from './../../../../src/cards/card-number/card-number';
+import { Toolbar } from './../../../../src/toolbar/toolbar';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'cards',
@@ -208,6 +209,45 @@ export class CardsComponent implements OnInit {
                     value: 240
                 }
             ]
+        }
+    );
+    public cardNumber: CardNumber = new CardNumber(
+        {
+            title: 'Hola',
+            pipe: null,
+            value: 50000,
+            label: 'Posts',
+            countTo: {
+                countFrom: 0,
+                step: 30, // How fast in ms
+                duration: 1 // In Seconds
+            },
+            size: 'sm',
+            optionsRight: [
+                new ActionDropdown(null,
+                    [
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
+                    ]),
+                    new Action({
+                        callback: () => {
+                            console.log('Filter');
+                        },
+                        icon: 'filter'
+                    })
+            ],
+            optionsLeft: [
+                new Action({
+                    callback: () => {
+                        console.log('Back');
+                    },
+                    icon: 'chevron-left'
+                })
+            ],
+            actions: [
+                new Action({label: 'Action 1'}),
+                new Action({label: 'Action 12'})
+            ],
         }
     );
     constructor(
