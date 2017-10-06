@@ -85,7 +85,7 @@ export class LayoutComponent implements OnInit {
             value: 'content-placeholder'
         })
     ];
-    public selectedTab: Segment = this.segments[5];
+    public selectedTab: Segment = this.segments[0];
     public avatarChip: Chip = new Chip({
         img: '../assets/img/jonsnow.png',
         content: 'Jon Snow'

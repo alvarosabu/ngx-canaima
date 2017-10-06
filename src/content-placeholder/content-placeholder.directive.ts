@@ -30,7 +30,7 @@ export class ContentPlaceholderDirective implements OnInit, OnChanges {
             <div class="content-placeholder__action animated-background"></div>
         </div>
     </div>`
-    private cardDataContentPlaceholderEl = `<div class="content-placeholder content-placeholder--data shadow-1">
+    private cardDataContentPlaceholderEl = `<div class="card content-placeholder content-placeholder--data shadow-1">
     <div class="content-placeholder__thumb" >
        <div class="content-placeholder--data__img circle animated-background"></div>
     </div>
@@ -40,6 +40,44 @@ export class ContentPlaceholderDirective implements OnInit, OnChanges {
     </div>
     <div class="content-placeholder--data__actions" >
     </div>
+    </div>`
+    private cardImageContentPlaceholderEl = `<div class="card content-placeholder content-placeholder--image shadow-1">
+        <div class="content-placeholder__header">
+            <div class="content-placeholder--image__img animated-background">
+            </div>
+            <div class="content-placeholder--image__titles">
+                <div class="content-placeholder__title animated-background"></div>
+                <div class="content-placeholder__subtitle animated-background"></div>
+            </div>
+        </div>
+        <div class="content-placeholder__body">
+            <div class="content-placeholder__paragraph animated-background"
+            *ngFor="let line of [10,6,7,4,5]" [ngStyle]="{ 'width.%' : line * 10}">
+            </div>
+        </div>
+        <div class="content-placeholder__footer">
+            <div class="content-placeholder__action animated-background"></div>
+            <div class="content-placeholder__action animated-background"></div>
+        </div>
+    </div>`;
+    private cardIllustrationContentPlaceholderEl = `<div class="card content-placeholder content-placeholder--illustration shadow-1">
+        <div class="content-placeholder__header">
+            <div class="content-placeholder--illustration__img animated-background">
+            </div>
+            <div class="content-placeholder--illustration__titles">
+                <div class="content-placeholder__title animated-background"></div>
+                <div class="content-placeholder__subtitle animated-background"></div>
+            </div>
+        </div>
+        <div class="content-placeholder__body">
+            <div class="content-placeholder__paragraph animated-background"
+            *ngFor="let line of [10,6,7,4,5]" [ngStyle]="{ 'width.%' : line * 10}">
+            </div>
+        </div>
+        <div class="content-placeholder__footer">
+            <div class="content-placeholder__action animated-background"></div>
+            <div class="content-placeholder__action animated-background"></div>
+        </div>
     </div>`
     @Input('contentPlaceholder') contentPlaceholder;
 
@@ -75,6 +113,12 @@ export class ContentPlaceholderDirective implements OnInit, OnChanges {
                 break;
             case 'as-card-data':
                 template = this.cardDataContentPlaceholderEl;
+                break;
+            case 'as-card-image':
+                template = this.cardImageContentPlaceholderEl;
+                break;
+            case 'as-card-illustration':
+                template = this.cardIllustrationContentPlaceholderEl;
                 break;
             default:
                 template = this.cardContentPlaceholderEl;
