@@ -841,3 +841,12 @@
 	height: $thickness;
   box-shadow: $shadow;
 }
+
+@keyframes placeHolderShimmer{
+  0%{
+      background-position: -468px 0
+  }
+  100%{
+      background-position: 468px 0
+  }
+}

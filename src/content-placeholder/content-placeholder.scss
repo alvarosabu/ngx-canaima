@@ -1,0 +1,128 @@
+/*------------------------------------*\
+    $Content-placeholder
+\*------------------------------------*/
+
+@import '../_variables.scss';
+@import '../_effects.scss';
+
+
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 96px;
+    position: relative;
+}
+
+.content-placeholder {
+    padding: 1rem;
+    //background:rgb(98.4%, 98.4%, 98.4%);
+    border-radius: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__avatar {
+        width: 45px;
+        height: 45px;
+    }
+    &__titles {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        height: 10px;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    &__subtitle {
+        height: 5px;
+        width: 50%;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 6;
+        padding: 0 2rem;
+        justify-content: center;
+    }
+    &__body {
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+    }
+    &__paragraph {
+        height: 7px;
+        margin-bottom: 7px;
+    }
+    &__footer {
+        display: flex;
+    }
+    &__action {
+        margin-right: 1rem;
+        width: 25px;
+        height: 15px;
+    }
+    &--data {
+        display: flex;
+        flex-direction: row;
+        &__img {
+            width: 45px;
+            height: 45px;
+        }
+        &__title {
+            height: 7px;
+            margin-bottom:  1rem;
+        }
+        &__subtitle {
+            height: 5px;
+            width: 50%;
+        }
+        &__actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex: 1;
+            padding: 16px;
+            i {
+                font-size: 24px;
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.data-table-placeholder {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    &__header {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 3rem;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+    }
+    &__column {
+        width: 50px;
+        height: 20px;
+    }
+}

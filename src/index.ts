@@ -1,3 +1,4 @@
+import { ContentPlaceholderModule } from './content-placeholder/content-placeholder.module';
 import { MiscModule } from './misc/misc.module';
 
 
@@ -65,7 +66,8 @@ export * from './misc';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
-    MiscModule
+    MiscModule,
+    ContentPlaceholderModule
   ],
   declarations: [
     
@@ -89,7 +91,8 @@ export * from './misc';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
-    MiscModule
+    MiscModule,
+    ContentPlaceholderModule
   ]
 })
 export class NgxCanaimaModule {
