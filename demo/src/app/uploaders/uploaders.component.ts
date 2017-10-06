@@ -20,6 +20,7 @@ import { Action } from './../../../../src/action';
     ]
 })
 export class UploadersComponent implements OnInit {
+    public uploader;
     public toolBar: Toolbar = new Toolbar(
         {
             brand: {

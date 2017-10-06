@@ -51,10 +51,14 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
       setTimeout(() => {
         if (this.uploader === undefined || this.uploader) {
           this.uploader = new FileUploader(this.config);
+          this.uploader.onCompleteItem = (fileItem) => {
+            this.uploader = new FileUploader(this.config);
+          }
           this.uploader.onAfterAddingFile = (fileItem) => {
             this.onQueue.emit(fileItem);
             fileItem.withCredentials = false;
           };
+          this.mediaUploaderService.uploader = this.uploader;
         }
         this.uploaderChange.emit(this.uploader);
       }, 500);
@@ -68,10 +72,10 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
 
     }
     public ngOnChanges(changes: SimpleChanges) {
-      /* console.log(changes)
-      if (changes.deuploader.previousValue === undefined) {
-        this.deuploaderChange.emit(this.uploader);
-      } */
+      console.log(changes)
+      if (changes.uploader.previousValue === undefined) {
+        this.uploaderChange.emit(this.uploader);
+      }
     }
     public fileOverBase(e: any): void {
       this.hasBaseDropZoneOver = e;
