@@ -55,12 +55,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
             msg: `Forms represent a way for the user to interact with the business logic`
         },
         {
-            label: 'Grid',
-            illustration: '/assets/svg/grid-illustration.svg',
-            comming: false,
-            slug: 'grid',
+            label: 'File Upload',
+            illustration: '/assets/svg/fileupload-illustration.svg',
+            comming: true,
+            slug: 'uploaders',
             // tslint:disable-next-line:max-line-length
-            msg: `A grid list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
+            msg: `File uploaders allow you to save files, images, media to the Cloud. Just click it or drop it on`
         },
         {
             label: 'Layout',
@@ -79,20 +79,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
             msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
         },
         {
-            label: 'File Upload',
-            illustration: '/assets/svg/modals-illustration.svg',
+            label: 'Grid',
+            illustration: '/assets/svg/grid-illustration.svg',
             comming: false,
-            slug: 'uploaders',
+            slug: 'grid',
             // tslint:disable-next-line:max-line-length
-            msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
+            msg: `A grid list consists of a repeated pattern of cells arrayed in a vertical and horizontal layout.`
         },
         {
             label: 'Miscellaneus',
-            illustration: '/assets/svg/modals-illustration.svg',
+            illustration: '/assets/svg/misc-illustration.svg',
             comming: false,
             slug: 'misc',
             // tslint:disable-next-line:max-line-length
-            msg: `Modals inform users about a specific task and may contain critical information, require decisions, or involve multiple tasks..`
+            msg: `Just like Lorem Ipsum, a lot of random usefull stuff`
         }
     ];
     public header: Header = new Header({

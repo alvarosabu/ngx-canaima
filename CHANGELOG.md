@@ -1,3 +1,9 @@
+## 0.7.0 - 2017-10-07
+### Added
+- Format Case Service methods with recursiveness
+- Content Placeholder Directive for Multiple types of Cards
+- Profile Dropdown with custom Menu
+- Spacer Component
 ## 0.6.0 - 2017-10-04
 ### Added
 - Number si prefix Pipe
