@@ -355,6 +355,24 @@ a {
   margin-top: 0;
   border: none;
   @include box-shadow(0 1px 4px rgba(0,0,0,.3));
+  &__header {
+    padding: 8px;
+  }
+  &--bubble-top {
+    &:after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: 43%;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid #fff;
+    }
+  }
+  .dropdown-item {
+    cursor: pointer;
+  }
 }
 
 // Indicators =================================================================

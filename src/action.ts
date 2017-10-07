@@ -11,6 +11,8 @@ export class Action {
     public outline?: boolean;
     public rounded?: boolean;
     public circle?: boolean;
+    public anchor?: boolean;
+    public link?: string;
     constructor(
         options: {
             label?: string;
@@ -25,6 +27,8 @@ export class Action {
             outline?: boolean;
             rounded?: boolean;
             circle?: boolean;
+            anchor?: boolean;
+            link?: string;
         }
     ) {
         this.label = options.label;
@@ -39,21 +43,7 @@ export class Action {
         this.outline = options.outline;
         this.rounded = options.rounded;
         this.circle = options.circle;
+        this.anchor = options.anchor;
+        this.link = options.link;
     }
 }
-
-/*
-label = null,
-        callback = () => {
-            console.log('Simple action');
-        },
-        icon = null,
-        iconActive= null,
-        value= false,
-        customClass = null,
-        prefix = 'mdi',
-        size = 'md',
-        color = 'link',
-        outline?: boolean,
-        rounded?: boolean
-*/

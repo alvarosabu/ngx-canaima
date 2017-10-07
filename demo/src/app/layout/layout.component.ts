@@ -1,3 +1,4 @@
+import { ProfileDropdown } from './../../../../src/profile-dropdown/profile-dropdown';
 import { EmptyState } from './../../../../src/empty-state/empty-state';
 
 import {
@@ -46,6 +47,38 @@ export class LayoutComponent implements OnInit {
                     icon: 'filter'
                 })
             ]
+        }
+    );
+    public profile: ProfileDropdown = new ProfileDropdown(
+        {
+            title: 'Your Profile',
+            img: '../assets/img/jonsnow.png',
+            defaultImg: '../assets/img/profile.png',
+            dropdown: [
+                new Action({
+                    label: 'Your profile',
+                    callback: () => {
+                        console.log('goToProfile');
+                    },
+                    icon: 'account'
+                }),
+                new Action({
+                    label: 'Settings',
+                    callback: () => {
+                        console.log('goToSettings');
+                    },
+                }),
+                new Action({
+                    label: 'Web Page',
+                    link: 'http://alvarosaburido.com'
+                })
+            ],
+            lastAction: new Action({
+                label: 'Logout',
+                callback: () => {
+                    console.log('logout');
+                }
+            })
         }
     );
     public header: Header = new Header(
