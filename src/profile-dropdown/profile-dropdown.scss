@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    Profile-dropdown
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+@import '../_effects.scss';
+
+.profile-dropdown {
+    .dropdown-menu {
+        margin-top: 1rem;
+        background: $as-profile-dropdown-menu-bg;
+        border-radius: $as-profile-dropdown-menu-border-radius;
+        &__header {
+            border-bottom: 1px solid darken($as-profile-dropdown-menu-bg, 5%)
+        }
+        .dropdown-item {
+            color: $as-profile-dropdown-menu-color;
+            &:hover {
+                background: darken($as-profile-dropdown-menu-bg, 4%);
+            }
+        }
+        .divider {
+            background-color: darken($as-profile-dropdown-menu-bg, 5%);
+        }
+        &--bubble-top {
+            &:after {
+                right: 7%;
+                left: auto;
+                border-bottom-color: $as-profile-dropdown-menu-bg;
+            }
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        background: $as-profile-dropdown-bg;
+        color: $as-profile-dropdown-color;
+        padding: $as-profile-dropdown-padding;
+        width: $as-profile-dropdown-width;
+        height: $as-profile-dropdown-height;
+    }
+    &__img {
+        width: $as-profile-dropdown-img-size;
+        height: $as-profile-dropdown-img-size;
+        border-radius: $as-profile-dropdown-img-border-radius;
+        border: $as-profile-dropdown-border $as-profile-dropdown-border-style
+        $as-profile-dropdown-border-color;
+        background-size: cover;
+        background-position: center;
+    }
+}
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    widows: 75%;
+    padding: 0 1rem;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    span {
+        color: $gray-dark;
+    }
+}

@@ -12,8 +12,22 @@
         <div class="toolbar__title">{{toolBar?.title}}</div>
     </div>
     <div class="right-content">
-        <as-search-bar
-        (onSearch)="search($event)"></as-search-bar>
+        <as-profile-dropdown
+        [title]="profile.title"
+        [img]="profile.img"
+        [defaultImg]="profile.defaultImg"
+        [bubble]="true"
+        [dropdown]="profile.dropdown"
+        [lastAction]="profile.lastAction">
+            <div class="dropdown-menu__header">
+                <div class="profile">
+                    <img
+                    class="circle"
+                    src="../../assets/img/jonsnow.png" alt="">
+                    <span>Jon Snow</span>
+                </div>
+            </div>
+        </as-profile-dropdown>
     </div>
 </as-toolbar>
 
@@ -26,6 +40,10 @@
         [msg]="header.msg"
         [bg]="header.bg" 
         [parallax]="selectedTab?.value !== 'loading' && header.parallax">
+        <div class="header__content">
+            <as-search-bar
+            (onSearch)="search($event)"></as-search-bar>
+        </div>
     </as-header>
     <as-segment
     [shadow]="1"
@@ -483,6 +501,39 @@
                     [msg]="emptyState.msg"
                     [actions]="emptyState.actions">
                 </as-empty-state>
+        </div>
+        <div
+            *ngSwitchCase="'content-placeholder'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+                <as-card
+                    [contentPlaceholder]="contentLoading"
+                    [title]="'Im a card'"
+                    [subtitle]="'Wazaaaa'"
+                    [msg]="'Venmo banjo semiotics, scenester hexagon beard schlitz chic flannel coloring book portland kickstarter.'"
+                    [shadow]="1">        
+                </as-card>
+        </div>
+        <div
+            *ngSwitchCase="'content-placeholder'"
+            class="box"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+                <as-card-data
+                    [contentPlaceholder]="contentLoading"
+                    [img]="'https://s3-eu-west-1.amazonaws.com/asaburido/gyaradosrojo.jpg'"
+                    [title]="'Im a card data'"
+                    [shadow]="1">        
+                </as-card-data>
+                <as-spacer [size]="'sm'"></as-spacer>
+                <as-card-illustration
+                    [contentPlaceholder]="contentLoading"
+                    [img]="'https://s3-eu-west-1.amazonaws.com/asaburido/gyaradosrojo.jpg'"
+                    [title]="'Im a illustration card'"
+                    [shadow]="1">        
+                </as-card-illustration>
+                
         </div>
         <div
         *ngSwitchCase="'fabs'"

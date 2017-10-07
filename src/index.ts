@@ -1,3 +1,5 @@
+import { ProfileDropdownModule } from './profile-dropdown/profile-dropdown.module';
+import { ContentPlaceholderModule } from './content-placeholder/content-placeholder.module';
 import { MiscModule } from './misc/misc.module';
 
 
@@ -42,6 +44,8 @@ export * from './modals';
 export * from './search-bar';
 export * from './loading';
 export * from './empty-state';
+export * from './misc';
+export * from './profile-dropdown';
 @NgModule({
   imports: [
     CommonModule,
@@ -63,7 +67,9 @@ export * from './empty-state';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
-    MiscModule
+    MiscModule,
+    ContentPlaceholderModule,
+    ProfileDropdownModule
   ],
   declarations: [
     
@@ -87,7 +93,9 @@ export * from './empty-state';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
-    MiscModule
+    MiscModule,
+    ContentPlaceholderModule,
+    ProfileDropdownModule
   ]
 })
 export class NgxCanaimaModule {

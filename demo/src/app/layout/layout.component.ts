@@ -1,3 +1,4 @@
+import { ProfileDropdown } from './../../../../src/profile-dropdown/profile-dropdown';
 import { EmptyState } from './../../../../src/empty-state/empty-state';
 
 import {
@@ -48,6 +49,38 @@ export class LayoutComponent implements OnInit {
             ]
         }
     );
+    public profile: ProfileDropdown = new ProfileDropdown(
+        {
+            title: 'Your Profile',
+            img: '../assets/img/jonsnow.png',
+            defaultImg: '../assets/img/profile.png',
+            dropdown: [
+                new Action({
+                    label: 'Your profile',
+                    callback: () => {
+                        console.log('goToProfile');
+                    },
+                    icon: 'account'
+                }),
+                new Action({
+                    label: 'Settings',
+                    callback: () => {
+                        console.log('goToSettings');
+                    },
+                }),
+                new Action({
+                    label: 'Web Page',
+                    link: 'http://alvarosaburido.com'
+                })
+            ],
+            lastAction: new Action({
+                label: 'Logout',
+                callback: () => {
+                    console.log('logout');
+                }
+            })
+        }
+    );
     public header: Header = new Header(
         {
             title: 'Header Title',
@@ -79,6 +112,10 @@ export class LayoutComponent implements OnInit {
         new Segment({
             label: 'Empty States',
             value: 'empty-state'
+        }),
+        new Segment({
+            label: 'Content Placeholder',
+            value: 'content-placeholder'
         })
     ];
     public selectedTab: Segment = this.segments[0];
@@ -163,6 +200,7 @@ export class LayoutComponent implements OnInit {
             })
         ]
     });
+    public contentLoading: boolean = true;
     constructor(
         private route: ActivatedRoute,
     ) { }
@@ -177,6 +215,9 @@ export class LayoutComponent implements OnInit {
                 }
             ));
         }
+        setTimeout(() => {
+            this.contentLoading = false;
+        }, 2000);
     }
     /**
      * search
