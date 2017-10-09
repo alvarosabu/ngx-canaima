@@ -11,13 +11,12 @@
     /* width: 32px;
     height: 32px;
     cursor: pointer; */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     &__icon {
         width: $as-badge-icon-width;
         height: $as-badge-icon-height;
-        /* height: 32px; */
         font-size: $as-badge-icon-font-size;
         position: relative;
     }

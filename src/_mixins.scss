@@ -1238,7 +1238,7 @@ $breakpoints: (
 
 }
 // AsBasge Counter ====================================================================
-@mixin badge($class,$bg,$color){
+@mixin badge($class,$bg,$color, $highlight){
 	.badge-#{$class} {
 	  background-color: $bg;
 	  color: $color;
@@ -1248,7 +1248,7 @@ $breakpoints: (
   
 	  &:hover,
 	  &:active:hover {
-		color: darken($color, 6%) !important;
+		color: $highlight !important;
 		background-color: darken($bg, 6%);
 	  }
 	  @include ripple($color);
@@ -1258,6 +1258,5 @@ $breakpoints: (
 	.asbadge__counter--#{$class} {
 	  background-color: $bg;
 	  color: $color;
-	  @include ripple($color);
 	}
   }
