@@ -24,7 +24,9 @@
         border-radius: 50px;
         height: $as-badge-icon-counter-width;
         width: $as-badge-icon-counter-height;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         font-size: $as-badge-icon-counter-font-size;
         font-weight: $as-badge-icon-counter-font-weight;
