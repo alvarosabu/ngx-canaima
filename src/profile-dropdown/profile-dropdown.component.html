@@ -1,8 +1,11 @@
 <div class="profile-dropdown" dropdown>
-    <div dropdownToggle class="profile-dropdown__btn">
+    <div dropdownToggle 
+    class="profile-dropdown__btn profile-dropdown--{{orientation}}">
         <div *ngIf="img" class="profile-dropdown__img" [ngStyle]="{'background-image': img && 'url(' + img + ')'}"></div>
-        <span *ngIf="title" class="profile-dropdown__title">{{title}}</span>
-        <i class="{{prefix}} {{prefix}}-{{caret}}"></i>
+        <span class="profile-dropdown__title">{{title}}
+            <i class="{{prefix}} {{prefix}}-{{caret}}"></i>
+        </span>
+        
     </div>
     <ul [ngClass]="{'dropdown-menu--bubble-top': bubble}" *dropdownMenu class="dropdown-menu" role="menu">
         <li #dropdownHeader>

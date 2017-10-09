@@ -30,20 +30,30 @@
             }
         }
     }
+    &--vertical {
+        flex-direction: column;
+        .profile-dropdown__img {
+            margin-top: 1rem;
+        }
+    }
+    &--horizontal {
+        flex-direction: row;
+    }
     &__btn {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        
         background: $as-profile-dropdown-bg;
         color: $as-profile-dropdown-color;
         padding: $as-profile-dropdown-padding;
-        width: $as-profile-dropdown-width;
-        height: $as-profile-dropdown-height;
+        min-width: $as-profile-dropdown-width;
+        min-height: $as-profile-dropdown-height;
     }
     &__img {
         width: $as-profile-dropdown-img-size;
         height: $as-profile-dropdown-img-size;
+        margin-right: 1rem;
         border-radius: $as-profile-dropdown-img-border-radius;
         border: $as-profile-dropdown-border $as-profile-dropdown-border-style
         $as-profile-dropdown-border-color;
