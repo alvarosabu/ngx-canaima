@@ -10,7 +10,7 @@
         *ngIf="subtitle">{{subtitle}}</span>
     </div>
     <div class="list-item__side">
-        <div class="list-item__actions" *ngIf="actions.length !== 0">
+        <div class="list-item__actions" *ngIf="actions">
             <button 
             asIconButton
             [prefix]="action.prefix"
