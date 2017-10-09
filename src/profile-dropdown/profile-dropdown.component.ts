@@ -25,6 +25,7 @@ export class ProfileDropdownComponent implements OnInit {
     @Input('title') public title: string;
     @Input('img') public img: string;
     @Input('defaultImg') public defaultImg: string;
+    @Input('orientation') public orientation = 'horizontal';
     @Input('dropdown') public dropdown: Action[];
     @Input('lastAction') public lastAction: Action;
     @Input('prefix') public prefix = 'mdi';
