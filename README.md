@@ -116,6 +116,21 @@ So you are in trouble, where to get help:
 
 Are very welcome! And remember, contribution is not only PRs and code, but any help with docs or helping other developers to solve issues are very appreciated! Thanks in advance!
 
+# TodoList
+
+- [X] Cards Components
+- [X] Lists Components
+- [X] Dynamic Forms Components
+- [X] Buttons Directives
+- [X] Toolbar Component
+- [X] Header Component
+- [X] Segments Component
+- [X] Chip Component
+- [X] Fab Button Component
+- [ ] Media Uploader
+- [ ] Avatar Uploader
+- [ ] Datatable Component
+- [ ] Breadcrumbs Component
 
 
 ## Credits
