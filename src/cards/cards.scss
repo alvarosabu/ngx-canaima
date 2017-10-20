@@ -31,6 +31,23 @@
         flex: 15;
         color: $as-card-header-color;
     }
+    &__icon {
+        padding: $as-card-data-padding;
+        background: $as-card-data-thumb-bg;
+        min-width: 69px;
+        display: flex;
+        justify-content: center;
+        transition: all ease-in-out 1s;
+        
+        i {
+            width: 100%;
+            text-align: center;
+            font-size: $as-card-data-icon-font-size;
+            color: $as-card-data-icon-color;
+            background:  $as-card-data-icon-bg;
+            border-radius:  $as-card-data-icon-border-radius;
+        }
+    }
     &__options {
         height: 65px;
         display: flex;
