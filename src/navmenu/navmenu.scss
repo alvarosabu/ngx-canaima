@@ -17,6 +17,7 @@
   &--collapsable {
     position: fixed;
     top: $as-navmenu-min-height-top;
+    min-height: $as-navmenu-min-height;
   }
   &__item {
     padding: $as-navmenu-item-padding;

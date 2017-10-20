@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-    selector: '[asButton]',
+    selector: '[asButton]'
 })
 export class AsButtonDirective implements OnInit, OnChanges {
     @Input() color = 'plain';
@@ -24,6 +24,7 @@ export class AsButtonDirective implements OnInit, OnChanges {
     private nativeElement: any;
     constructor(public renderer: Renderer2, public hostElement: ElementRef) {
         this.nativeElement = hostElement.nativeElement;
+        this.renderer.addClass(this.nativeElement, `btn`);
     }
     public ngOnInit() {
         this.cls = {
@@ -34,7 +35,6 @@ export class AsButtonDirective implements OnInit, OnChanges {
             color: `btn-${this.color}`
         }
         this.attributes = Object.keys(this.cls);
-        this.renderer.addClass(this.nativeElement, `btn`);
         if (this.checkInput(this.loading)) {
             this.appendLoading();
         }
