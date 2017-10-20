@@ -1011,6 +1011,7 @@ $as-toolbar-color: white !default;
 $as-toolbar-min-height: 54px !default;
 $as-toolbar-back-button-icon-size: 36px !default;
 //== Navmenu
+$as-navmenu-min-height: 150px !default;
 $as-navmenu-min-height-top: $as-toolbar-min-height !default;
 $as-navmenu-bg: darken($brand-primary, 2%) !default;
 $as-navmenu-color: $white !default;
