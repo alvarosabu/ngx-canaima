@@ -219,7 +219,24 @@
             margin-top: -28px;
         }
     }
-    
+    &--toggle {
+        display: flex;
+        flex-direction: row;
+        &__title {
+            font-size: 1.8rem;
+            margin-bottom: 2px !important;
+        }
+        &__subtitle {
+            font-size: 1.4rem;
+            color: $gray;
+        }
+        &__toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+    }
     &--noBg {
         background: none !important;
         .card__thumb, .card__content, .card--data__actions {

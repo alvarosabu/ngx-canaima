@@ -1189,6 +1189,18 @@ $breakpoints: (
 	}
 	
   }
+// Toggle ====================================================================
+
+@mixin toggle($class, $color) {
+	.toggle--#{$class} {
+		&:checked ~ label {
+			background: lighten($color, 10%);
+		}
+		&:checked ~ label:after {
+			background: $color;
+		}
+	}
+}
 
 // Buttons ====================================================================
 

@@ -1,3 +1,5 @@
+import { ToggleModule } from './../toggle/toggle.module';
+import { CardToggleComponent } from './card-toggle/card-toggle.component';
 import { MiscModule } from './../misc/misc.module';
 
 
@@ -18,6 +20,7 @@ import { CountoModule } from 'angular2-counto';
 @NgModule({
   imports: [
     ButtonsModule,
+    ToggleModule,
     FabsModule,
     CommonModule,
     BsDropdownModule,
@@ -32,7 +35,8 @@ import { CountoModule } from 'angular2-counto';
     CardDataComponent,
     CardProfileComponent,
     CardIllustrationComponent,
-    CardNumberComponent
+    CardNumberComponent,
+    CardToggleComponent
   ],
   declarations: [
     CardComponent,
@@ -41,7 +45,8 @@ import { CountoModule } from 'angular2-counto';
     CardDataComponent,
     CardProfileComponent,
     CardIllustrationComponent,
-    CardNumberComponent
+    CardNumberComponent,
+    CardToggleComponent
   ],
   providers: []
 })
