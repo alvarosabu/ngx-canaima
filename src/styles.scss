@@ -12,6 +12,7 @@
 @import "./navmenu/navmenu.scss";
 @import "./header/header.scss";
 @import "./segment/segment.scss";
+@import "./chip/chip.scss";
 @import "./modals/modals.scss";
 
 @import "./search-bar/search-bar.scss";
@@ -22,6 +23,7 @@
 @import "./profile-dropdown/profile-dropdown.scss";
 @import "./misc/spacer/spacer.scss";
 @import "./badges/badges.scss";
+@import "./toggle/toggle.scss";
 *:focus {
     outline: none !important;
 }

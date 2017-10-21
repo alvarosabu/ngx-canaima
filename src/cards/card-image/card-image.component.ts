@@ -10,7 +10,7 @@ import { Action } from '../../action';
 export class CardImageComponent {
     @Input('img') public img: string;
     @Input('title') public title: string;
-    @Input('orientation') public orientation;
+    @Input('orientation') public orientation = 'top';
     @Input('subtitle') public subtitle: string;
     @Input('customClass') public customClass: string;
     @Input('msg') public msg: string;

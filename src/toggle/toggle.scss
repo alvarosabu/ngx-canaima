@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    Segment
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+// Toggle
+
+.lbl {
+    position: relative;
+    display: block;
+    height: $as-toggle-height;
+    width: $as-toggle-width;
+    background: $as-toggle-bg;
+    border-radius: $as-toggle-border-radius;
+    border: $as-toggle-border $as-toggle-border-color $as-toggle-border-style;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .lbl:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: $as-toggle-circle-size;
+    height: $as-toggle-circle-size;
+    border-radius: $as-toggle-circle-border-radius;
+    background: $as-toggle-circle-bg;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+  }
+  .lbl:active:after {
+    transform: scale(1.15, 0.85);
+  }
+  .toggle {
+      &:checked ~ label {
+          background: #6fbeb5;
+      }
+      &:checked ~ label:after {
+          left: 20px;
+          background: #179588;
+      }
+      &:disabled ~ label {
+          background: #d5d5d5;
+          pointer-events: none;
+      }
+      &:disabled ~ label:after {
+          background: #bcbdbc;
+      }
+  }
+  

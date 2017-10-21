@@ -1,0 +1,6 @@
+<div class="toggle {{customClass}}" >
+  <input type="checkbox" id="toggle"  
+  [checked]="toggle === toggle.value" 
+          (change)="toggle.callback($event.target.checked); toggle.value = $event.target.checked " class="toggle toggle--{{toggle.color}} hidden"/>
+  <label for="toggle" class="lbl"></label>
+</div>

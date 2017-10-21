@@ -526,3 +526,14 @@ a {
 @include asBadgeCounter(warning,$btn-warning-bg,$btn-warning-color);
 @include asBadgeCounter(danger,$btn-danger-bg,$btn-danger-color);
 @include asBadgeCounter(link,#fff,$btn-default-color);
+
+// Toggle ====================================================================
+
+@include toggle(default,$btn-default-bg);
+@include toggle(primary,$brand-primary);
+@include toggle(secondary,$brand-secondary);
+@include toggle(success,$btn-success-bg);
+@include toggle(info,$btn-info-bg);
+@include toggle(warning,$btn-warning-bg);
+@include toggle(danger,$btn-danger-bg);
+@include toggle(link,#fff);
