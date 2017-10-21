@@ -7,6 +7,7 @@
 .toolbar {
   z-index: 3;
   width: 100%;
+  border-bottom: $as-toolbar-border $as-toolbar-border-style $as-toolbar-border-color;
   &--flex {
     .container-fluid {
       display: flex;
