@@ -47,6 +47,7 @@ export * from './empty-state';
 export * from './misc';
 export * from './profile-dropdown';
 export * from './validation';
+export * from './toggle';
 
 @NgModule({
   imports: [
