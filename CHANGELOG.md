@@ -1,3 +1,18 @@
+## 0.7.1 - 2017-10-21
+### Added
+- Icon on Card Data instead of img
+- Card Toggle
+- Toggle Component
+- Toolbar variables for border
+- Vertical Align option to Profile Dropdown
+- Added flex align to badge counter
+- Horizontal Scroll for Large Segments
+#Fixed
+- Card Image orientation
+- Variables
+- Directives slow re-render
+- List item actions undefined predefined
+- Capacity to override badge variables
 ## 0.7.0 - 2017-10-07
 ### Added
 - Format Case Service methods with recursiveness

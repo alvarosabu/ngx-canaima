@@ -122,6 +122,9 @@
                                     <a href="../modules/SegmentModule.html" >SegmentModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/ToggleModule.html" >ToggleModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/ToolbarModule.html" >ToolbarModule</a>
                                 </li>
                         </ul>
@@ -164,6 +167,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CardToggleComponent.html" >CardToggleComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/ChipComponent.html" >ChipComponent</a>
@@ -250,6 +256,9 @@
                                     <a href="../components/SpacerComponent.html" >SpacerComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/ToggleComponent.html" >ToggleComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/ToolbarComponent.html" >ToolbarComponent</a>
                                 </li>
                         </ul>
@@ -329,6 +338,9 @@
                                     <a href="../classes/CardProfile.html" >CardProfile</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../classes/CardToggle.html" >CardToggle</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/CheckboxInput.html" >CheckboxInput</a>
                                 </li>
                                 <li class="link">
@@ -399,6 +411,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../classes/TextInput.html" >TextInput</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/Toggle.html" >Toggle</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Toolbar.html" >Toolbar</a>
@@ -591,6 +606,9 @@
                                            <a href="../modules/SegmentModule.html" >SegmentModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/ToggleModule.html" >ToggleModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/ToolbarModule.html" >ToolbarModule</a>
                                        </li>
                                </ul>
@@ -633,6 +651,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/CardProfileComponent.html" >CardProfileComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CardToggleComponent.html" >CardToggleComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/ChipComponent.html" >ChipComponent</a>
@@ -719,6 +740,9 @@
                                            <a href="../components/SpacerComponent.html" >SpacerComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/ToggleComponent.html" >ToggleComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/ToolbarComponent.html" >ToolbarComponent</a>
                                        </li>
                                </ul>
@@ -798,6 +822,9 @@
                                            <a href="../classes/CardProfile.html" >CardProfile</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../classes/CardToggle.html" >CardToggle</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/CheckboxInput.html" >CheckboxInput</a>
                                        </li>
                                        <li class="link">
@@ -868,6 +895,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../classes/TextInput.html" >TextInput</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/Toggle.html" >Toggle</a>
                                        </li>
                                        <li class="link">
                                            <a href="../classes/Toolbar.html" >Toolbar</a>
@@ -1064,12 +1094,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="clearQueue"></a>
-                                    <b><span class="modifier">Public</span> clearQueue</b>
+                                    <span class="name"><b><span class="modifier">Public</span> clearQueue</b><a href="#clearQueue"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play "></span>
+                                        <span class="modifier-icon fa fa-reset"></span>
                                     <code>clearQueue()</code>
                                 </td>
                             </tr>
@@ -1097,13 +1127,13 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="config"></a>
-                                    <b><span class="modifier">Public</span> config</b>
+                                    <span class="name"><b><span class="modifier">Public</span> config</b><a href="#config"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play "></span>
-                                    <code>config(config: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>config(config?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                                 </td>
                             </tr>
             
@@ -1118,9 +1148,39 @@
                                 <td class="col-md-4">
             
                                         <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>config</td>
+                                                              <td>
+                                                                      <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                              </td>
+                                                              <td>
+                                                                  true
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
                                             <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
             
                                         </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -1130,12 +1190,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="uploadAll"></a>
-                                    <b><span class="modifier">Public</span> uploadAll</b>
+                                    <span class="name"><b><span class="modifier">Public</span> uploadAll</b><a href="#uploadAll"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play "></span>
+                                        <span class="modifier-icon fa fa-reset"></span>
                                     <code>uploadAll()</code>
                                 </td>
                             </tr>
@@ -1163,12 +1223,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="uploadMedia"></a>
-                                    <b><span class="modifier">Public</span> uploadMedia</b>
+                                    <span class="name"><b><span class="modifier">Public</span> uploadMedia</b><a href="#uploadMedia"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play "></span>
+                                        <span class="modifier-icon fa fa-reset"></span>
                                     <code>uploadMedia(fileItem: FileItem)</code>
                                 </td>
                             </tr>
@@ -1184,9 +1244,38 @@
                                 <td class="col-md-4">
             
                                         <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>fileItem</td>
+                                                              <td>
+                                                                      <code>FileItem</code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
                                             <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
             
                                         </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -1203,12 +1292,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="apiUrl"></a>
-                                    <b><span class="modifier">Public</span> apiUrl</b>
+                                    <span class="name"><b><span class="modifier">Public</span> apiUrl</b><a href="#apiUrl"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-"></span><code>apiUrl:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    <span class="modifier-icon fa fa-reset"></span><code>apiUrl:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
             </code>
                                 </td>
                             </tr>
@@ -1232,12 +1321,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="uploader"></a>
-                                    <b><span class="modifier">Public</span> uploader</b>
+                                    <span class="name"><b><span class="modifier">Public</span> uploader</b><a href="#uploader"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-"></span><code>uploader:     <code>FileUploader</code>
+                                    <span class="modifier-icon fa fa-reset"></span><code>uploader:     <code>FileUploader</code>
             </code>
                                 </td>
                             </tr>
