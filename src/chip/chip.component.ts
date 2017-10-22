@@ -13,10 +13,7 @@ import { Chip } from './chip';
 
 @Component({
     selector: 'as-chip',
-    templateUrl: 'chip.component.html',
-    styleUrls: [
-        './chip.component.scss'
-    ]
+    templateUrl: 'chip.component.html'
 })
 export class ChipComponent {
     @Input('img') public img: string;

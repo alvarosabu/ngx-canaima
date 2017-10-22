@@ -6,19 +6,19 @@
     [size]="size"
     class="asbadge"
     [ngClass]="customClass">
-    <span class="asbadge__icon {{prefix}} {{prefix}}-{{icon}}">
-        <span
+    <div class="asbadge__icon {{prefix}} {{prefix}}-{{icon}}">
+        <div
         *ngIf="count" 
         class="asbadge__counter asbadge__counter--{{badge}}"
         [ngStyle]="getPos()">
             {{count}}
-        </span>
-        <span
+        </div>
+        <div
         *ngIf="badgeIcon && !count" 
         class="asbadge__counter asbadge__counter--{{badge}}"
         [ngStyle]="getPos()">
             <i class="{{prefix}} {{prefix}}-{{badgeIcon}}"></i>
-        </span>
-    </span>
+        </div>
+    </div>
     
 </button>

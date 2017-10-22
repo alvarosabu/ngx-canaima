@@ -1,10 +1,8 @@
-import { ProfileDropdown } from './../../../../src/profile-dropdown/profile-dropdown';
-import { EmptyState } from './../../../../src/empty-state/empty-state';
-
 import {
     Component,
     OnInit,
-    ViewEncapsulation
+    ViewEncapsulation,
+    ChangeDetectionStrategy
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ActionDropdown } from './../../../../src/action-dropdown';
@@ -15,6 +13,8 @@ import { Segment } from './../../../../src/segment/segment';
 import { Fab } from './../../../../src/fabs/fab';
 import { Badge } from './../../../../src/badges/badge';
 import { Chip } from './../../../../src/chip/chip';
+import { EmptyState } from './../../../../src/empty-state/empty-state';
+import { ProfileDropdown } from './../../../../src/profile-dropdown/profile-dropdown';
 
 @Component({
     encapsulation: ViewEncapsulation.None,
@@ -22,7 +22,8 @@ import { Chip } from './../../../../src/chip/chip';
     templateUrl: 'layout.component.html',
     styleUrls: [
         './layout.component.scss'
-    ]
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class LayoutComponent implements OnInit {

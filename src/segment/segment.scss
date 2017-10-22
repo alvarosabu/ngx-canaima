@@ -11,16 +11,25 @@
   transform: translateZ(0);
   .tab-container {
     width: 100%;
+    @include breakpoint('reverse-epsilon') {
+      overflow-y: scroll;
+    }
   }
   .nav-item {
     @include ripple($gray);
   }
   .nav-tabs { 
     display: flex;
+    @include breakpoint('reverse-epsilon') {
+      width: 200%;
+    }
   }
   &--center {
     .nav-tabs {
       justify-content: center;
+      @include breakpoint('reverse-epsilon') {
+        justify-content: space-between;
+      }
     }
   }
   &--flex-start {
@@ -31,6 +40,9 @@
   &--flex-end {
     .nav-tabs {
       justify-content: flex-end;
+      @include breakpoint('reverse-epsilon') {
+        justify-content: space-between;
+      }
     }
   }
 }

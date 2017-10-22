@@ -1,17 +1,19 @@
 <div class="card card--data shadow-{{shadow}} {{customClass}}">
     <div class="card__thumb" 
-        *ngIf="img"
+        *ngIf="img && !icon"
         (mouseover)='hover = true'
-        (mouseleave)='hover = false'
-        >
-        <div class="card--data__img circle"
-        [ngStyle]="{'background-image': img && 'url(' + img + ')'}"
-        *ngIf="!hover"></div>
-        <div class="checkbox" *ngIf="hover">
-        <label>
-            <input type="checkbox" value="">
-        </label>
+        (mouseleave)='hover = false'>
+            <div class="card--data__img circle"
+            [ngStyle]="{'background-image': img && 'url(' + img + ')'}"
+            *ngIf="!hover"></div>
+            <div class="checkbox" *ngIf="hover">
+            <label>
+                <input type="checkbox" value="">
+            </label>
+        </div>
     </div>
+    <div class="card__icon" *ngIf="icon && !img">
+        <i class="{{prefix}} {{prefix}}-{{icon}}"></i>
     </div>
     <div class="card__content">
        <h5 

@@ -57,7 +57,6 @@
         <as-card-image
         [img]="cardImage.img"
         [title]="cardImage.title"
-        [orientation]="'top'"
         [subtitle]="cardImage.subtitle"
         [fab]="cardImage.fab"
         [optionsLeft]="cardImage.optionsLeft"
@@ -100,6 +99,23 @@
         [actions]="cardData.actions"
         [shadow]=1
         ></as-card-data>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-data
+        [icon]="'android'"
+        [title]="cardData.title"
+        [subtitle]="cardData.subtitle"
+        [actions]="cardData.actions"
+        [shadow]=1
+        ></as-card-data>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-toggle
+        [icon]="cardToggle.icon"
+        [title]="cardToggle.title"
+        [toggle]="cardToggle.toggle"
+        [shadow]="1">
+        </as-card-toggle>
     </div>
     <div class="box"
     fxFlexAlign="start"

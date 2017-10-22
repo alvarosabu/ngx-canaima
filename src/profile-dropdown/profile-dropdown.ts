@@ -9,7 +9,7 @@ export class ProfileDropdown {
     public dropdown?: Action[];
     public lastAction?: Action;
     public customClass?: string;
-
+    public orientation?: string;
     constructor(
         options: {
             title?: string,
@@ -21,7 +21,7 @@ export class ProfileDropdown {
             dropdown?: Action[],
             lastAction?: Action,
             customClass?: string
-
+            orientation?: string;
         }
     ) {
         this.title = options.title;
@@ -33,6 +33,7 @@ export class ProfileDropdown {
         this.dropdown = options.dropdown;
         this.lastAction = options.lastAction;
         this.customClass = options.customClass;
+        this.orientation = options.orientation || 'horizontal';
 
     }
 }

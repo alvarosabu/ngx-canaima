@@ -26,7 +26,7 @@
     <div class="list-item__side">
         <span class="list-item__least" 
         *ngIf="least">{{least}}</span>
-        <div class="list-item__actions" *ngIf="actions.length !== 0">
+        <div class="list-item__actions" *ngIf="actions">
             <button 
             asIconButton
             [prefix]="action.prefix"
