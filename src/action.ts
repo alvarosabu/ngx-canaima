@@ -1,11 +1,13 @@
 export class Action {
     public label?: string;
+    public active?: boolean;
     public callback?: any;
     public icon?: string;
     public iconActive?: string;
     public value?: boolean;
     public size?: string;
     public prefix?: string;
+    public activeClass?: string;
     public customClass?: string;
     public color?: string;
     public outline?: boolean;
@@ -16,12 +18,14 @@ export class Action {
     constructor(
         options: {
             label?: string;
+            active?: boolean;
             callback?: any;
             icon?: string;
             iconActive?: string;
             value?: boolean;
             size?: string;
             prefix?: string;
+            activeClass?: string;
             customClass?: string;
             color?: string;
             outline?: boolean;
@@ -32,9 +36,11 @@ export class Action {
         }
     ) {
         this.label = options.label;
+        this.active = options.active || false;
         this.icon = options.icon;
         this.iconActive = options.iconActive;
         this.prefix = options.prefix || 'mdi';
+        this.activeClass = options.activeClass;
         this.customClass = options.customClass;
         this.callback = options.callback;
         this.size = options.size;
