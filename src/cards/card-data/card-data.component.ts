@@ -21,5 +21,12 @@ export class CardDataComponent implements OnInit {
 
     public ngOnInit() {
         this.hover = false;
-     }
+    }
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }

@@ -20,4 +20,11 @@ export class CardBgComponent {
         alignment: 'center'
     };
     @Input('shadow') public shadow: string;
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }

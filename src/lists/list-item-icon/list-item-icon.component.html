@@ -18,22 +18,21 @@
             <div 
             class="list-item__actions"
             *ngIf="actions">
-            <button 
-            asIconButton
-            [prefix]="action.prefix"
-            [icon]="action.icon"
-            [color]="action.color"
-            [outline]="action.outline"
-            [rounded]="action.rounded"
-            [circle]="action.circle"
-            [size]="action.size"
-            class=" card__action"
-            [ngClass]="action?.customClass"  
-            *ngFor="let action of actions" 
-            [disabled]="action.disabled" 
-            (click)="action.callback()">
-                {{action.label}} 
-            </button>
+                <button
+                *ngFor="let action of actions" 
+                asIconButton
+                class="card__action"
+                [prefix]="action.prefix"
+                [icon]="action.active ? action.iconActive : action.icon"
+                [color]="action.color"
+                [outline]="action.outline"
+                [rounded]="action.rounded"
+                [size]="action.size"
+                [ngClass]="action?.customClass"
+                [disabled]="action.disabled" 
+                (click)="actionCallback(action)">
+                    {{action.label}}
+                </button>
         </div>
     </div>
 </div>

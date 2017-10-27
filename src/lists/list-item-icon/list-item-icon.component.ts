@@ -23,4 +23,11 @@ export class ListItemIconComponent {
     @Input('least') public least: string;
     @Input('actions') public actions: [Action];
     @Input('customClass') public customClass: string;
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }
