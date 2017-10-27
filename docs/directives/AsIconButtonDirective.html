@@ -1402,7 +1402,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/buttons/button-icon.directive.ts:73</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/buttons/button-icon.directive.ts:76</a></div>
                                         </td>
                                     </tr>
             
@@ -1472,7 +1472,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/buttons/button-icon.directive.ts:86</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/buttons/button-icon.directive.ts:89</a></div>
                                         </td>
                                     </tr>
             
@@ -1505,7 +1505,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/buttons/button-icon.directive.ts:83</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/buttons/button-icon.directive.ts:86</a></div>
                                         </td>
                                     </tr>
             
@@ -1660,7 +1660,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/buttons/button-icon.directive.ts:95</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/buttons/button-icon.directive.ts:98</a></div>
                                         </td>
                                     </tr>
             
@@ -1835,6 +1835,9 @@ export class AsIconButtonDirective implements OnInit, OnChanges {
                   } else {
                     if (key &#x3D;&#x3D;&#x3D; &#x27;color&#x27;) {
                         this.addClass(&#x60;btn-${changes[key].currentValue}&#x60;, &#x60;btn-${changes[key].previousValue}&#x60;)
+                    }else if (key &#x3D;&#x3D;&#x3D; &#x27;icon&#x27;) {
+                        this.removeIcon();
+                        this.appendIcon();
                     }else if (key &#x3D;&#x3D;&#x3D; &#x27;outline&#x27;) {
                         let isOutline &#x3D; changes[key].currentValue;
                         this.addClass(
