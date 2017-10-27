@@ -1083,6 +1083,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <span class="modifier">Public</span> <a href="#actionCallback">actionCallback</a>
+                            </li>
+                            <li>
                                 <span class="modifier">Public</span> <a href="#click">click</a>
                             </li>
                             <li>
@@ -1297,6 +1300,70 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
+                            <a name="actionCallback"></a>
+                            <span class="name"><b><span class="modifier">Public</span> actionCallback</b><a href="#actionCallback"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>actionCallback(action: <a href="../classes/Action.html">Action</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/lists/list-item-fileqeue/list-item-fileqeue.component.ts:41</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>actionCallback</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>action</td>
+                                                      <td>
+                                                              <code><a href="../classes/Action.html" target="_self" >Action</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
                             <a name="click"></a>
                             <span class="name"><b><span class="modifier">Public</span> click</b><a href="#click"><span class="fa fa-link"></span></a></span>
                         </td>
@@ -1439,6 +1506,13 @@ export class ListItemFileQeueComponent {
      */
     public click() {
         this.onClicked.emit(this.index);
+    }
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active &#x3D; !action.active;
+        action.callback()
     }
 }
 </code></pre>
