@@ -22,23 +22,23 @@
     class="box"
     fxFlexAlign="start"
     fxFlex="100"
-    fxFlex.gt-md="50">
+    fxFlex.gt-sm="50">
 		<as-card 
 		[title]="cardSimple.title"
 		[subtitle]="cardSimple.subtitle"
         [shadow]="1"
         [actions]="cardSimple.actions"
         [msg]="cardSimple.msg">
-        <div class="card__content">
-           
-        </div>
+            <div class="card__content">
+            
+            </div>
 		</as-card>
 	</div>
     <div
     class="box"
     fxFlexAlign="start"
     fxFlex="100"
-    fxFlex.gt-md="50">
+    fxFlex.gt-sm="50">
 		<as-card 
 		[title]="cardSimple.title + ' with stuff'"
         [shadow]="1"
@@ -53,11 +53,10 @@
     class="box"
     fxFlexAlign="start"
     fxFlex="100"
-    fxFlex.gt-md="50">
+    fxFlex.gt-sm="50">
         <as-card-image
         [img]="cardImage.img"
         [title]="cardImage.title"
-        [orientation]="'top'"
         [subtitle]="cardImage.subtitle"
         [fab]="cardImage.fab"
         [optionsLeft]="cardImage.optionsLeft"
@@ -78,7 +77,7 @@
     class="box"
     fxFlexAlign="start"
     fxFlex="100"
-    fxFlex.gt-md="50">
+    fxFlex.gt-sm="50">
         <as-card-image
         [img]="'https://upload.wikimedia.org/wikipedia/en/f/fa/Linkin_Park%2C_The_Hunting_Party%2C_album_art_final.jpg'"
         [title]="cardImage.title"
@@ -100,11 +99,28 @@
         [actions]="cardData.actions"
         [shadow]=1
         ></as-card-data>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-data
+        [icon]="'android'"
+        [title]="cardData.title"
+        [subtitle]="cardData.subtitle"
+        [actions]="cardData.actions"
+        [shadow]=1
+        ></as-card-data>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-toggle
+        [icon]="cardToggle.icon"
+        [title]="cardToggle.title"
+        [toggle]="cardToggle.toggle"
+        [shadow]="1">
+        </as-card-toggle>
     </div>
     <div class="box"
     fxFlexAlign="start"
     fxFlex="100"
-    fxFlex.gt-md="50">
+    fxFlex.gt-sm="50">
         <as-card-bg 
         [title]="cardBg.title"
         [subtitle]="cardBg.subtitle"
@@ -121,7 +137,7 @@
     class="box"
     fxFlexAlign="start"
     fxFlex="100"
-    fxFlex.gt-md="50">
+    fxFlex.gt-sm="50">
         <as-card-illustration
         [img]="cardImage.img"
         [title]="cardImage.title"
@@ -137,10 +153,40 @@
         >
 		</as-card-illustration>
     </div>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="50"
+        fxFlex.gt-sm="25">
+        <as-card-number
+        [shadow]=1
+        [customClass]="'card--kpis'"
+        [value]="cardNumber.value"
+        [label]="cardNumber.label"
+        [pipe]="cardNumber.pipe"
+        [countTo]="cardNumber.countTo"
+        [size]="cardNumber.size">
+        </as-card-number>
+    </div>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="50"
+    fxFlex.gt-sm="25">
+        <as-card-number
+        [shadow]=1
+        [customClass]="'card--kpis'"
+        [value]="32000000"
+        [pipe]="cardNumber.pipe"
+        [countTo]="cardNumber.countTo"
+        [label]="cardNumber.label"
+        [size]="cardNumber.size">
+        </as-card-number>
+    </div>
     <div class="box"
     fxFlexAlign="start"
     fxFlex="100"
-    fxFlex.gt-md="50">
+    fxFlex.gt-sm="50">
             <as-card-profile
             [bg]="cardProfile.bg"
             [avatar]="cardProfile.avatar"

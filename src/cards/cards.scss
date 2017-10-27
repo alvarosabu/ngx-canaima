@@ -6,7 +6,8 @@
 .card {
     background: $as-card-bg;
     border-radius: $as-card-border-radius;
-    width: 100%;   
+    width: 100%;
+    flex-direction: column;   
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
     }
@@ -29,6 +30,23 @@
         order: 2;
         flex: 15;
         color: $as-card-header-color;
+    }
+    &__icon {
+        padding: $as-card-data-padding;
+        background: $as-card-data-thumb-bg;
+        min-width: 69px;
+        display: flex;
+        justify-content: center;
+        transition: all ease-in-out 1s;
+        
+        i {
+            width: 100%;
+            text-align: center;
+            font-size: $as-card-data-icon-font-size;
+            color: $as-card-data-icon-color;
+            background:  $as-card-data-icon-bg;
+            border-radius:  $as-card-data-icon-border-radius;
+        }
     }
     &__options {
         height: 65px;
@@ -123,6 +141,43 @@
             color: $gray;
         }
     }
+    &__value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $as-card-number-value-font-size;
+        font-weight: $as-card-number-value-font-weigth;
+        letter-spacing: 2.6px;
+        text-align: center;
+        color: $as-card-number-value-color;
+        &--sm {
+            font-size: 36px;
+        }
+        &--md {
+            font-size: $as-card-number-value-font-size;
+        }
+        &--lg {
+            font-size: 75px;
+        }
+        
+    }
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: $as-card-number-label-font-weigth;
+        letter-spacing: 2.6px;
+        text-align: center;
+        &--sm {
+            font-size: 16px;
+        }
+        &--md {
+            font-size: $as-card-number-label-font-size;
+        }
+        &--lg {
+            font-size: 24px;
+        }
+    }
     &__thumb {
         background: $gray-light $as-card-data-thumb-bg;
         color: $as-card-data-thumb-color;
@@ -164,7 +219,24 @@
             margin-top: -28px;
         }
     }
-    
+    &--toggle {
+        display: flex;
+        flex-direction: row;
+        &__title {
+            font-size: 1.8rem;
+            margin-bottom: 2px !important;
+        }
+        &__subtitle {
+            font-size: 1.4rem;
+            color: $gray;
+        }
+        &__toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+    }
     &--noBg {
         background: none !important;
         .card__thumb, .card__content, .card--data__actions {
@@ -396,12 +468,27 @@
             align-items: center;
             flex: 1;
             padding: 16px;
-            i {
+            .btn {
+                padding: 0;
                 font-size: $as-card-actions-font-size;
                 margin-left: 1rem;
                 cursor: pointer;
                 color: $as-card-data-actions-color !important;
             }
         }
+    }
+    &--number {
+        .card__body {
+            padding: 1rem;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+        h4 {
+            font-size: 14px;
+        }
+        
     }
 }

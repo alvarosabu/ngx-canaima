@@ -1,3 +1,57 @@
+## 0.7.1 - 2017-10-21
+### Added
+- Icon on Card Data instead of img
+- Card Toggle
+- Toggle Component
+- Toolbar variables for border
+- Vertical Align option to Profile Dropdown
+- Added flex align to badge counter
+- Horizontal Scroll for Large Segments
+#Fixed
+- Card Image orientation
+- Variables
+- Directives slow re-render
+- List item actions undefined predefined
+- Capacity to override badge variables
+## 0.7.0 - 2017-10-07
+### Added
+- Format Case Service methods with recursiveness
+- Content Placeholder Directive for Multiple types of Cards
+- Profile Dropdown with custom Menu
+- Spacer Component
+## 0.6.0 - 2017-10-04
+### Added
+- Number si prefix Pipe
+- Card Number component
+- Searchbar component
+- Loaders and spinners
+- Empty State component
+- Toolbar menuSide option
+- Add anchor capability to navmenu items with Page Scroll
+- Add external url capaibility to navmenu items
+### Fixed
+- Navmenu select
+- Material variables by default
+## 0.5.1 - 2017-09-21
+### Fixed
+- Material variables by default
+## 0.5.0 - 2017-09-20
+### Added
+- Chip Component
+- Badge Icon Component
+- Fab Button Component
+- Fab Button menu circle, horizontal and vertical
+- Modal Component
+## 0.4.2 - 2017-09-15
+### Added
+- Transparent and diverse navbar colors
+- Buttons directives onChanges function
+- btn-plain and btn-circle classes
+### Changes
+- Actions now support buttons attributes
+- Button directive inside other components
+### Fixed
+- Brand toolbar action override
 ## 0.4.1 - 2017-09-13
 ### Fixed
 - Export Action Dropdown

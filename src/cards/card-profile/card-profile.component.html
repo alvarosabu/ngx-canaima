@@ -7,21 +7,42 @@
         <div class="card__options card__options--left" *ngIf="optionsLeft?.length > 0">
             <div class="card__option" *ngFor="let option of optionsLeft"
             (click)="option.callback()">
-                <button class="btn btn-link" (click)="option.callback()">
-                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
+                <button
+                asIconButton
+                [prefix]="option?.prefix"
+                [icon]="option?.icon"
+                [color]="option?.color"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
+                (click)="option.callback()">
                 </button>
             </div>
         </div> 
         <div class="card__options card__options--right" *ngIf="optionsRight?.length > 0">
             <div class="card__option" [hidden]="option.dropdown !== undefined" *ngFor="let option of optionsRight"
             (click)="option.callback()">
-                <button class="btn btn-link" (click)="option.callback()">
-                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
+                <button
+                asIconButton
+                [prefix]="option?.prefix"
+                [icon]="option?.icon"
+                [color]="option?.color"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
+                (click)="option.callback()">
                 </button>
             </div>
             <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">
-                <button dropdownToggle class="btn btn-link dropdown-toggle">
-                    <i class="{{option.prefix}} {{option.prefix}}-{{option.icon}}"></i>
+                <button 
+                dropdownToggle
+                asIconButton
+                [prefix]="option?.prefix"
+                [icon]="option?.icon"
+                [outline]="option?.outline"
+                [rounded]="option?.rounded"
+                [size]="option?.size"
+                class="dropdown-toggle">
                 </button>
                 <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">
                     <li *ngFor="let choice of option.dropdown">
@@ -57,10 +78,19 @@
         <div class="card__actions"
         [ngStyle]="{'justify-content': footer.justify,
         'align-items': footer.alignment}">
-            <button class="btn {{action?.customClass}} card__action"  
+            <button
             *ngFor="let action of actions" 
+            asIconButton
+            class="card__action"
+            [prefix]="action.prefix"
+            [icon]="action.active ? action.iconActive : action.icon"
+            [color]="action.color"
+            [outline]="action.outline"
+            [rounded]="action.rounded"
+            [size]="action.size"
+            [ngClass]="action?.customClass"
             [disabled]="action.disabled" 
-            (click)="action.callback()">
+            (click)="actionCallback(action)">
                 {{action.label}}
             </button>
         </div>

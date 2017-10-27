@@ -20,8 +20,8 @@
     <div
         class="box"
         fxFlexAlign="start"
-        fxFlex="50"
-        fxFlex.lt-md="100">
+        fxFlex="100"
+        fxFlex.gt-sm="50">
         <as-card 
         [title]="'Normal Form'"
         [shadow]="1">
@@ -37,8 +37,8 @@
     <div
     class="box"
     fxFlexAlign="start"
-    fxFlex="50"
-    fxFlex.lt-md="100">
+    fxFlex="100"
+    fxFlex.gt-sm="50">
         <as-card 
         [title]="'Float Label Form'"
         [shadow]="1">
@@ -46,6 +46,7 @@
                 <as-dynamic-form
                 [inputs]="inputs"
                 [style]="'float'"
+                [reset]="true"
                 (onSubmit)="submitForm($event)"
                 [actions]="normalForm.actions"
                 ></as-dynamic-form>

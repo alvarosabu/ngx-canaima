@@ -1,0 +1,13 @@
+<div class="card card--toggle shadow-{{shadow}} {{customClass}}">
+    <div class="card__icon" >
+        <i class="{{prefix}} {{prefix}}-{{icon}}"></i>
+    </div>
+    <div class="card__content">
+       <h5 class="card--toggle__title">{{title}}</h5>
+       <span class="card--toggle__subtitle">{{toggle.value}}</span>
+    </div>
+    <div class="card--toggle__toggle">
+        <as-toggle
+        [(toggle)]="toggle"></as-toggle>
+    </div>
+</div>

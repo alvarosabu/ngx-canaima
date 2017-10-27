@@ -1,3 +1,8 @@
+import { ProfileDropdownModule } from './profile-dropdown/profile-dropdown.module';
+import { ContentPlaceholderModule } from './content-placeholder/content-placeholder.module';
+import { MiscModule } from './misc/misc.module';
+
+
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsModule } from './cards/cards.module';
@@ -10,11 +15,20 @@ import { HeaderModule } from './header/header.module';
 import { NavmenuModule } from './navmenu/navmenu.module';
 import { SegmentModule } from './segment/segment.module';
 import { ButtonsModule } from './buttons/buttons.module';
+import { ChipModule } from './chip/chip.module';
+import { BadgesModule } from './badges/badges.module';
+import { FabsModule } from './fabs/fabs.module';
+import { AsModalModule } from './modals/modals.module';
+import { SearchBarModule } from './search-bar/search-bar.module';
+import { EmptyStateModule } from './empty-state/empty-state.module';
+import { LoadingModule } from
+'./loading/loading.module';
+import { PreviewModule } from './preview/preview.module';
+import { MediaUploaderModule } from './media-uploader/media-uploader.module';
 
 export * from './action';
 export * from './action-dropdown';
-export * from './bg-image-preview.directive';
-export * from './image-preview.directive';
+export * from './preview';
 export * from './cards';
 export * from './forms';
 export * from './lists';
@@ -23,33 +37,68 @@ export * from './segment';
 export * from './navmenu';
 export * from './toolbar';
 export * from './header';
+export * from './chip';
+export * from './badges';
+export * from './fabs';
+export * from './modals';
+export * from './search-bar';
+export * from './loading';
+export * from './empty-state';
+export * from './misc';
+export * from './profile-dropdown';
+export * from './validation';
+export * from './toggle';
 
 @NgModule({
   imports: [
     CommonModule,
     CardsModule,
     ListsModule,
+    PreviewModule,
     DynamicFormsModule,
     GridListsModule,
     ToolbarModule,
     NavmenuModule,
     HeaderModule,
     SegmentModule,
-    ButtonsModule
+    ButtonsModule,
+    ChipModule,
+    BadgesModule,
+    FabsModule,
+    AsModalModule,
+    SearchBarModule,
+    LoadingModule,
+    EmptyStateModule,
+    MediaUploaderModule,
+    MiscModule,
+    ContentPlaceholderModule,
+    ProfileDropdownModule
   ],
   declarations: [
-
+    
   ],
   exports: [
     CardsModule,
     ListsModule,
+    PreviewModule,
     DynamicFormsModule,
     GridListsModule,
     ToolbarModule,
     NavmenuModule,
     HeaderModule,
     SegmentModule,
-    ButtonsModule
+    ButtonsModule,
+    ChipModule,
+    BadgesModule,
+    FabsModule,
+    AsModalModule,
+    SearchBarModule,
+    LoadingModule,
+    EmptyStateModule,
+    MediaUploaderModule,
+    MiscModule,
+    ContentPlaceholderModule,
+    ProfileDropdownModule
   ]
 })
 export class NgxCanaimaModule {

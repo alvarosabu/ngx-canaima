@@ -10,7 +10,9 @@ export class ActionDropdown {
     constructor(
         label = null,
         dropdown: Action[] = [
-            new Action('Action 1')
+            new Action({
+                label: 'Action 1'
+            })
         ],
         icon = 'dots-vertical',
         iconActive= null,

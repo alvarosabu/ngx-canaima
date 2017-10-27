@@ -1,0 +1,11 @@
+<div class="circle-fab circle-fab--{{btnClass}}" [ngClass]="{'circle-fab--active': active, 'circle-fab--bg': bg}">
+    <div class="btn btn-fab btn-{{btnClass}} btn-fab-sm" (click)="openCircle()">
+        <i class="mdi mdi-settings"></i>
+    </div>
+    <div class="circle-fab__menu" [hidden]="menu?.length === 0">
+        <i class="circle-fab__item btn btn-fab-mini mdi mdi-{{item.icon}}" [ngStyle]="{
+            'background-color': item.bg,
+            'color': item.color
+        }" *ngFor="let item of menu" (click)="item.callback()"></i>
+    </div>
+</div>

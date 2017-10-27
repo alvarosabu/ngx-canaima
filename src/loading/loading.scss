@@ -1,0 +1,453 @@
+/*------------------------------------*\
+    Loading
+\*------------------------------------*/
+@import '../_effects.scss';
+@import '../_variables.scss';
+
+.loading-backdrop {
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $as-loader-backdrop-bg;
+  height: 100%;
+  width: 100%;
+}
+.loading-container {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &--solid {
+    background: $as-loader-container-bg;
+    border-radius: $as-loader-container-border-radius;
+    padding: $as-loader-container-padding;
+    box-shadow: $as-loader-container-box-shadow;
+  }
+}
+.loading-text {
+  margin-left: 1rem;
+}
+.loading {
+  width: $as-loader-size;
+  height: $as-loader-size;
+  
+  &--donnut {
+    border-radius: $as-loader-donnut-border-radius;
+    position: relative;
+    text-indent: -9999em;
+    opacity: $as-loader-donnut-opacity;
+    border-top: $as-loader-donnut-border-size $as-loader-donnut-border-type $as-loader-donnut-border-color;
+    border-right: $as-loader-donnut-border-size $as-loader-donnut-border-type $as-loader-donnut-border-color;
+    border-bottom: $as-loader-donnut-border-size $as-loader-donnut-border-type $as-loader-donnut-border-color;
+    border-left: $as-loader-donnut-border-size $as-loader-donnut-border-type darken($as-loader-donnut-border-color, 10%);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: spin $as-loader-donnut-animation-duration infinite $as-loader-donnut-animation-time-function;
+    animation: spin $as-loader-donnut-animation-duration infinite $as-loader-donnut-animation-time-function;
+  }
+  &--rotateplane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: $as-loader-rotateplane-bg;
+    animation: rotatePlane $as-loader-rotateplane-animation-duration infinite $as-loader-rotateplane-animation-time-function;
+  }
+  &--circle {
+    border-radius: $as-loader-circle-border-radius;
+    border-top: $as-loader-circle-border-size $as-loader-circle-border-type transparent;
+    border-right: $as-loader-circle-border-size $as-loader-circle-border-type $as-loader-circle-border-color;
+    border-bottom: $as-loader-circle-border-size $as-loader-circle-border-type $as-loader-circle-border-color;
+    border-left: $as-loader-circle-border-size $as-loader-circle-border-type $as-loader-circle-border-color;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation:  spin $as-loader-circle-animation-duration infinite $as-loader-circle-animation-time-function;
+    animation: spin $as-loader-circle-animation-duration infinite $as-loader-circle-animation-time-function;
+  }
+  &--bars {
+    height: $as-loader-bars-height;
+    &,
+    &:before,
+    &:after {
+      background: $as-loader-bars-color;
+      -webkit-animation: bars $as-loader-bars-animation-duration infinite $as-loader-bars-animation-time-function;
+      animation: bars $as-loader-bars-animation-duration infinite $as-loader-bars-animation-time-function;
+      width: $as-loader-bars-width;
+      height: $as-loader-bars-height;
+      border-radius: $as-loader-bars-border-radius;
+    }
+    & {
+      color: $as-loader-bars-color;
+      text-indent: -9999em;
+      margin: 1px auto;
+      position: relative;
+      font-size: 11px;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      content: '';
+    }
+    &:before {
+      left: -($as-loader-bars-gap);
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+    &:after {
+      left: $as-loader-bars-gap;
+    }
+  }
+  &--dots-circle {
+    color: $as-loader-dots-circle-color;
+    font-size: $as-loader-dots-circle-font-size;
+    border-radius: $as-loader-dots-circle-border-radius;
+    text-indent: -9999em;
+    -webkit-animation: dotsCircle $as-loader-dots-circle-animation-duration infinite $as-loader-dots-circle-animation-time-function;
+    animation: dotsCircle $as-loader-dots-circle-animation-duration infinite $as-loader-dots-circle-animation-time-function;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  &--location {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &:before, &:after{
+        position: absolute;
+        content: "";
+    }
+    
+    &:before{
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+        border-radius: 100% 100% 100% 0;
+        box-shadow: 0px 0px 0px 2px $as-loader-location-color;
+        -webkit-animation: mapping $as-loader-location-animation-duration $as-loader-location-animation-time-function infinite;
+          -moz-animation: mapping $as-loader-location-animation-duration $as-loader-location-animation-time-function infinite;
+                animation: mapping $as-loader-location-animation-duration $as-loader-location-animation-time-function infinite;
+        -webkit-transform: rotate(-46deg);
+          -moz-transform: rotate(-46deg);
+                transform: rotate(-46deg);
+    }
+    &:after{
+        width: 30px;
+        height: 10px;
+        border-radius: 100%;
+        opacity: .4;
+        background-color: $as-loader-location-color;
+        top: 24px;
+        z-index: 1;
+    }
+  }
+  &--orbit {
+    width: $as-loader-orbit-size;
+    height: $as-loader-orbit-size;
+    position: relative;
+    border: $as-loader-orbit-border-size solid rgba($as-loader-orbit-color, $as-loader-orbit-border-opacity);
+    border-radius: $as-loader-orbit-border-radius;
+    -webkit-animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+            animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+
+    &:before, &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      border-radius: $as-loader-orbit-border-radius;
+    }
+    &:before {
+      width: $as-loader-orbit-dot;
+      height: $as-loader-orbit-dot;
+      background: $as-loader-orbit-color;
+      -webkit-animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+              animation: spin $as-loader-orbit-animation-duration $as-loader-orbit-animation-time-function infinite;
+    }
+    &:after {
+      width: $as-loader-orbit-dot / 2;
+      height: $as-loader-orbit-dot / 2;
+      top: $as-loader-orbit-dot;
+      left: $as-loader-orbit-dot;
+      background: $as-loader-orbit-color;
+      -webkit-transform-origin: -$as-loader-orbit-dot / 2 -$as-loader-orbit-dot / 2;
+              transform-origin: -$as-loader-orbit-dot / 2 -$as-loader-orbit-dot / 2;
+      -webkit-animation: spin $as-loader-orbit-animation-duration / 4 $as-loader-orbit-animation-time-function infinite;
+              animation: spin $as-loader-orbit-animation-duration / 4 $as-loader-orbit-animation-time-function infinite;
+    }
+    
+  }
+  &--dual-ring {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    span {
+      position: absolute;
+      width: $as-loader-dual-ring-size;
+      height: $as-loader-dual-ring-size;
+      border-radius: $as-loader-dual-ring-border-radius;
+      border: $as-loader-dual-ring-border-size solid;
+      border-color: $as-loader-dual-ring-color transparent $as-loader-dual-ring-color transparent;
+      -webkit-animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+      animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+    }
+  }
+  &--double-dual-ring {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    .first-ring, .second-ring {
+      position: absolute;
+      border-radius: $as-loader-dual-ring-border-radius;
+      border: $as-loader-dual-ring-border-size solid;
+    }
+    .first-ring {
+      width: $as-loader-dual-ring-size;
+      height: $as-loader-dual-ring-size;
+      border-color: $as-loader-dual-ring-color transparent $as-loader-dual-ring-color transparent;
+      -webkit-animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+      animation: spin $as-loader-dual-ring-animation-duration $as-loader-dual-ring-animation-time-function infinite;
+    }
+    .second-ring {
+      top: $as-loader-dual-ring-size / 6.2;
+      left: $as-loader-dual-ring-size / 2.4;
+      width: $as-loader-dual-ring-size / 1.4;
+      height: $as-loader-dual-ring-size / 1.4;
+      border-color: $as-loader-dual-ring-color transparent $as-loader-dual-ring-color transparent;
+      -webkit-animation: counter-spin $as-loader-dual-ring-animation-duration  $as-loader-dual-ring-animation-time-function infinite;
+      animation: counter-spin $as-loader-dual-ring-animation-duration  $as-loader-dual-ring-animation-time-function infinite;
+      transform: rotate(15deg);
+    }
+  }
+  &--ring-retard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+      position: absolute;
+      width: $as-loader-ring-retard-size;
+      height: $as-loader-ring-retard-size;
+      border-radius: $as-loader-ring-retard-border-radius;
+      border: $as-loader-ring-retard-border-size solid;
+      border-color: $as-loader-ring-retard-color transparent transparent transparent;
+      animation: spin $as-loader-ring-retard-animation-duration $as-loader-ring-retard-animation-time-function infinite;
+    }
+    div:nth-child(2) {
+      animation-delay: .195s;
+    }
+    div:nth-child(3) {
+      animation-delay: .39s;
+    }
+    div:nth-child(4) {
+      animation-delay: .585s;
+    }
+  }
+  &--dots {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    .dot {
+      &,
+      &:before,
+      &:after {
+        border-radius: $as-loader-dots-border-radius;
+        width: $as-loader-dots-size;
+        height: $as-loader-dots-size;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation: dots $as-loader-dots-animation-duration infinite $as-loader-dots-animation-time-function;
+        animation: dots $as-loader-dots-animation-duration infinite $as-loader-dots-animation-time-function;
+      }
+      & {
+        color: $as-loader-dots-color;
+        font-size: $as-loader-dots-font-size;
+        position: absolute;
+        text-indent: -9999em;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+      }
+      &:before {
+        left: -$as-loader-dots-size * 1.5;
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+      &:after {
+        left: $as-loader-dots-size * 1.5;
+      }
+    }
+  }
+  &--pulse {
+
+    border-radius: $as-loader-pulse-border-radius;
+    line-height: 100px;
+    text-align: center;
+    width: $as-loader-pulse-size;
+    height: $as-loader-pulse-size;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: $as-loader-pulse-border-opacity;
+      background: $as-loader-pulse-color;
+      border-radius: $as-loader-pulse-border-radius;
+      opacity: 0;
+    }
+    
+    &:before {
+      transform: scale(1);
+      animation: pulse $as-loader-pulse-animation-duration infinite $as-loader-pulse-animation-time-function;
+    }
+    
+    &:after {
+      animation: pulse $as-loader-pulse-animation-duration $as-loader-pulse-animation-duration / 2 infinite $as-loader-pulse-animation-time-function;
+    }
+  }
+  &--ios {
+    display: flex;
+    justify-content: center;
+    align-items:  start;
+    .ios {
+      border-radius: $as-loader-ios-border-radius;
+      animation: spin $as-loader-ios-animation-duration infinite steps(8);
+      transform-origin: 50% 50%;
+      @include spinner($color: $as-loader-ios-color);
+    }
+  }
+  &--clock {
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px $as-loader-clock-color;
+    border-radius: $as-loader-clock-border-radius;
+    position: relative;
+    width: $as-loader-clock-size;
+    height: $as-loader-clock-size;
+  &:after, &:before{
+    position: absolute;
+    content:"";
+    background-color: $as-loader-clock-color;
+  }
+  &:after{
+    width: 10px;
+    height: 2px;
+    top: $as-loader-clock-size / 2;
+    left: $as-loader-clock-size / 2;
+    -webkit-transform-origin: 1px 1px;
+      -moz-transform-origin: 1px 1px;
+            transform-origin: 1px 1px;
+    -webkit-animation: minhand $as-loader-clock-animation-duration $as-loader-clock-animation-time-function infinite;
+      -moz-animation: minhand $as-loader-clock-animation-duration $as-loader-clock-animation-time-function infinite;
+            animation: minhand $as-loader-clock-animation-duration $as-loader-clock-animation-time-function infinite;
+  }
+
+  &:before{
+    width: 8px;
+    height: 2px;
+    top: $as-loader-clock-size / 2;
+    left: $as-loader-clock-size / 2;
+    -webkit-transform-origin: 1px 1px;
+      -moz-transform-origin: 1px 1px;
+            transform-origin: 1px 1px;
+    -webkit-animation: hrhand $as-loader-clock-animation-duration * 4 $as-loader-clock-animation-time-function infinite;
+      -moz-animation: hrhand $as-loader-clock-animation-duration * 4 $as-loader-clock-animation-time-function infinite;
+            animation: hrhand $as-loader-clock-animation-duration * 4 $as-loader-clock-animation-time-function infinite;
+    }
+  }
+  &--gplus {
+    /* :not(:required) hides this rule from IE9 and below */
+    &:not(:required) {
+      overflow: hidden;
+      position: relative;
+      text-indent: -9999px;
+      display: inline-block;
+      width: $as-loader-gplus-size;
+      height: $as-loader-gplus-size;
+      background: $as-loader-gplus-bg-1;
+      -moz-border-radius: $as-loader-gplus-size/2;
+      -webkit-border-radius: $as-loader-gplus-size/2;
+      border-radius: $as-loader-gplus-size/2;
+      -moz-transform: rotateZ(90deg);
+      -ms-transform: rotateZ(90deg);
+      -webkit-transform: rotateZ(90deg);
+      transform: rotateZ(90deg);
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -moz-animation: plus-loader-background $as-loader-gplus-animation-duration infinite ease-in-out;
+      -webkit-animation: plus-loader-background $as-loader-gplus-animation-duration infinite ease-in-out;
+      animation: plus-loader-background $as-loader-gplus-animation-duration infinite ease-in-out;
+    }
+    &:not(:required)::after {
+      background: $as-loader-gplus-bg-1;
+      -moz-border-radius: $as-loader-gplus-size/2 0 0 $as-loader-gplus-size/2;
+      -webkit-border-radius: $as-loader-gplus-size/2;
+      border-radius: $as-loader-gplus-size/2 0 0 $as-loader-gplus-size/2;
+      content: '';
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      -moz-transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
+      -webkit-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
+      -moz-animation: plus-loader-top $as-loader-gplus-animation-duration infinite linear;
+      -webkit-animation: plus-loader-top $as-loader-gplus-animation-duration infinite linear;
+      animation: plus-loader-top $as-loader-gplus-animation-duration infinite linear;
+    }
+    &:not(:required)::before {
+      background: #fc6;
+      -moz-border-radius: $as-loader-gplus-size/2 0 0 $as-loader-gplus-size/2;
+      -webkit-border-radius: $as-loader-gplus-size/2;
+      border-radius: $as-loader-gplus-size/2 0 0 $as-loader-gplus-size/2;
+      content: '';
+      position: absolute;
+      right: 50%;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      -moz-transform-origin: 100% 50%;
+      -ms-transform-origin: 100% 50%;
+      -webkit-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
+      -moz-animation: plus-loader-bottom $as-loader-gplus-animation-duration infinite linear;
+      -webkit-animation: plus-loader-bottom $as-loader-gplus-animation-duration infinite linear;
+      animation: plus-loader-bottom $as-loader-gplus-animation-duration infinite linear;
+    }
+  }
+}
+
+

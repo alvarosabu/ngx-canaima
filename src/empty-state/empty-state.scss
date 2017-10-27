@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $Empty-state
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__header {
+        display: flex;
+        flex: 2;
+        justify-content: center;
+        align-content: center;
+    }
+    &__img {
+        width: $as-empty-state-img-width;
+        height: $as-empty-state-img-height;
+        background-size: cover;
+        background-position: center;
+    }
+    &__body {
+        padding: $as-empty-state-padding;
+         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-size: $as-empty-state-title-font-size;
+        text-align: $as-empty-state-title-text-align;
+        color: $gray-light;
+    }
+    &__msg {
+        font-size: $as-empty-state-msg-font-size;
+        text-align: $as-empty-state-msg-text-align;
+        color: $as-empty-state-msg-color;
+        margin: 3rem 0px;
+    }
+}

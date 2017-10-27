@@ -10,12 +10,22 @@
         *ngIf="subtitle">{{subtitle}}</span>
     </div>
     <div class="list-item__side">
-        <div class="list-item__actions" [hidden]="actions?.length === 0">
-            <i 
-            class="{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}"
-            [ngStyle]="{'font-size': action.size + 'px'}"
-            (click)="action.callback(); action.value = ! action.value" 
-            *ngFor="let action of actions" ></i>
+        <div class="list-item__actions" *ngIf="actions">
+            <button
+            *ngFor="let action of actions" 
+            asIconButton
+            class="card__action"
+            [prefix]="action.prefix"
+            [icon]="action.active ? action.iconActive : action.icon"
+            [color]="action.color"
+            [outline]="action.outline"
+            [rounded]="action.rounded"
+            [size]="action.size"
+            [ngClass]="action?.customClass"
+            [disabled]="action.disabled" 
+            (click)="actionCallback(action)">
+                {{action.label}}
+            </button>
         </div>
     </div>
     

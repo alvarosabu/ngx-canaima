@@ -1,0 +1,102 @@
+/*------------------------------------*\
+    $Modal
+\*------------------------------------*/
+@import '../_variables.scss';
+@import '../_mixins.scss';
+@import '../_effects.scss';
+
+.modal {
+    &--sm {   
+        @include breakpoint('epsilon') {
+            width: 30% !important;
+        }
+    }
+    &--md {
+        @include breakpoint('epsilon') {
+            width: 60% !important;
+        }
+    }
+    &--lg {  
+        @include breakpoint('epsilon') {
+            width: 90% !important;
+        }
+    }
+    &__container {
+        background-color: $as-modal-bg;
+        position: relative;
+        border: $as-modal-border $as-modal-border-color;
+        border-radius: $as-modal-border-radius;
+        -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+        background-clip: padding-box;
+        outline: 0;
+    }
+    &__header {
+        background: $as-modal-header-bg;
+        padding: $as-modal-header-padding;
+        border-top: $as-modal-header-border-top;
+        border-bottom: $as-modal-header-border-bottom;
+        border-color: $as-modal-header-border-color;
+    }
+    &__msg {
+        background: $as-modal-msg-bg;
+        padding: $as-modal-msg-padding;
+        border-top: $as-modal-msg-border-top;
+        border-bottom: $as-modal-msg-border-bottom;
+        border-color: $as-modal-msg-border-color;
+    }
+    &__content {
+        img {
+            width: 100%;
+        }
+        background: $as-modal-content-bg;
+        padding: $as-modal-content-padding;
+        border-top: $as-modal-content-border-top;
+        border-bottom: $as-modal-content-border-bottom;
+        border-color: $as-modal-content-border-color;
+    }
+    &__img {
+        width: $as-modal-img-width;
+        height: $as-modal-img-height;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    &__footer {
+        background: $as-modal-footer-bg;
+        padding: $as-modal-footer-padding;
+        border-top: $as-modal-footer-border-top;
+        border-bottom: $as-modal-footer-border-bottom;
+        border-color: $as-modal-footer-border-color;
+    }
+    &__actions {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        flex: 1;
+        padding: 8px;
+    }
+    &__footer {
+        padding: $as-modal-footer-padding;
+        background: $as-modal-footer-bg;
+        border-top: $as-modal-footer-border-top;
+        border-bottom: $as-modal-footer-border-bottom;
+        border-color: $as-modal-footer-border-color;
+        .btn {
+            margin: 0 .5rem;
+        }
+    }
+    .form-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+    }
+    &--center {
+        h4, p {
+            text-align: center;
+        }
+    }
+}

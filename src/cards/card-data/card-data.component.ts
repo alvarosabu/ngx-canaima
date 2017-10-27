@@ -10,6 +10,8 @@ import { Action } from './../../action';
 })
 export class CardDataComponent implements OnInit {
     @Input('img') public img: string;
+    @Input('icon') public icon: string;
+    @Input('prefix') public prefix = 'mdi';
     @Input('title') public title: string;
     @Input('subtitle') public subtitle: string;
     @Input('actions') public actions: Action[];
@@ -19,5 +21,12 @@ export class CardDataComponent implements OnInit {
 
     public ngOnInit() {
         this.hover = false;
-     }
+    }
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }

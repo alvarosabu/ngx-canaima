@@ -1,4 +1,4 @@
-import { Toolbar } from './../../../../src/toolbar/toolbar';
+import { CardToggle } from './../../../../src/cards/card-toggle/card-toggle';
 import {
     Component,
     OnInit,
@@ -12,6 +12,8 @@ import { CardData } from './../../../../src/cards/card-data/card-data';
 import { CardBg } from './../../../../src/cards/card-bg/card-bg';
 import { CardImage } from './../../../../src/cards/card-image/card-image';
 import { Card } from './../../../../src/cards/card/card';
+import { CardNumber } from './../../../../src/cards/card-number/card-number';
+import { Toolbar } from './../../../../src/toolbar/toolbar';
 @Component({
     encapsulation: ViewEncapsulation.None,
     selector: 'cards',
@@ -38,27 +40,53 @@ export class CardsComponent implements OnInit {
             msg: `Venmo banjo semiotics, scenester hexagon beard schlitz` +
                 `chic flannel coloring book portland kickstarter.`,
             actions: [
-                new Action('Action 1'),
-                new Action('Action 2')
+                new Action(
+                {
+                    label: 'Action 1',
+                    color: 'primary',
+                    rounded: true
+                }),
+                new Action(
+                {
+                        label: 'Action Icon',
+                        color: 'primary',
+                        outline: true,
+                        icon: 'android'
+                }),
+                new Action(
+                {
+                        active: false,
+                        icon: 'heart-outline',
+                        iconActive: 'heart',
+                        callback: () => {
+                            console.log('Back');
+                        }
+                })
             ],
             optionsLeft: [
-                new Action(null, () => {
-                    console.log('Back');
-                }, 'chevron-left')
+                new Action({
+                    callback: () => {
+                        console.log('Back');
+                    },
+                    icon: 'chevron-left',
+                })
             ],
             optionsRight: [
                 new ActionDropdown(null,
                     [
-                        new Action('Action 1'),
-                        new Action('Action 2')
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
                     ]),
-                new Action(null, () => {
-                    console.log('Filter');
-                }, 'filter')
+                new Action({
+                    callback: () => {
+                        console.log('Filter');
+                    },
+                    icon: 'filter'
+                })
             ]
         }
     );
-    public cardImage: CardImage = new CardImage(
+     public cardImage: CardImage = new CardImage(
         {
             // tslint:disable-next-line:max-line-length
             img: 'https://s3.favim.com/610/150115/fireworks-heart-hipster-pastel-Favim.com-2386613.jpg',
@@ -67,27 +95,38 @@ export class CardsComponent implements OnInit {
             msg: `Venmo banjo semiotics, scenester hexagon beard schlit` +
             `shoreditch delectus organic shabby chic flannel coloring boo` +
             `portland kickstarter`,
-            fab: new Action(null, () => {
-                console.log('Fab Action');
-            }, 'plus', null, false, 'btn-primary', 'mdi', 'md'),
+            fab: new Action({
+                callback: () => {
+                    console.log('Fab Action');
+                },
+                icon: 'plus',
+                size: 'md',
+                customClass: 'btn-primary'
+            }),
             optionsRight: [
                 new ActionDropdown(null,
                     [
-                        new Action('Action 1'),
-                        new Action('Action 2')
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
                     ]),
-                new Action(null, () => {
-                    console.log('Filter');
-                }, 'filter')
+                    new Action({
+                        callback: () => {
+                            console.log('Filter');
+                        },
+                        icon: 'filter'
+                    })
             ],
             optionsLeft: [
-                new Action(null, () => {
-                    console.log('Back');
-                }, 'chevron-left')
+                new Action({
+                    callback: () => {
+                        console.log('Back');
+                    },
+                    icon: 'chevron-left'
+                })
             ],
             actions: [
-                new Action('Action 1'),
-                new Action('Action 2'),
+                new Action({label: 'Action 1'}),
+                new Action({label: 'Action 12'})
             ],
             footer: {
                 justify: 'flex-end',
@@ -104,21 +143,27 @@ export class CardsComponent implements OnInit {
             optionsRight: [
                 new ActionDropdown(null,
                     [
-                        new Action('Action 1'),
-                        new Action('Action 2')
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
                     ]),
-                new Action(null, () => {
-                    console.log('Filter');
-                }, 'filter')
+                    new Action({
+                        callback: () => {
+                            console.log('Filter');
+                        },
+                        icon: 'filter'
+                    })
             ],
             optionsLeft: [
-                new Action(null, () => {
-                    console.log('Back');
-                }, 'chevron-left')
+                new Action({
+                    callback: () => {
+                        console.log('Back');
+                    },
+                    icon: 'chevron-left'
+                })
             ],
             actions: [
-                new Action('Action 1'),
-                new Action('Action 2'),
+                new Action({label: 'Action 1'}),
+                new Action({label: 'Action 12'})
             ],
             footer: {
                 justify: 'flex-end',
@@ -133,9 +178,13 @@ export class CardsComponent implements OnInit {
             // tslint:disable-next-line:max-line-length
             img: 'https://img06.deviantart.net/29f9/i/2014/018/0/e/hipster_wallpaper_by_bomberbb-d72q9no.png',
             actions: [
-                new Action(null, () => {
-                    console.log('Data action1');
-                  }, 'heart-outline', 'heart', false),
+                new Action({
+                    callback: () => {
+                        console.log('fav');
+                    },
+                    icon: 'heart',
+                    value: false
+                }),
             ]
         });
     public cardProfile: CardProfile = new CardProfile(
@@ -148,9 +197,14 @@ export class CardsComponent implements OnInit {
             msg: `Venmo banjo semiotics, scenester hexagon beard schlit` +
           `shoreditch delectus organic shabby chic flannel coloring boo` +
           `portland kickstarter`,
-            fab: new Action(null, () => {
-                console.log('Fab Action');
-            }, 'plus', null, false, 'btn-primary', 'mdi', 'md'),
+            fab: new Action({
+                callback: () => {
+                    console.log('Fab Action');
+                },
+                icon: 'plus',
+                size: 'md',
+                customClass: 'btn-primary'
+            }),
             stats: [
                 {
                     label: 'Posts',
@@ -167,6 +221,58 @@ export class CardsComponent implements OnInit {
             ]
         }
     );
+    public cardNumber: CardNumber = new CardNumber(
+        {
+            title: 'Hola',
+            pipe: null,
+            value: 50000,
+            label: 'Posts',
+            countTo: {
+                countFrom: 0,
+                step: 30, // How fast in ms
+                duration: 1 // In Seconds
+            },
+            size: 'sm',
+            optionsRight: [
+                new ActionDropdown(null,
+                    [
+                        new Action({label: 'Action 1'}),
+                        new Action({label: 'Action 12'})
+                    ]),
+                    new Action({
+                        callback: () => {
+                            console.log('Filter');
+                        },
+                        icon: 'filter'
+                    })
+            ],
+            optionsLeft: [
+                new Action({
+                    callback: () => {
+                        console.log('Back');
+                    },
+                    icon: 'chevron-left'
+                })
+            ],
+            actions: [
+                new Action({label: 'Action 1'}),
+                new Action({label: 'Action 12'})
+            ],
+        }
+    );
+    public cardToggle: CardToggle = new CardToggle({
+        icon: 'android',
+        title: 'Relay',
+        toggle: {
+            color: 'success',
+            value: false,
+            callback: (value) => {
+                console.log('Hola');
+                /* this.toggleRelay(); */
+                // this.getVoltage();
+            }
+        }
+    });
     constructor(
         private route: ActivatedRoute,
     ) { }

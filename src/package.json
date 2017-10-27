@@ -1,6 +1,6 @@
 {
   "name": "ngx-canaima",
-  "version": "0.1.1",
+  "version": "0.7.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/alvarosaburido/ngx-canaima"
@@ -10,7 +10,12 @@
     "email": "alvaro.saburido@gmail.com"
   },
   "keywords": [
-    "angular"
+    "angular",
+    "angular4",
+    "webpack",
+    "typescript",
+    "bootstrap",
+    "material"
   ],
   "license": "MIT",
   "bugs": {
@@ -22,8 +27,13 @@
   "typings": "ngx-canaima.d.ts",
   "peerDependencies": {
     "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.3.6",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4",
-    "ngx-bootstrap": "^1.8.0"
+    "bootstrap-sass": "^3.3.7",
+    "ngx-bootstrap": "^1.8.0",
+    "@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git",
+    "angular2-counto": "^1.2.3",
+    "ng2-page-scroll": "^4.0.0-beta.11"
   }
 }

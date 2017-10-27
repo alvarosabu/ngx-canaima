@@ -7,6 +7,7 @@
 .toolbar {
   z-index: 3;
   width: 100%;
+  border-bottom: $as-toolbar-border $as-toolbar-border-style $as-toolbar-border-color;
   &--flex {
     .container-fluid {
       display: flex;
@@ -42,15 +43,13 @@
   &__brand, &__burger {
     flex: 2;
     z-index: 3;
+    cursor: pointer;
   }
   &__title {
     font-weight: 500;
     @include breakpoint('reverse-epsilon') {
       text-align: left;
       padding-left: 3rem;
-    }
-    .badge {
-      background-color: darken($brand-primary, 5%);
     }
   }
   &__subtitle {

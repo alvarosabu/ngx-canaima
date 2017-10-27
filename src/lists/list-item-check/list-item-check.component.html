@@ -22,9 +22,22 @@
         <span class="list-item__least"
         *ngIf="least">{{least}}</span>
             <div class="list-item__actions" *ngIf="actions">
-            <i class="{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}"
-            [ngStyle]="{'font-size': action.size + 'px'}"
-            (click)="action.callback(); action.value = ! action.value" *ngFor="let action of actions" ></i>
+                <button 
+                asIconButton
+                [prefix]="action.prefix"
+                [icon]="action.icon"
+                [color]="action.color"
+                [outline]="action.outline"
+                [rounded]="action.rounded"
+                [circle]="action.circle"
+                [size]="action.size"
+                class=" card__action"
+                [ngClass]="action?.customClass"  
+                *ngFor="let action of actions" 
+                [disabled]="action.disabled" 
+                (click)="action.callback()">
+                    {{action.label}} 
+                </button>
         </div>
     </div>
 </div>

@@ -44,17 +44,26 @@
     [ngStyle]="{'justify-content': footer?.justify}">
       <div
       *ngFor="let action of actions">
-        <div *ngIf="!action.value"
-        class="btn btn-primary {{action.customClass}}"
+        <div 
+        asButton *ngIf="!action.value"
+        [color]="action.color"
+        [rounded]="action.rounded"
+        [outline]="action.outline"
+        [ngClass]="action.customClass"
         >
         {{action.label}}
         </div>
         <button
-        class="btn btn-primary"
+        asButton
+        [color]="action.color"
+        [rounded]="action.rounded"
+        [outline]="action.outline"
+        [ngClass]="action.customClass"
         *ngIf="action.value"
         type="submit" >
          {{action.label}}
         </button>
+        
       </div>
     </div>
   </form>

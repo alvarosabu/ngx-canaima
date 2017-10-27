@@ -1,3 +1,4 @@
+import { MediaUploaderService } from './../../../src/media-uploader/media-uploader.service';
 import { NavService } from './core/navmenu/nav.service';
 
 /*
@@ -42,12 +43,13 @@ import { Nav } from './../../../src/navmenu/nav';
 export class AppComponent implements AfterViewInit {
   @ViewChildren('pageContent', { read: ElementRef }) public elements: QueryList<any>;
   constructor(
+    public mediaUploaderService: MediaUploaderService,
     private router: Router,
     private toastyService: ToastyService,
     private toastyConfig: ToastyConfig
   ) {
     this.toastyConfig.theme = 'material';
-
+    this.mediaUploaderService.config();
   }
   public ngAfterViewInit() {
     this.router.events.subscribe((path: any) => {
@@ -56,10 +58,8 @@ export class AppComponent implements AfterViewInit {
   }
   public toolbarCheck() {
     setTimeout(() => {
-      console.log(this.elements);
       this.elements.forEach((element) => {
         const toolbars = element.nativeElement.getElementsByClassName('toolbar');
-        console.log(toolbars);
         if (toolbars.length > 1) {
           toolbars[0].hidden = true;
         }else {
