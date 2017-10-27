@@ -28,4 +28,11 @@ export class ListItemComponent {
         this.onSelected.emit(this.index);
         this.isChecked = !this.isChecked;
     }
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }
