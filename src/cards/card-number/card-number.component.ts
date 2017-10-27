@@ -33,5 +33,11 @@ export class CardNumberComponent {
         justify: 'flex-end',
         alignment: 'center'
     };
-
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }

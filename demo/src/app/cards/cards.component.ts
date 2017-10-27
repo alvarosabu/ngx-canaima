@@ -56,9 +56,11 @@ export class CardsComponent implements OnInit {
                 new Action(
                 {
                         active: false,
-                        icon: 'heart-ouline',
+                        icon: 'heart-outline',
                         iconActive: 'heart',
-                        color: 'primary'
+                        callback: () => {
+                            console.log('Back');
+                        }
                 })
             ],
             optionsLeft: [

@@ -58,6 +58,9 @@ export class AsIconButtonDirective implements OnInit, OnChanges {
                   } else {
                     if (key === 'color') {
                         this.addClass(`btn-${changes[key].currentValue}`, `btn-${changes[key].previousValue}`)
+                    }else if (key === 'icon') {
+                        this.removeIcon();
+                        this.appendIcon();
                     }else if (key === 'outline') {
                         let isOutline = changes[key].currentValue;
                         this.addClass(

@@ -23,4 +23,11 @@ export class CardIllustrationComponent {
     @Input('optionsRight') public optionsRight: any;
     @Input('shadow') public shadow: string;
     @Input('actions') public actions: Action[];
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }

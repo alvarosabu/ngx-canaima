@@ -62,7 +62,7 @@
             <ng-content selector=".card__content" ></ng-content>
         </div>
         <p class="card__msg" 
-        *ngIf="cardContent.children.length == 0">
+        *ngIf="cardContent.children.length == 0 && msg">
             {{msg}}
         </p>
         
@@ -84,8 +84,8 @@
             [size]="action.size"
             [ngClass]="action?.customClass"
             [disabled]="action.disabled" 
-            (click)="action.callback()">
-                {{action.label}} 
+            (click)="actionCallback(action)">
+                {{action.label}}
             </button>
         </div>
     </div>

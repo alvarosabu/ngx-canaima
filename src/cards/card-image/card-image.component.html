@@ -77,7 +77,7 @@ shadow-{{shadow}}
                 <ng-content selector=".card__content" ></ng-content>
             </div>
             <p class="card__msg" 
-            *ngIf="cardContent.children.length == 0">
+            *ngIf="cardContent.children.length == 0 && msg">
                 {{msg}}
             </p>
         </div>
@@ -86,19 +86,19 @@ shadow-{{shadow}}
             <div class="card__actions" 
             [ngStyle]="{'justify-content': footer.justify,
             'align-items': footer.alignment}">
-                <button 
+                <button
+                *ngFor="let action of actions" 
                 asIconButton
+                class="card__action"
                 [prefix]="action.prefix"
-                [icon]="action.icon"
+                [icon]="action.active ? action.iconActive : action.icon"
                 [color]="action.color"
                 [outline]="action.outline"
                 [rounded]="action.rounded"
                 [size]="action.size"
                 [ngClass]="action?.customClass"
-                class=" card__action"  
-                *ngFor="let action of actions" 
                 [disabled]="action.disabled" 
-                (click)="action.callback()">
+                (click)="actionCallback(action)">
                     {{action.label}}
                 </button>
             </div>
