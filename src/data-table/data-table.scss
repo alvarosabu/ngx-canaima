@@ -1,7 +1,8 @@
 /*------------------------------------*\
     $Data-table
 \*------------------------------------*/
-
+$flex-basis: 15%;
+$flex-rest: 20%;
 @import '../_variables.scss';
 @import '../_mixins.scss';
 
@@ -17,15 +18,15 @@
         color: $gray;
         border-bottom: 1px solid lightgray;
     }
-    &__headers:nth-child(2) {
+    &__headers:nth-child(1) {
         text-align: left;
-        flex-basis: 5%;
+         flex-basis: $flex-basis;
     }
-    &__headers:nth-child(3) {
-        flex-basis: 5%;
+    &__headers:nth-child(2) {
+        flex-basis: $flex-basis;
     }
     &__headers {
-        flex-basis: 15%;
+        flex-basis: $flex-rest;
         text-align: right;
         &--checkbox {
             flex-basis: 4%;
@@ -43,15 +44,15 @@
         align-items: center;
         border-bottom: 1px solid lightgray;
     }
-    &__column:nth-child(2) {
+    &__column:nth-child(1) {
         text-align: left;
-        flex-basis: 5%;
+        flex-basis: $flex-basis;
     }
-    &__column:nth-child(3) {
-        flex-basis: 5%;
+    &__column:nth-child(2) {
+        flex-basis: $flex-basis;
     }
     &__column {
-        flex-basis: 15%;
+        flex-basis: $flex-rest;
         text-align: right;
         &--checkbox {
             flex-basis: 4%;

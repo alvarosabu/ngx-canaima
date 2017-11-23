@@ -7,6 +7,7 @@ import { ROUTES } from './datatable.routes';
 import { DatatableActivityComponent } from './datatable.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { BalanceService } from './balance.service';
 @NgModule({
     imports: [
         SharedModule,
@@ -16,6 +17,8 @@ import { SharedModule } from '../shared/shared.module';
     declarations: [
         DatatableActivityComponent
     ],
-    providers: [],
+    providers: [
+        BalanceService
+    ],
 })
 export class DatatableActivityModule { }

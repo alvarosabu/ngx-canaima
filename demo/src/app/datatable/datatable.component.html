@@ -12,12 +12,27 @@
     </div>
     <div class="right-content"></div>
 </as-toolbar>
-<div class="container-fluid has-toolbar">
-    <div class="frow">
-        <div class="fcol-xs">
-            <div class="box">
-             
+<div class="container-fluid has-toolbar"
+    fxLayout="row"
+    fxFlexAlign="start start"
+    fxLayoutWrap>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="100">
+        <as-card
+            [customClass]="'card--nopadding'"
+            [shadow]=0>
+            <div class="card__content" >
+                <as-data-table
+                [data]="balanceList"
+                [headers]="fields"
+                [customClass]="'data-table--inverse'"
+                [height]="320"
+                [scroll]="true"
+                (onRowSelected)="onRowSelected($event)">
+                </as-data-table>
             </div>
-        </div>
+        </as-card>
     </div>
 </div>
