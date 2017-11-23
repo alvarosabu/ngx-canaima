@@ -1,0 +1,34 @@
+<div class="data-table" [ngStyle]="{'height': height + 'px'}"
+[ngClass]="{'data-table--scrollable': scroll}">
+    <div class="data-table__header">
+        <div class="data-table__headers data-table__headers--checkbox">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" [checked]="isChecked" (click)="selectAll()">
+                    
+                </label>
+            </div>
+        </div>
+        <div class="data-table__headers" *ngFor="let head of headers" (click)="sortBy(head)">
+            <i class="mdi" *ngIf="head.sort" [ngClass]="head.order ? 'mdi-arrow-down': 'mdi-arrow-up'"></i>
+            {{head.alias}}
+            <span class="data-table__unit" *ngIf="head.unit"> ({{head.unit}})</span>
+            
+        </div>
+    </div>
+    <div class="data-table__body">
+        <div class="data-table__row" *ngFor="let row of data">
+             <div class="data-table__column data-table__column--checkbox">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" [checked]="row.isChecked" (click)="row.isChecked= true">
+                        
+                    </label>
+                </div>
+            </div>
+            <div class="data-table__column {{head.customClass}}" [ngClass]="head.signColored && checkSignClass(row[head.key])" *ngFor="let head of headers">
+            {{row[head.key]}}
+            </div>
+        </div>
+    </div>
+</div>

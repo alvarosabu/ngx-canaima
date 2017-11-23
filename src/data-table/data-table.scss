@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    $Data-table
+\*------------------------------------*/
+
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+.data-table {
+    width: 100%;
+    &--scrollable {
+        overflow-y: scroll;
+    }
+    &__header {
+        display: flex;
+        height: 56px;
+        align-items: center;
+        color: $gray;
+        border-bottom: 1px solid lightgray;
+    }
+    &__headers:nth-child(2) {
+        text-align: left;
+        flex-basis: 5%;
+    }
+    &__headers:nth-child(3) {
+        flex-basis: 5%;
+    }
+    &__headers {
+        flex-basis: 15%;
+        text-align: right;
+        &--checkbox {
+            flex-basis: 4%;
+            .checkbox {
+                display: flex !important;
+            }
+        }
+    }
+    &__body {
+        width: 100%;
+    }
+    &__row {
+        display: flex;
+        height: 46px;
+        align-items: center;
+        border-bottom: 1px solid lightgray;
+    }
+    &__column:nth-child(2) {
+        text-align: left;
+        flex-basis: 5%;
+    }
+    &__column:nth-child(3) {
+        flex-basis: 5%;
+    }
+    &__column {
+        flex-basis: 15%;
+        text-align: right;
+        &--checkbox {
+            flex-basis: 4%;
+            .checkbox {
+                display: flex !important;
+            }
+        }
+        &--secondary {
+            color: $brand-secondary;
+        }
+        &--balanced {
+            color: $brand-success;
+        }
+        &--assertive {
+            color: $brand-danger;
+        }
+    }
+}
