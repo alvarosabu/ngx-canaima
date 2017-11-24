@@ -26,7 +26,7 @@
              class="data-table__column data-table__column--checkbox">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" [checked]="row.isChecked" (click)="row.isChecked= true">
+                        <input type="checkbox" [checked]="row.isChecked" (click)="selectRow(row)">
                         
                     </label>
                 </div>

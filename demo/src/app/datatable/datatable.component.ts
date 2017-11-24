@@ -78,4 +78,10 @@ export class DatatableActivityComponent implements OnInit {
             this.balanceList = res;
         });
     }
+    /**
+     * selectRow
+     */
+    public selectRow(e: any) {
+        console.log('Row Selected', e);
+    }
 }

@@ -5,7 +5,8 @@ import {
     Output,
     OnChanges,
     SimpleChanges,
-    ViewEncapsulation
+    ViewEncapsulation,
+    EventEmitter
 } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
@@ -21,13 +22,13 @@ export class DataTableComponent implements OnChanges {
     @Input('height') public height: string;
     @Input('scroll') public scroll: string;
     @Input('customClass') public customClass: string;
+    @Output() public onSelected = new EventEmitter<any>();
     constructor(
        private datePipe: DatePipe
     ) { }
 
     public ngOnChanges(changes: SimpleChanges) {
         const data = changes.data.currentValue;
-        console.log('Data', data );
         if (data) {
             this.headers.forEach((header) => {
                 if (header.pipe === 'date') {
@@ -77,5 +78,22 @@ export class DataTableComponent implements OnChanges {
         } else {
             return 'data-table__column--assertive';
         }
+    }
+    /**
+     * selectAll
+     */
+    public selectAll() {
+        this.data = this.data.map((res) => {
+            res.isChecked = !res.isChecked;
+            return res;
+        })
+        this.onSelected.emit(this.data);
+    }
+    /**
+     * selectRow
+     */
+    public selectRow(row: any) {
+        row.isChecked = !row.isChecked;
+        this.onSelected.emit(row);
     }
 }

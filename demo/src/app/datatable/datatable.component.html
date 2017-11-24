@@ -28,6 +28,7 @@
                 [data]="balanceList"
                 [checkable]="true"
                 [headers]="fields"
+                (onSelected)="selectRow($event)"
                 [customClass]="'data-table--inverse'"
                 [height]="320"
                 [scroll]="true"

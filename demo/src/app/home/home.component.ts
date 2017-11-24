@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         },
         {
             label: 'Data Table',
-            illustration: '/assets/svg/fileupload-illustration.svg',
+            illustration: '/assets/svg/datatable-illustration.svg',
             comming: false,
             slug: 'datatable',
             // tslint:disable-next-line:max-line-length
