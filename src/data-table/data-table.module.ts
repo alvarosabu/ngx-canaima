@@ -4,10 +4,12 @@ import {
   DatePipe
 } from '@angular/common';
 import { DataTableComponent } from './data-table.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FlexLayoutModule
   ],
   declarations: [
     DataTableComponent

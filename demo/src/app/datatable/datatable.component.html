@@ -1,5 +1,5 @@
 <as-toolbar
-    [customClass]="'navbar--primary navbar--subheader'" 
+  [customClass]="'navbar--primary navbar--subheader'" 
   [shadow]=1
   [fixed]=true
 >
@@ -26,6 +26,7 @@
             <div class="card__content" >
                 <as-data-table
                 [data]="balanceList"
+                [checkable]="true"
                 [headers]="fields"
                 [customClass]="'data-table--inverse'"
                 [height]="320"

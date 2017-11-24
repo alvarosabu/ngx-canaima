@@ -16,6 +16,8 @@ import { DatePipe } from '@angular/common';
 export class DataTableComponent implements OnChanges {
     @Input('headers') public headers: any[];
     @Input('data') public data: any[];
+    @Input('checkable') public checkable = false;
+    @Input('prefix') public prefix = 'mdi';
     @Input('height') public height: string;
     @Input('scroll') public scroll: string;
     @Input('customClass') public customClass: string;

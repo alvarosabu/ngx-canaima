@@ -25,17 +25,24 @@ export class DatatableActivityComponent implements OnInit {
     public balanceList: any[] = [];
     public fields: TableField[] = [
         new TableField({
+            key: 'media',
+            alias: 'Media',
+            type: 'img',
+            ordenable: true,
+            basis: 5,
+            responsive: true
+        }),
+        new TableField({
             key: 'concept',
             alias: 'Concept',
             ordenable: true,
-            basis: 15,
-            customClass: 'data-table__column--bold'
+            basis: 15
         }),
         new TableField({
             key: 'amount',
             alias: 'Amount',
             ordenable: true,
-            customClass: 'data-table__column--bold'
+            signColored: true
         }),
         new TableField({
             key: 'balance',
@@ -43,6 +50,15 @@ export class DatatableActivityComponent implements OnInit {
             ordenable: true,
             unit: '€',
             customClass: 'data-table__column--bold'
+        }),
+        new TableField({
+            key: 'date',
+            alias: 'Date',
+            ordenable: true,
+            pipe: 'date',
+            format: 'shortDate',
+            responsive: true,
+            customClass: 'data-table__column--secondary'
         })
     ];
     constructor(

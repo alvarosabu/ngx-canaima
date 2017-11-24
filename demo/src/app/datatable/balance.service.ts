@@ -30,21 +30,24 @@ export class BalanceService {
             concept: 'Descuento concepto 1',
             amount: 300,
             balance: 53.760,
-            date: new Date()
+            date: new Date(),
+            media: 'https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg'
         },
         {
             id: 2,
             concept: 'Descuento concepto 2',
             amount: -150,
             balance: 12.30,
-            date: new Date()
+            date: new Date(),
+            media: 'https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg'
         },
         {
             id: 3,
             concept: 'Descuento concepto 3',
             amount: 450,
             balance: 153.760,
-            date: new Date()
+            date: new Date(),
+            media: 'https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg'
         }
     ];
     constructor(

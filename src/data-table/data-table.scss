@@ -1,8 +1,7 @@
 /*------------------------------------*\
     $Data-table
 \*------------------------------------*/
-$flex-basis: 15%;
-$flex-rest: 20%;
+
 @import '../_variables.scss';
 @import '../_mixins.scss';
 
@@ -12,24 +11,27 @@ $flex-rest: 20%;
         overflow-y: scroll;
     }
     &__header {
+        padding: $as-datatable-header-padding;
         display: flex;
-        height: 56px;
+        height: $as-datatable-header-height;
         align-items: center;
-        color: $gray;
-        border-bottom: 1px solid lightgray;
+        font-weight: $as-datatable-header-font-weight;
+        background: $as-datatable-header-bg;
+        color: $as-datatable-header-color;
+        border-bottom: $as-datatable-header-border $as-datatable-header-border-style $as-datatable-header-border-color;
     }
     &__headers:nth-child(1) {
         text-align: left;
-         flex-basis: $flex-basis;
+         flex: $as-datatable-flex-basis;
     }
     &__headers:nth-child(2) {
-        flex-basis: $flex-basis;
+        flex: $as-datatable-flex-basis;
     }
     &__headers {
-        flex-basis: $flex-rest;
+        flex: $as-datatable-flex-rest;
         text-align: right;
         &--checkbox {
-            flex-basis: 4%;
+            flex: 4% !important;
             .checkbox {
                 display: flex !important;
             }
@@ -40,25 +42,38 @@ $flex-rest: 20%;
     }
     &__row {
         display: flex;
-        height: 46px;
+        height: $as-datatable-row-height;
         align-items: center;
-        border-bottom: 1px solid lightgray;
+        padding: $as-datatable-row-padding;
+        font-weight: $as-datatable-row-font-weight;
+        border-bottom: $as-datatable-row-border $as-datatable-row-border-style $as-datatable-row-border-color;
+    }
+    &__row:nth-child(odd) {
+        background: $as-datatable-row-odd-bg;
+        color: $as-datatable-row-odd-color;
+    }
+    &__row:nth-child(even) {
+        background: $as-datatable-row-even-bg;
+        color: $as-datatable-row-even-color;
     }
     &__column:nth-child(1) {
         text-align: left;
-        flex-basis: $flex-basis;
+        flex: $as-datatable-flex-basis;
     }
     &__column:nth-child(2) {
-        flex-basis: $flex-basis;
+        flex: $as-datatable-flex-basis;
     }
     &__column {
-        flex-basis: $flex-rest;
+        flex: $as-datatable-flex-rest;
         text-align: right;
         &--checkbox {
-            flex-basis: 4%;
+            flex: 4% !important;
             .checkbox {
                 display: flex !important;
             }
+        }
+        &--bold {
+            font-weight: bold;
         }
         &--secondary {
             color: $brand-secondary;
@@ -69,5 +84,15 @@ $flex-rest: 20%;
         &--assertive {
             color: $brand-danger;
         }
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        margin-left: 50%;
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+        transition: all .4s ease-out;
     }
 }

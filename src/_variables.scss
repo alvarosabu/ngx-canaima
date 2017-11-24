@@ -1271,3 +1271,25 @@ $as-toggle-border-style: solid !default;
 $as-toggle-circle-size: 26px !default;
 $as-toggle-circle-border-radius: 100px !default;
 $as-toggle-circle-bg: #fefefe !default;
+
+//== Data Tables
+$as-datatable-header-height: 56px !default;
+$as-datatable-header-bg: transparent !default;
+$as-datatable-header-color: $gray !default;
+$as-datatable-header-padding: 0 !default;
+$as-datatable-header-font-weight: 600 !default;
+$as-datatable-header-border: 1px !default;
+$as-datatable-header-border-color: lightgray !default;
+$as-datatable-header-border-style: solid !default;
+$as-datatable-row-height: 46px !default;
+$as-datatable-row-odd-bg: transparent !default;
+$as-datatable-row-odd-color: $gray !default;
+$as-datatable-row-even-bg: transparent !default;
+$as-datatable-row-even-color: $gray !default;
+$as-datatable-row-padding: 0 !default;
+$as-datatable-row-font-weight: 400 !default;
+$as-datatable-row-border: 1px !default;
+$as-datatable-row-border-color: lightgray !default;
+$as-datatable-row-border-style: solid !default;
+$as-datatable-flex-basis: 15%;
+$as-datatable-flex-rest: 20%;
