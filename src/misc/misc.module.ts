@@ -3,15 +3,18 @@ import { NgModule } from '@angular/core';
 import { NumberSiPrefixPipe } from './number-si-prefix.pipe';
 import { FormatCaseService } from './format-case.service';
 import { SpacerComponent } from './spacer/spacer.component';
+import { KeysPipe } from './keys.pipe';
 
 @NgModule({
     imports: [],
     exports: [
         NumberSiPrefixPipe,
+        KeysPipe,
         SpacerComponent
     ],
     declarations: [
         NumberSiPrefixPipe,
+        KeysPipe,
         SpacerComponent
     ],
     providers: [

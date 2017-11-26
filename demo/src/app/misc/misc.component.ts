@@ -184,6 +184,13 @@ export class MiscComponent implements OnInit {
             ]
         }
     );
+    public keyPipeObject: any = {
+        ip: '192.168.1.123',
+        groupId: 1,
+        moteId: 23,
+        temp: '23ºC',
+        hum: '33%'
+    };
     constructor(
         public formatCaseService: FormatCaseService,
         private route: ActivatedRoute,
