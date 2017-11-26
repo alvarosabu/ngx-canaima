@@ -45,4 +45,28 @@
             </div>
         </as-card>
     </div>
+    <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-sm="50">
+            <as-card 
+                [title]="'Keys Pipe'"
+                [shadow]="1">
+                 <div class="card__content">
+                     <pre>{{keyPipeObject | json}}</pre>
+                     <as-list> 
+                          <div class="list__body" list-body>
+                             <as-list-item-property
+                                 *ngFor="let item of keyPipeObject | keys"
+                                 [index]="item._id"
+                                 [key]="item.key"
+                                 [value]="item.value"
+                                 (onSelected)="onSelected(event)">
+                             </as-list-item-property>
+                         </div>
+                     </as-list>
+                 </div>
+            </as-card>
+    </div>
 </div>
