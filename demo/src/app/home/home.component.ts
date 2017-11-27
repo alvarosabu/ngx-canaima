@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         {
             label: 'File Upload',
             illustration: '/assets/svg/fileupload-illustration.svg',
-            comming: true,
+            /* comming: true, */
             slug: 'uploaders',
             // tslint:disable-next-line:max-line-length
             msg: `File uploaders allow you to save files, images, media to the Cloud. Just click it or drop it on`
