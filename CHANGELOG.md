@@ -1,3 +1,7 @@
+## 0.7.2 - 2017-10-27
+### Added
+- Card Actions active state
+- Dynamic forms optional reset when submit
 ## 0.7.1 - 2017-10-21
 ### Added
 - Icon on Card Data instead of img

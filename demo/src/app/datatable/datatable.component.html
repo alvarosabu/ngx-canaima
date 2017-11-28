@@ -1,0 +1,40 @@
+<as-toolbar
+  [customClass]="'navbar--primary navbar--subheader'" 
+  [shadow]=1
+  [fixed]=true
+>
+    <div class="left-content">
+        <as-back-button
+        [label]="'Back'"></as-back-button>
+    </div>
+    <div class="center-content">
+        <div class="toolbar__title">{{navBar?.title}}</div>
+    </div>
+    <div class="right-content"></div>
+</as-toolbar>
+<div class="container-fluid has-toolbar"
+    fxLayout="row"
+    fxFlexAlign="start start"
+    fxLayoutWrap>
+    <div
+    class="box"
+    fxFlexAlign="start"
+    fxFlex="100">
+        <as-card
+            [customClass]="'card--nopadding'"
+            [shadow]=0>
+            <div class="card__content" >
+                <as-data-table
+                [data]="balanceList"
+                [checkable]="true"
+                [headers]="fields"
+                (onSelected)="selectRow($event)"
+                [customClass]="'data-table--inverse'"
+                [height]="320"
+                [scroll]="true"
+                (onRowSelected)="onRowSelected($event)">
+                </as-data-table>
+            </div>
+        </as-card>
+    </div>
+</div>

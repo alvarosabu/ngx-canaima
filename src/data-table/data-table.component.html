@@ -1,0 +1,44 @@
+<div class="data-table" [ngStyle]="{'height': height + 'px'}"
+[ngClass]="{'data-table--scrollable': scroll}">
+    <div class="data-table__header">
+        <div
+        *ngIf="checkable"
+        class="data-table__headers data-table__headers--checkbox">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" [checked]="isChecked" (click)="selectAll()">
+                </label>
+            </div>
+        </div>
+        <div
+        fxShow
+        [fxHide.lt-sm]="head.responsive"
+        class="data-table__headers" 
+        *ngFor="let head of headers" [ngStyle]="{'flex-basis': head.basis + '%'}" (click)="sortBy(head)">
+            <i class="{{prefix}}" *ngIf="head.sort" [ngClass]="head.order ? prefix + '-arrow-down': prefix + '-arrow-up'"></i>
+            {{head.alias}}
+            <span class="data-table__unit" *ngIf="head.unit"> ({{head.unit}})</span>
+        </div>
+    </div>
+    <div class="data-table__body">
+        <div class="data-table__row" *ngFor="let row of data">
+             <div  *ngIf="checkable"
+             class="data-table__column data-table__column--checkbox">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" [checked]="row.isChecked" (click)="selectRow(row)">
+                        
+                    </label>
+                </div>
+            </div>
+            <div
+            fxShow
+            [fxHide.lt-sm]="head.responsive"
+            class="data-table__column {{head.customClass}}" [ngStyle]="{'flex-basis': head.basis + '%'}"
+            [ngClass]="head.signColored && checkSignClass(row[head.key])" *ngFor="let head of headers">
+                <span *ngIf="head.type !== 'img'">{{row[head.key] !== null ? row[head.key] : '-   '}}</span>
+                <div class="data-table__img circle" [ngStyle]="{'background-image': 'url(' + row[head.key] + ')'}" *ngIf="head.type == 'img'"></div>
+            </div>
+        </div>
+    </div>
+</div>

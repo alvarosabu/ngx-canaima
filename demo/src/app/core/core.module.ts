@@ -1,5 +1,3 @@
-
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +15,7 @@ import { ModalsActivityModule } from '../modals/modals.module';
 import { UploadersModule } from '../uploaders/uploaders.module';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { MiscActivityModule } from './../misc/misc.module';
+import { DatatableActivityModule } from '../datatable/datatable.module';
 
 @NgModule({
   imports: [
@@ -28,6 +27,7 @@ import { MiscActivityModule } from './../misc/misc.module';
     ListsActivityModule,
     FormsActivityModule,
     GridActivityModule,
+    DatatableActivityModule,
     LayoutModule,
     ModalsActivityModule,
     UploadersModule,
@@ -50,6 +50,7 @@ import { MiscActivityModule } from './../misc/misc.module';
     ListsActivityModule,
     FormsActivityModule,
     GridActivityModule,
+    DatatableActivityModule,
     LayoutModule,
     ModalsActivityModule,
     UploadersModule,
