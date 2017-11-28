@@ -40,4 +40,11 @@ export class ListItemAvatarComponent {
     public click() {
         this.onClicked.emit(this.index);
     }
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }

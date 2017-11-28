@@ -12,13 +12,19 @@
 @import "./navmenu/navmenu.scss";
 @import "./header/header.scss";
 @import "./segment/segment.scss";
+@import "./chip/chip.scss";
 @import "./modals/modals.scss";
+
 @import "./search-bar/search-bar.scss";
 @import "./loading/loading.scss";
 @import "./empty-state/empty-state.scss";
 @import "./media-uploader/media-uploader.scss";
 @import "./content-placeholder/content-placeholder.scss";
-
+@import "./profile-dropdown/profile-dropdown.scss";
+@import "./misc/spacer/spacer.scss";
+@import "./badges/badges.scss";
+@import "./toggle/toggle.scss";
+@import "./data-table/data-table.scss";
 *:focus {
     outline: none !important;
 }

@@ -1,0 +1,37 @@
+<div class="profile-dropdown" dropdown>
+    <div dropdownToggle 
+    class="profile-dropdown__btn profile-dropdown--{{orientation}}">
+        <div *ngIf="img" class="profile-dropdown__img" [ngStyle]="{'background-image': img && 'url(' + img + ')'}"></div>
+        <span class="profile-dropdown__title">{{title}}
+            <i class="{{prefix}} {{prefix}}-{{caret}}"></i>
+        </span>
+        
+    </div>
+    <ul [ngClass]="{'dropdown-menu--bubble-top': bubble}" *dropdownMenu class="dropdown-menu" role="menu">
+        <li #dropdownHeader>
+            <ng-content selector=".dropdown-menu__header"></ng-content>
+        </li>
+        <li *ngFor="let action of dropdown" role="menuitem">
+            <a *ngIf="action.link" class="dropdown-item" href="{{action.link}}" target="_blank">
+                <i *ngIf="action.icon" class="{{action.prefix}} {{action.prefix}}-{{action.icon}}"></i> {{action.label}}
+            </a>
+            <a *ngIf="!action.link" (click)="action.callback()" class="dropdown-item">
+                <i *ngIf="action.icon" class="{{action.prefix}} {{action.prefix}}-{{action.icon}}"></i> {{action.label}}
+            </a>
+        </li>
+        <li *ngIf="lastAction" class="divider dropdown-divider"></li>
+        <li *ngIf="lastAction" role="menuitem">
+            <a *ngIf="lastAction.link" class="dropdown-item" href="{{lastAction.link}}" target="_blank">
+                <i *ngIf="lastAction.icon" class="{{lastAction.prefix}} {{lastAction.prefix}}-{{lastAction.icon}}"></i> {{lastAction.label}}
+            </a>
+            <a *ngIf="!lastAction.link" (click)="lastAction.callback()" class="dropdown-item">
+                <i *ngIf="lastAction.icon" class="{{lastAction.prefix}} {{lastAction.prefix}}-{{lastAction.icon}}"></i> {{lastAction.label}}
+            </a>
+        </li>
+        <!-- <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+      </li> -->
+    </ul>
+</div>

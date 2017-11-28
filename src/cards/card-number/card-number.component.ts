@@ -25,7 +25,7 @@ export class CardNumberComponent {
     @Input('optionsRight') public optionsRight: Action[];
     @Input('actions') public actions: Action[];
     @Input('fab') public fab: any[];
-    @Input('countTo') public countTo: any[];
+   /*  @Input('countTo') public countTo: any[]; */
     @Input('height') public height: any[];
     @Input('customClass') public customClass: string;
     @Input('shadow') public shadow: string;
@@ -33,5 +33,11 @@ export class CardNumberComponent {
         justify: 'flex-end',
         alignment: 'center'
     };
-
+    /**
+     * actionCallback
+     */
+    public actionCallback(action: Action) {
+        action.active = !action.active;
+        action.callback()
+    }
 }

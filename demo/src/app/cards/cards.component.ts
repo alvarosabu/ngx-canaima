@@ -1,3 +1,4 @@
+import { CardToggle } from './../../../../src/cards/card-toggle/card-toggle';
 import {
     Component,
     OnInit,
@@ -51,6 +52,15 @@ export class CardsComponent implements OnInit {
                         color: 'primary',
                         outline: true,
                         icon: 'android'
+                }),
+                new Action(
+                {
+                        active: false,
+                        icon: 'heart-outline',
+                        iconActive: 'heart',
+                        callback: () => {
+                            console.log('Back');
+                        }
                 })
             ],
             optionsLeft: [
@@ -250,6 +260,19 @@ export class CardsComponent implements OnInit {
             ],
         }
     );
+    public cardToggle: CardToggle = new CardToggle({
+        icon: 'android',
+        title: 'Relay',
+        toggle: {
+            color: 'success',
+            value: false,
+            callback: (value) => {
+                console.log('Hola');
+                /* this.toggleRelay(); */
+                // this.getVoltage();
+            }
+        }
+    });
     constructor(
         private route: ActivatedRoute,
     ) { }

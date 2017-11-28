@@ -1,3 +1,31 @@
+## 0.7.3 - 2017-10-28
+### Added
+- Temporarly unsupport angular count to library
+## 0.7.2 - 2017-10-27
+### Added
+- Added option to not reset Form after submit
+- Added active/no-active class and icon support for Card Actions
+## 0.7.1 - 2017-10-21
+### Added
+- Icon on Card Data instead of img
+- Card Toggle
+- Toggle Component
+- Toolbar variables for border
+- Vertical Align option to Profile Dropdown
+- Added flex align to badge counter
+- Horizontal Scroll for Large Segments
+### Fixed
+- Card Image orientation
+- Variables
+- Directives slow re-render
+- List item actions undefined predefined
+- Capacity to override badge variables
+## 0.7.0 - 2017-10-07
+### Added
+- Format Case Service methods with recursiveness
+- Content Placeholder Directive for Multiple types of Cards
+- Profile Dropdown with custom Menu
+- Spacer Component
 ## 0.6.0 - 2017-10-04
 ### Added
 - Number si prefix Pipe

@@ -6,7 +6,7 @@ import {
     ViewEncapsulation
 } from '@angular/core';
 import { Toolbar } from './../../../../src/toolbar/toolbar';
-import { FileUploader } from 'ng2-file-upload';
+import { FileUploader, FileUploaderOptions } from 'ng2-file-upload';
 import { MediaUploaderService } from '../../../../src/media-uploader/media-uploader.service';
 import { ActionDropdown } from './../../../../src/action-dropdown';
 import { Card } from './../../../../src/cards/card/card';
@@ -20,7 +20,8 @@ import { Action } from './../../../../src/action';
     ]
 })
 export class UploadersComponent implements OnInit {
-    public uploader;
+    public mediaUploader: FileUploader;
+    public fileUploader: FileUploader;
     public toolBar: Toolbar = new Toolbar(
         {
             brand: {
@@ -51,10 +52,20 @@ export class UploadersComponent implements OnInit {
     );
     constructor(
         public mediaUploaderService: MediaUploaderService,
+        public fileUploaderService: MediaUploaderService,
         private route: ActivatedRoute,
     ) { }
 
-    public ngOnInit() { }
+    public ngOnInit() {
+        this.mediaUploader = this.mediaUploaderService.config();
+        this.fileUploader = this.fileUploaderService.config(
+            {
+                url: 'asdasdas',
+                itemAlias: 'body',
+                allowedMimeType: ['application/pdf']
+            }
+        );
+    }
     /**
      * getActions
      */

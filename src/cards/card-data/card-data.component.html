@@ -1,17 +1,19 @@
 <div class="card card--data shadow-{{shadow}} {{customClass}}">
     <div class="card__thumb" 
-        *ngIf="img"
+        *ngIf="img && !icon"
         (mouseover)='hover = true'
-        (mouseleave)='hover = false'
-        >
-        <div class="card--data__img circle"
-        [ngStyle]="{'background-image': img && 'url(' + img + ')'}"
-        *ngIf="!hover"></div>
-        <div class="checkbox" *ngIf="hover">
-        <label>
-            <input type="checkbox" value="">
-        </label>
+        (mouseleave)='hover = false'>
+            <div class="card--data__img circle"
+            [ngStyle]="{'background-image': img && 'url(' + img + ')'}"
+            *ngIf="!hover"></div>
+            <div class="checkbox" *ngIf="hover">
+            <label>
+                <input type="checkbox" value="">
+            </label>
+        </div>
     </div>
+    <div class="card__icon" *ngIf="icon && !img">
+        <i class="{{prefix}} {{prefix}}-{{icon}}"></i>
     </div>
     <div class="card__content">
        <h5 
@@ -20,19 +22,19 @@
        class="card--data__subtitle">{{subtitle}}</span>
     </div>
     <div class="card--data__actions" *ngIf="actions">
-        <button 
+        <button
+        *ngFor="let action of actions" 
         asIconButton
+        class="card__action"
         [prefix]="action.prefix"
-        [icon]="action.icon"
+        [icon]="action.active ? action.iconActive : action.icon"
         [color]="action.color"
         [outline]="action.outline"
         [rounded]="action.rounded"
         [size]="action.size"
-        class=" card__action"
-        [ngClass]="action?.customClass"  
-        *ngFor="let action of actions" 
+        [ngClass]="action?.customClass"
         [disabled]="action.disabled" 
-        (click)="action.callback()">
-            {{action.label}} 
+        (click)="actionCallback(action)">
+            {{action.label}}
         </button>
 </div>

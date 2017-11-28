@@ -6,12 +6,8 @@ import {
 } from '@angular/core';
 
 @Component({
-    encapsulation: ViewEncapsulation.None,
     selector: 'as-badge',
-    templateUrl: 'badge.component.html',
-    styleUrls: [
-        './badge.component.scss'
-    ]
+    templateUrl: 'badge.component.html'
 })
 export class BadgeComponent implements OnInit {
     public style: any = {};

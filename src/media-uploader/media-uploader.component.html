@@ -5,28 +5,39 @@
         (fileOver)="fileOverBase($event)"
         [uploader]="uploader"
         class="media-uploader__drop-zone"
-        *ngIf="!image && !uploader?.queue[0]?._file"
+        *ngIf="!media && !uploader?.queue[0]?._file"
         >
         <i *ngIf="icon" class="{{prefix}} {{prefix}}-{{icon}}"></i>
         <input type="file" 
         ng2FileSelect
-            multiple="multiple" 
+        multiple="multiple" 
         [uploader]="uploader" />
     </div>
-    <div class="media-uploader__imgpreview" bgPreview 
-    *ngIf="!image && uploader?.queue[0]?._file"
+    <div
+    class="media-uploader__imgpreview" bgPreview 
+    *ngIf="!media && checkFileType(uploader?.queue[0]?.file) === 'image' && uploader?.queue[0]?._file"
         [image]="uploader?.queue[0]?._file"
        >
         <span class="media-uploader__editbtn"  (click)="uploader?.queue[0].remove()">
             <i class="mdi mdi-pencil"></i>
         </span>
     </div>
+    <div class="media-uploader__pdfpreview"
+    *ngIf="!media && uploader?.queue[0]?._file">
+        <pdf-viewer pdfPreview
+        [pdf]="uploader?.queue[0]?._file"
+        [page]="1"
+        [render-text]="true"
+        style="display: block;"
+        ></pdf-viewer>
+    </div>
     <div class="media-uploader__imgpreview"  
-    *ngIf="image"
+    *ngIf="media"
         [ngStyle]="{'background-image': 'url(' + image + ')'}"
        >
         <span class="media-uploader__editbtn"  (click)="image = undefined">
             <i class="mdi mdi-pencil"></i>
         </span>
     </div>
+    
 </div>

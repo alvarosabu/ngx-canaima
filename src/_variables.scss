@@ -915,10 +915,15 @@ $as-card-image-height: 300px !default;
 $as-card-bg-height: 300px !default;
 $as-card-bg-actions-color: $white !default;
 
+$as-card-data-icon-bg: transparent !default;
+$as-card-data-icon-color: $gray-dark !default;
+$as-card-data-icon-padding: 16px 8px 16px 16px !default;
+$as-card-data-icon-font-size: 24px !default;
+$as-card-data-icon-border-radius: 50px !default;
 $as-card-data-thumb-size: 45px !default;
-$as-card-data-thumb-bg: transparent;
-$as-card-data-thumb-color: $gray-dark;
-$as-card-data-padding: 16px 8px 16px 16px;
+$as-card-data-thumb-bg: transparent !default;
+$as-card-data-thumb-color: $gray-dark !default;
+$as-card-data-padding: 16px 8px 16px 16px !default;
 $as-card-data-thumb-border-right: none !default;
 $as-card-data-thumb-border-color: transparent !default;
 $as-card-data-actions-color: $gray-dark !default;
@@ -1010,7 +1015,11 @@ $as-grid-list-item-action-color: white !default;
 $as-toolbar-color: white !default;
 $as-toolbar-min-height: 54px !default;
 $as-toolbar-back-button-icon-size: 36px !default;
+$as-toolbar-border: 0 !default;
+$as-toolbar-border-style: solid !default;
+$as-toolbar-border-color: transparent !default;
 //== Navmenu
+$as-navmenu-min-height: 150px !default;
 $as-navmenu-min-height-top: $as-toolbar-min-height !default;
 $as-navmenu-bg: darken($brand-primary, 2%) !default;
 $as-navmenu-color: $white !default;
@@ -1234,3 +1243,53 @@ $as-loader-ring-retard-border-radius: 50px !default;
 $as-loader-ring-retard-color: $brand-primary !default;
 $as-loader-ring-retard-animation-duration: 1.5s !default;
 $as-loader-ring-retard-animation-time-function: cubic-bezier(0.5,0,0.5,1) !default;
+
+$as-profile-dropdown-padding: 8px 16px !default;
+$as-profile-dropdown-bg: transparent !default;
+$as-profile-dropdown-color: inherit !default;
+$as-profile-dropdown-width: 175px !default;
+$as-profile-dropdown-height: 32px !default;
+$as-profile-dropdown-img-size: 32px !default;
+$as-profile-dropdown-img-border-radius: 50% !default;
+$as-profile-dropdown-border: none !default;
+$as-profile-dropdown-border-color: transparent !default;
+$as-profile-dropdown-border-style: solid !default;
+$as-profile-dropdown-menu-bg: $white !default;
+$as-profile-dropdown-menu-color: $gray-dark !default;
+$as-profile-dropdown-menu-border-radius: 2px !default;
+
+//== Toggle
+
+$as-toggle-height: 20px !default;
+$as-toggle-width: 44px !default;
+$as-toggle-bg: #898989 !default;
+$as-toggle-border-radius: 100px !default;
+$as-toggle-border: none !default;
+$as-toggle-border-color: transparent !default;
+$as-toggle-border-style: solid !default;
+
+$as-toggle-circle-size: 26px !default;
+$as-toggle-circle-border-radius: 100px !default;
+$as-toggle-circle-bg: #fefefe !default;
+
+//== Data Tables
+$as-datatable-header-height: 56px !default;
+$as-datatable-header-bg: transparent !default;
+$as-datatable-header-color: $gray !default;
+$as-datatable-header-padding: 0 !default;
+$as-datatable-header-font-weight: 600 !default;
+$as-datatable-header-border: 1px !default;
+$as-datatable-header-border-color: lightgray !default;
+$as-datatable-header-border-style: solid !default;
+$as-datatable-row-height: 46px !default;
+$as-datatable-row-odd-bg: transparent !default;
+$as-datatable-row-odd-color: $gray !default;
+$as-datatable-row-even-bg: transparent !default;
+$as-datatable-row-even-color: $gray !default;
+$as-datatable-row-padding: 0 !default;
+$as-datatable-row-font-weight: 400 !default;
+$as-datatable-row-border: 1px !default;
+$as-datatable-row-border-color: lightgray !default;
+$as-datatable-row-border-style: solid !default;
+$as-datatable-flex-basis: 15%;
+$as-datatable-flex-rest: 20%;

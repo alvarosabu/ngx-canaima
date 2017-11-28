@@ -17,6 +17,7 @@ export class DynamicFormComponent implements OnInit {
 
   @Input('inputs') public inputs: Array<InputBase<any>> = [];
   @Input('style') public style = 'default';
+  @Input('reset') public reset = false;
   @Input('actions') public actions: Action[] = [];
   @Input('footer') public footer: any = {
     justify: 'flex-end',
@@ -32,8 +33,6 @@ export class DynamicFormComponent implements OnInit {
   public ngOnInit() {
     this.form = this.ics.toFormGroup(this.inputs);
     this.form.valueChanges.subscribe((value) => {
-      // called when the value is updated
-      console.log(value);
     });
   }
 
@@ -42,7 +41,9 @@ export class DynamicFormComponent implements OnInit {
     if (this.form.valid) {
 
       this.onSubmit.emit(this.form.value);
-      this.form.reset();
+      if (this.reset) {
+        this.form.reset();
+      }
       this.submitted = false;
     }
   }

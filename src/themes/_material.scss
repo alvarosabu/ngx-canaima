@@ -355,6 +355,24 @@ a {
   margin-top: 0;
   border: none;
   @include box-shadow(0 1px 4px rgba(0,0,0,.3));
+  &__header {
+    padding: 8px;
+  }
+  &--bubble-top {
+    &:after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: 43%;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid #fff;
+    }
+  }
+  .dropdown-item {
+    cursor: pointer;
+  }
 }
 
 // Indicators =================================================================
@@ -508,3 +526,14 @@ a {
 @include asBadgeCounter(warning,$btn-warning-bg,$btn-warning-color);
 @include asBadgeCounter(danger,$btn-danger-bg,$btn-danger-color);
 @include asBadgeCounter(link,#fff,$btn-default-color);
+
+// Toggle ====================================================================
+
+@include toggle(default,$btn-default-bg);
+@include toggle(primary,$brand-primary);
+@include toggle(secondary,$brand-secondary);
+@include toggle(success,$btn-success-bg);
+@include toggle(info,$btn-info-bg);
+@include toggle(warning,$btn-warning-bg);
+@include toggle(danger,$btn-danger-bg);
+@include toggle(link,#fff);

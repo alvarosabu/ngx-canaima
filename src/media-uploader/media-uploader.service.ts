@@ -9,6 +9,7 @@ import {
     FileItem,
     FileUploaderOptions
 } from 'ng2-file-upload';
+import { FileUploaderOptions } from 'ng2-file-upload/ng2-file-upload';
 declare var API_URL: string;
 @Injectable()
 export class MediaUploaderService {
@@ -18,12 +19,20 @@ export class MediaUploaderService {
     constructor() {
         //
     }
-    public config({url, itemAlias, disableMultipart = false}: any) {
-        this.uploader = new FileUploader({
-            url,
-            itemAlias,
-            disableMultipart
-        });
+    public config(config?: FileUploaderOptions) {
+        if (config) {
+            this.uploader = new FileUploader(config);
+        } else {
+          const uploadApi = `${API_URL}/medias`;
+          this.uploader = new FileUploader({
+              url: uploadApi,
+              itemAlias: 'body',
+          });
+        }
+        return this.uploader;
+    }
+    public getCurrentUploader() {
+        return this.uploader;
     }
     public uploadMedia(fileItem: FileItem) {
         const complete = new Observable((observer) => {

@@ -57,7 +57,6 @@
         <as-card-image
         [img]="cardImage.img"
         [title]="cardImage.title"
-        [orientation]="'top'"
         [subtitle]="cardImage.subtitle"
         [fab]="cardImage.fab"
         [optionsLeft]="cardImage.optionsLeft"
@@ -100,6 +99,23 @@
         [actions]="cardData.actions"
         [shadow]=1
         ></as-card-data>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-data
+        [icon]="'android'"
+        [title]="cardData.title"
+        [subtitle]="cardData.subtitle"
+        [actions]="cardData.actions"
+        [shadow]=1
+        ></as-card-data>
+        <div class="spacer spacer--sm">
+        </div>
+        <as-card-toggle
+        [icon]="cardToggle.icon"
+        [title]="cardToggle.title"
+        [toggle]="cardToggle.toggle"
+        [shadow]="1">
+        </as-card-toggle>
     </div>
     <div class="box"
     fxFlexAlign="start"
@@ -142,13 +158,21 @@
         fxFlexAlign="start"
         fxFlex="50"
         fxFlex.gt-sm="25">
-        <as-card-number
+       <!--  <as-card-number
         [shadow]=1
         [customClass]="'card--kpis'"
         [value]="cardNumber.value"
         [label]="cardNumber.label"
         [pipe]="cardNumber.pipe"
         [countTo]="cardNumber.countTo"
+        [size]="cardNumber.size">
+        </as-card-number> -->
+        <as-card-number
+        [shadow]=1
+        [customClass]="'card--kpis'"
+        [value]="cardNumber.value"
+        [label]="cardNumber.label"
+        [pipe]="cardNumber.pipe"
         [size]="cardNumber.size">
         </as-card-number>
     </div>
@@ -157,12 +181,20 @@
     fxFlexAlign="start"
     fxFlex="50"
     fxFlex.gt-sm="25">
-        <as-card-number
+        <!-- <as-card-number
         [shadow]=1
         [customClass]="'card--kpis'"
         [value]="32000000"
         [pipe]="cardNumber.pipe"
         [countTo]="cardNumber.countTo"
+        [label]="cardNumber.label"
+        [size]="cardNumber.size">
+        </as-card-number> -->
+        <as-card-number
+        [shadow]=1
+        [customClass]="'card--kpis'"
+        [value]="32000000"
+        [pipe]="cardNumber.pipe"
         [label]="cardNumber.label"
         [size]="cardNumber.size">
         </as-card-number>
