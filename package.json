@@ -1,6 +1,6 @@
 {
   "name": "ngx-canaima",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
@@ -72,13 +72,7 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
-    "@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git",
-    "@angular/forms": "^4.4.4",
-    "angular2-counto": "^1.2.3",
-    "bootstrap-sass": "^3.3.7",
-    "ng2-file-upload": "^1.2.1",
-    "ng2-page-scroll": "^4.0.0-beta.11",
-    "ngx-bootstrap": "^1.9.3"
+    "@angular/forms": "^4.4.4"
   },
   "peerDependencies": {
     "@angular/core": "^4.0.0",
@@ -89,6 +83,7 @@
     "ngx-bootstrap": "^1.9.3",
     "@angular/flex-layout": "git+https://github.com/angular/flex-layout-builds.git",
     "angular2-counto": "^1.2.3",
+    "ng2-file-upload": "^1.2.1",
     "ng2-page-scroll": "^4.0.0-beta.11"
   }
 }
