@@ -15,7 +15,6 @@ import { CardIllustrationComponent } from './card-illustration/card-illustration
 import { CardNumberComponent } from './card-number/card-number.component';
 import { FabsModule } from '../fabs/fabs.module';
 import { ButtonsModule } from '../buttons/buttons.module';
-import { CountoModule } from 'angular2-counto';
 
 @NgModule({
   imports: [
@@ -24,7 +23,6 @@ import { CountoModule } from 'angular2-counto';
     FabsModule,
     CommonModule,
     BsDropdownModule,
-    CountoModule,
     MiscModule
   ],
   exports: [
