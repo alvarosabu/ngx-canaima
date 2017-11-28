@@ -60,6 +60,7 @@
                  <div class="card__content">
                         <media-uploader
                         [multiple]="true"
+                        [icon]="'file'"
                         [(uploader)]="fileUploader"></media-uploader>
                         <pre>{{fileUploader?.queue[0] | circularJson}}</pre>
                  </div>

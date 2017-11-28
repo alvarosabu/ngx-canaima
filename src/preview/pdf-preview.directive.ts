@@ -14,21 +14,16 @@ export class PdfPreviewDirective implements OnChanges {
         const el = this.el;
 
         reader.onloadend = (e) => {
-            el.nativeElement.src = new Uint8Array(reader.result);
+            /* el.nativeElement.src = new Uint8Array(reader.result); */
+            el.nativeElement.src = reader.result;
         };
 
         if (this.pdf) {
             /* console.log('PDF', reader.readAsArrayBuffer(this.pdf)); */
-            return reader.readAsArrayBuffer(this.pdf);
+            var fileURL = URL.createObjectURL(this.pdf);
+            return fileURL;
+            /* return reader.readAsArrayBuffer(this.pdf); */
         }
 
-    }
-    private base64ToUint8Array(base64) {
-        let raw = atob(base64);
-        let uint8Array = new Uint8Array(raw.length);
-        for (let i = 0; i < raw.length; i++) {
-          uint8Array[i] = raw.charCodeAt(i);
-        }
-        return uint8Array;
     }
 }

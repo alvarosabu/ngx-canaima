@@ -41,7 +41,6 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
     constructor() {
     }
     public ngOnInit() {
-      this.uploader = this.mediaUploaderService.uploader;
       setTimeout(() => {
         console.log(' Init ', this.uploader);
         /* if (this.uploader === undefined || this.uploader) {
@@ -60,8 +59,6 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
         url: `${API_URL}/medias`,
         itemAlias: 'body'
       }); */
-      
-
     }
     public ngOnChanges(changes: SimpleChanges) {
       console.log(' Changes ', changes);
