@@ -24,6 +24,14 @@
         </span>
     </div>
     <div class="media-uploader__pdfpreview"
+    *ngIf="!media && checkMimeType(uploader?.queue[0]?.file) === 'pdf' && uploader?.queue[0]?._file">
+        <i class="pdf-icon mdi mdi-file"></i>
+        <span>{{uploader?.queue[0]?.file.name}}</span>
+        <span class="media-uploader__editbtn"  (click)="media == undefined; uploader?.queue[0].remove()">
+            <i class="mdi mdi-pencil"></i>
+        </span>
+    </div>
+    <!-- <div class="media-uploader__pdfpreview"
     *ngIf="!media && uploader?.queue[0]?._file">
         <pdf-viewer pdfPreview
         [pdf]="uploader?.queue[0]?._file"
@@ -31,7 +39,7 @@
         [render-text]="true"
         style="display: block;"
         ></pdf-viewer>
-    </div>
+    </div> -->
     <div class="media-uploader__imgpreview"  
     *ngIf="media"
         [ngStyle]="{'background-image': 'url(' + image + ')'}"

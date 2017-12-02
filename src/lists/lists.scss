@@ -58,7 +58,17 @@
         background-size: $as-list-item-avatar-bg-size;
         background-position: $as-list-item-avatar-bg-position;
         transition: all .4s ease-out;
-        
+    }
+    &__file {
+        width: $as-list-item-avatar-size;
+        height: $as-list-item-avatar-size;
+        border: $as-list-item-avatar-border $as-list-item-avatar-border-color;
+        background-color: $as-list-item-avatar-bg;
+        color: $as-list-item-avatar-border-color;
+        transition: all .4s ease-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__filepreview {
         border-radius: 50%;

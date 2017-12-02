@@ -20,7 +20,7 @@ export class PdfPreviewDirective implements OnChanges {
 
         if (this.pdf) {
             /* console.log('PDF', reader.readAsArrayBuffer(this.pdf)); */
-            var fileURL = URL.createObjectURL(this.pdf);
+            let fileURL = URL.createObjectURL(this.pdf);
             return fileURL;
             /* return reader.readAsArrayBuffer(this.pdf); */
         }
