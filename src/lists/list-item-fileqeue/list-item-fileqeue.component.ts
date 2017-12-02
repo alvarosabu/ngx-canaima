@@ -42,4 +42,22 @@ export class ListItemFileQeueComponent {
         action.active = !action.active;
         action.callback()
     }
+    /**
+     * checkFileType
+     */
+    public checkFileType(file) {
+        if (file) {
+          let type = file.type.split('/')[0];
+          return type;
+        }
+      }
+      /**
+       * checkMimeType
+       */
+      public checkMimeType(file) {
+        if (file) {
+          let mime = file.type.split('/')[1];
+          return mime;
+        }
+      }
 }

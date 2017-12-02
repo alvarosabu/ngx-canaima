@@ -24,37 +24,34 @@ declare var API_URL: string;
     templateUrl: 'media-uploader.component.html'
 })
 export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit {
-    @Input('image') public image;
+    @Input('media') public media;
     @Input('customClass') public customClass;
     @Input('prefix') public prefix = 'mdi';
     @Input('icon') public icon = 'image';
     @Input('multiple') public multiple = false;
-    @Input('config') public config?: FileUploaderOptions = {
+    /* @Input('config') public config?: FileUploaderOptions = {
       url: `${API_URL}/medias`,
       itemAlias: 'body'
-    };
+    }; */
     @Input('uploader') public uploader: FileUploader;
     @Output() public uploaderChange = new EventEmitter<FileUploader>();
     @Output() public onQueue = new EventEmitter<any>();
-    
     public hasBaseDropZoneOver = false;
 
-    constructor(
-      public mediaUploaderService: MediaUploaderService,
-    ) {
-      
-      
+    constructor() {
     }
     public ngOnInit() {
       setTimeout(() => {
-        if (this.uploader === undefined || this.uploader) {
-          this.uploader = new FileUploader(this.config);
+        console.log(' Init ', this.uploader);
+        /* if (this.uploader === undefined || this.uploader) {
+          /* this.uploader = new FileUploader(this.config); 
           this.uploader.onAfterAddingFile = (fileItem) => {
             this.onQueue.emit(fileItem);
             fileItem.withCredentials = false;
           };
+          this.mediaUploaderService.uploader = this.uploader;
         }
-        this.uploaderChange.emit(this.uploader);
+        this.uploaderChange.emit(this.uploader); */
       });
     }
     public ngAfterViewInit() {
@@ -62,10 +59,9 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
         url: `${API_URL}/medias`,
         itemAlias: 'body'
       }); */
-      
-
     }
     public ngOnChanges(changes: SimpleChanges) {
+      console.log(' Changes ', changes);
       /* console.log(changes)
       if (changes.deuploader.previousValue === undefined) {
         this.deuploaderChange.emit(this.uploader);
@@ -73,5 +69,23 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
     }
     public fileOverBase(e: any): void {
       this.hasBaseDropZoneOver = e;
+    }
+    /**
+     * checkFileType
+     */
+    public checkFileType(file) {
+      if (file) {
+        let type = file.type.split('/')[0];
+        return type;
+      }
+    }
+    /**
+     * checkMimeType
+     */
+    public checkMimeType(file) {
+      if (file) {
+        let mime = file.type.split('/')[1];
+        return mime;
+      }
     }
 }

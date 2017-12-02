@@ -35,6 +35,21 @@
         position: relative;
 
     }
+    &__pdfpreview {
+        width: 100%;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: $gray-lighter;
+        color: $gray-light;
+        text-align: center;
+        position: relative;
+        .pdf-icon {
+            font-size: 36px;
+        }
+    }
     &__editbtn {
         background: $brand-primary;
         border-radius: 50%;

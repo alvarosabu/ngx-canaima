@@ -49,7 +49,6 @@ export class AppComponent implements AfterViewInit {
     private toastyConfig: ToastyConfig
   ) {
     this.toastyConfig.theme = 'material';
-    this.mediaUploaderService.config();
   }
   public ngAfterViewInit() {
     this.router.events.subscribe((path: any) => {
