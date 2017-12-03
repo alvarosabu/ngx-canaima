@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: 'cards',
          component: CardsComponent,
-         data: { title: 'Cards' }
+         data: { title: 'Cards' },
+         pathMatch: 'full'
     }
 ];
