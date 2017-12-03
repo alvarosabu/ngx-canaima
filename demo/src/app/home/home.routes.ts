@@ -6,9 +6,11 @@ export const ROUTES: Routes = [
     {
         path: '',
         component: HomeComponent,
+        pathMatch: 'full'
     },
     {
          path: 'home',
          component: HomeComponent,
+         pathMatch: 'full'
     },
 ];

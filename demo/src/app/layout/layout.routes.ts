@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: 'layout',
          component: LayoutComponent,
-         data: { title: 'Layout' }
+         data: { title: 'Layout' },
+         pathMatch: 'full'
     }
 ];

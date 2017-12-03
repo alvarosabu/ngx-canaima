@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: 'forms',
          component: FormsComponent,
-         data: { title: 'Forms' }
+         data: { title: 'Forms' },
+         pathMatch: 'full'
     }
 ];

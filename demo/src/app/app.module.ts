@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 /*
  * Platform and Environment providers/directives/pipes

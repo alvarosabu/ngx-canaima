@@ -7,6 +7,7 @@ export const ROUTES: Routes = [
     {
          path: '<%= name %>',
          component: <%= capitalname %>Component,
-         // canActivate: [AuthGuard]
+         data: { title: '<%= capitalname %>' },
+         pathMatch: 'full'
     }
 ];
