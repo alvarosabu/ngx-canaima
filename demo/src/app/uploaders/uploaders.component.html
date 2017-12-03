@@ -79,6 +79,19 @@
                     [actions]="getActions(item)">
                 </as-list-item-fileqeue>
              </div>
+             
+        </as-card>
+        <div class="spacer spacer--sm">    
+        </div>
+        <as-card 
+            [title]="'File Button'"
+            [shadow]="1">
+            <div class="card__content">
+                    <file-button
+                    [multiple]="true"
+                    [(uploader)]="mediaUploader"></file-button>
+                    <pre>{{mediaUploader?.queue[0] | circularJson}}</pre>
+            </div>
         </as-card>
     </div>
 </div>

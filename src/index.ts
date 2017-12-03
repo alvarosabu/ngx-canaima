@@ -23,6 +23,7 @@ import { DataTableModule } from './data-table/data-table.module';
 import { ProfileDropdownModule } from './profile-dropdown/profile-dropdown.module';
 import { ContentPlaceholderModule } from './content-placeholder/content-placeholder.module';
 import { MiscModule } from './misc/misc.module';
+import { FileButtonModule } from './file-button/file-button.module';
 
 export * from './action';
 export * from './action-dropdown';
@@ -46,6 +47,8 @@ export * from './misc';
 export * from './profile-dropdown';
 export * from './validation';
 export * from './toggle';
+export * from './media-uploader';
+export * from './file-button';
 export * from './data-table';
 
 @NgModule({
@@ -69,6 +72,7 @@ export * from './data-table';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
+    FileButtonModule,
     MiscModule,
     ContentPlaceholderModule,
     ProfileDropdownModule,
@@ -95,6 +99,7 @@ export * from './data-table';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
+    FileButtonModule,
     MiscModule,
     ContentPlaceholderModule,
     ProfileDropdownModule,
