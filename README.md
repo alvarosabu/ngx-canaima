@@ -127,9 +127,9 @@ Are very welcome! And remember, contribution is not only PRs and code, but any h
 - [X] Segments Component
 - [X] Chip Component
 - [X] Fab Button Component
-- [ ] Media Uploader
-- [ ] Avatar Uploader
-- [ ] Datatable Component
+- [X] Media Uploader
+- [X] Avatar Uploader
+- [X] Datatable Component
 - [ ] Breadcrumbs Component
 
 
