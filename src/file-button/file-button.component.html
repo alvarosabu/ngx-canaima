@@ -1,0 +1,11 @@
+<div class="file-button {{customClass}}"
+(click)="uploader.clearQueue()">
+    <label for="file" asIconButton [color]="color" [rounded]="rounded"
+    [outline]="outline" [size]="size" [icon]="icon" side="right" class="btn-attachment">
+        <input
+        
+        type="file"
+        [multiple]="multiple" 
+        ng2FileSelect [uploader]="uploader" />
+    </label>
+</div>
