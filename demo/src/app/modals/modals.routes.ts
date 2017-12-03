@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: 'modals',
          component: ModalsComponent,
-         data: { title: 'Modals' }
+         data: { title: 'Modals' },
+         pathMatch: 'full'
     }
 ];

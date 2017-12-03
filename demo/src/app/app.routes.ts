@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: '',
          component: HomeComponent,
+         pathMatch: 'full'
          /* canActivate: [AuthGuard] */
     }
 ];

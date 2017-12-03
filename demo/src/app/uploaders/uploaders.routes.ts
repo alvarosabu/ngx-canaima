@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: 'uploaders',
          component: UploadersComponent,
-         data: { title: 'Uploaders' }
+         data: { title: 'Uploaders' },
+         pathMatch: 'full'
     }
 ];
