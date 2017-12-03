@@ -24,12 +24,12 @@
             fxFlex="100"
             fxFlex.gt-sm="50">
                 <as-card 
-                    [title]="'Media Uploader'"
+                    [title]="'Default Media Uploader'"
                     [shadow]="1">
                      <div class="card__content">
                             <media-uploader
                             [multiple]="true"
-                            [(uploader)]="uploader"></media-uploader>
+                            [(uploader)]="mediaUploader"></media-uploader>
                      </div>
                 </as-card>
                 <div class="spacer spacer--sm">    
@@ -39,7 +39,8 @@
                 [optionsRight]="queueCard.optionsRight"
                 [shadow]="1">
                  <div class="card__content">
-                    <as-list-item-fileqeue                           *ngFor="let item of uploader?.queue"
+                    <as-list-item-fileqeue
+                        *ngFor="let item of mediaUploader?.queue"
                         [data]="item"
                         [hasLine]="true"
                         [actions]="getActions(item)">
@@ -47,4 +48,49 @@
                  </div>
             </as-card>
         </div>
+        <div
+        class="box"
+        fxFlexAlign="start"
+        fxFlex="100"
+        fxFlex.gt-sm="50">
+            <as-card 
+                [title]="'Configured File Uploader'"
+                [shadow]="1">
+                 <div class="card__content">
+                        <media-uploader
+                        [multiple]="true"
+                        [icon]="'file'"
+                        [(uploader)]="fileUploader"></media-uploader>
+                      
+                 </div>
+            </as-card>
+            <div class="spacer spacer--sm">    
+            </div>
+            <as-card 
+            [title]="'File Queue'"
+            [optionsRight]="queueCard.optionsRight"
+            [shadow]="1">
+             <div class="card__content">
+                <as-list-item-fileqeue
+                    *ngFor="let item of fileUploader?.queue"
+                    [data]="item"
+                    [hasLine]="true"
+                    [actions]="getActions(item)">
+                </as-list-item-fileqeue>
+             </div>
+             
+        </as-card>
+        <div class="spacer spacer--sm">    
+        </div>
+        <as-card 
+            [title]="'File Button'"
+            [shadow]="1">
+            <div class="card__content">
+                    <file-button
+                    [multiple]="true"
+                    [(uploader)]="mediaUploader"></file-button>
+                   
+            </div>
+        </as-card>
+    </div>
 </div>

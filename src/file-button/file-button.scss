@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    $Avatar-uploader
+\*------------------------------------*/
+
+@import '../_effects.scss';
+@import '../_variables.scss';
+
+.file-button {
+    /* width: 200px;
+    height: 50px; */
+    .btn-attachment {
+        position: relative;
+        cursor: pointer;
+        /* width: 100%;
+        height: 100%; */
+        display: flex;
+        justify-content: center;
+        input[type=file] {
+          position: absolute;
+          outline: 0;
+          opacity: 0;
+          z-index: 33;
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+        }
+        i {
+          font-size: 22px;
+          cursor: pointer;
+        }
+      }
+}

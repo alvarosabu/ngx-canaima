@@ -1,7 +1,16 @@
+## 0.9.0 - 2017-12-03
+### Added
+- Media Uploader Service
+- Media Uploader Component
+- File Button Component
+- Datatable component
+## 0.7.3 - 2017-10-28
+### Added
+- Temporarly unsupport angular count to library
 ## 0.7.2 - 2017-10-27
 ### Added
-- Card Actions active state
-- Dynamic forms optional reset when submit
+- Added option to not reset Form after submit
+- Added active/no-active class and icon support for Card Actions
 ## 0.7.1 - 2017-10-21
 ### Added
 - Icon on Card Data instead of img
@@ -11,7 +20,7 @@
 - Vertical Align option to Profile Dropdown
 - Added flex align to badge counter
 - Horizontal Scroll for Large Segments
-#Fixed
+### Fixed
 - Card Image orientation
 - Variables
 - Directives slow re-render

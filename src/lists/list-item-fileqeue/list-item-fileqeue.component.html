@@ -7,15 +7,20 @@
             <div class="list-item__filesuccess" *ngIf="data.isSuccess">
                 <i class="mdi mdi-check"></i>
             </div>
-            <div bgPreview [image]="data._file" class="list-item__img circle"
+            <div bgPreview 
+            *ngIf="checkFileType(data.file) === 'image'" [image]="data._file" class="list-item__img circle"
             ></div>
+            <div 
+            *ngIf="checkMimeType(data.file) === 'pdf'" class="list-item__file circle">
+                <i class="mdi mdi-file"></i>
+            </div>
        </div>
     </div>
     <div class="list-item__content">
        <h5 
        class="list-item__title"
        *ngIf="data.file.name">{{data.file?.name}}</h5>
-       <span class="list-item__subtitle">{{data.file?.size}} MB</span>
+       <span class="list-item__subtitle">{{data.file?.size / 1000000 | number:'1.2-2'}} MB</span>
     </div>
     <div 
         class="list-item__side"

@@ -1,14 +1,8 @@
-import { ProfileDropdownModule } from './profile-dropdown/profile-dropdown.module';
-import { ContentPlaceholderModule } from './content-placeholder/content-placeholder.module';
-import { MiscModule } from './misc/misc.module';
-
-
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardsModule } from './cards/cards.module';
 import { ListsModule } from './lists/lists.module';
 import { GridListsModule } from './grid-list/grid-list.module';
-
 import { DynamicFormsModule } from './forms/dynamic-forms/dynamic-forms.module';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { HeaderModule } from './header/header.module';
@@ -25,6 +19,11 @@ import { LoadingModule } from
 './loading/loading.module';
 import { PreviewModule } from './preview/preview.module';
 import { MediaUploaderModule } from './media-uploader/media-uploader.module';
+import { DataTableModule } from './data-table/data-table.module';
+import { ProfileDropdownModule } from './profile-dropdown/profile-dropdown.module';
+import { ContentPlaceholderModule } from './content-placeholder/content-placeholder.module';
+import { MiscModule } from './misc/misc.module';
+import { FileButtonModule } from './file-button/file-button.module';
 
 export * from './action';
 export * from './action-dropdown';
@@ -48,6 +47,9 @@ export * from './misc';
 export * from './profile-dropdown';
 export * from './validation';
 export * from './toggle';
+export * from './media-uploader';
+export * from './file-button';
+export * from './data-table';
 
 @NgModule({
   imports: [
@@ -70,12 +72,13 @@ export * from './toggle';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
+    FileButtonModule,
     MiscModule,
     ContentPlaceholderModule,
-    ProfileDropdownModule
+    ProfileDropdownModule,
+    DataTableModule
   ],
   declarations: [
-    
   ],
   exports: [
     CardsModule,
@@ -96,9 +99,11 @@ export * from './toggle';
     LoadingModule,
     EmptyStateModule,
     MediaUploaderModule,
+    FileButtonModule,
     MiscModule,
     ContentPlaceholderModule,
-    ProfileDropdownModule
+    ProfileDropdownModule,
+    DataTableModule
   ]
 })
 export class NgxCanaimaModule {

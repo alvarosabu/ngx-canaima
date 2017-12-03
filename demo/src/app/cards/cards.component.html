@@ -158,13 +158,21 @@
         fxFlexAlign="start"
         fxFlex="50"
         fxFlex.gt-sm="25">
-        <as-card-number
+       <!--  <as-card-number
         [shadow]=1
         [customClass]="'card--kpis'"
         [value]="cardNumber.value"
         [label]="cardNumber.label"
         [pipe]="cardNumber.pipe"
         [countTo]="cardNumber.countTo"
+        [size]="cardNumber.size">
+        </as-card-number> -->
+        <as-card-number
+        [shadow]=1
+        [customClass]="'card--kpis'"
+        [value]="cardNumber.value"
+        [label]="cardNumber.label"
+        [pipe]="cardNumber.pipe"
         [size]="cardNumber.size">
         </as-card-number>
     </div>
@@ -173,12 +181,20 @@
     fxFlexAlign="start"
     fxFlex="50"
     fxFlex.gt-sm="25">
-        <as-card-number
+        <!-- <as-card-number
         [shadow]=1
         [customClass]="'card--kpis'"
         [value]="32000000"
         [pipe]="cardNumber.pipe"
         [countTo]="cardNumber.countTo"
+        [label]="cardNumber.label"
+        [size]="cardNumber.size">
+        </as-card-number> -->
+        <as-card-number
+        [shadow]=1
+        [customClass]="'card--kpis'"
+        [value]="32000000"
+        [pipe]="cardNumber.pipe"
         [label]="cardNumber.label"
         [size]="cardNumber.size">
         </as-card-number>

@@ -24,7 +24,6 @@ import * as apiNpm from 'api-npm';
     ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-    
     public version: string;
     public openDropdown: boolean = false;
     public toolBar: any = {
@@ -57,10 +56,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
         {
             label: 'File Upload',
             illustration: '/assets/svg/fileupload-illustration.svg',
-            comming: true,
+            /* comming: true, */
             slug: 'uploaders',
             // tslint:disable-next-line:max-line-length
             msg: `File uploaders allow you to save files, images, media to the Cloud. Just click it or drop it on`
+        },
+        {
+            label: 'Data Table',
+            illustration: '/assets/svg/datatable-illustration.svg',
+            comming: false,
+            slug: 'datatable',
+            // tslint:disable-next-line:max-line-length
+            msg: `Data table alow you to show a list of items with multiple, sortable fields`
         },
         {
             label: 'Layout',
