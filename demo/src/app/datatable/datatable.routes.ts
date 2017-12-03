@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: 'datatable',
          component: DatatableActivityComponent,
-         data: { title: 'Datatable' }
+         data: { title: 'Datatable' },
+         pathMatch: 'full'
     }
 ];

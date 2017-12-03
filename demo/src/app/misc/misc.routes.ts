@@ -6,6 +6,7 @@ export const ROUTES: Routes = [
     {
          path: 'misc',
          component: MiscComponent,
-         data: { title: 'Misc' }
+         data: { title: 'Misc' },
+         pathMatch: 'full'
     }
 ];

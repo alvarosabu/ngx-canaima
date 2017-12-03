@@ -1,3 +1,6 @@
+## 0.9.1 - 2017-12-03
+### Fixed
+- Removed ng2-pdf-viewer
 ## 0.9.0 - 2017-12-03
 ### Added
 - Media Uploader Service
