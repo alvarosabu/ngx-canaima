@@ -1,4 +1,4 @@
-# @AngularClass
+# tipe.io
 
 # Logs
 logs
@@ -59,6 +59,7 @@ dll/
 
 # Doc #
 /doc/
+/documentation/
 
 # IDE #
 .idea/

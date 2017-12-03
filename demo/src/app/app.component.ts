@@ -1,5 +1,4 @@
-import { MediaUploaderService } from './../../../src/media-uploader/media-uploader.service';
-import { NavService } from './core/navmenu/nav.service';
+
 
 /*
  * Angular 2 decorators and services
@@ -20,6 +19,8 @@ import {
     ToastOptions,
     ToastData
 } from 'ng2-toasty';
+import { MediaUploaderService } from './../../../src/media-uploader/media-uploader.service';
+import { NavService } from './core/navmenu/nav.service';
 import {
   Location
 } from '@angular/common';

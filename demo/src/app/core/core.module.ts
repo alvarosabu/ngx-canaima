@@ -16,10 +16,15 @@ import { UploadersModule } from '../uploaders/uploaders.module';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { MiscActivityModule } from './../misc/misc.module';
 import { DatatableActivityModule } from '../datatable/datatable.module';
+import { ToastyModule } from 'ng2-toasty';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
     CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     NavbarModule,
     HomeModule,
@@ -32,6 +37,7 @@ import { DatatableActivityModule } from '../datatable/datatable.module';
     ModalsActivityModule,
     UploadersModule,
     Ng2PageScrollModule,
+    ToastyModule.forRoot(),
     MiscActivityModule
   ],
   declarations: [
@@ -43,6 +49,8 @@ import { DatatableActivityModule } from '../datatable/datatable.module';
   ],
   exports: [
     CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     NavbarModule,
     HomeModule,
@@ -55,6 +63,7 @@ import { DatatableActivityModule } from '../datatable/datatable.module';
     ModalsActivityModule,
     UploadersModule,
     Ng2PageScrollModule,
+    ToastyModule,
     MiscActivityModule
   ]
 })

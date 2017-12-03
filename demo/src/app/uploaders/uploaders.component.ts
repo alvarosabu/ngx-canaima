@@ -20,8 +20,8 @@ import { Action } from './../../../../src/action';
     ]
 })
 export class UploadersComponent implements OnInit {
-    public mediaUploader: FileUploader;
-    public fileUploader: FileUploader;
+    public mediaUploader: any;
+    public fileUploader: any;
     public toolBar: Toolbar = new Toolbar(
         {
             brand: {

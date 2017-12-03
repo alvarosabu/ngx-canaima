@@ -1,8 +1,10 @@
 /**
- * @author: @AngularClass
+ * @author: @AlvaroSaburido
  */
 
-// Look in ./config folder for webpack.dev.js
+/**
+ * Look in ./config folder for webpack.dev.js
+ */
 switch (process.env.NODE_ENV) {
   case 'prod':
   case 'production':
@@ -11,6 +13,10 @@ switch (process.env.NODE_ENV) {
   case 'test':
   case 'testing':
     module.exports = require('./config/webpack.test')({env: 'test'});
+    break;
+  case 'pre':
+  case 'prestaging':
+    module.exports = require('./config/webpack.pre')({env: 'prestaging'});
     break;
   case 'dev':
   case 'development':
