@@ -1,3 +1,9 @@
+## 0.9.0 - 2017-12-03
+### Added
+- Media Uploader Service
+- Media Uploader Component
+- File Button Component
+- Datatable component
 ## 0.7.3 - 2017-10-28
 ### Added
 - Temporarly unsupport angular count to library

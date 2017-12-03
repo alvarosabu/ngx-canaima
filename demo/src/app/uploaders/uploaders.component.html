@@ -30,7 +30,6 @@
                             <media-uploader
                             [multiple]="true"
                             [(uploader)]="mediaUploader"></media-uploader>
-                            <pre>{{mediaUploader?.queue[0] | circularJson}}</pre>
                      </div>
                 </as-card>
                 <div class="spacer spacer--sm">    
@@ -62,7 +61,7 @@
                         [multiple]="true"
                         [icon]="'file'"
                         [(uploader)]="fileUploader"></media-uploader>
-                        <pre>{{fileUploader?.queue[0] | circularJson}}</pre>
+                      
                  </div>
             </as-card>
             <div class="spacer spacer--sm">    
@@ -90,7 +89,7 @@
                     <file-button
                     [multiple]="true"
                     [(uploader)]="mediaUploader"></file-button>
-                    <pre>{{mediaUploader?.queue[0] | circularJson}}</pre>
+                   
             </div>
         </as-card>
     </div>

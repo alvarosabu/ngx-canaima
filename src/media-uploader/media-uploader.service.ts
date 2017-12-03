@@ -9,7 +9,6 @@ import {
     FileItem,
     FileUploaderOptions
 } from 'ng2-file-upload';
-import { FileUploaderOptions } from 'ng2-file-upload/ng2-file-upload';
 declare var API_URL: string;
 @Injectable()
 export class MediaUploaderService {
