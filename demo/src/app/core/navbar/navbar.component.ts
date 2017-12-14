@@ -48,10 +48,12 @@ export class NavbarComponent implements OnInit {
         });
         this.router.events.subscribe((path: any) => {
             this.menuOpen = false;
-            this.routeData = this.router.config.filter((route) => {
+            if (path.url) {
+              this.routeData = this.router.config.filter((route) => {
                 return route.path === path.url.replace('/', '');
             })[0];
-            if (this.routeData.data) {
+            }
+            if (this.routeData && this.routeData.data) {
                 this.toolBar.title = this.routeData.data.title;
             }
         });

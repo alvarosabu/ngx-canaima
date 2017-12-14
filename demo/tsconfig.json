@@ -15,6 +15,10 @@
       "dom",
       "es6"
     ],
+    "baseUrl": "./src",
+    "paths": {
+      "@angular/*": ["node_modules/@angular/*"]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -30,7 +34,10 @@
   "exclude": [
     "node_modules",
     "dist",
-    "gulp"
+    "src/**/*.spec.ts",
+    "src/**/*.e2e.ts",
+    "gulp",
+    "pre"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,

@@ -1,9 +1,13 @@
-/*------------------------------------*\
-    $Global Classes
-\*------------------------------------*/
-
-@import '../styles/styles.scss';
+@import "../styles/_variables.scss";
 
 .page-content {
-  width: 100%;
+    width: 100%;
+    height: 100%;
+    // height: calc( 100% - 54px );
+}
+ng-sidebar-container {
+    width: 100%;
+}
+as-sidebar {
+  height: 100%;
 }

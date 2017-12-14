@@ -10,7 +10,7 @@ import { PreviewModule } from './../preview/preview.module';
     imports: [
         CommonModule,
         PreviewModule,
-        FileUploadModule,
+        FileUploadModule
     ],
     exports: [
         MediaUploaderComponent

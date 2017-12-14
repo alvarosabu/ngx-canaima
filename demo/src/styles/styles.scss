@@ -1,12 +1,11 @@
 /* this file will be extracted to main dist folder and is imported in index.html */
 /* This file is for setting global styles  */
-
 @import 'variables';
 
 @import "../../../src/styles.scss";
 @import "../../../src/themes/_material.scss";
 @import 'common';
 @import "~mdi/css/materialdesignicons.css";
-@import "~ng2-slim-loading-bar/bundles/style.css";
+/* @import "~ng2-slim-loading-bar/bundles/style.css"; */
 
 

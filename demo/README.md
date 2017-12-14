@@ -1,18 +1,35 @@
-![repository-banner.png](https://bitbucket.org/repo/BnXgnX/images/1955719455-repository-banner.png)
+![repository-banner.png](https://s3-eu-west-1.amazonaws.com/asaburido/as-readme-banner.png)
 
 ## Software version ##
-* ```node -v```  : v6.7.0
-* ```npm -v```  : v3.10.3
-* ```webpack -v```  : v2.2.1
+* ```node -v```  : v8.5.0
+* ```npm -v```  : v5.5.1
+* ```yarn -v```: 1.0.2
+* ```angular```: 5.0.3
 
 ___
 
 
-# NGX - Canaima demo page
+# AS Projects Angular  Scaffolding Webapp 
 
-> A ngx - canaima demo repo
+> An Angular 5 lab featuring [Angular 5](https://angular.io), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
+[Http](https://angular.io/docs/ts/latest/guide/server-communication.html),
+[Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter),
+[ngx-canaima](https://github.com/alvarosaburido/ngx-canaima),
+[Tests](https://angular.io/docs/ts/latest/guide/testing.html), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [TypeScript](http://www.typescriptlang.org/), [@types](https://www.npmjs.com/~types), [TsLint](http://palantir.github.io/tslint/), [Codelyzer](https://github.com/mgechev/codelyzer), [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), and [Webpack 3](http://webpack.github.io/) by Alvaro Saburido based on [AngularClass](https://angularclass.com).
 
 
+This seed repo serves as an Angular 4 webapp starter
+* Best practices in file and application organization for Angular 4 by John Papa oficial guidelines.
+* Ready to go build system using Webpack for working with TypeScript.
+* Ahead of Time (AoT) compile for rapid page loads of your production builds.
+* Tree shaking to automatically remove unused code from your production bundle.
+* [Webpack DLLs](https://robertknight.github.io/posts/webpack-dll-plugins/) dramatically speed your development builds.
+* Testing Angular 4 code with Jasmine and Karma.
+* Coverage with Istanbul and Karma
+* End-to-end Angular 4 code using Protractor.
+* Type manager with @types
+* Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
+* Boostrapping Design with [ngx-canaima](https://github.com/alvarosaburido/ngx-canaima)
 
 ### Quick start
 **Make sure you have Node version >= 5.0 and NPM >= 3**
@@ -109,7 +126,7 @@ Once you have those, you should install these globals with `npm install --global
 * `npm run server` to start the dev server in another tab
 
 ## Running the app
-After you have installed all dependencies you can now run the app. Run `npm run server` to start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://0.0.0.0:7682` (or if you prefer IPv6, if you're using `express` server, then it's `http://[::1]:7682/`).
+After you have installed all dependencies you can now run the app. Run `npm run server` to start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://0.0.0.0:2690` (or if you prefer IPv6, if you're using `express` server, then it's `http://[::1]:2690/`).
 
 ### server
 ```bash
@@ -119,6 +136,30 @@ npm run server
 npm run build:prod
 npm run server:prod
 ```
+
+## Deploying
+
+### Build files
+```bash
+# development
+npm run build:dev
+# production (jit)
+npm run build:prod
+```
+
+* Create API credentials that have sufficient permissions to S3. More info
+  [here](https://github.com/laurilehmijoki/s3_website/tree/master/additional-docs/setting-up-aws-credentials.md).
+* Go to your website directory
+* Run `s3_website cfg create`. This generates a configuration file called `s3_website.yml`.
+* Set the site: option to `site: dist`
+* Put your AWS credentials and the S3 bucket name into the file
+* Run `s3_website cfg apply`. This will configure your bucket to function as an
+  S3 website. If the bucket does not exist, the command will create it for you.
+* Run `s3_website push` to push your website to S3. Congratulations! You are live.
+* At any later time when you would like to synchronise your local website with
+  the S3 website, simply run `s3_website push` again.
+  (It will calculate the difference, update the changed files,
+  upload the new files and delete the obsolete files.)
 
 ## Other commands
 
@@ -272,12 +313,10 @@ import * as _ from 'lodash';
 ```
 
 # Support, Questions, or Feedback
-> Contact me anytime for anything about this repo or Angular 2
+> Contact me anytime for anything about this repo or Angular 4
 
 * [Email: Alvaro Saburido](alvaro.saburido@gmail.com)
-* [Twitter: @shevastation](https://twitter.com/AngularClass)
-
-
+* [Twitter: @alvarosaburido1](https://twitter.com/alvarosaburido1)
 
 ___
 
