@@ -1,4 +1,3 @@
-import { PdfPreviewDirective } from './pdf-preview.directive';
 import { NgModule } from '@angular/core';
 import { ImagePreviewDirective } from './image-preview.directive';
 import { BgImagePreviewDirective } from './bg-image-preview.directive';
@@ -8,12 +7,10 @@ import { BgImagePreviewDirective } from './bg-image-preview.directive';
     exports: [
         BgImagePreviewDirective,
         ImagePreviewDirective,
-        PdfPreviewDirective
     ],
     declarations: [
         BgImagePreviewDirective,
         ImagePreviewDirective,
-        PdfPreviewDirective
     ],
     providers: [],
 })

@@ -10,12 +10,5 @@
     ],
     "skipLibCheck": true,
     "types": []
-  },
-  "include": [
-    "src/**/*",
-    "node_modules"
-  ],
-  "exclude": [
-    "demo/**/*"
-  ]
+  }
 }
