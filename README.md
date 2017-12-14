@@ -2,7 +2,7 @@
 
 # ngx-canaima [![npm version](https://badge.fury.io/js/ngx-canaima.svg)](http://badge.fury.io/js/ngx-canaima) [![npm downloads](https://img.shields.io/npm/dm/ngx-canaima.svg)](https://npmjs.org/ngx-canaima)
 
-Angular 4+ Awesome UI Components 
+Angular 5+ Awesome UI Components 
 
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/guide/styleguide)
 [![Build Status](https://travis-ci.org/valor-software/ngx-canaima.svg?branch=master)](https://travis-ci.org/valor-software/ngx-canaima)
@@ -57,7 +57,7 @@ If you have a `variables` file that overrides Bootstrap variables, put the ngx-c
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install ngx-canaima
+$ npm install ngx-canaima --save
 ```
 
 and then from your Angular `AppModule`:

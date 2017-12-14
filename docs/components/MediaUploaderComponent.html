@@ -48,8 +48,8 @@
                                   <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
-                                    <a href="./changelog.html"
-                                        >
+                                        <a href="../changelog.html"
+                                    >
                                         <span class="fa fa-file-text-o"></span>CHANGELOG
                                     </a>
                                 </li>
@@ -302,9 +302,6 @@
                                 <li class="link">
                                     <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                 </li>
-                                <li class="link">
-                                    <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                </li>
                         </ul>
                     </li>
             
@@ -472,6 +469,7 @@
                     </li>
             
             
+            
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
                                 data-target="#xs-pipes-links"
@@ -556,8 +554,8 @@
                                          <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
-                                           <a href="./changelog.html"
-                                               >
+                                               <a href="../changelog.html"
+                                           >
                                                <span class="fa fa-file-text-o"></span>CHANGELOG
                                            </a>
                                        </li>
@@ -810,9 +808,6 @@
                                        <li class="link">
                                            <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                        </li>
-                                       <li class="link">
-                                           <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                       </li>
                                </ul>
                            </li>
                    
@@ -980,6 +975,7 @@
                            </li>
                    
                    
+                   
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
                                        data-target="#pipes-links"
@@ -1059,7 +1055,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1072,9 +1068,9 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnInit-interface.html" target="_blank" >OnInit</a></code>
-                <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnChanges-interface.html" target="_blank" >OnChanges</a></code>
-                <code><a href="https://angular.io/docs/ts/latest/api/core/index/AfterViewInit-interface.html" target="_blank" >AfterViewInit</a></code>
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
     </p>
 
 
@@ -1125,7 +1121,8 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <span class="modifier">Public</span> <a href="#hasBaseDropZoneOver">hasBaseDropZoneOver</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#hasBaseDropZoneOver">hasBaseDropZoneOver</a>
                             </li>
                         </ul>
                     </td>
@@ -1139,22 +1136,28 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <span class="modifier">Public</span> <a href="#checkFileType">checkFileType</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#checkFileType">checkFileType</a>
                             </li>
                             <li>
-                                <span class="modifier">Public</span> <a href="#checkMimeType">checkMimeType</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#checkMimeType">checkMimeType</a>
                             </li>
                             <li>
-                                <span class="modifier">Public</span> <a href="#fileOverBase">fileOverBase</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#fileOverBase">fileOverBase</a>
                             </li>
                             <li>
-                                <span class="modifier">Public</span> <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
                             </li>
                             <li>
-                                <span class="modifier">Public</span> <a href="#ngOnChanges">ngOnChanges</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnChanges">ngOnChanges</a>
                             </li>
                             <li>
-                                <span class="modifier">Public</span> <a href="#ngOnInit">ngOnInit</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
                     </td>
@@ -1256,7 +1259,7 @@
                         </td>
                         <td class="col-md-10">
                             <p>
-                              <em>Default value: </em><code>image</code>
+                              <em>Default value: </em><code>&#x27;image&#x27;</code>
                             </p>
                         </td>
                     </tr>
@@ -1313,7 +1316,7 @@
                         </td>
                         <td class="col-md-10">
                             <p>
-                              <em>Default value: </em><code>mdi</code>
+                              <em>Default value: </em><code>&#x27;mdi&#x27;</code>
                             </p>
                         </td>
                     </tr>
@@ -1357,7 +1360,7 @@
                             <code>onQueue</code>
                         </td>
                         <td class="col-md-10">
-                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/docs/ts/latest/api/core/index/EventEmitter-class.html" target="_blank" >EventEmitter</a></code>
+                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
 
                         </td>
                     </tr>
@@ -1376,7 +1379,7 @@
                             <code>uploaderChange</code>
                         </td>
                         <td class="col-md-10">
-                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/docs/ts/latest/api/core/index/EventEmitter-class.html" target="_blank" >EventEmitter</a></code>
+                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
 
                         </td>
                     </tr>
@@ -1401,7 +1404,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="checkFileType"></a>
-                            <span class="name"><b><span class="modifier">Public</span> checkFileType</b><a href="#checkFileType"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                checkFileType
+                                </b>
+                                <a href="#checkFileType"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1464,7 +1473,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="checkMimeType"></a>
-                            <span class="name"><b><span class="modifier">Public</span> checkMimeType</b><a href="#checkMimeType"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                checkMimeType
+                                </b>
+                                <a href="#checkMimeType"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1527,7 +1542,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="fileOverBase"></a>
-                            <span class="name"><b><span class="modifier">Public</span> fileOverBase</b><a href="#fileOverBase"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                fileOverBase
+                                </b>
+                                <a href="#fileOverBase"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1589,7 +1610,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="ngAfterViewInit"></a>
-                            <span class="name"><b><span class="modifier">Public</span> ngAfterViewInit</b><a href="#ngAfterViewInit"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                ngAfterViewInit
+                                </b>
+                                <a href="#ngAfterViewInit"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1622,13 +1649,19 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="ngOnChanges"></a>
-                            <span class="name"><b><span class="modifier">Public</span> ngOnChanges</b><a href="#ngOnChanges"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                ngOnChanges
+                                </b>
+                                <a href="#ngOnChanges"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
                                 <span class="modifier-icon fa fa-reset"></span>
-                            <code>ngOnChanges(changes: <a href="https://angular.io/docs/ts/latest/api/core/index/SimpleChanges-interface.html" target="_blank">SimpleChanges</a>)</code>
+                            <code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
                         </td>
                     </tr>
     
@@ -1657,7 +1690,7 @@
                                                     <tr>
                                                       <td>changes</td>
                                                       <td>
-                                                              <code><a href="https://angular.io/docs/ts/latest/api/core/index/SimpleChanges-interface.html" target="_blank" >SimpleChanges</a></code>
+                                                              <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
                                                       </td>
                                                       <td>
                                                       </td>
@@ -1684,7 +1717,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="ngOnInit"></a>
-                            <span class="name"><b><span class="modifier">Public</span> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                ngOnInit
+                                </b>
+                                <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1724,7 +1763,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="hasBaseDropZoneOver"></a>
-                            <span class="name"><b><span class="modifier">Public</span> hasBaseDropZoneOver</b><a href="#hasBaseDropZoneOver"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                hasBaseDropZoneOver
+                                </b>
+                                <a href="#hasBaseDropZoneOver"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1748,10 +1793,11 @@
                 </tbody>
             </table>
     </section>
+
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import {
     Component,
     OnInit,
@@ -1846,7 +1892,7 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;media-uploader__uploadimg {{customClass}}&quot;&gt;
     &lt;div ng2FileDrop
         multiple&#x3D;&quot;multiple&quot;
@@ -1901,7 +1947,7 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
 &lt;/div&gt;</code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -1926,10 +1972,11 @@ export class MediaUploaderComponent implements OnInit, OnChanges, AfterViewInit 
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="media-uploader__uploadimg {{customClass}}">    <div ng2FileDrop        multiple="multiple"        [ngClass]="{\'nv-file-over\': hasBaseDropZoneOver}"        (fileOver)="fileOverBase($event)"        [uploader]="uploader"        class="media-uploader__drop-zone"        *ngIf="!media && !uploader?.queue[0]?._file"        >        <i *ngIf="icon" class="{{prefix}} {{prefix}}-{{icon}}"></i>        <input type="file"                 ng2FileSelect        multiple="multiple"         [uploader]="uploader" />    </div>    <div    class="media-uploader__imgpreview" bgPreview     *ngIf="!media && checkFileType(uploader?.queue[0]?.file) === \'image\' && uploader?.queue[0]?._file"        [image]="uploader?.queue[0]?._file"       >        <span class="media-uploader__editbtn"  (click)="uploader?.queue[0].remove()">            <i class="mdi mdi-pencil"></i>        </span>    </div>    <div class="media-uploader__pdfpreview"    *ngIf="!media && checkMimeType(uploader?.queue[0]?.file) === \'pdf\' && uploader?.queue[0]?._file">        <i class="pdf-icon mdi mdi-file"></i>        <span>{{uploader?.queue[0]?.file.name}}</span>        <span class="media-uploader__editbtn"  (click)="media == undefined; uploader?.queue[0].remove()">            <i class="mdi mdi-pencil"></i>        </span>    </div>    <!-- <div class="media-uploader__pdfpreview"    *ngIf="!media && uploader?.queue[0]?._file">        <pdf-viewer pdfPreview        [pdf]="uploader?.queue[0]?._file"        [page]="1"        [render-text]="true"        style="display: block;"        ></pdf-viewer>    </div> -->    <div class="media-uploader__imgpreview"      *ngIf="media"        [ngStyle]="{\'background-image\': \'url(\' + image + \')\'}"       >        <span class="media-uploader__editbtn"  (click)="image = undefined">            <i class="mdi mdi-pencil"></i>        </span>    </div>    </div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'BadgeComponent', 'selector': 'as-badge'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardNumberComponent', 'selector': 'as-card-number'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'CardToggleComponent', 'selector': 'as-card-toggle'},{'name': 'ChipComponent', 'selector': 'as-chip'},{'name': 'CircleFabComponent', 'selector': 'circle-fab'},{'name': 'DataTableComponent', 'selector': 'as-data-table'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'EmptyStateComponent', 'selector': 'as-empty-state'},{'name': 'FabComponent', 'selector': 'as-fab'},{'name': 'FileButtonComponent', 'selector': 'file-button'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'LoadingComponent', 'selector': 'as-loading'},{'name': 'MediaUploaderComponent', 'selector': 'media-uploader'},{'name': 'ModalComponent', 'selector': 'as-modal'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'ProfileDropdownComponent', 'selector': 'as-profile-dropdown'},{'name': 'SearchBarComponent', 'selector': 'as-search-bar'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'SpacerComponent', 'selector': 'as-spacer'},{'name': 'ToggleComponent', 'selector': 'as-toggle'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
-    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'},{'name': 'PdfPreviewDirective', 'selector': 'pdf-viewer[pdfPreview]'}];
+    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'MediaUploaderComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
 
 
 
