@@ -48,8 +48,8 @@
                                   <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
-                                    <a href="./changelog.html"
-                                        >
+                                        <a href="../changelog.html"
+                                    >
                                         <span class="fa fa-file-text-o"></span>CHANGELOG
                                     </a>
                                 </li>
@@ -302,9 +302,6 @@
                                 <li class="link">
                                     <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                 </li>
-                                <li class="link">
-                                    <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                </li>
                         </ul>
                     </li>
             
@@ -472,6 +469,7 @@
                     </li>
             
             
+            
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
                                 data-target="#xs-pipes-links"
@@ -556,8 +554,8 @@
                                          <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
-                                           <a href="./changelog.html"
-                                               >
+                                               <a href="../changelog.html"
+                                           >
                                                <span class="fa fa-file-text-o"></span>CHANGELOG
                                            </a>
                                        </li>
@@ -810,9 +808,6 @@
                                        <li class="link">
                                            <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                        </li>
-                                       <li class="link">
-                                           <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                       </li>
                                </ul>
                            </li>
                    
@@ -980,6 +975,7 @@
                            </li>
                    
                    
+                   
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
                                        data-target="#pipes-links"
@@ -1059,7 +1055,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1117,7 +1113,8 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <span class="modifier">Public</span> <a href="#actionCallback">actionCallback</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#actionCallback">actionCallback</a>
                             </li>
                         </ul>
                     </td>
@@ -1242,6 +1239,12 @@
                                 <em>Type:</em>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                               </p>
+                            <p>
+                              <em>Default value: </em><code>{
+        justify: &#x27;flex-end&#x27;,
+        alignment: &#x27;center&#x27;
+    }</code>
+                            </p>
                         </td>
                     </tr>
                             <tr>
@@ -1371,7 +1374,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="actionCallback"></a>
-                            <span class="name"><b><span class="modifier">Public</span> actionCallback</b><a href="#actionCallback"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                actionCallback
+                                </b>
+                                <a href="#actionCallback"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1432,10 +1441,11 @@
             </table>
     </section>
 
+
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import {
     Component,
     Input,
@@ -1469,7 +1479,7 @@ export class CardBgComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card card--bg {{customClass}} shadow-{{shadow}}&quot;  [ngStyle]&#x3D;&quot;{&#x27;background-image&#x27;: bg &amp;&amp; &#x27;url(&#x27; + bg + &#x27;)&#x27;}&quot; &gt;
     &lt;div class&#x3D;&quot;card__options card__options--left&quot;
     *ngIf&#x3D;&quot;optionsLeft?.length &gt; 0&quot;&gt;
@@ -1557,7 +1567,7 @@ export class CardBgComponent {
 &lt;/div&gt;</code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -1582,10 +1592,11 @@ export class CardBgComponent {
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="card card--bg {{customClass}} shadow-{{shadow}}"  [ngStyle]="{\'background-image\': bg && \'url(\' + bg + \')\'}" >    <div class="card__options card__options--left"    *ngIf="optionsLeft?.length > 0">        <div class="card__option"         *ngFor="let option of optionsLeft"        (click)="option.callback()">            <button            asIconButton            [prefix]="option?.prefix"            [icon]="option?.icon"            [color]="option?.color"            [outline]="option?.outline"            [rounded]="option?.rounded"            [size]="option?.size"            (click)="option.callback()">            </button>        </div>    </div>    <div class="card__options card__options--right"     *ngIf="optionsRight?.length > 0">        <div class="card__option"         [hidden]="option.dropdown !== undefined"         *ngFor="let option of optionsRight"        >            <button            asIconButton            [prefix]="option?.prefix"            [icon]="option?.icon"            [outline]="option?.outline"            [rounded]="option?.rounded"            [size]="option?.size"            (click)="option.callback()">                        </button>        </div>        <div class="card__option" [hidden]="option.dropdown === undefined" dropdown *ngFor="let option of optionsRight">            <button             dropdownToggle            asIconButton            [prefix]="option?.prefix"            [icon]="option?.icon"            [outline]="option?.outline"            [rounded]="option?.rounded"            [size]="option?.size"            class="dropdown-toggle">            </button>            <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" [hidden]="option.dropdown !== undefined" role="menu">                <li *ngFor="let choice of option.dropdown">                    <a class="dropdown-item" (click)="choice.callback()"><i class="{{option.prefix}} {{option.prefix}}-{{choice.icon}}"></i>{{choice.label}}</a>                </li>            </ul>        </div>    </div>    <div class="card__body" >             <h4         class="card__title"        *ngIf="title">{{title}}</h4>        <h6         class="card__subtitle"        *ngIf="subtitle">{{subtitle}}</h6>    </div>    <div class="card__footer"     *ngIf="actions">        <div class="card__actions"        [ngStyle]="{\'justify-content\': footer.justify,        \'align-items\': footer.alignment}">            <button            *ngFor="let action of actions"             asIconButton            class="card__action"            [prefix]="action.prefix"            [icon]="action.active ? action.iconActive : action.icon"            [color]="action.color"            [outline]="action.outline"            [rounded]="action.rounded"            [size]="action.size"            [ngClass]="action?.customClass"            [disabled]="action.disabled"             (click)="actionCallback(action)">                {{action.label}}            </button>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'BadgeComponent', 'selector': 'as-badge'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardNumberComponent', 'selector': 'as-card-number'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'CardToggleComponent', 'selector': 'as-card-toggle'},{'name': 'ChipComponent', 'selector': 'as-chip'},{'name': 'CircleFabComponent', 'selector': 'circle-fab'},{'name': 'DataTableComponent', 'selector': 'as-data-table'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'EmptyStateComponent', 'selector': 'as-empty-state'},{'name': 'FabComponent', 'selector': 'as-fab'},{'name': 'FileButtonComponent', 'selector': 'file-button'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'LoadingComponent', 'selector': 'as-loading'},{'name': 'MediaUploaderComponent', 'selector': 'media-uploader'},{'name': 'ModalComponent', 'selector': 'as-modal'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'ProfileDropdownComponent', 'selector': 'as-profile-dropdown'},{'name': 'SearchBarComponent', 'selector': 'as-search-bar'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'SpacerComponent', 'selector': 'as-spacer'},{'name': 'ToggleComponent', 'selector': 'as-toggle'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
-    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'},{'name': 'PdfPreviewDirective', 'selector': 'pdf-viewer[pdfPreview]'}];
+    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'CardBgComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
 
 
 

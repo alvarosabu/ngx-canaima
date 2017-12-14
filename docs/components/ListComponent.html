@@ -48,8 +48,8 @@
                                   <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
-                                    <a href="./changelog.html"
-                                        >
+                                        <a href="../changelog.html"
+                                    >
                                         <span class="fa fa-file-text-o"></span>CHANGELOG
                                     </a>
                                 </li>
@@ -302,9 +302,6 @@
                                 <li class="link">
                                     <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                 </li>
-                                <li class="link">
-                                    <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                </li>
                         </ul>
                     </li>
             
@@ -472,6 +469,7 @@
                     </li>
             
             
+            
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
                                 data-target="#xs-pipes-links"
@@ -556,8 +554,8 @@
                                          <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
-                                           <a href="./changelog.html"
-                                               >
+                                               <a href="../changelog.html"
+                                           >
                                                <span class="fa fa-file-text-o"></span>CHANGELOG
                                            </a>
                                        </li>
@@ -810,9 +808,6 @@
                                        <li class="link">
                                            <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                        </li>
-                                       <li class="link">
-                                           <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                       </li>
                                </ul>
                            </li>
                    
@@ -980,6 +975,7 @@
                            </li>
                    
                    
+                   
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
                                        data-target="#pipes-links"
@@ -1059,7 +1055,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1228,10 +1224,11 @@
 
 
 
+
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import {
     Component,
     OnInit,
@@ -1255,7 +1252,7 @@ export class ListComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div 
     class&#x3D;&quot;list {{customClass}}&quot; 
     [ngStyle]&#x3D;&quot;{&#x27;height&#x27;: height + &#x27;px&#x27;}&quot;
@@ -1271,7 +1268,7 @@ export class ListComponent {
 &lt;/div&gt;</code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -1296,10 +1293,11 @@ export class ListComponent {
 <script>
         var COMPONENT_TEMPLATE = '<div><div     class="list {{customClass}}"     [ngStyle]="{\'height\': height + \'px\'}"    [ngClass]="{\'list--scrollable\': scroll}">    <div         class="list__header"        *ngIf="title">        {{title}}    </div>   <ng-content select="[list-body]"     ></ng-content></div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'BadgeComponent', 'selector': 'as-badge'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardNumberComponent', 'selector': 'as-card-number'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'CardToggleComponent', 'selector': 'as-card-toggle'},{'name': 'ChipComponent', 'selector': 'as-chip'},{'name': 'CircleFabComponent', 'selector': 'circle-fab'},{'name': 'DataTableComponent', 'selector': 'as-data-table'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'EmptyStateComponent', 'selector': 'as-empty-state'},{'name': 'FabComponent', 'selector': 'as-fab'},{'name': 'FileButtonComponent', 'selector': 'file-button'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'LoadingComponent', 'selector': 'as-loading'},{'name': 'MediaUploaderComponent', 'selector': 'media-uploader'},{'name': 'ModalComponent', 'selector': 'as-modal'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'ProfileDropdownComponent', 'selector': 'as-profile-dropdown'},{'name': 'SearchBarComponent', 'selector': 'as-search-bar'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'SpacerComponent', 'selector': 'as-spacer'},{'name': 'ToggleComponent', 'selector': 'as-toggle'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
-    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'},{'name': 'PdfPreviewDirective', 'selector': 'pdf-viewer[pdfPreview]'}];
+    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'ListComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
 
 
 

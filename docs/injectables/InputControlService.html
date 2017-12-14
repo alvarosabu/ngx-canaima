@@ -48,8 +48,8 @@
                                   <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
-                                    <a href="./changelog.html"
-                                        >
+                                        <a href="../changelog.html"
+                                    >
                                         <span class="fa fa-file-text-o"></span>CHANGELOG
                                     </a>
                                 </li>
@@ -302,9 +302,6 @@
                                 <li class="link">
                                     <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                 </li>
-                                <li class="link">
-                                    <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                </li>
                         </ul>
                     </li>
             
@@ -472,6 +469,7 @@
                     </li>
             
             
+            
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
                                 data-target="#xs-pipes-links"
@@ -556,8 +554,8 @@
                                          <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
-                                           <a href="./changelog.html"
-                                               >
+                                               <a href="../changelog.html"
+                                           >
                                                <span class="fa fa-file-text-o"></span>CHANGELOG
                                            </a>
                                        </li>
@@ -810,9 +808,6 @@
                                        <li class="link">
                                            <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                        </li>
-                                       <li class="link">
-                                           <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                       </li>
                                </ul>
                            </li>
                    
@@ -980,6 +975,7 @@
                            </li>
                    
                    
+                   
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
                                        data-target="#pipes-links"
@@ -1055,7 +1051,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info">
+    <div class="tab-pane fade active in" id="c-info">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -1078,7 +1074,8 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                        <span class="modifier">Public</span> <a href="#toFormGroup">toFormGroup</a>
+                                            <span class="modifier">Public</span>
+                                        <a href="#toFormGroup">toFormGroup</a>
                                     </li>
                                 </ul>
                             </td>
@@ -1116,13 +1113,19 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="toFormGroup"></a>
-                                    <span class="name"><b><span class="modifier">Public</span> toFormGroup</b><a href="#toFormGroup"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                            <span class="modifier">Public</span>
+                                        toFormGroup
+                                        </b>
+                                        <a href="#toFormGroup"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
                                         <span class="modifier-icon fa fa-reset"></span>
-                                    <code>toFormGroup(inputs: <a href="../classes/InputBase.html">Array<InputBase></a>)</code>
+                                    <code>toFormGroup(inputs: <a href="../classes/InputBase.html">Array<InputBase<any>></a>)</code>
                                 </td>
                             </tr>
             
@@ -1151,7 +1154,7 @@
                                                             <tr>
                                                               <td>inputs</td>
                                                               <td>
-                                                                      <code><a href="../classes/InputBase.html" target="_self" >Array&lt;InputBase&gt;</a></code>
+                                                                      <code><a href="../classes/InputBase.html" target="_self" >Array&lt;InputBase&lt;any&gt;&gt;</a></code>
                                                               </td>
                                                               <td>
                                                               </td>
@@ -1175,10 +1178,11 @@
                     </table>
             </section>
 
+
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 
@@ -1220,6 +1224,7 @@ export class InputControlService {
 </code></pre>
     </div>
 </div>
+
 
 
 
