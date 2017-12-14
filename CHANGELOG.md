@@ -1,3 +1,9 @@
+## 1.0.0-rc2 - 2017-12-14
+### Fixed
+- Issue with gulp sass task for build stylesheets
+## 1.0.0-rc1 - 2017-12-14
+### Added
+- Library support to Angular 5+
 ## 0.9.1 - 2017-12-03
 ### Fixed
 - Removed ng2-pdf-viewer
