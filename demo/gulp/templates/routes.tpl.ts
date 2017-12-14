@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+// import { AuthGuard } from '../shared/auth/auth.guard';
 import { DataResolver } from '../app.resolver';
 import { <%= capitalname %>Component } from './<%= name %>.component';
 

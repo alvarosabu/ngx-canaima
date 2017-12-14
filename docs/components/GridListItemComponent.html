@@ -48,8 +48,8 @@
                                   <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
-                                    <a href="./changelog.html"
-                                        >
+                                        <a href="../changelog.html"
+                                    >
                                         <span class="fa fa-file-text-o"></span>CHANGELOG
                                     </a>
                                 </li>
@@ -302,9 +302,6 @@
                                 <li class="link">
                                     <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                 </li>
-                                <li class="link">
-                                    <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                </li>
                         </ul>
                     </li>
             
@@ -472,6 +469,7 @@
                     </li>
             
             
+            
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
                                 data-target="#xs-pipes-links"
@@ -556,8 +554,8 @@
                                          <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
-                                           <a href="./changelog.html"
-                                               >
+                                               <a href="../changelog.html"
+                                           >
                                                <span class="fa fa-file-text-o"></span>CHANGELOG
                                            </a>
                                        </li>
@@ -810,9 +808,6 @@
                                        <li class="link">
                                            <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                        </li>
-                                       <li class="link">
-                                           <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                       </li>
                                </ul>
                            </li>
                    
@@ -980,6 +975,7 @@
                            </li>
                    
                    
+                   
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
                                        data-target="#pipes-links"
@@ -1059,7 +1055,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -1117,10 +1113,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <span class="modifier">Public</span> <a href="#isChecked">isChecked</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#isChecked">isChecked</a>
                             </li>
                             <li>
-                                <span class="modifier">Public</span> <a href="#showFooter">showFooter</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#showFooter">showFooter</a>
                             </li>
                         </ul>
                     </td>
@@ -1134,7 +1132,8 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <span class="modifier">Public</span> <a href="#select">select</a>
+                                    <span class="modifier">Public</span>
+                                <a href="#select">select</a>
                             </li>
                         </ul>
                     </td>
@@ -1375,7 +1374,7 @@
                             <code>onSelected</code>
                         </td>
                         <td class="col-md-10">
-                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/docs/ts/latest/api/core/index/EventEmitter-class.html" target="_blank" >EventEmitter</a></code>
+                            <em><code>$event</code> type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
 
                         </td>
                     </tr>
@@ -1400,7 +1399,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="select"></a>
-                            <span class="name"><b><span class="modifier">Public</span> select</b><a href="#select"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                select
+                                </b>
+                                <a href="#select"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1442,7 +1447,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="isChecked"></a>
-                            <span class="name"><b><span class="modifier">Public</span> isChecked</b><a href="#isChecked"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                isChecked
+                                </b>
+                                <a href="#isChecked"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1470,7 +1481,13 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="showFooter"></a>
-                            <span class="name"><b><span class="modifier">Public</span> showFooter</b><a href="#showFooter"><span class="fa fa-link"></span></a></span>
+                            <span class="name">
+                                <b>
+                                    <span class="modifier">Public</span>
+                                showFooter
+                                </b>
+                                <a href="#showFooter"><span class="fa fa-link"></span></a>
+                            </span>
                         </td>
                     </tr>
                     <tr>
@@ -1494,10 +1511,11 @@
                 </tbody>
             </table>
     </section>
+
 </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import {
     Component,
     OnInit,
@@ -1537,7 +1555,7 @@ export class GridListItemComponent {
 </code></pre>
     </div>
 
-    <div class="tab-pane fade" id="templateData">
+    <div class="tab-pane fade" id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;grid-list-item {{customClass}} shadow-{{shadow}}&quot;
 (mouseover)&#x3D;&quot;showFooter &#x3D; true&quot;
 (mouseleave)&#x3D;&quot;showFooter &#x3D; false&quot;&gt;
@@ -1560,7 +1578,7 @@ export class GridListItemComponent {
 &lt;/div&gt;</code></pre>
     </div>
 
-    <div class="tab-pane fade" id="tree">
+    <div class="tab-pane fade" id="c-tree">
         <div id="tree-container"></div>
         <div class="tree-legend">
             <div class="title">
@@ -1585,10 +1603,11 @@ export class GridListItemComponent {
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="grid-list-item {{customClass}} shadow-{{shadow}}"(mouseover)="showFooter = true"(mouseleave)="showFooter = false">        <div class="grid-list-item__content" [ngStyle]="{\'background-image\': \'url(\' + img + \')\'}">           </div>    <div     class="grid-list-item__footer"    [ngStyle]="!action && {\'justify-content\': \'center\'}"     *ngIf="showFooter || persistent">        <span class="grid-list-item__title">{{title}}</span>        <div class="grid-list-item__action" *ngIf="action">            <i class="{{action.prefix}} {{action.prefix}}-{{action.value ? action.iconActive : action.icon}}"            [ngStyle]="{\'font-size\': action.size + \'px\'}"            (click)="action.callback(); action.value = ! action.value"></i>        </div>    </div>    </div></div>'
     var COMPONENTS = [{'name': 'BackButtonComponent', 'selector': 'as-back-button'},{'name': 'BadgeComponent', 'selector': 'as-badge'},{'name': 'CardBgComponent', 'selector': 'as-card-bg'},{'name': 'CardComponent', 'selector': 'as-card'},{'name': 'CardDataComponent', 'selector': 'as-card-data'},{'name': 'CardIllustrationComponent', 'selector': 'as-card-illustration'},{'name': 'CardImageComponent', 'selector': 'as-card-image'},{'name': 'CardNumberComponent', 'selector': 'as-card-number'},{'name': 'CardProfileComponent', 'selector': 'as-card-profile'},{'name': 'CardToggleComponent', 'selector': 'as-card-toggle'},{'name': 'ChipComponent', 'selector': 'as-chip'},{'name': 'CircleFabComponent', 'selector': 'circle-fab'},{'name': 'DataTableComponent', 'selector': 'as-data-table'},{'name': 'DynamicFormCheckboxComponent', 'selector': 'as-df-checkbox'},{'name': 'DynamicFormComponent', 'selector': 'as-dynamic-form'},{'name': 'DynamicFormInputComponent', 'selector': 'as-df-input'},{'name': 'DynamicFormRadioComponent', 'selector': 'as-df-radio'},{'name': 'DynamicFormSelectComponent', 'selector': 'as-df-select'},{'name': 'DynamicFormTextAreaComponent', 'selector': 'as-df-textarea'},{'name': 'EmptyStateComponent', 'selector': 'as-empty-state'},{'name': 'FabComponent', 'selector': 'as-fab'},{'name': 'FileButtonComponent', 'selector': 'file-button'},{'name': 'GridListComponent', 'selector': 'as-grid-list'},{'name': 'GridListItemComponent', 'selector': 'as-grid-list-item'},{'name': 'HeaderComponent', 'selector': 'as-header'},{'name': 'ListComponent', 'selector': 'as-list'},{'name': 'ListItemAvatarComponent', 'selector': 'as-list-item-avatar'},{'name': 'ListItemCheckComponent', 'selector': 'as-list-item-check'},{'name': 'ListItemComponent', 'selector': 'as-list-item'},{'name': 'ListItemFileQeueComponent', 'selector': 'as-list-item-fileqeue'},{'name': 'ListItemIconComponent', 'selector': 'as-list-item-icon'},{'name': 'ListItemPropertyComponent', 'selector': 'as-list-item-property'},{'name': 'LoadingComponent', 'selector': 'as-loading'},{'name': 'MediaUploaderComponent', 'selector': 'media-uploader'},{'name': 'ModalComponent', 'selector': 'as-modal'},{'name': 'NavmenuComponent', 'selector': 'as-navmenu'},{'name': 'ProfileDropdownComponent', 'selector': 'as-profile-dropdown'},{'name': 'SearchBarComponent', 'selector': 'as-search-bar'},{'name': 'SegmentComponent', 'selector': 'as-segment'},{'name': 'SpacerComponent', 'selector': 'as-spacer'},{'name': 'ToggleComponent', 'selector': 'as-toggle'},{'name': 'ToolbarComponent', 'selector': 'as-toolbar'}];
-    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'},{'name': 'PdfPreviewDirective', 'selector': 'pdf-viewer[pdfPreview]'}];
+    var DIRECTIVES = [{'name': 'AsButtonDirective', 'selector': '[asButton]'},{'name': 'AsIconButtonDirective', 'selector': '[asIconButton]'},{'name': 'BgImagePreviewDirective', 'selector': '[bgPreview]'},{'name': 'ContentPlaceholderDirective', 'selector': '[contentPlaceholder]'},{'name': 'ImagePreviewDirective', 'selector': 'img[imgPreview]'}];
     var ACTUAL_COMPONENT = {'name': 'GridListItemComponent'};
 </script>
 <script src="../js/tree.js"></script>
+
 
 
 

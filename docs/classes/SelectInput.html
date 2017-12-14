@@ -48,8 +48,8 @@
                                   <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
-                                    <a href="./changelog.html"
-                                        >
+                                        <a href="../changelog.html"
+                                    >
                                         <span class="fa fa-file-text-o"></span>CHANGELOG
                                     </a>
                                 </li>
@@ -302,9 +302,6 @@
                                 <li class="link">
                                     <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                 </li>
-                                <li class="link">
-                                    <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                </li>
                         </ul>
                     </li>
             
@@ -472,6 +469,7 @@
                     </li>
             
             
+            
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse"
                                 data-target="#xs-pipes-links"
@@ -556,8 +554,8 @@
                                          <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
-                                           <a href="./changelog.html"
-                                               >
+                                               <a href="../changelog.html"
+                                           >
                                                <span class="fa fa-file-text-o"></span>CHANGELOG
                                            </a>
                                        </li>
@@ -810,9 +808,6 @@
                                        <li class="link">
                                            <a href="../directives/ImagePreviewDirective.html" >ImagePreviewDirective</a>
                                        </li>
-                                       <li class="link">
-                                           <a href="../directives/PdfPreviewDirective.html" >PdfPreviewDirective</a>
-                                       </li>
                                </ul>
                            </li>
                    
@@ -980,6 +975,7 @@
                            </li>
                    
                    
+                   
                            <li class="chapter">
                                <div class="simple menu-toggler" data-toggle="collapse"
                                        data-target="#pipes-links"
@@ -1040,6 +1036,7 @@
 
 
 
+
 <ol class="breadcrumb">
   <li>Classes</li>
   <li>SelectInput</li>
@@ -1057,7 +1054,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="info">
+    <div class="tab-pane fade active in" id="c-info">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -1088,10 +1085,10 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
-                                         <a href="#controlType">controlType</a>
+                                        <a href="#controlType">controlType</a>
                                     </li>
                                     <li>
-                                         <a href="#options">options</a>
+                                        <a href="#options">options</a>
                                     </li>
                                 </ul>
                             </td>
@@ -1159,7 +1156,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="controlType"></a>
-                                    <span class="name"><b> controlType</b><a href="#controlType"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                        controlType
+                                        </b>
+                                        <a href="#controlType"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
@@ -1170,7 +1172,7 @@
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <i>Default value : </i><code>dropdown</code>
+                                        <i>Default value : </i><code>&#x27;dropdown&#x27;</code>
                                     </td>
                                 </tr>
                                     <tr>
@@ -1187,7 +1189,12 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="options"></a>
-                                    <span class="name"><b> options</b><a href="#options"><span class="fa fa-link"></span></a></span>
+                                    <span class="name">
+                                        <b>
+                                        options
+                                        </b>
+                                        <a href="#options"><span class="fa fa-link"></span></a>
+                                    </span>
                                 </td>
                             </tr>
                             <tr>
@@ -1202,6 +1209,11 @@
             
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Default value : </i><code>[]</code>
+                                    </td>
+                                </tr>
                                     <tr>
                                         <td class="col-md-4">
                                             <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/forms/select-input.ts:5</a></div>
@@ -1212,10 +1224,11 @@
                         </tbody>
                     </table>
             </section>
+
     </div>
 
 
-    <div class="tab-pane fade tab-source-code" id="source">
+    <div class="tab-pane fade tab-source-code" id="c-source">
         <pre class="line-numbers"><code class="language-typescript">import { InputBase } from &#x27;./input-base&#x27;;
 
 export class SelectInput extends InputBase&lt;string&gt; {

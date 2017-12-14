@@ -1,8 +1,3 @@
-import { ToggleModule } from './../toggle/toggle.module';
-import { CardToggleComponent } from './card-toggle/card-toggle.component';
-import { MiscModule } from './../misc/misc.module';
-
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './card/card.component';
@@ -15,6 +10,10 @@ import { CardIllustrationComponent } from './card-illustration/card-illustration
 import { CardNumberComponent } from './card-number/card-number.component';
 import { FabsModule } from '../fabs/fabs.module';
 import { ButtonsModule } from '../buttons/buttons.module';
+import { ToggleModule } from './../toggle/toggle.module';
+import { CardToggleComponent } from './card-toggle/card-toggle.component';
+import { MiscModule } from './../misc/misc.module';
+
 
 @NgModule({
   imports: [
@@ -22,7 +21,7 @@ import { ButtonsModule } from '../buttons/buttons.module';
     ToggleModule,
     FabsModule,
     CommonModule,
-    BsDropdownModule,
+    BsDropdownModule.forRoot(),
     MiscModule
   ],
   exports: [

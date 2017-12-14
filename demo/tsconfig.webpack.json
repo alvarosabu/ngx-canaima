@@ -7,7 +7,6 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "noEmit": true,
     "noEmitHelpers": true,
     "importHelpers": true,
     "strictNullChecks": false,
@@ -15,6 +14,10 @@
       "es2015",
       "dom"
     ],
+    "baseUrl": "./src",
+    "paths": {
+      "@angular/*": ["node_modules/@angular/*"]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -23,19 +26,16 @@
       "node"
     ]
   },
+
   "exclude": [
     "node_modules",
     "dist",
-    "gulp",
     "src/**/*.spec.ts",
-    "src/**/*.e2e.ts"
+    "src/**/*.e2e.ts",
+    "gulp",
+    "pre"
   ],
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useWebpackText": true
-  },
   "angularCompilerOptions": {
-    "genDir": "./compiled",
     "skipMetadataEmit": true
   },
   "compileOnSave": false,

@@ -9,7 +9,6 @@ import {
     ViewChild,
     ViewEncapsulation
 } from '@angular/core';
-import { ModalDirective } from 'ngx-bootstrap';
 import { Action } from '../action';
 @Component({
     selector: 'as-modal',
@@ -17,7 +16,7 @@ import { Action } from '../action';
 })
 
 export class ModalComponent implements OnChanges, AfterViewInit  {
-    @ViewChild('asModal') public asModal: ModalDirective;
+    @ViewChild('asModal') public asModal: any;
     @Input('title') public title: string;
     @Input('img') public img: string;
     @Input('msg') public msg: string;

@@ -6,7 +6,7 @@ import { TabsModule} from 'ngx-bootstrap';
 
 @NgModule({
     imports: [
-        TabsModule,
+        TabsModule.forRoot(),
         CommonModule,
     ],
     exports: [
